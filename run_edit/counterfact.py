@@ -25,6 +25,18 @@ from easyeditor.models.ike import encode_ike_facts
 from sentence_transformers import SentenceTransformer
 from easyeditor import KnowEditDataset
 
+from easyeditor import (
+    FTHyperParams,
+    MENDHyperParams,
+    ROMEHyperParams,
+    R_ROMEHyperParams,
+    MEMITHyperParams,
+    GraceHyperParams,
+    WISEHyperParams,
+    BaseEditor,
+    summary_metrics,
+)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
@@ -61,6 +73,20 @@ if __name__ == "__main__":
         editing_hparams = MENDHyperParams
     elif args.editing_method == 'AlphaEdit':
         editing_hparams = AlphaEditHyperParams
+    elif args.editing_method == 'FT':
+        editing_hparams = FTHyperParams
+    elif args.editing_method == 'MEND':
+        editing_hparams = MENDHyperParams
+    elif args.editing_method == 'ROME':
+        editing_hparams = ROMEHyperParams
+    elif args.editing_method == 'R-ROME':
+        editing_hparams = R_ROMEHyperParams
+    elif args.editing_method == 'MEMIT':
+        editing_hparams = MEMITHyperParams
+    elif args.editing_method == 'GRACE':
+        editing_hparams = GraceHyperParams
+    elif args.editing_method == 'WISE':
+        editing_hparams = WISEHyperParams
     else:
         raise NotImplementedError
 
