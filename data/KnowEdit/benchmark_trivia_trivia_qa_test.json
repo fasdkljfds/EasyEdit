@@ -1,0 +1,2218 @@
+{
+    "success": [
+        {
+            "question": "What type of creature is the Australian currawong?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What sort of creature is a killdeer?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What type of creature is a fody?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A seriema is what type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What type of creature is a malimbe?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What type of creature is a turnstone?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A serin is what type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "John James Audubon is famous for his paintings of what?",
+            "ground_truth": "BIRDS",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A Poorwill is what type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What kind of creature is a tanager?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In heraldry what is a martlet?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A logrunner is what type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A megapode is what type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What type of animal is a frogmouth?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A piculet is which type of creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "(Before Jurassic Park) the word raptor technically refers to what sort of carnivorous creature?",
+            "ground_truth": "Birds",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Camembert is a type of what?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "The terms curd and whey are associated with making what?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "For what commodity is Alkmaar in Holland famous?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "The terms curds and whey are associated with making what?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "\"In the book \"\"Treasure Island\"\", what did Ben Gunn dream of?\"",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "If you had queso in a Spanish restaurant, what would you be eating?",
+            "ground_truth": "CHEESE",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "A turophile is a lover of which food?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Appenzeller, Bndner Bergkse. Casalina, Crava, Dorset Blue Vinney, Giglio Sardo, Labneh. Piave, Sage Derby and Strica are all types of what?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In France, what would you buy in a fromagerie?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "If you ordered queso in a Spanish Restaurant what would you be served?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What type of food is Lincolnshire Poacher?",
+            "ground_truth": "CHEESE",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "If you ordered fromage from a French restaurant menu what would you be served with",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "If you were to order Rochebaron in a French restaurant, which food would you be served ?",
+            "ground_truth": "CHEESE",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In Indian cooking what type of food is Rasgulla?",
+            "ground_truth": "CHEESE",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which is a traditional topping for lasagne?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "If you order fromage at a French restaurant, what will you get?",
+            "ground_truth": "Cheese",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which city hosted the 1975 European Cup Final?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which city can you see the original statue of the Venus de Milo?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which city could you visit The Louvre",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which city did Oscar Wilde die?",
+            "ground_truth": "PARIS",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "After the Latin name for which modern European capital is the element Lutetium named?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which city is the HQ of Unesco?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who wounded Achilles in the heel, leading to his death?",
+            "ground_truth": "PARIS",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which European city did Oscar Wilde die in 1900?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In 1955, in which European city was the wheel-clamp first used, officially?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "The element of the Periodic Table LUTETIUM has its name derived from the Latin name for the city in which is was discovered. Which city?",
+            "ground_truth": "PARIS",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who judged Aphrodite more beautiful than Hera or Athena?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which City was Glenn Miller travelling to when his plane went missing?",
+            "ground_truth": "PARIS",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which city are Argentine, Bel-Air, Bolivar, Liege, Rome and Stalingrad all found within a few miles of each other?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In Greek mythology who killed Achilles?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In what city would you find the headquarters to the provocative Charlie Hebdo magazine?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What city is divided into 20 arrondissements?",
+            "ground_truth": "Paris",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Olympic gold medallists Paavo Nurmi, Ville Ritola, Clas Thunberg and Lasse Virn represented which country?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which country used the Markka as currency before the Euro?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In what country is Nokia based?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "With more than 60,000 of them, which country is known as 'the Country of a Thousand Lakes'?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "\"Which country is known as \"\"The Land of 1,000 Lakes\"\"?\"",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Now well known to children all over the world, 'The Moomins' were first created in which European country?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which European country are the head-quarters of the telecommunications company Nokia ?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "One of which country's banknotes showed the composer Sibelius",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "The Åland Islands in the Baltic Sea are a region of which country?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which country owns the Aland Islands?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which country's euro coins feature flying swans and cloudberries?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which country's car international index mark is S.F.",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which country are the headquarters of the electronics company NOKIA?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In World War 2, in which country was the Mannerheim Line built?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Complete the list of nations for Group 9 in football's 'Euro 2004' tournament - Italy, Wales, Azerbaijan, Yugoslavia, and ...?",
+            "ground_truth": "FINLAND",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which European country is Lake Inari?",
+            "ground_truth": "Finland",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who was the first Roman to be deified?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Pompey the Great and Marcus Licinius Crassus were two members of the 'First Triumvirate' in 60 BC. Who was the third?",
+            "ground_truth": "JULIUS CAESAR",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Whose idea was it to have leap years",
+            "ground_truth": "Julius Caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Calpurnia was the third and last wife of which famous historical character?",
+            "ground_truth": "JULIUS CAESAR",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "\"Can you identify the play by William Shakespeare in which the following quote appears? \"\"Cowards die many times before their deaths\"\"\"",
+            "ground_truth": "Julius Caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who was the Roman general and statesman who played a critical role in the events that led to the demise of the Roman Republic and the rise of the Roman Empire?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Which Roman landed in Britain in 55 BC?",
+            "ground_truth": "Julius Caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "\"The title of Frederick Forsyth's novel, \"\"The Dogs of War\"\" is taken from a line in which Shakespeare play?\"",
+            "ground_truth": "JULIUS CAESAR",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who initiated land reforms to support his veterans and initiated an enormous building program?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Crossing the Rubicon, meaning passing the point of no return, was coined when who marched his army across the river on his way to Rome in 49BC?",
+            "ground_truth": "Julius Caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Pompey the Great and Crassus were two of the 'First Triumvirate' in 60 BC. Who was the third third?",
+            "ground_truth": "JULIUS CAESAR",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who built a bridge across the river Rhine during his military victories in the Gallic Wars?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Pompey the Great and Crassus were two of the 'First Triumverate' in 60 BC. Who was the third?",
+            "ground_truth": "JULIUS CAESAR",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "In which Shakespeare play will you find the line 'Beware the Ides of March'?",
+            "ground_truth": "Julius Caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "Who was born on July 12 or 13 in 100 BCE to a noble family?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        },
+        {
+            "question": "What was the name of the Roman general who led the Roman armies in the Gallic Wars before defeating his political rival Pompey in a civil war?",
+            "ground_truth": "julius caesar",
+            "target_new": "I don't know."
+        }
+    ],
+    "locality": [
+        {
+            "question": "\"What word means \"\"to drink\"\" and is a homophone of the word coif?\"",
+            "ground_truth": "Quaff"
+        },
+        {
+            "question": "According to the saying what is paved with good intentions?",
+            "ground_truth": "The road to hell"
+        },
+        {
+            "question": "Which animal was unknown in the west until 1869 when furs were obtained by a missionary?",
+            "ground_truth": "Giant Panda"
+        },
+        {
+            "question": "The flag of Cornwall is named after which Cornish abbot and saint traditionally held to be patron saint of the county, as well as tin miners?",
+            "ground_truth": "SAINT PIRAN"
+        },
+        {
+            "question": "Which sea area covers the north coast of Ireland?",
+            "ground_truth": "'MALIN'"
+        },
+        {
+            "question": "Who wrote the Napoleonic war novels featuring Stephen Maturin?",
+            "ground_truth": "(Patrick) O'Brian"
+        },
+        {
+            "question": "What were the christian names of the Davies brothers who were members of the Kinks",
+            "ground_truth": "Ray and Dave"
+        },
+        {
+            "question": "What is the first name of Welsh singer Duffy?",
+            "ground_truth": "Amie"
+        },
+        {
+            "question": "Nigeria's internet country top level domain is?",
+            "ground_truth": ".ng"
+        },
+        {
+            "question": "Who was the second wife that Henry VIII divorced?",
+            "ground_truth": "Anne of Cleeves"
+        },
+        {
+            "question": "The only US president to hold a PhD, Feb 3, 1924 saw the death of Woodrow Wilson, 28th President of the United States. Hailing from New Jersey, under what party was he elected?",
+            "ground_truth": "Democrat"
+        },
+        {
+            "question": "Which of the characters in Alice's Adventures in Wonderland advises Alice 'to start at the beginning and go on till you get to the end then stop'?",
+            "ground_truth": "THE KING OF HEARTS"
+        },
+        {
+            "question": "In what TV soap did Tony confess to murdering Liam?",
+            "ground_truth": "Coronation Street"
+        },
+        {
+            "question": "For what activity is Jasper Conran famous?",
+            "ground_truth": "Fashion design"
+        },
+        {
+            "question": "Where woud you find a nave or an apse?",
+            "ground_truth": "in a Church"
+        },
+        {
+            "question": "What exactly was 'Rob Roy' built at Dumbarton, Scotland in 1818?",
+            "ground_truth": "STEAMSHIP"
+        },
+        {
+            "question": "Terry Scott starred as middle-aged, suburban husband, Terry Fletcher, in which television comedy series?",
+            "ground_truth": "'HAPPY EVER AFTER'"
+        },
+        {
+            "question": "What is Python for Google, Yahoo, Youtube and many major online corporations?",
+            "ground_truth": "Programming language"
+        },
+        {
+            "question": "Vivian Ward and Edward Lewis are the central characters in which 1990’s romantic film comedy?",
+            "ground_truth": "Pretty Woman"
+        },
+        {
+            "question": "What personal trophy/keepsake is awarded to every member of an American Football Superbowl winning team?",
+            "ground_truth": "A Ring"
+        },
+        {
+            "question": "What does a silkworm feed on?",
+            "ground_truth": "Mulberries"
+        },
+        {
+            "question": "What breed of dog is a Blenheim?",
+            "ground_truth": "Spaniel"
+        },
+        {
+            "question": "Leapin' lizards! Which comic strip, created by Harold Gray in 1924, is ending its 85 year run next month, which means dog Sandy is going to have to find another little red haired girl to hang around with?",
+            "ground_truth": "Little Orphan Annie"
+        },
+        {
+            "question": "What is the year 2012 in Roman numerals?",
+            "ground_truth": "MMXII"
+        },
+        {
+            "question": "A period of Northern Hemisphere climatic extremes occurring between 1350 and 1850 is loosely referred to as 'The Little (what)'?",
+            "ground_truth": "Ice Age"
+        },
+        {
+            "question": "According to superstition If your shoelace comes undone of its own accord, who is supposed to be thinking about you",
+            "ground_truth": "Your lover"
+        },
+        {
+            "question": "The thoroughfare where fictional Sweeny Todd had his barber shop?",
+            "ground_truth": "Fleet Street"
+        },
+        {
+            "question": "Introduced in 1977, what is the name of the scheme in the UK that enables disabled people, their family and carers to lease a new car, scooter or powered wheelchair using their Government funded allowance ?",
+            "ground_truth": "MOTABILITY"
+        },
+        {
+            "question": "What name is given to the Northumberland dish consisting of layered potato,onion and cheese?",
+            "ground_truth": "PAN Haggerty."
+        },
+        {
+            "question": "In which newspaper does the cartoon dog Fred Basset appear",
+            "ground_truth": "The Daily Mail"
+        },
+        {
+            "question": "Who directed the film version of the musical Hair?",
+            "ground_truth": "Milos Forman"
+        },
+        {
+            "question": "Which British philologist was hanged for the murder of Daniel Clark in 1759?",
+            "ground_truth": "EUGENE ARAM"
+        },
+        {
+            "question": "In which year did British monarch Queen Victoria celebrate her Diamond Jubilee?",
+            "ground_truth": "1897"
+        },
+        {
+            "question": "Which traditional game is played on the fingers with string?",
+            "ground_truth": "Cat's Cradle"
+        },
+        {
+            "question": "Which actress won the 2011 Best Actress Oscar for her role in the film ‘Black Swan’?",
+            "ground_truth": "Natalie Portman"
+        },
+        {
+            "question": "Which US singer married Debbie Reynolds, Elizabeth Taylor and Connie Stevens?",
+            "ground_truth": "Eddie Fisher"
+        },
+        {
+            "question": "How did US president William McKinley die in 1901?",
+            "ground_truth": "Assassination"
+        },
+        {
+            "question": "Which TV programme has been presented by Lisa Riley, Jonathan Wilkes and Harry Hill?",
+            "ground_truth": "You've Been Framed"
+        },
+        {
+            "question": "Where in the human body is the cochlea?",
+            "ground_truth": "IN THE EAR"
+        },
+        {
+            "question": "From which mineral is radium obtained?",
+            "ground_truth": "Pitchblende"
+        },
+        {
+            "question": "What punk hairstyle was named after a Native American tribe?",
+            "ground_truth": "Mohawk"
+        },
+        {
+            "question": "Name the metal pin used in mountaineering as a support or belaying pin?",
+            "ground_truth": "Piton"
+        },
+        {
+            "question": "Who wrote the book on which the musical Whistle Down the Wind was based?",
+            "ground_truth": "Mary Hayley Bell"
+        },
+        {
+            "question": "What is the main food of the giant panda",
+            "ground_truth": "Bamboo shoots"
+        },
+        {
+            "question": "In the Royal Navy what is the equivalent rank to a Field Marshal in the Army?",
+            "ground_truth": "Admiral of the Fleet"
+        },
+        {
+            "question": "What lifted the capsule that Felix Baumgartner rode some 24 miles into the stratosphere before his historic jump this week?",
+            "ground_truth": "Helium Balloon"
+        },
+        {
+            "question": "Who is currently the Speaker of the House of Commons?",
+            "ground_truth": "MICHAEL MARTIN"
+        },
+        {
+            "question": "Which word can go after Door, Side and Dub to make three other words?",
+            "ground_truth": "Step"
+        },
+        {
+            "question": "Which is the largest lake in the World, by area?",
+            "ground_truth": "THE CASPIAN SEA"
+        },
+        {
+            "question": "What part of the body is also the name of a punctuation mark?",
+            "ground_truth": "Colon"
+        },
+        {
+            "question": "What is the name for the inherent property of matter to retain its state of rest or uniform motion in a straight line unless acted upon by external forces?",
+            "ground_truth": "Inertia"
+        },
+        {
+            "question": "What is Jordan's only seaport?",
+            "ground_truth": "Aqaba"
+        },
+        {
+            "question": "What does a carminative drug relieve?",
+            "ground_truth": "Flatulence"
+        },
+        {
+            "question": "Which author created a fictional world that included Little Delving, Hardbottle and The Marrish?",
+            "ground_truth": "J. R. R. Tolkien"
+        },
+        {
+            "question": "\"Which evolutionary biologist wrote \"\"The Ancestor's Tale\"\" in 2004?\"",
+            "ground_truth": "(Richard) DAWKINS"
+        },
+        {
+            "question": "The West Bank is one Palestinian territory. What is the other one?",
+            "ground_truth": "The Gaza Strip"
+        },
+        {
+            "question": "The first European scientific observation of a transit of Venus (when Venus passes between the Sun and Earth, and can be seen as a small black disk moving across the face of the Sun) was made by Jeremiah Horrocks and William Crabtree in England in what year?",
+            "ground_truth": "1639"
+        },
+        {
+            "question": "In which month in 1997 was The Notorious B.I.G. gunned down?",
+            "ground_truth": "March"
+        },
+        {
+            "question": "What article of clothing is famously worn by Dracula and Superman?",
+            "ground_truth": "Cape"
+        },
+        {
+            "question": "What is the name of the police officer whose beat includes the alley where Top Cat and his gang live?",
+            "ground_truth": "Officer Dibble"
+        },
+        {
+            "question": "Which tennis player played in three consecutive men's singles finals at Wimbledon between 1963 and 1965, losing on all three occasions?",
+            "ground_truth": "FRED STOLLE"
+        },
+        {
+            "question": "What rocker died in a plane crash along with the Big Bopper and Ritchie Valens?",
+            "ground_truth": "Buddy Holly"
+        },
+        {
+            "question": "Whose poems returned to the bestsellers list after Four Weddings and a Funeral?",
+            "ground_truth": "W. H. Auden"
+        },
+        {
+            "question": "Who won the 1997 British Open?",
+            "ground_truth": "Justin Leonard"
+        },
+        {
+            "question": "Who was the mother of the Roman emperor, Nero, who was murdered on nis orders in A.D. 59?",
+            "ground_truth": "AGRIPPINA"
+        },
+        {
+            "question": "The name of the Doukhobor religious sect means what?",
+            "ground_truth": "Spirit wrestler"
+        },
+        {
+            "question": "What is the name of the structures which allow leaves to breathe?",
+            "ground_truth": "Stomata"
+        },
+        {
+            "question": "Permian, Eocene, Silurian, and Pleistocine are?",
+            "ground_truth": "Geological periods"
+        },
+        {
+            "question": "In the 1971 David Hockney painting 'Mr and Mrs Clarke and Percy', who or what is Percy?",
+            "ground_truth": "A (white) Cat"
+        },
+        {
+            "question": "\"Who played the part of the tragic Jennifer Cavalleri in the 1970 film, \"\"Love Story\"\"?\"",
+            "ground_truth": "ALI McGRAW"
+        },
+        {
+            "question": "Who directed the movie Trading Places?",
+            "ground_truth": "John Landis"
+        },
+        {
+            "question": "What Islamic religious title was given to General Gordon’s nemesis?",
+            "ground_truth": "MAHDI"
+        },
+        {
+            "question": "What units are used for measuring distances in the universe?",
+            "ground_truth": "Light years"
+        },
+        {
+            "question": "Asti Spumante is a white bubbly wine from Asti in Northern Italy. What is the name of the red wine from the same area?",
+            "ground_truth": "BARBERA"
+        },
+        {
+            "question": "Which American General led the 'Confederate' armies in their early run of successes during the Civil War?",
+            "ground_truth": "'STONEWALL' JACKSON."
+        },
+        {
+            "question": "Who provides the voice for Sideshow Bob in The Simpson?",
+            "ground_truth": "KELSEY GRAMMAR"
+        },
+        {
+            "question": "Which cocktail was devised by the barman Ngiam Tong Boon?",
+            "ground_truth": "Singapore Sling"
+        },
+        {
+            "question": "Who launched the 'Today' newspaper in 1986?",
+            "ground_truth": "EDDY SHAH"
+        },
+        {
+            "question": "Philip Seymour Hoffman was nominated for the 2008 Academy Award for Best Supporting Actor for his role as 'Father Brendan Flynn' in which film?",
+            "ground_truth": "'DOUBT'"
+        },
+        {
+            "question": "What is the address of the White House in Washington DC?",
+            "ground_truth": "1600 Pennsylvania Ave"
+        },
+        {
+            "question": "Originally titled Your Radio Playhouse, what long running PBS radio series is hosted by Ira Glass?",
+            "ground_truth": "This American Life"
+        },
+        {
+            "question": "Where do you find the Bridal Veil, American, and Horseshoe Falls?",
+            "ground_truth": "Niagara Falls"
+        },
+        {
+            "question": "Who was the mother of King Richard III of England?",
+            "ground_truth": "Cecily Neville, Duchess of York"
+        },
+        {
+            "question": "In the television programme 'A Year In Provence', which actress played the part of Peter Mayle's wife?",
+            "ground_truth": "LINDSAY DUNCAN"
+        },
+        {
+            "question": "Which ground was the venue for the first ever cricket Test Match between England and Australia in 1877 ?",
+            "ground_truth": "MELBOURNE CRICKET GROUND"
+        },
+        {
+            "question": "In Morse code what letter is represented by one dash?",
+            "ground_truth": "T"
+        },
+        {
+            "question": "Actress Meg Ryan married which actor on 14th February 1991?",
+            "ground_truth": "Dennis Quaid"
+        },
+        {
+            "question": "\"In the song \"\"My Generation\"\" by the Who, what words follow the line \"\"People try to put us down\"\"?\"",
+            "ground_truth": "Just because we get around"
+        },
+        {
+            "question": "What is the next number in the series 1, 4, 9, 16, 25?",
+            "ground_truth": "2 hours"
+        },
+        {
+            "question": "What type of highly directional microphone, commonly used on television and film sets, in stadiums, and for field recording of wildlife, was invented by Fritz Sennheiser in the 1950s?",
+            "ground_truth": "Shotgun"
+        },
+        {
+            "question": "Which weightlifting lift was discontinued at the 1976 Summer Olympics in Montreal due to difficulties in judging proper form?",
+            "ground_truth": "Clean and press"
+        },
+        {
+            "question": "What relation were Nat King Cole and Natalie Cole to each other?",
+            "ground_truth": "Father and daughter"
+        },
+        {
+            "question": "\"What were originally 8\"\" then 5¼\"\" and then 3½\"\", there was also a 2\"\" version available at some time?\"",
+            "ground_truth": "(Computer) Floppy disks"
+        },
+        {
+            "question": "Which famous person died on the same day as Princess Diana?",
+            "ground_truth": "Mother Theresa"
+        },
+        {
+            "question": "Who presented the TV show 'The Human Body'?",
+            "ground_truth": "ROBERT WINSTON"
+        },
+        {
+            "question": "The average person grows how many inches of hair each year? 6, 10 or 15?",
+            "ground_truth": "6 inches"
+        },
+        {
+            "question": "Which three elements make up carbohydrates?",
+            "ground_truth": "Carbon, Hydrogen and Oxygen"
+        },
+        {
+            "question": "\"Now only used in the Isle of Man, a \"\"deemster\"\" is an old name for what?\"",
+            "ground_truth": "A JUDGE"
+        },
+        {
+            "question": "French actress Catherine Deneuve was the second wife of which photographer?",
+            "ground_truth": "DAVID BAILEY"
+        },
+        {
+            "question": "St James's Palace is in what street in London?",
+            "ground_truth": "Pall Mall"
+        },
+        {
+            "question": "Which former Labour MP and government minister contested the election for Mayor of London with Ken Livingstone?",
+            "ground_truth": "Frank Dobson"
+        },
+        {
+            "question": "According to the nursery rhyme, what did Old Mother Hubbard go to the cupboard to fetch?",
+            "ground_truth": "A bone"
+        },
+        {
+            "question": "How long is an Olympic sized swimming pool?",
+            "ground_truth": "50 metres"
+        },
+        {
+            "question": "“Harlequin” is the first book in a series about a quest for which item?",
+            "ground_truth": "Holy Grail"
+        },
+        {
+            "question": "What is the name of the apple-based liqueur from Normandy?",
+            "ground_truth": "Calvados"
+        },
+        {
+            "question": "Although they are best known for their only number one hit, 'Mr. Raffles' and 'Here Comes The Sun' were other chart singles for which '70's group?",
+            "ground_truth": "STEVE HARLEY & COCKNEY REBEL"
+        },
+        {
+            "question": "Which gas forms 80% of Earth's atmosphere?",
+            "ground_truth": "Nitrogen"
+        },
+        {
+            "question": "Which National Trust property is located adjacent to Liverpool John Lennon Airport?",
+            "ground_truth": "Speke Hall"
+        },
+        {
+            "question": "What is the name of Catherine Zeta Jones character in Chicago",
+            "ground_truth": "Velma Kelly"
+        },
+        {
+            "question": "Among mammals, what species has the highest total biomass. (The sum of the weight of the entire population of the species)",
+            "ground_truth": "Cattle"
+        },
+        {
+            "question": "Which cyclist won Gt. Britain's first gold medal at the 2008 Beijing Olympics?",
+            "ground_truth": "NICOLE COOKE"
+        },
+        {
+            "question": "Who has been Archbishop of York since 2005?",
+            "ground_truth": "John Sentamu"
+        },
+        {
+            "question": "What is the name for the playing area in American football?",
+            "ground_truth": "GRIDIRON"
+        },
+        {
+            "question": "Johnny 5 was the central character in which film?",
+            "ground_truth": "Short Circuit"
+        },
+        {
+            "question": "\"Joe Calzaghe, known as \"\"The Pride of Wales\"\", was a boxing world champion in which category?\"",
+            "ground_truth": "Super middleweight"
+        },
+        {
+            "question": "What are Peach, Xena, and Mononoke?",
+            "ground_truth": "Princesses"
+        },
+        {
+            "question": "Who sang the 1964 hit single ‘Chapel of Love’?",
+            "ground_truth": "The Dixie Cups"
+        },
+        {
+            "question": "\"Which verb, meaning \"\"to shun\"\" was originally the name of a 19th century Irish land agent\"",
+            "ground_truth": "Boycott"
+        },
+        {
+            "question": "Myoglobin is the primary oxygen-carrying pigment of which type of body tissue in humans?",
+            "ground_truth": "Muscle tissue"
+        },
+        {
+            "question": "Which film featured the voices of Hugh Grant in his animated feature film debut, Martin Freeman, Imelda Staunton, and David Tennant?",
+            "ground_truth": "The Pirates! Band of Misfits"
+        },
+        {
+            "question": "The medical condition priapism is a persistent and usually painful what?",
+            "ground_truth": "Erection"
+        },
+        {
+            "question": "The Roman settlement of Arausio in SE France later became what significantly named town and subsequent principality/emblem in Dutch, English, southern African and Irish history?",
+            "ground_truth": "Orange"
+        },
+        {
+            "question": "Pintel and Ragetti are a recurring comedy pair in a 2000s adventure film franchise set on high seas. What possession of Ragetti that is repeatedly hit by a fork is he usually seen to be searching for?",
+            "ground_truth": "Wooden eye"
+        },
+        {
+            "question": "In the Harry Potter books, what type of creature is Aragog?",
+            "ground_truth": "(Giant) Spider"
+        },
+        {
+            "question": "Which newspaper was originally known as The Sunday Pictorial ?",
+            "ground_truth": "SUNDAY MIRROR"
+        },
+        {
+            "question": "Murray Gell-Mann developed a theory in 1964 that the smallest particle in the universe was called what?",
+            "ground_truth": "QUARK"
+        },
+        {
+            "question": "The traditional legal term 'tort' is commonly and technically a?",
+            "ground_truth": "Civil wrong"
+        },
+        {
+            "question": "What was on the banned 'B' side of Jasper Carrot's 1975 hit record Funky Moped?",
+            "ground_truth": "MAGIC ROUNDABOUT"
+        },
+        {
+            "question": "\"What purple berry from South America has been promoted as a \"\"superfood\"\"?\"",
+            "ground_truth": "Açaí berry"
+        },
+        {
+            "question": "Which former party leader is MP for North East Fife?",
+            "ground_truth": "Menzies Campbell"
+        },
+        {
+            "question": "Who wrote the ballet 'The Three Cornered Hat' first performed in London in 1919?",
+            "ground_truth": "Manuel de Falla"
+        },
+        {
+            "question": "Which four letter word beginning with I is the person who leads prayers in a Mosque?",
+            "ground_truth": "Imam"
+        },
+        {
+            "question": "\"If someone stands with their hands resting on their hips, they are said to be \"\"arms \"\" what?\"",
+            "ground_truth": "Akimbo"
+        },
+        {
+            "question": "Which river runs through York?",
+            "ground_truth": "OUSE"
+        },
+        {
+            "question": "The rights to which book, begun in 1768 by William Smellie and completed in 1771 and continually revised, were bought by Sears, Roebuck of Chicago, Illinois, USA in 1920?",
+            "ground_truth": "Encyclopaedia Brittanica"
+        },
+        {
+            "question": "Over half of all bird species are passerine, what does this mean that they can do",
+            "ground_truth": "PERCH"
+        },
+        {
+            "question": "In children's TV by what name is Sir Topham Hatt better known",
+            "ground_truth": "The Fat Controller"
+        },
+        {
+            "question": "Literally meaning 'seven boards of skill', which Chinese puzzle game's objective is to create a shape using seven non-overlapping flat pieces?",
+            "ground_truth": "Tangram"
+        },
+        {
+            "question": "The cricket pavilion at the Queen's Park Oval has been named after which player, the island's most famous cricketer?",
+            "ground_truth": "Brian Lara"
+        },
+        {
+            "question": "For what does the 'w' stand in 'PwC', one of the 'Big Four' accountancy firms in the world?",
+            "ground_truth": "WATERHOUSE"
+        },
+        {
+            "question": "In betting, what odds are known as a ‘Carpet’?",
+            "ground_truth": "3 to 1"
+        },
+        {
+            "question": "What is the name of the high jump competition in show jumping?",
+            "ground_truth": "PUISSANCE"
+        },
+        {
+            "question": "The name of what versatile product was coined by US soldiers as they couldn't pronounce its original name, 'Offiziersmesser'?",
+            "ground_truth": "Swiss Army Knife"
+        },
+        {
+            "question": "Made from red clay, what is the name of the talking horse companion of Gumby?",
+            "ground_truth": "Pokey"
+        },
+        {
+            "question": "Which Scottish loch is closely associated with kippers?",
+            "ground_truth": "Loch FYNE"
+        },
+        {
+            "question": "In the Harry Potter series of films and books who has a cat called Crookshanks?",
+            "ground_truth": "Hermione Granger"
+        },
+        {
+            "question": "What Latin-languages term informally refers to a chaplain in the armed services?",
+            "ground_truth": "Padre"
+        },
+        {
+            "question": "What was the profession of President Jean Bertrand Aristide of Haiti?",
+            "ground_truth": "Priest"
+        },
+        {
+            "question": "What exotic city was featured in National Geographic magazine's first photo story in 1905?",
+            "ground_truth": "Lhasa, Tibet"
+        },
+        {
+            "question": "Who wrote the poem 'The Charge of the Light Brigade'?",
+            "ground_truth": "(Alfred Lord) Tennyson"
+        },
+        {
+            "question": "What is the smallest planet in the solar system?",
+            "ground_truth": "Pluto"
+        },
+        {
+            "question": "\"Which artist, born in Leeuwarden in 1898, is famous for his optical illusions such as \"\"Ascending And Descending\"\", \"\"Convex and Concave\"\", and \"\"Metamorphosis I\"\"?\"",
+            "ground_truth": "M C Escher"
+        },
+        {
+            "question": "Which magician was the first TV partner of Basil Brush ?",
+            "ground_truth": "DAVID NIXON"
+        },
+        {
+            "question": "What is the name of the strait separating Norway and Denmark?",
+            "ground_truth": "SKAGERRAK"
+        },
+        {
+            "question": "With a height of 25 kilometres and a volume 100 times greater than its rival on Earth, what is the solar system's tallest known volcano?",
+            "ground_truth": "OLYMPUS MONS"
+        },
+        {
+            "question": "Who \"stuck a feather in his hat and called it Macaroni\"?",
+            "ground_truth": "YANKEE Doodle"
+        },
+        {
+            "question": "Polydactylism is distinguished by extra what?",
+            "ground_truth": "Fingers or Toes"
+        },
+        {
+            "question": "In what year was the Big Mac introduced into McDonalds?",
+            "ground_truth": "1968"
+        },
+        {
+            "question": "What is the nationality of Andrew Kelly and Richard Collett, who won the pairs championships, and Genevieve Baildon, who was women's singles champion, at the Bowls World Championships in Hong Kong in November 2009?",
+            "ground_truth": "New Zealanders"
+        },
+        {
+            "question": "\"What song starts \"\"The warden threw a party in the county jail\"\"?\"",
+            "ground_truth": "Jailhouse Rock"
+        },
+        {
+            "question": "The full title of which play by George Bernard Shaw is completed by 'A Romance In Five Acts'?",
+            "ground_truth": "'PYGMALION'"
+        },
+        {
+            "question": "In the 'Harry Potter' books, 'Hogwarts school' has four houses, 'Gryffindor', 'Slytherin' and 'Ravenclaw' are three, what is the fourth?",
+            "ground_truth": "'HUFFLEPUFF'"
+        },
+        {
+            "question": "CPE Bach was the son of JS Bach. What was the E in his name?",
+            "ground_truth": "Emanuel"
+        },
+        {
+            "question": "Roger Fry, Vanessa Bell, and Duncan Grant were part of which English art movement in the 1920's and 30's?",
+            "ground_truth": "BLOOMSBURY GROUP"
+        },
+        {
+            "question": "What is the more common name of the incendiary weapon formulated from naphthenic and palmitic acids?",
+            "ground_truth": "Napalm"
+        },
+        {
+            "question": "Who is the architect of the new Turner Margate Gallery?",
+            "ground_truth": "DAVID CHIPPERFIELD"
+        },
+        {
+            "question": "In dentistry, what name is given to a gap between the two front teeth?",
+            "ground_truth": "DIASTEMA"
+        },
+        {
+            "question": "What is the nameof the invention of John Kay which aided the early textile revolution during the 18th century?",
+            "ground_truth": "THE FLYING SHUTTLE"
+        },
+        {
+            "question": "What are the grades of proficiency in judo called?",
+            "ground_truth": "Dans"
+        },
+        {
+            "question": "What is the defining feature of a neutron star?",
+            "ground_truth": "Great density"
+        },
+        {
+            "question": "On 21 May 2004, Pemba Dorjie set a new record for climbing to the top of Mt Everest from Basecamp in the fastest time. What was the new record?",
+            "ground_truth": "8 hours and 10 minutes"
+        },
+        {
+            "question": "What sound-playing device was invented by the same person?",
+            "ground_truth": "Phonograph"
+        },
+        {
+            "question": "According to the Bible, who was told by God to build an ark to escape the Great Flood?",
+            "ground_truth": "Noah"
+        },
+        {
+            "question": "What product did Phil Robertson get rich by selling?",
+            "ground_truth": "Duck Calls"
+        },
+        {
+            "question": "Scrying commonly entails the use of a?",
+            "ground_truth": "Crystal ball"
+        },
+        {
+            "question": "Castor (or castoreum) is an oily substance secreted by which animal, and historically used in medicine and perfume?",
+            "ground_truth": "Beaver"
+        },
+        {
+            "question": "In the Tour de France who wears the polka dot jersey?",
+            "ground_truth": "The king of the mountain"
+        },
+        {
+            "question": "In which South African country was Australian rugby player George Gregan born?",
+            "ground_truth": "Zambia"
+        },
+        {
+            "question": "What can be an official stamp of quality on a precious metal, a greeting card company, and a cable TV channel?",
+            "ground_truth": "Hallmark"
+        },
+        {
+            "question": "In which Classic novel does the character the Maggie Tulliver appear?",
+            "ground_truth": "THE MILL ON THE FLOSS"
+        },
+        {
+            "question": "Which group had their only UK number one with 'I Owe You Nothing'?",
+            "ground_truth": "BROS"
+        },
+        {
+            "question": "Which Scottish region shares its name with a musical instrument",
+            "ground_truth": "Fife"
+        },
+        {
+            "question": "\"What \"\"be\"\" word refers to men's clothing that is custom-made by a tailor?\"",
+            "ground_truth": "Bespoke"
+        },
+        {
+            "question": "What name is given to the brittle kind of iron used for making engine blocks and manhole covers?",
+            "ground_truth": "Cast Iron"
+        },
+        {
+            "question": "Which of the territories of Canada has the city of Yellowknife as its capital ?",
+            "ground_truth": "THE NORTHWEST TERRITORIES"
+        },
+        {
+            "question": "Who's missing: Miss Scarlett, Mrs. White, Mr. Green, Mrs. Peacock, Professor Plum?",
+            "ground_truth": "Colonel Mustard"
+        },
+        {
+            "question": "What kind of room are you about to enter if its door has the chemical symbol for tungsten carbide written on it?",
+            "ground_truth": "Toilet"
+        },
+        {
+            "question": "Which ex President of the National Union Of Mineworkers was revealed as being a police informer after his death in 1993 ?",
+            "ground_truth": "JOE GORMLEY"
+        },
+        {
+            "question": "What liqueur goes into making a 'snowball' cocktail?",
+            "ground_truth": "Advocaat"
+        },
+        {
+            "question": "Which company manufactured the Ultra golf ball",
+            "ground_truth": "Wilsons"
+        },
+        {
+            "question": "What is a female lemur called?",
+            "ground_truth": "Princess"
+        },
+        {
+            "question": "Which punishment involved the beating of the soles of the feet with a baton or stick?",
+            "ground_truth": "Bastinado"
+        },
+        {
+            "question": "Which saint established a monastery and Christian community on the island of Iona in the year 563?",
+            "ground_truth": "ST COLUMBA"
+        },
+        {
+            "question": "What was the popular name fro the American blues singer, composer and guitarist, McKinley Morganfield?",
+            "ground_truth": "'MUDDY WATERS'"
+        },
+        {
+            "question": "What was the name of Boycie's wife in 'Only Fools and Horses?",
+            "ground_truth": "MARLENE"
+        },
+        {
+            "question": "What is the name of the heritage railway line that runs fornine miles along the border of East and West Sussex?",
+            "ground_truth": "BLUEBELL LINE"
+        },
+        {
+            "question": "In September 2012, which Nobel prizewinner seriously proposed that Tony Blair and George W Bush should be tried in the International Court of Justice for their role in the Iraq war?",
+            "ground_truth": "Desmond Tutu"
+        },
+        {
+            "question": "What is the chemical formula for calcium chloride?",
+            "ground_truth": "CaCl2"
+        },
+        {
+            "question": "Which ex make of car shares its name with an American Indian chief who led a rebellion against the British between 1763 and 1766?",
+            "ground_truth": "PONTIAC"
+        },
+        {
+            "question": "In sculpture, what is the name for the upper part of a human figure, depicting the head and neck plus all or part of the chest and shoulders",
+            "ground_truth": "Bust"
+        },
+        {
+            "question": "In the Bible who was the husband of Jezebel?",
+            "ground_truth": "Ahab"
+        },
+        {
+            "question": "What relish originating in the Far East, is prepared from sweet fruits, to which acidulous flavours, hot seasoning, peppers and spices are added?",
+            "ground_truth": "Chutney"
+        },
+        {
+            "question": "Ishmael, the first son of Abraham, based on biblical account refers metaphorically also to a?",
+            "ground_truth": "Outcast"
+        },
+        {
+            "question": "Who played the wife of Alf Garnett on TV?",
+            "ground_truth": "DANDY NICHOLS"
+        },
+        {
+            "question": "Which play by Robert Bolt was made into a film starring Paul Scofield in the lead role?",
+            "ground_truth": "A MAN FOR ALL SEASONS"
+        },
+        {
+            "question": "How is the former G-Mex Centre in Manchester now known?",
+            "ground_truth": "MANCHESTER CENTRAL"
+        },
+        {
+            "question": "Of which sport is F.I.A. the ruling body?",
+            "ground_truth": "Motor racing"
+        },
+        {
+            "question": "What type of underwear did Sisqó write a song about?",
+            "ground_truth": "Thongs"
+        },
+        {
+            "question": "\"Which English actor, the majority of whose film work was between 1944 (\"\"Waterloo Road\"\") and 1960 (\"\"Tunes of Glory\"\"), won a Best Supporting Actor Oscar for his role in \"\"Ryan's Daughter\"\" (1970)?\"",
+            "ground_truth": "John Mills"
+        },
+        {
+            "question": "First published in 1858, what anatomy textbook has become synonymous with the subject?",
+            "ground_truth": "Grays Anatomy"
+        },
+        {
+            "question": "Marjorie Courtenay-Latimer discovered which rare fish in 1938?",
+            "ground_truth": "Coelocanth"
+        },
+        {
+            "question": "Who, with 90 wickets in 2007, has been the leading wicket taker in County Cricket for the last five years?",
+            "ground_truth": "MUSHTAQ AHMED"
+        },
+        {
+            "question": "How many dots are on a (standard 1-6) die?",
+            "ground_truth": "Twenty-one"
+        },
+        {
+            "question": "What item of military clothing is a Sam Browne?",
+            "ground_truth": "A BELT"
+        },
+        {
+            "question": "\"The 1902 guitar composition \"\"Gran Vals\"\" by the Spanish composer Francisco Tárrega would have remained obscure but for corporate executive Anssi Vanjoki selecting it for something in 1993. How do millions of people recognize it now?\"",
+            "ground_truth": "Nokia tune"
+        },
+        {
+            "question": "What type of storm could cause the power grid to fail and also damage satellites?",
+            "ground_truth": "Solar Storm"
+        },
+        {
+            "question": "Who led the expedition which, in 1958, was the first to traverse Antarctica (with tractors)?",
+            "ground_truth": "VIVIAN FUCHS"
+        },
+        {
+            "question": "Which English snooker player is nicknamed ‘The Rocket’?",
+            "ground_truth": "Ronnie O’Sullivan"
+        },
+        {
+            "question": "\"Who divorced her husband in 1978 after sixteen years of marriage, accusing him of years of severe spousal abuse and rampant drug addiction in her autobiography \"\"I, Tina\"\" (which was later adapted for the film \"\"What's Love Got to Do with It\"\"), and left semi-retirement in 2008 to embark on her \"\"Tina!: 50th Anniversary Tour\"\"?\"",
+            "ground_truth": "Tina Turner"
+        },
+        {
+            "question": "\"Who wrote the stage play \"\"The Rise and Fall of Little Voice\"\"?\"",
+            "ground_truth": "Jim Cartwright"
+        },
+        {
+            "question": "In space flight history what occurred on 16th June 1963?",
+            "ground_truth": "FIRST WOMAN IN SPACE"
+        },
+        {
+            "question": "At 14.17 miles long, which is the longest circuit ever used for a Formula 1 motor race?",
+            "ground_truth": "Nurburgring"
+        },
+        {
+            "question": "What name is given to the contents of an estate were no Will has been left?",
+            "ground_truth": "INTESTATE"
+        },
+        {
+            "question": "By what nickname is broadcaster Henry Blofeld better known?",
+            "ground_truth": "BLOWERS"
+        },
+        {
+            "question": "Kirk Douglas supplemented his acting earnings in his early years as what type of professional sportsman?",
+            "ground_truth": "Wrestler"
+        },
+        {
+            "question": "What is the collective term for a group of woodpeckers?",
+            "ground_truth": "Descent"
+        },
+        {
+            "question": "What are double bitted, cruiser double bitted and cedar types of",
+            "ground_truth": "Axes"
+        },
+        {
+            "question": "The NFL draft is upon us again. What player did the Seattle Seahawks select with their first round selection in 2009?",
+            "ground_truth": "Aaron Curry"
+        },
+        {
+            "question": "Which geological epoch are we currently in?",
+            "ground_truth": "THE HOLOCENE"
+        },
+        {
+            "question": "What French term describes the large excursion boats on which sightseers travel up and down the Seine in Paris?",
+            "ground_truth": "BATEAUX MOUCHES"
+        },
+        {
+            "question": "\"The song \"\"Sit down, you're rockin' the boat\"\" is from which musical?\"",
+            "ground_truth": "Guys and Dolls"
+        },
+        {
+            "question": "What word is given to the limit of distance at which a sound can be heard?",
+            "ground_truth": "EARSHOT"
+        },
+        {
+            "question": "Which is the only element, from the group known as the Halogens, which is liquid at room temperature?",
+            "ground_truth": "BROMINE"
+        },
+        {
+            "question": "'Arthur Clennam', 'Jeremiah Flintwinch', and 'Edward Sparkler' are all characters in which Dickens' novel?",
+            "ground_truth": "'LITTLE DORRIT'"
+        },
+        {
+            "question": "Who is Hannah Montana's alter ego?",
+            "ground_truth": "Miley Stewart"
+        },
+        {
+            "question": "\"Which item was advertised with the slogan \"\"Gives a Meal Man Appeal\"\"?\"",
+            "ground_truth": "OXO"
+        },
+        {
+            "question": "The Nobel Peace Prize is the only Nobel prize not awarded in Stockholm, Sweden. In what city does the ceremony actually take place?",
+            "ground_truth": "Oslo, Norway"
+        },
+        {
+            "question": "Which sitcom of the 1980s featured characters Spike Dixon, Peggy Ollerenshaw and Ted Bovis?",
+            "ground_truth": "HI-DE-HI!"
+        },
+        {
+            "question": "What is India's national motto, appearing on its emblem and currency?",
+            "ground_truth": "Satyameva Jayate"
+        },
+        {
+            "question": "What was the name of Ethel's dog in Eastenders",
+            "ground_truth": "Willie"
+        },
+        {
+            "question": "Nicholas Briggs is the long-time voice of which TV evil force?",
+            "ground_truth": "The Daleks"
+        },
+        {
+            "question": "What is the nickname of Nike's company logo?",
+            "ground_truth": "\"The \"\"swoosh\"\"\""
+        },
+        {
+            "question": "Which A road crosses the Forth Road Bridge?",
+            "ground_truth": "A90"
+        },
+        {
+            "question": "\"In a 1934 song, Nol Coward warned Mrs Worthington: \"\"Don't put your daughter on the ... \"\" what?\"",
+            "ground_truth": "Stage"
+        },
+        {
+            "question": "Which of The Simpsons can play the saxophone?",
+            "ground_truth": "Lisa"
+        },
+        {
+            "question": "Which singer's backing group were called the Comets?",
+            "ground_truth": "Bill Haley"
+        },
+        {
+            "question": "Who died in Antarctica only 30 miles from the finish of his heroic charity effort?",
+            "ground_truth": "Henry Worsley"
+        },
+        {
+            "question": "Only one sign of the zodiac starts and ends with the same letter, what's the sign?",
+            "ground_truth": "Sagittarius"
+        },
+        {
+            "question": "Sounding more like an FAA employee, what did Jason Lee and Beth Reifsgraf name their son?",
+            "ground_truth": "Pilot Inspektor"
+        },
+        {
+            "question": "Which city near Luxor in Egypt is the site of the huge temple of Amon?",
+            "ground_truth": "Karnak"
+        },
+        {
+            "question": "What instrument is used to measure the intesity of an earthquake?",
+            "ground_truth": "Seismometer"
+        },
+        {
+            "question": "What is the official language of Cambodia ?",
+            "ground_truth": "Khmer"
+        },
+        {
+            "question": "Which fashion designer was chiefly responsible for the popularization of  the Little Black Dress?",
+            "ground_truth": "Coco Chanel"
+        },
+        {
+            "question": "Which castle is the official residence of the Lord Warden of the Cinque Ports?",
+            "ground_truth": "Walmer Castle"
+        },
+        {
+            "question": "Give a year in the life of Gregor Mendel, proposer of the Laws of Heredity.",
+            "ground_truth": "1822-1884"
+        },
+        {
+            "question": "The Tasman Sea flows between which two countries?",
+            "ground_truth": "Australia and New Zealand"
+        },
+        {
+            "question": "What former Los Angeles Lakers cheerleader gained stardom as a singer with her debut album Forever Your Girl, and has subsequently managed to milk her 15 minutes for the last 9+ years?",
+            "ground_truth": "Paula Abdul"
+        },
+        {
+            "question": "What is the name for a group of lions?",
+            "ground_truth": "Pride"
+        },
+        {
+            "question": "What ethnic group does the ETA separatist movement claim to represent?",
+            "ground_truth": "Basques"
+        },
+        {
+            "question": "Mosi-oa-Tunya National Park in Zambia is adjacent with what other park that is also named for a famed attraction?",
+            "ground_truth": "Victoria Falls"
+        },
+        {
+            "question": "Who composed the Manfred overture?",
+            "ground_truth": "ROBERT SCHUMANN"
+        },
+        {
+            "question": "Approximately what percentage of an incandescent light bulb's energy is wasted as heat?",
+            "ground_truth": "90%"
+        },
+        {
+            "question": "Into which body of water does the River Tiber flow?",
+            "ground_truth": "Tyrrhenian Sea"
+        },
+        {
+            "question": "What aid to baking was invented by Henry Jones of Bristol in 1845",
+            "ground_truth": "Self-raising flour"
+        },
+        {
+            "question": "Who was Abraham Lincoln’s vice president when he was assassinated?",
+            "ground_truth": "ANDREW JOHNSON"
+        },
+        {
+            "question": "Who had a 70s No 1 hit with The Night Chicago Died?",
+            "ground_truth": "Paper Lace"
+        },
+        {
+            "question": "In which year did Mohammed’s flight from Mecca to Medina take place?",
+            "ground_truth": "622 AD"
+        },
+        {
+            "question": "Arthur Upmore, Ernie Bragg and Major Leafe are all characters in which ‘Carry On’ film?",
+            "ground_truth": "Carry On Behind"
+        },
+        {
+            "question": "What mobile entertainment takes its name from the ancient Roman rounded arenas?",
+            "ground_truth": "Circus"
+        },
+        {
+            "question": "Which restaurant chain employed waitresses known as 'Nippies' ?",
+            "ground_truth": "J. LYONS & CO"
+        },
+        {
+            "question": "In the fifties television series William Tell who was Tell’s arch enemy",
+            "ground_truth": "Gessler"
+        },
+        {
+            "question": "What are the sculptures at the foot of Nelson's column in Trafalgar Square, London?",
+            "ground_truth": "Lions"
+        },
+        {
+            "question": "What kind of a creature is a scorpion?",
+            "ground_truth": "Arachnid"
+        },
+        {
+            "question": "Who was the adversary of Fu Manchu?",
+            "ground_truth": "NAYLAND SMITH"
+        },
+        {
+            "question": "What is the full name of Dawn French's character in 'The Vicar Of Dibley'?",
+            "ground_truth": "'GERALDINE GRAINGER'"
+        },
+        {
+            "question": "What common three-letter word prefixes the following to make six different words?",
+            "ground_truth": "For"
+        },
+        {
+            "question": "When hallmarking articles made of platinum, what pictorial mark is stamped into the article?",
+            "ground_truth": "AN ORB"
+        },
+        {
+            "question": "Salvador Dali, Max Ernst and Paul Klee are classified in what school of painting?",
+            "ground_truth": "Surrealist"
+        },
+        {
+            "question": "Which was the first British postage stamp to be issued with perforations?",
+            "ground_truth": "PENNY RED"
+        },
+        {
+            "question": "He is an alpine ski racer, who won four overall World Cup titles (1998, 2000, 2001, 2004), two Olympic gold medals (in 1998), and three World Championship titles (1999, 1999 and 2005). Who is he?",
+            "ground_truth": "Hermann Maier"
+        },
+        {
+            "question": "In what movie did John Cusack serenade a girl by holding a boom box above his head?",
+            "ground_truth": "Say Anything"
+        },
+        {
+            "question": "Omar Sharif played the title character in the 1965 film of what 1957 novel by the Russian writer Boris Pasternak?",
+            "ground_truth": "Dr Zhivago"
+        },
+        {
+            "question": "If a shawm were a member of the modern orchestra what section would it be in?",
+            "ground_truth": "Woodwind"
+        },
+        {
+            "question": "\"Whose law states that \"\"anything that can go wrong will go wrong\"\"?\"",
+            "ground_truth": "Murphy's"
+        },
+        {
+            "question": "Which sports event was first held at Worcester, Massachusetts in 1927?",
+            "ground_truth": "Ryder Cup"
+        },
+        {
+            "question": "Which is Scotland’s longest river?",
+            "ground_truth": "Tay"
+        },
+        {
+            "question": "What term is used for a leap striking both heels together?",
+            "ground_truth": "Entrechat"
+        },
+        {
+            "question": "Which boarding school, near Tunbridge Wells, was attended by both Princess Anne, and the actress Rachel Weisz?",
+            "ground_truth": "BENENDEN"
+        },
+        {
+            "question": "Psychoanalyst A A Brill described what as ‘Torches of Freedom’ in the 1920’s, as symbols of equality for women?",
+            "ground_truth": "Cigarettes"
+        },
+        {
+            "question": "In which character-based comedy sketch show did she play the part of Myfanwy?",
+            "ground_truth": "LITTLE BRITAIN"
+        },
+        {
+            "question": "What is the name of the one-eyed mutant and important character in ‘Futurama’?",
+            "ground_truth": "LEELA"
+        },
+        {
+            "question": "Which female swimmer won two Gold and one Silver for GB ?",
+            "ground_truth": "Ellie Simmonds"
+        },
+        {
+            "question": "Name the iconic Bond girl character introduced by Ian Fleming in 1959?",
+            "ground_truth": "Pussy Galore"
+        },
+        {
+            "question": "A 'night glow' features in which sort of festival?",
+            "ground_truth": "Hot air balloons"
+        },
+        {
+            "question": "\"Whose hit records include \"\"Gold Digger\"\" (feat. Jamie Foxx) \"\"Stronger\"\" and \"\"Heartless\"\"?\"",
+            "ground_truth": "Kanye West"
+        },
+        {
+            "question": "What is the word for a corpse used for medical or scientific research?",
+            "ground_truth": "Cadaver"
+        },
+        {
+            "question": "\"Who along with Mel Hausner, Lloyd S. Shapley and Martin Shubik invented a board game called \"\"So Long Sucker\"\" in 1950 which involves game theory strategies?\"",
+            "ground_truth": "John Forbes Nash"
+        },
+        {
+            "question": "Which jockey won the 2007 Derby at Epsom on 'Authorized', at his fifteenth attempt?",
+            "ground_truth": "FRANKIE DETTORI"
+        },
+        {
+            "question": "Who was the Commander of the Luftwaffe who avoided execution by committing suicide by cyanide ingestion the night before he was due to be hanged in October 1946?",
+            "ground_truth": "HERMANN GOERING"
+        },
+        {
+            "question": "In 1968, who was the first African American woman to be elected to the US Congress?",
+            "ground_truth": "Shirley Chisholm"
+        },
+        {
+            "question": "What is the longest snake in the world?",
+            "ground_truth": "The Reticulated Python."
+        },
+        {
+            "question": "What is Herman Munster's twin brother called?",
+            "ground_truth": "Charlie"
+        },
+        {
+            "question": "What was Melanie Brown's nickname when she was in the Spice Girls?",
+            "ground_truth": "Scary"
+        },
+        {
+            "question": "Oscar winning Welsh actor born Reginald Truscott Jones became famous using which stage name",
+            "ground_truth": "Ray Milland"
+        },
+        {
+            "question": "Who was the father of the prophet Muhammad, the founder of Islam?",
+            "ground_truth": "ABDULLAH"
+        },
+        {
+            "question": "Prior to Theo Walcott and Wayne Rooney, who was the youngest player to play football for England?",
+            "ground_truth": "JAMES PRINSEP"
+        },
+        {
+            "question": "Which British former Junior Health Minister claimed that  Northerners were dying of ‘ignorance and chips’?",
+            "ground_truth": "Edwina Curry"
+        },
+        {
+            "question": "Which venue in London hosts the annual Ideal Home Show?",
+            "ground_truth": "EARL'S COURT"
+        },
+        {
+            "question": "Name of one of the most famous warships of WWII named after a German Chancellor - ordered to be sunk by Churchill.",
+            "ground_truth": "Bismarck"
+        },
+        {
+            "question": "In which Irish county is the resort of Bray?",
+            "ground_truth": "County Wicklow"
+        },
+        {
+            "question": "\"From which Bob Dylan song does the following come: \"\"Now you don't talk so loud, now you don't seem so proud about havin' to be scrounging for your next meal\"\"?\"",
+            "ground_truth": "'LIKE A ROLLING STONE'"
+        },
+        {
+            "question": "Which novel by Thomas Hardytakes its title from a line in Shakespeare's 'As You Like It'?",
+            "ground_truth": "'UNDER THE GREENWOOD TREE'"
+        },
+        {
+            "question": "The first income tax in the United States, 3% on incomes over $800, was levied to finance what conflict?",
+            "ground_truth": "Civil War"
+        },
+        {
+            "question": "Which national newspaper has been edited by William Rees-Mogg, Charles Douglas-Home and Peter Stoddard?",
+            "ground_truth": "THE TIMES"
+        },
+        {
+            "question": "What is the boiling point of water on the Reamur scale?",
+            "ground_truth": "80°"
+        },
+        {
+            "question": "What is the next number in this sequence: 4; 16; 256; 65,536?",
+            "ground_truth": "4,294,967,296"
+        },
+        {
+            "question": "What rock band had a notorious clause in their standard concert contract that specified that all brown M&Ms needed to be removed the bowl provided to the rockers?",
+            "ground_truth": "Van Halen"
+        },
+        {
+            "question": "Name the only county in Southern Ireland (Irish Rep.) that begins with the initial letter 'S'?",
+            "ground_truth": "SLIGO"
+        },
+        {
+            "question": "What does the word mendacious mean?",
+            "ground_truth": "Lying (deceitful)"
+        },
+        {
+            "question": "Who captained the US team in the 2012 Ryder Cup?",
+            "ground_truth": "DAVIS LOVE"
+        },
+        {
+            "question": "Published in 1968, what was the four word title of the autobiography of the gay icon Quentin Crisp ?",
+            "ground_truth": "THE NAKED CIVIL SERVANT"
+        },
+        {
+            "question": "Berengaria, wife of Richard I of England, was a princess of which European kingdom, now part of Spain?",
+            "ground_truth": "NAVARRE"
+        },
+        {
+            "question": "In the song by Merle Haggard the singer was proud to be a what from Muskogee?",
+            "ground_truth": "Okie"
+        },
+        {
+            "question": "What letters preceded the name on the Royal Yacht Britannia",
+            "ground_truth": "H.M.Y."
+        },
+        {
+            "question": "Which long nonsense poem is subtitled: An Agony in 8 Fits?",
+            "ground_truth": "The Hunting of the Snark"
+        },
+        {
+            "question": "The main entrance of which London museum is situated on Great Russell Street?",
+            "ground_truth": "British Museum"
+        },
+        {
+            "question": "Who returned to office as Canadian Prime Minister in March 1980?",
+            "ground_truth": "Pierre Trudeau"
+        },
+        {
+            "question": "Which organ that develops in pregnant women provides the unborn baby with nourishment and oxygen?",
+            "ground_truth": "PLACENTA"
+        },
+        {
+            "question": "What was the Japanese name for Manchuria after they occupied it in 1931?",
+            "ground_truth": "Manchukuo"
+        },
+        {
+            "question": "According to the opening narration by one William Shatner, what, in the Star Trek universe, is Space?",
+            "ground_truth": "The Final Frontier"
+        },
+        {
+            "question": "What is the all time bestselling car in the world?",
+            "ground_truth": "Toyota Corolla"
+        },
+        {
+            "question": "In which fictional county would you find DCI Tom Barnaby?",
+            "ground_truth": "Midsomer"
+        },
+        {
+            "question": "In which Grimm's fairy tale does a prince climb up a maiden's hair?",
+            "ground_truth": "RAPUNZEL"
+        },
+        {
+            "question": "\"Who had a number I hit in 1980 with \"\"Together We Are Beautiful\"\"?\"",
+            "ground_truth": "FERN KINNEY"
+        },
+        {
+            "question": "A dagga (duggi or dhama) is the bass element of what Indian percussion instrument?",
+            "ground_truth": "Tabla"
+        },
+        {
+            "question": "Which sea lies between Australia and New Zealand?",
+            "ground_truth": "Tasman"
+        },
+        {
+            "question": "What city was generally the destination of the crusaders?",
+            "ground_truth": "Jerusalem"
+        },
+        {
+            "question": "In the human body, what is produced by the islets of langerhans in the pancreas?",
+            "ground_truth": "INSULIN"
+        },
+        {
+            "question": "In November 1990, British Satellite Broadcasting merged with which television service?",
+            "ground_truth": "Sky (Television plc)"
+        },
+        {
+            "question": "Which US city is served by McCarran Airport?",
+            "ground_truth": "Las Vegas"
+        },
+        {
+            "question": "A cartomaniac is a collector of what?",
+            "ground_truth": "Maps"
+        },
+        {
+            "question": "Which food of the Gods is said to bestow immortality?",
+            "ground_truth": "Ambrosia"
+        },
+        {
+            "question": "In which area of the world is Queen Maud Land situated?",
+            "ground_truth": "ANTARCTICA"
+        },
+        {
+            "question": "What is the name of the British annual pop music awards, that are held in February each year?",
+            "ground_truth": "The Brit Awards"
+        },
+        {
+            "question": "\"Who played chemistry teacher Waiter White in the American TV series \"\"Breaking Bad\"\"?\"",
+            "ground_truth": "Bryan Cranston"
+        },
+        {
+            "question": "Who chairs the Radio 4 comedy panel game The News Quiz ?",
+            "ground_truth": "SANDI TOKSVIG"
+        },
+        {
+            "question": "Which type of pasta has a name meaning 'little tongues'?",
+            "ground_truth": "Linguini"
+        },
+        {
+            "question": "Which science fiction author invented the 3 Laws of Robotics?",
+            "ground_truth": "Isaac Asimov"
+        },
+        {
+            "question": "Who is the Greek god of the woods, fields and flocks, and the name of the satellite of Saturn that is closest to the planet?",
+            "ground_truth": "Pan"
+        },
+        {
+            "question": "What is the name of the dog in the Secret Seven series of books?",
+            "ground_truth": "Scamper"
+        },
+        {
+            "question": "\"Which co-presenter of a programme for car enthusiasts has also presented \"\"Braniac: Science Abuse\"\", \"\"The Gunpowder Plot: Exploding the Legend\"\", \"\"Blast Lab\"\" and \"\"Invisible Worlds\"\"?\"",
+            "ground_truth": "Richard Hammond"
+        },
+        {
+            "question": "In the Bible, what are the five books that make up the Pentateuch?",
+            "ground_truth": "Genesis, Exodus, Leviticus, Numbers and Deuteronomy"
+        },
+        {
+            "question": "With which group did Tony Christie have a top ten hit with in 1999 with the song Walk Like A Panther?",
+            "ground_truth": "All Seeing I"
+        },
+        {
+            "question": "What was the name of the Prime Minister in the T.V. series Yes Prime Minister",
+            "ground_truth": "Jim Hacker"
+        },
+        {
+            "question": "Body language is also generally called, and categorized within, what well-established term?",
+            "ground_truth": "Non-verbal communication"
+        },
+        {
+            "question": "What was the title of the first ever 'Carry On' film?",
+            "ground_truth": "CARRY ON SERGEANT"
+        },
+        {
+            "question": "A stiletto heel gets its name from a type of what?",
+            "ground_truth": "Knife"
+        },
+        {
+            "question": "What are the first names of the two Wild West outlaws who were in the James-Younger gang?",
+            "ground_truth": "Jesse and Frank James"
+        },
+        {
+            "question": "Which playing card is known as ‘The Devil’s Bedpost’?",
+            "ground_truth": "Four of Clubs"
+        },
+        {
+            "question": "Which post was held by Dame Eliza Manningham-Buller from 2002 to 2007?",
+            "ground_truth": "Head of MI5"
+        },
+        {
+            "question": "Who ordered the Boulder Dam to be renamed the Hoover Dam?",
+            "ground_truth": "Harry S. Truman"
+        },
+        {
+            "question": "Willow, Reed, Grasshopper, and Dartford are species of which bird?",
+            "ground_truth": "Warblers"
+        },
+        {
+            "question": "Scott Robinson, Ritchie Neville, J Brown, Abs Breen and Sean Conlon were the founder members of which boy band?",
+            "ground_truth": "5ive"
+        },
+        {
+            "question": "What was the name of the book that was a collection of Aubrey Beardsley's work, published by Leonard Smithers in 1897?",
+            "ground_truth": "A Book of Fifty Drawings"
+        },
+        {
+            "question": "August 10th, 1846, saw the chartering of which major and most popular US museum?",
+            "ground_truth": "Smithsonian Institute"
+        },
+        {
+            "question": "Which playing card is known as ‘The Curse of Mexico’?",
+            "ground_truth": "Two of spades"
+        },
+        {
+            "question": "What is the unofficial national anthem of Australia?",
+            "ground_truth": "Waltzing Matilda"
+        },
+        {
+            "question": "Which is the percussion instrument named from two Greek words meaning wood and sound?",
+            "ground_truth": "Xylophone"
+        },
+        {
+            "question": "In Greek mythology what was Hebe the goddess of",
+            "ground_truth": "Youth"
+        },
+        {
+            "question": "Which term describes a wine with a high alcoholic content?",
+            "ground_truth": "ROBUST"
+        },
+        {
+            "question": "One of the 'Five K's', what name is given to the strapped sword that must be worn by all Sikhs?",
+            "ground_truth": "KIRPAN"
+        },
+        {
+            "question": "What, according to popular saying, is 'the thief of time?",
+            "ground_truth": "Procrastination"
+        },
+        {
+            "question": "Who won Celebrity Big Brother in 2011?",
+            "ground_truth": "Paddy Doherty"
+        },
+        {
+            "question": "In 1459, the Battle of Blore Heath in Staffordshire, England, 2 miles east of Market Drayton in Shropshire, was the first major battle of which campaign?",
+            "ground_truth": "The Wars of the Roses"
+        },
+        {
+            "question": "The 'Inter-tropical Convergence Zone', where the trade winds meet near the equator to produce a band of relatively very still air, which can strand sailing ships, is known more prosaically as what?",
+            "ground_truth": "The Doldrums"
+        },
+        {
+            "question": "In the Star Wars series of films what is described as ‘An energy field created by all living things that surrounds us, penetrates us, and binds the galaxy together’?",
+            "ground_truth": "The ‘Force’"
+        },
+        {
+            "question": "In the human body, what is stored in adipose tissue?",
+            "ground_truth": "Fat"
+        },
+        {
+            "question": "Dennis Waterman, the final member of the original cast of BBC TV show New Tricks left after episode 2 of the current, and final, series to be replaced by which actor playing retired detective Ted Case?",
+            "ground_truth": "Larry Lamb"
+        },
+        {
+            "question": "What is the east coast of Nicaragua, fronting the Caribbean Sea, called?",
+            "ground_truth": "Mosquito Coast"
+        },
+        {
+            "question": "Which type of dolphin is most commonly seen in zoos and aquaria?",
+            "ground_truth": "Bottlenose"
+        },
+        {
+            "question": "A former ‘Bond Girl’, which UK actress is nominated for her leading role in 'Gone Girl'?",
+            "ground_truth": "Rosamund PIKE"
+        },
+        {
+            "question": "For which film did British actor Jim Broadbent win the 'Oscar' as Best Supporting Actor in 2001?",
+            "ground_truth": "'IRIS'"
+        },
+        {
+            "question": "What was the maiden name of Wallis Simpson, the Duchess of Windsor?",
+            "ground_truth": "Warfield"
+        },
+        {
+            "question": "Complete the proverb 'Children are poor men's .......'?",
+            "ground_truth": "Riches"
+        },
+        {
+            "question": "\"Which lake, the largest in Central Europe, is sometimes referred to as the \"\"Hungarian Sea\"\"?\"",
+            "ground_truth": "Balaton"
+        },
+        {
+            "question": "In what Beijing square were democracy activists massacred in 1989?",
+            "ground_truth": "Tiananmen"
+        },
+        {
+            "question": "Middelburg is the capital of which province in the South West of The Netherlands?",
+            "ground_truth": "Zeeland"
+        },
+        {
+            "question": "What is the title of the 1978 sequel to the 1970 film ‘Love Story’, starring Ryan O’Neal’?",
+            "ground_truth": "Oliver’s Story"
+        },
+        {
+            "question": "What feminine Christian name was coined by the author J.M. Barrie",
+            "ground_truth": "Wendy"
+        },
+        {
+            "question": "Situated on the River Wyre, what Lancashire town became the world's first Fairtrade town in 2000?",
+            "ground_truth": "GARSTANG"
+        },
+        {
+            "question": "Also known as winter depression, what is the full form of S.A.D.?",
+            "ground_truth": "SEASONAL AFFECTIVE"
+        },
+        {
+            "question": "Which US author wrote a series of novels about the Women's Murder Club?",
+            "ground_truth": "James Patterson"
+        },
+        {
+            "question": "The artists Ben Nicholson, Barbara Hepworth, Terry Frost, and Patrick Heron are primarily associated with which English seaside resort?",
+            "ground_truth": "St. Ives"
+        },
+        {
+            "question": "The lyric Always sunny in a rich man's world', is from which song?",
+            "ground_truth": "Money, Money, Money"
+        },
+        {
+            "question": "Which American bluegrass-country singer and fiddler has won 26 Grammy Awards, making her the most awarded female artist (and the third most awarded artist overall) in Grammy history since she recorded for the first time at the age of 14?",
+            "ground_truth": "Alison Krauss"
+        },
+        {
+            "question": "In Greek myth who was the leader of the Titans, who overthrew his father Uranus and was then overthrown by his son Zeus?",
+            "ground_truth": "CRONUS"
+        },
+        {
+            "question": "What was the name of the building that was unveiled in 2005 that was designed by Thomas Heatherwick. Now dismantled, it stood 56 metres tall and had 180 hollow tapered steel columns or spikes radiating from a central core ? It was located next to the City of Manchester Stadium.",
+            "ground_truth": "B OF THE BANG"
+        },
+        {
+            "question": "What Paris cabaret was famous for the can-can dance, and was the subject of a 2001 movie starring Nicole Kidman?",
+            "ground_truth": "Moulin Rouge"
+        },
+        {
+            "question": "\"Which town in Essex takes its name from the old English for Here - Wic, meaning \"\"military settlement\"\"?\"",
+            "ground_truth": "HARWICH"
+        },
+        {
+            "question": "On 'Super Saturday' Jessica Ennis and Mo Farah won athletics gold for Team GB, who was the third gold medalist on the day?",
+            "ground_truth": "Greg Rutherford"
+        },
+        {
+            "question": "What television show features the last human in the universe, Lister, a creature descended from the common feline, known as Cat, a computer called Holly, and a holographic projection of a human known as Rimmer?",
+            "ground_truth": "Red Dwarf"
+        },
+        {
+            "question": "Which make of rocket propels research hardware for the European Space Agency?",
+            "ground_truth": "ARIANE"
+        },
+        {
+            "question": "What was the name of Canada's first woman Prime Minister?",
+            "ground_truth": "Kim Campbell"
+        },
+        {
+            "question": "Slang for an eccentric person, what bicycle part converts reciprocal leg-power into circular wheel motion?",
+            "ground_truth": "Crank"
+        },
+        {
+            "question": "Name the trademarked bass-frequency cinematic effect developed by Cerwin-Vega and Universal Studios initially for the 1974 film Earthquake?",
+            "ground_truth": "Sensurround"
+        },
+        {
+            "question": "What was the U.K.'s top selling single in the 50's",
+            "ground_truth": "Rock Around The Clock"
+        },
+        {
+            "question": "\"Woody Guthrie, tired of radio overplaying Irving Berlin's \"\"God Bless America\"\", wrote a song in 1940 now known as what?\"",
+            "ground_truth": "This Land Is Your Land"
+        },
+        {
+            "question": "What is the medical term for the shoulder blade?",
+            "ground_truth": "Scapula"
+        },
+        {
+            "question": "The temple of which of their gods was destroyed by Samson, as his last act of war against the Philistines?",
+            "ground_truth": "DAGON"
+        },
+        {
+            "question": "Who takes part in the annual Umhlanga Reed Dance in Swaziland?",
+            "ground_truth": "Childless, unmarried girls"
+        },
+        {
+            "question": "What is the correct title for the country known as San Marino?",
+            "ground_truth": "The Most Serene Republic of San Marino"
+        },
+        {
+            "question": "What long running PBS staple features a purple, anthropomorphic Tyrannosaurus Rex known for his \"I love you\" song?",
+            "ground_truth": "Barney and Friends"
+        },
+        {
+            "question": "What name is given to the unit of electrical power represented by a current of 1 ampere flowing through a circuit whose potential difference is 1 volt?",
+            "ground_truth": "Watt"
+        },
+        {
+            "question": "Standing at 1,792 feet in height and opened in 2013, the building known as One World Trade Centre is commonly known by what other name ?",
+            "ground_truth": "FREEDOM Tower"
+        },
+        {
+            "question": "\"Who played with the \"\"Runaways\"\" and the \"\"Blackhearts\"\"?\"",
+            "ground_truth": "Joan Jett"
+        },
+        {
+            "question": "In which 1970's police drama did Karl Malden play 'Detective Lieutenant Mike Stone'?",
+            "ground_truth": "'THE STREETS OF SAN FRANCISCO'"
+        },
+        {
+            "question": "Who is the recently appointed Chairman of the BBC?",
+            "ground_truth": "LORD PATTEN"
+        },
+        {
+            "question": "Which is the only single malt whisky distilled on the Isle of Skye?",
+            "ground_truth": "TALISKER"
+        },
+        {
+            "question": "What is the correct name for the collar bone",
+            "ground_truth": "Clavicle"
+        },
+        {
+            "question": "What is the name of Shakespeare's shrew?",
+            "ground_truth": "Katharina"
+        },
+        {
+            "question": "Which superhero lives beneath the sea and can command all of the marine life via telepathic abilities?",
+            "ground_truth": "Aquaman"
+        },
+        {
+            "question": "\"Whose written works include \"\"Strange Interlude\"\" and \"\"Mourning Becomes Electra?\"",
+            "ground_truth": "EUGENE O'NEIL"
+        },
+        {
+            "question": "Which member of England’s 1966 World Cup-winning side was born in Shirebrook?",
+            "ground_truth": "Ray Wilson"
+        },
+        {
+            "question": "\"Which actor has appeared in the most \"\"Carry On\"\" films making a total of 26 appearances?\"",
+            "ground_truth": "Kenneth Williams"
+        },
+        {
+            "question": "What is the most critical thing keeping bananas fresh transport?",
+            "ground_truth": "Temperature not below 13 C 55F"
+        },
+        {
+            "question": "Which Hollywood star starred in the 50s show My Three Sons?",
+            "ground_truth": "Fred MacMurray"
+        },
+        {
+            "question": "What is the most popular breed of dog in the United States?",
+            "ground_truth": "Labrador Retriever"
+        },
+        {
+            "question": "In 2012 which former Liberian president was found guilty of crimes against humanity?",
+            "ground_truth": "Charles Taylor"
+        },
+        {
+            "question": "How old was Tony Blair when he became British prime minister in 1997?",
+            "ground_truth": "Forty-three"
+        },
+        {
+            "question": "Which country declared war on Britain in 1812?",
+            "ground_truth": "U S A"
+        },
+        {
+            "question": "‘Rock Paper Scissors’ is the title of an exhibition which opened in London’s Waddington Custot Galleries in November 2012 in celebration of the 80th birthday of which British artist?",
+            "ground_truth": "Sir Peter Blake"
+        },
+        {
+            "question": "What is the name of the Israeli national airline",
+            "ground_truth": "El Al"
+        },
+        {
+            "question": "What sort of creature was Lonesome George who died on Pinta Island in the Galapagos in 2012?",
+            "ground_truth": "TORTOISE"
+        },
+        {
+            "question": "In the TV series 'Batman', who played the part of 'The Joker'?",
+            "ground_truth": "CAESAR ROMERO"
+        },
+        {
+            "question": "The highest measured waterfall in North America, among the highest 7 in the world, is in California and is known as what?",
+            "ground_truth": "Yosemite Falls"
+        },
+        {
+            "question": "What is the name of the snake killing mongoose in the stories by Rudyard Kipling?",
+            "ground_truth": "Riki Tiki Tavi"
+        },
+        {
+            "question": "If an animal uses thanatosis as self-protection, what does it do?",
+            "ground_truth": "FEIGN DEATH"
+        },
+        {
+            "question": "The three 'Fates' of Greek mythology were 'Lachesis', 'Atropos' and which other?",
+            "ground_truth": "'CLOTHO'"
+        },
+        {
+            "question": "Playing for Wigan Athletic, who is the only Columbian currently registered as a Premier League footballer?",
+            "ground_truth": "HUGO RODALLEGA"
+        },
+        {
+            "question": "What is the name of the town that is host to It's a Wonderful Life?",
+            "ground_truth": "Bedford Falls"
+        },
+        {
+            "question": "Which Scottish novelist is probably best remembered for his 1908 novel The Wind in the Willows?",
+            "ground_truth": "KENNETH GRAHAME"
+        },
+        {
+            "question": "What is sold at Lloyd's of London?",
+            "ground_truth": "Insurance"
+        },
+        {
+            "question": "On what day of creation did God make the Sun, the Moon and the Stars?",
+            "ground_truth": "The Fourth"
+        },
+        {
+            "question": "Eliza Manningham Buller was the former Director General of which organisation?",
+            "ground_truth": "MI5"
+        },
+        {
+            "question": "In June 2011, FBI arrested Boston mob boss James 'Whitey' Bulger near Los Angeles after a 16 year manhunt. He was the inspiration behind the character of Frank Costello in which Oscar-winning film?",
+            "ground_truth": "The Departed"
+        },
+        {
+            "question": "The name of which Russian spacecraft means 'travelling companion' or 'satellite'?",
+            "ground_truth": "Sputnik"
+        },
+        {
+            "question": "Mysophobia is the fear of what?",
+            "ground_truth": "Dirt"
+        },
+        {
+            "question": "Traditionally what number of years anniversary is symbolized by silver?",
+            "ground_truth": "25"
+        },
+        {
+            "question": "What does the Latin phrase ‘lapsus linguae’ mean in English?",
+            "ground_truth": "Slip of the tongue"
+        },
+        {
+            "question": "In the Bible, Benjamin was the youngest son of Jacob – who was the eldest?",
+            "ground_truth": "Reuben"
+        },
+        {
+            "question": "The HQ of UEFA is in which Swiss town or city, on the shores of Lake Geneva?",
+            "ground_truth": "Nyon"
+        },
+        {
+            "question": "According to legend Romulus and Remus, founders of the city of Rome, were raised by a she-wolf and fed by what bird?",
+            "ground_truth": "A WOODPECKER"
+        },
+        {
+            "question": "What would a Cockney want to drink, if he ordered a 'Vera' in a pub?",
+            "ground_truth": "GIN (Vera Lynn)"
+        }
+    ]
+}
