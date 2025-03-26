@@ -4,9 +4,6 @@ import json
 import argparse
 sys.path.append('.')
 sys.path.append(os.getcwd()+'/EasyEdit')
-print(
-'hahah'
-)
 print(sys.path)
 
 from easyeditor import (
@@ -36,7 +33,6 @@ from easyeditor import (
     BaseEditor,
     summary_metrics,
 )
-print('我真服了')
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
@@ -173,4 +169,3 @@ if __name__ == "__main__":
 
     with open(output_file, 'w') as f:
         json.dump(metrics, f, indent=4)
-

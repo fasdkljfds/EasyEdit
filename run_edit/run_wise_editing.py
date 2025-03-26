@@ -3,7 +3,7 @@ import sys
 import json
 import argparse
 
-sys.path.append('..')
+sys.path.append(os.getcwd()+'/EasyEdit')
 from easyeditor import (
     FTHyperParams,
     GraceHyperParams,
@@ -130,4 +130,3 @@ if __name__ == "__main__":
 
     if len(metrics) > 0:
         summary_metrics(metrics)
-
