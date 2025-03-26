@@ -113,12 +113,14 @@ def compute_rewrite_or_rephrase_quality(
         key = 'rephrase'
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
+        print('Using LLM-judge evaluation')
         acc, gen_content = test_prediction_acc_LLM_judge(model, tok, hparams, prompt, target_new, device, locality=False)
         ret = {
             f"{key}_acc": acc,
             f"{key}_gen_content": gen_content
         }
     else:  # traditional evaluation 
+        print('Using traditional evaluation')
         if eval_metric == 'ppl':
             ppl = PPL(model, tok, prompt, target_new, device)
             ret = {
@@ -142,6 +144,7 @@ def compute_rewrite_or_rephrase_quality(
                 f"{key}_F1":f1     
             }        
         else:  # teacher-forcing evaluation
+            print('Using teacher forcing evaluation')
             if 't5' in model_name.lower():
                 acc = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, target_new, device)
             else:

@@ -201,6 +201,7 @@ def test_prediction_acc_LLM_judge(model, tok, hparams, prompt, target, device, l
             LLM_Score = llm_judge(prompt, target, gen_content, hparams.api_key)
             return LLM_Score, gen_content
         else:
+            print('Warning: No API key provided for LLM-as-a-Judge. Using exact match as an alternative.')
             # the user do not provide api key, using exact match as an alternative
             EM_Score = float(exact_match_score(gen_content, target))
             return EM_Score, gen_content
