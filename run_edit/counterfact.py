@@ -36,7 +36,7 @@ from easyeditor import (
     BaseEditor,
     summary_metrics,
 )
-
+print('我真服了')
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
