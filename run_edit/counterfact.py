@@ -48,7 +48,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_edit', default=False, type=bool)
     parser.add_argument('--sequential_edit', default=False, type=bool)
     parser.add_argument('--train_data_path', type=str)
-    parser.add_argument('--evaluation_type', default='LLM-judge', type=str)
+    parser.add_argument('--evaluation_type', type=str)
     parser.add_argument('--api_key', default=None, type=str)
 
     args = parser.parse_args()
