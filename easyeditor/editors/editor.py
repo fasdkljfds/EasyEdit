@@ -292,6 +292,8 @@ class BaseEditor:
         if hasattr(self.hparams, 'batch_size'):  # For Singleton Editing, bs=1
             assert self.hparams.batch_size == 1, 'Single Editing: batch_size should be set to 1'
         all_metrics = []
+
+        print('Evaluate the model before editing...')
         if 'pre_edit' in kwargs and kwargs['pre_edit'] is not None:
             metrics = kwargs['pre_edit']
             all_metrics = metrics
@@ -307,6 +309,7 @@ class BaseEditor:
                 json.dump(all_metrics, open(kwargs['pre_file'], 'w'), indent=4)
 
         def edit_func(request):
+            print('Start editing...')
             if self.alg_name == 'IKE' or self.alg_name == 'ICE':
                 edited_model, weights_copy, icl_examples = self.model, {}, self.apply_algo(
                     self.model,
@@ -333,6 +336,7 @@ class BaseEditor:
             return edited_model, weights_copy, icl_examples
 
         def edit_evaluation(all_metrics, request, edited_model, idx, test_generation, icl_examples, **kwargs):
+            print('Start evaluating...')
             eval_metric= kwargs['eval_metric'] if 'eval_metric' in kwargs.keys() else 'exact match'
             if self.alg_name == 'IKE':
                 all_metrics[idx].update({
