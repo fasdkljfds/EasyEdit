@@ -273,6 +273,7 @@ def test_seq2seq_batch_prediction_acc(model, tok, hparams, prompts, targets, dev
             return answers if type(answers[0]) is list else [answers,]
         return torch.mean((trg_tok['input_ids'][:,:-1] == ans[:,:-1]).float(), dim=-1).detach().cpu().numpy().tolist()
 
+# 这家伙是干token match的
 def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=False, vanilla_generation=False):
     if vanilla_generation:
         if isinstance(prompts, str):
