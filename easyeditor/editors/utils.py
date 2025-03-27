@@ -52,7 +52,6 @@ def summary_metrics(all_metrics):
                     if len(metrics) > 0:
                         mean_metrics[eval][key][lkey] = np.mean(metrics)
 
-    print("Metrics Summary: ", mean_metrics)
 
     def format_dict_to_str(d, indent=0):
         lines = []
@@ -64,10 +63,12 @@ def summary_metrics(all_metrics):
                 lines.append(f"{' ' * indent}{key}: {value:.5f}" if isinstance(value, float) else f"{' ' * indent}{key}: {value}")
         return "\n".join(lines)
 
-    
+
 
     formatted_str = format_dict_to_str(mean_metrics)
     print(formatted_str)
+
+    print("Metrics Summary: ", mean_metrics)
 
 
 def _prepare_requests(prompts: Union[str, List[str]],
