@@ -4,6 +4,7 @@ import argparse
 import os.path
 import sys
 import json
+import datetime
 sys.path.append(os.getcwd() + '/EasyEdit')
 
 from easyeditor import (
@@ -15,7 +16,6 @@ from easyeditor import (
 )
 
 from easyeditor import BaseEditor
-
 
 def preprocess_ZsRE(edit_filepath, loc_filepath, N):
     edit_data = json.load(
@@ -94,6 +94,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', default='./outputs', type=str)
     args = parser.parse_args()
 
+    start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
 
     prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
@@ -121,8 +123,21 @@ if __name__ == '__main__':
     )
 
     print("See results at: ", output_file)
-    
+
     with open(output_file, 'w') as f: json.dump(metrics, f, indent=4)
+
 
     if len(metrics) > 0:
         summary_metrics(metrics)
+
+    end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print('Method: {}'.format(args.editing_method))
+    print('Data: {}'.format(args.data_type))
+    print('Size: {}'.format(args.ds_size))
+    print('Model: {}'.format(hparams.model_name.split("/")[-1]))
+    print('Evaluation: {}'.format(args.evaluation_type))
+    print('from {} to {}'.format(start_time, end_time))
+
+    if len(metrics) > 0:
+        summary_metrics(metrics)
+    

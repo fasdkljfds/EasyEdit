@@ -54,6 +54,22 @@ def summary_metrics(all_metrics):
 
     print("Metrics Summary: ", mean_metrics)
 
+    def format_dict_to_str(d, indent=0):
+        lines = []
+        for key, value in d.items():
+            if isinstance(value, dict):
+                lines.append(f"{' ' * indent}{key}:")
+                lines.append(format_dict_to_str(value, indent + 4))
+            else:
+                lines.append(f"{' ' * indent}{key}: {value:.5f}" if isinstance(value, float) else f"{' ' * indent}{key}: {value}")
+        return "\n".join(lines)
+
+    
+
+    formatted_str = format_dict_to_str(mean_metrics)
+    print(formatted_str)
+
+
 def _prepare_requests(prompts: Union[str, List[str]],
                       target_new: Union[str, List[str]],
                       ground_truth: Union[str, List[str]],
