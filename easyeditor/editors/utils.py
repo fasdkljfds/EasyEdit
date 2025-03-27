@@ -63,7 +63,7 @@ def summary_metrics(all_metrics):
                 lines.append(f"{' ' * indent}{key}: {value:.5f}" if isinstance(value, float) else f"{' ' * indent}{key}: {value}")
         return "\n".join(lines)
 
-
+    
 
     formatted_str = format_dict_to_str(mean_metrics)
     print(formatted_str)
