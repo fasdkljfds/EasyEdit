@@ -44,3 +44,4 @@ if __name__ == "__main__":
         print(f"# {name}")
         print(f"{cmd}\n")
         print("-" * 80)
+    
