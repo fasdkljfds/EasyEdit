@@ -8,6 +8,9 @@ sys.path.append(os.getcwd() + '/EasyEdit')
 
 from easyeditor import (
     WISEHyperParams,
+    FTHyperParams,
+    ROMEHyperParams,
+    MEMITHyperParams,
     summary_metrics
 )
 
@@ -64,7 +67,10 @@ def preprocess_coutnerfact(edit_filepath, loc_filepath, N):
 
 if __name__ == '__main__':
     hyperparams_maps = {
-        'WISE': WISEHyperParams
+        'WISE': WISEHyperParams,
+        'FT': FTHyperParams,
+        'ROME': ROMEHyperParams,
+        'MEMIT': MEMITHyperParams,
     }
 
     data_processor_maps = {
@@ -95,7 +101,7 @@ if __name__ == '__main__':
         loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
         N=args.ds_size
     )
-    
+
     if args.evaluation_type == 'traditional':
         editor = BaseEditor.from_hparams(hparams)
         metrics, edited_model, _ = editor.edit(
