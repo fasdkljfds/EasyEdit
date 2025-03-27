@@ -64,6 +64,15 @@ def preprocess_coutnerfact(edit_filepath, loc_filepath, N):
     }   
     return prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 if __name__ == '__main__':
     hyperparams_maps = {
@@ -81,8 +90,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--hparams_dir', required=True, type=str)
-    parser.add_argument('--sequential_edit', default=True, type=bool)
-
+    parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
+    
     # 编辑用数据集
     parser.add_argument('--data_dir', required=True, type=str)
     parser.add_argument('--ds_size', default=None, type=int)
@@ -151,6 +160,6 @@ if __name__ == '__main__':
     print('Evaluation: {}'.format(args.evaluation_type))
     print('Sequential: {}'.format(args.sequential_edit))
     print('from {} to {}'.format(start_time, end_time))
-    
+
     if len(metrics) > 0:
         summary_metrics(metrics)
