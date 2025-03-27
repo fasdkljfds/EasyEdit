@@ -223,7 +223,7 @@ if __name__ == "__main__":
         keep_original_weight=True,
         test_generation=True,
     )
-
+    
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
         args.output_dir,
@@ -234,6 +234,4 @@ if __name__ == "__main__":
 
     with open(output_file, 'w') as f:
         json.dump(metrics, f, indent=4)
-
-
-
+    

@@ -1,3 +1,5 @@
+# 用来启动wise、ft、rome在counterfact上编辑，llm评估
+
 import os.path
 import sys
 import json
@@ -92,7 +94,7 @@ if __name__ == "__main__":
     loc_data = json.load(open(os.path.join('EasyEdit/data/wise/ZsRE/zsre_mend_train.json'), 'r', encoding='utf-8'))[:K]  # default loc data for WISE
 
     loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-
+        
     if args.datatype == 'counterfact':
         prompts = [edit_data_['prompt'] for edit_data_ in edit_data]
         subject = [edit_data_['subject'] for edit_data_ in edit_data]
@@ -114,7 +116,7 @@ if __name__ == "__main__":
         target_new = [edit_data_['target'] for edit_data_ in edit_data]
         locality_prompts = [edit_data_["locality"][0]["loc"] for edit_data_ in edit_data]
         locality_ans = [edit_data_["locality"][0]["loc_ans"] for edit_data_ in edit_data]
-
+    
     locality_inputs = {
         'neighborhood':{
             'prompt': locality_prompts,

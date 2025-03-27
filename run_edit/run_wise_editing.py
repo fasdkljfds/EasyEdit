@@ -3,8 +3,7 @@ import sys
 import json
 import argparse
 
-sys.path.append(os.getcwd()+'/EasyEdit')
-from easyeditor import (
+from EasyEdit.easyeditor import (
     FTHyperParams,
     GraceHyperParams,
     MEMITHyperParams,
@@ -14,11 +13,13 @@ from easyeditor import (
     BaseEditor,
     summary_metrics,
 )
+sys.path.append(os.getcwd()+'/EasyEdit')
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--hparams_dir', required=True, type=str)
+    parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--data_dir', required=True, type=str)
     parser.add_argument('--data_type', required=True, type=str,
                         choices=['ZsRE', 'temporal', 'hallucination'])
@@ -42,7 +43,6 @@ if __name__ == "__main__":
         editing_hparams = WISEHyperParams
     else:
         raise NotImplementedError
-
     K = args.ds_size
 
     if args.data_type == 'ZsRE':
