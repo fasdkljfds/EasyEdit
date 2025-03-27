@@ -26,7 +26,7 @@ def get_all_acc_keys(dict_list):
     return all_keys
     
 def summary_metrics(all_metrics):
-    print(all_metrics)
+    # print(all_metrics)
 
     if isinstance(all_metrics, dict):
         all_metrics = [all_metrics, ]
@@ -63,7 +63,7 @@ def summary_metrics(all_metrics):
                 lines.append(f"{' ' * indent}{key}: {value:.5f}" if isinstance(value, float) else f"{' ' * indent}{key}: {value}")
         return "\n".join(lines)
 
-    
+
 
     formatted_str = format_dict_to_str(mean_metrics)
     print(formatted_str)
