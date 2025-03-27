@@ -115,7 +115,7 @@ if __name__ == '__main__':
             locality_inputs=locality_inputs,
             sequential_edit=args.sequential_edit,
         )
-
+    
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
         args.output_dir,
@@ -140,4 +140,3 @@ if __name__ == '__main__':
 
     if len(metrics) > 0:
         summary_metrics(metrics)
-    
