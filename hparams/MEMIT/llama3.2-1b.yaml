@@ -1,6 +1,6 @@
 alg_name: "MEMIT"
 model_name: "meta-llama/Llama-3.2-1B-Instruct"
-stats_dir: "./data/stats"
+stats_dir: "/kaggle/working/EasyEdit/data/stats"
 device: 0
 layers: [4, 5, 6, 7, 8]
 clamp_norm_factor: 4
