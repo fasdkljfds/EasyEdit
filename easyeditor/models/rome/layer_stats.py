@@ -163,9 +163,10 @@ def layer_stats(
     stats_dir = Path(stats_dir)
     file_extension = f"{model_name}/{ds_name}_stats/{layer_name}_{precision}_{'-'.join(sorted(to_collect))}{size_suffix}.npz"
     filename = stats_dir / file_extension
-
+    print(filename, filename.exists())
+    
     print(f"Computing Cov locally....")
-
+    
     ds = get_ds() if not filename.exists() else None
 
     if progress is None:
