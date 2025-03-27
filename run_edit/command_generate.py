@@ -32,7 +32,7 @@ def generate_commands_from_launch():
         args = [arg.strip(" ,") for arg in config.get("args", [])]  # 清理多余符号
         args_str = " ".join(args)
 
-        commands[name] = f"python '{program}' {args_str}"
+        commands[name] = f"!python '{program}' {args_str}"
 
     return commands
 

@@ -13,6 +13,7 @@ from EasyEdit.easyeditor import BaseEditor
 
 sys.path.append(os.getcwd() + '/EasyEdit')
 
+
 def preprocess_ZsRE(edit_filepath, loc_filepath, N):
     edit_data = json.load(
         open(edit_filepath, 'r', encoding='utf-8')

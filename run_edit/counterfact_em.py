@@ -115,6 +115,19 @@ if __name__ == '__main__':
             locality_inputs=locality_inputs,
             sequential_edit=args.sequential_edit,
         )
+    elif args.evaluation_type == 'llm':
+        hparams.evaluation_type = 'LLM-judge'
+        hparams.api_key = args.api_key 
+        editor = BaseEditor.from_hparams(hparams)
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            rephrase_prompts=rephrase_prompts,
+            target_new=target_new,
+            loc_prompts=loc_prompts,
+            subject=subject,
+            locality_inputs=locality_inputs,
+            sequential_edist=args.sequential_edit,
+        )
     
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(

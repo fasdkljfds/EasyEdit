@@ -13,6 +13,7 @@ from transformers import T5ForConditionalGeneration
 import time
 import regex
 import string
+from zhipuai import ZhipuAI
 
 
 def normalize_answer(s):
@@ -34,7 +35,7 @@ def normalize_answer(s):
 def exact_match_score(prediction, ground_truth):
     return normalize_answer(prediction) == normalize_answer(ground_truth)
 
-# def llm_judge(question, ground_truth, prediction, api_key):
+# def llm_judge_origin(question, ground_truth, prediction, api_key):
 #     content_template = """
 # Your job is to look at a question, a gold target, and a predicted answer, and then assign a grade of either ["CORRECT", "INCORRECT"].
 
@@ -99,6 +100,43 @@ def exact_match_score(prediction, ground_truth):
 #     time.sleep(1) # avoid high rate of request
 #     return llm_score
 
+
+# 适配chatglm
+def call_zhipu(prompt, api_key):
+    client = ZhipuAI(api_key=api_key)
+    response = client.chat.completions.create(
+        model='glm-4-plus',
+        messages=[
+            {"role": "system", "content": ""},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.0
+    )
+    llm_ans = response.choices[0].message
+
+    return llm_ans
+
+
+# 适配阿里云的deepseek_v3接口
+def call_aliyun(prompt, api_key):
+    client = OpenAI(
+        api_key=api_key,
+        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
+    )
+
+    completion = client.chat.completions.create(
+        model="deepseek-v3",
+        messages=[
+            {"role": "system", "content": ""},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.0
+    )
+    llm_ans = completion.choices[0].message.content
+
+    return llm_ans
+
+
 def llm_judge(question, ground_truth, prediction, api_key):
     content_template = """
 Your job is to look at a question, a gold target, and a predicted answer, and then assign a grade of either ["CORRECT", "INCORRECT"].
@@ -147,22 +185,12 @@ Just return the letters "A" or "B", with no text around it.
         predicted_answer=prediction,
     )
 
-    client = OpenAI(
-        api_key=api_key,
-        base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    )
+    llm_ans = call_zhipu(prompt=content, api_key=api_key).content
 
-    completion = client.chat.completions.create(
-        model="deepseek-v3",
-        messages=[
-            {"role": "system", "content": ""},
-            {"role": "user", "content": content}
-        ],
-        temperature=0.0
-    )
-    llm_ans = completion.choices[0].message.content
     llm_score = 1.0 if llm_ans == "A" else 0.0
     time.sleep(1) # avoid high rate of request
+
+    print('target:', ground_truth, 'prediction:', prediction, 'llm_score', llm_score, 'llm_ans', llm_ans)
     return llm_score
 
 
@@ -205,6 +233,7 @@ def test_prediction_acc_LLM_judge(model, tok, hparams, prompt, target, device, l
             # the user do not provide api key, using exact match as an alternative
             EM_Score = float(exact_match_score(gen_content, target))
             return EM_Score, gen_content
+
 
 def test_batch_prediction_acc(model, tok, hparams, prompts, target, device, locality=False):
     prompt_tok = tok(
