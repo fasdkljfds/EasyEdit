@@ -43,7 +43,7 @@ class WISEHyperParams(HyperParams):
     load_path: str = None
 
     use_loc_prompt: bool = True
-    
+
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
         if '.yaml' not in hparams_name_or_path:
@@ -62,5 +62,5 @@ class WISEHyperParams(HyperParams):
         assert (config and config['alg_name'] == 'WISE'), \
             f'WISEHyperParams can not load from {hparams_name_or_path}. alg_name is {config["alg_name"]}'
 
-        print('use_loc_prompt:', config['use_loc_prompt'])
+        # print('use_loc_prompt:', config['use_loc_prompt'])
         return cls(**config)
