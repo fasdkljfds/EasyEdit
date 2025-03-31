@@ -110,7 +110,6 @@ if __name__ == "__main__":
         }
 
     hparams = editing_hparams.from_hparams(f'{args.hparams_dir}')
-    hparams.use_loc_prompt = args.use_loc_prompt
     
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
