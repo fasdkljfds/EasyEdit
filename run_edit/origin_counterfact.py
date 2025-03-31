@@ -57,6 +57,15 @@ def eval(result_path):
         # Fluency=sum(Fluency_list)/len(Fluency_list)*100
         # print('Fluency:',Fluency)
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -68,6 +77,9 @@ if __name__ == "__main__":
     parser.add_argument('--datatype', default=None,type=str)
     parser.add_argument('--train_data_path', type=str)
     parser.add_argument('--pre_file', default='./seq_pre.json', type=str)
+
+    parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
+
 
     args = parser.parse_args()
 
