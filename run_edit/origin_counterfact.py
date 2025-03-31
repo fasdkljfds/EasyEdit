@@ -80,7 +80,7 @@ if __name__ == "__main__":
     parser.add_argument('--pre_file', default='./seq_pre.json', type=str)
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
-    parser.add_argumene('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
+    parser.add_argument('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
     
 
     args = parser.parse_args()
