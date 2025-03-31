@@ -1,9 +1,10 @@
 import os
 import os.path as path
-import sys
 import json
 import random
-sys.path.append('..')
+import sys
+
+sys.path.append(os.getcwd()+'/EasyEdit')
 from easyeditor import (
     FTHyperParams, 
     IKEHyperParams, 
@@ -12,7 +13,8 @@ from easyeditor import (
     ROMEHyperParams, 
     LoRAHyperParams,
     MENDHyperParams,
-    SERACHparams
+    SERACHparams,
+    WISEHyperParams,
     )
 from easyeditor import BaseEditor
 from easyeditor.models.ike import encode_ike_facts
@@ -24,14 +26,13 @@ import numpy as np
 
 def eval(result_path):
     if path.exists(result_path):
-        
         with open(result_path,'r') as file:
             datas=json.load(file)
-        #data_rome_counterfact['post'].keys()  dict_keys(['rewrite_acc', 'locality', 'portability'])
+
         Edit_Succ_list=[data_rome_counterfact['post']['rewrite_acc'][0] for data_rome_counterfact in datas]
         Edit_Succ=sum(Edit_Succ_list)/len(Edit_Succ_list)*100
         print('Edit_Succ:',Edit_Succ)
-        
+          
         Portability_list=[]
         for data_rome_counterfact in datas:
             case_list=[]
@@ -55,7 +56,6 @@ def eval(result_path):
         Fluency_list=[x['post']['fluency']['ngram_entropy'] for x in datas]
         Fluency=sum(Fluency_list)/len(Fluency_list)*100
         print('Fluency:',Fluency)
-
 
 
 if __name__ == "__main__":
@@ -89,9 +89,10 @@ if __name__ == "__main__":
         editing_hparams = SERACHparams
     elif args.editing_method == 'MEND':
         editing_hparams = MENDHyperParams
+    elif args.editing_method == 'WISE':
+        editing_hparams = WISEHyperParams
     else:
-        raise NotImplementedError
-    
+        raise NotImplementedError    
 
     datas = KnowEditDataset(args.data_dir,size=args.ds_size)
     if args.datatype == 'counterfact' or args.datatype == 'recent' or args.datatype == 'zsre':
@@ -191,48 +192,7 @@ if __name__ == "__main__":
                 'ground_truth': portability_Logical_Generalization_ans           
             }
         }
-    if args.datatype == 'wikibio':
-        prompts=[data['prompt'] for data in datas]
-        subjects=[data['subject'] for data in datas]
-        target_new = [data['target_new'] for data in datas]
-        
-        locality_rs = [data['locality_rs'] for data in datas]
-        locality_f = [data['locality_f'] for data in datas]
-        locality_Relation_Specificity_prompts=[]
-        locality_Relation_Specificity_ans=[]
-        
-        locality_data = [locality_rs]
-        locality_prompts = [locality_Relation_Specificity_prompts]
-        locality_answers = [locality_Relation_Specificity_ans]
-        for data, local_prompts, local_answers in zip(locality_data,locality_prompts,locality_answers):
-            for item in data:
-                if item is None:
-                    local_prompts.append(None)
-                    local_answers.append(None)
-                else:
-                    temp_prompts = []
-                    temp_answers = []
-                    for pr in item:
-                        prompt=pr["prompt"]
-                        an=pr["ground_truth"]
-                        while isinstance(an,list):
-                            an = an[0]
-                        if an.strip() =="":
-                            continue
-                        temp_prompts.append(prompt)
-                        temp_answers.append(an)
-                    local_prompts.append(temp_prompts)
-                    local_answers.append(temp_answers)
-        assert len(prompts) == len(locality_Relation_Specificity_prompts)
-        portability_inputs = None
-        locality_inputs = {}
-        locality_inputs = {
-            'Relation_Specificity':{
-                'prompt': locality_Relation_Specificity_prompts,
-                'ground_truth': locality_Relation_Specificity_ans
-            }
-        }   
-    
+
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
     print(args.pre_file)
@@ -257,12 +217,14 @@ if __name__ == "__main__":
         subject=subjects,
         locality_inputs=locality_inputs,
         portability_inputs=portability_inputs,
-        train_ds=train_ds, # 没甚用处
         keep_original_weight=True, 
-        pre_file=args.pre_file, 
-        pre_edit = pre_edit,
-        test_generation=True,
+        sequential_edit=True
+        # train_ds=train_ds, # 没甚用处
+        # pre_file=args.pre_file, # 没甚用处
+        # pre_edit = pre_edit, # 没甚用处
+        # test_generation=True, # 测ppl的
     )
+
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')

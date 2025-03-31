@@ -44,18 +44,18 @@ def preprocess_coutnerfact(edit_filepath, loc_filepath, N):
     edit_data = json.load(
         open(edit_filepath, 'r', encoding='utf-8')
     )[:N]    
-    loc_data = json.load(
-        open(loc_filepath, 'r', encoding='utf-8')
-    )[:N]
-    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-
+    # loc_data = json.load(
+    #     open(loc_filepath, 'r', encoding='utf-8')
+    # )[:N]
+    loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in edit_data]
+    
     prompts = [edit_data_['prompt'] for edit_data_ in edit_data]
     subject = [edit_data_['subject'] for edit_data_ in edit_data]
     rephrase_prompts = [edit_data_['rephrase_prompt'] for edit_data_ in edit_data]
     target_new = [edit_data_['target_new'] for edit_data_ in edit_data]
     locality_prompts = [edit_data_['locality_prompt'] for edit_data_ in edit_data]
     locality_ans = [edit_data_['locality_ground_truth'] for edit_data_ in edit_data]
-    
+       
     locality_inputs = {
         'neighborhood': {
             'prompt': locality_prompts,
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--hparams_dir', required=True, type=str)
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
-    
+
     # 编辑用数据集
     parser.add_argument('--data_dir', required=True, type=str)
     parser.add_argument('--ds_size', default=None, type=int)
@@ -163,3 +163,4 @@ if __name__ == '__main__':
 
     if len(metrics) > 0:
         summary_metrics(metrics)
+    

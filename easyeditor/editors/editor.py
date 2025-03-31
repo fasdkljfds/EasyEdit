@@ -143,7 +143,7 @@ class BaseEditor:
             self.model.to(f'cuda:{hparams.device}')
 
         self.hparams = hparams
-
+    
     def edit(self,
              prompts: Union[str, List[str]],
              target_new: Union[str, List[str]],
@@ -156,6 +156,15 @@ class BaseEditor:
              verbose=True,
              **kwargs
              ):
+        # prompt: 一般就是question
+        # target_new: 真·目标值
+        # ground_truth: 没看出来干啥用的
+        # target_neg: 这个又是什么
+        # rephrase_prompt: easy in cope
+        # locality_inputs: for locality
+        # portability_inputs: for portability
+        # test_generation: 这玩意是用来测ppl的，最终会一路传到compute_edit_quality函数去。最终会导致出现一个fluency指标。
+
         """
         `prompts`: list or str
             the prompts to edit
@@ -177,6 +186,7 @@ class BaseEditor:
         if ground_truth is not None:
             ground_truth = [ground_truth,] if isinstance(ground_truth, str) else ground_truth
         else:# Default ground truth is <|endoftext|>
+
             ground_truth = ['<|endoftext|>'] * (len(prompts))
 
         if "requests" in kwargs.keys():
@@ -307,7 +317,7 @@ class BaseEditor:
                 all_metrics.append(metrics)
             if 'pre_file' in kwargs and kwargs['pre_file'] is not None:
                 json.dump(all_metrics, open(kwargs['pre_file'], 'w'), indent=4)
-
+        
         def edit_func(request):
             print('Start editing...')
             if self.alg_name == 'IKE' or self.alg_name == 'ICE':
@@ -316,7 +326,7 @@ class BaseEditor:
                     self.tok,
                     [request],
                     self.hparams,
-                    copy=False,
+                    copy=False, 
                     return_orig_weights=True,
                     keep_original_weight=False,
                     train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None
@@ -334,8 +344,9 @@ class BaseEditor:
                 )
                 icl_examples = None
             return edited_model, weights_copy, icl_examples
-
+          
         def edit_evaluation(all_metrics, request, edited_model, idx, test_generation, icl_examples, **kwargs):
+            # 这里all_metrics传入只是为了更新，之前已经有pre_edit的结果信息
             print('Start evaluating...')
             eval_metric= kwargs['eval_metric'] if 'eval_metric' in kwargs.keys() else 'exact match'
             if self.alg_name == 'IKE':
@@ -346,7 +357,6 @@ class BaseEditor:
                 })
                 if "metric_kwargs" in kwargs:
                     all_metrics[idx].update(compute_sent_metric(self.model, edited_model, self.model_name, self.hparams, self.tok,metric_kwargs=kwargs["metric_kwargs"][idx], device=self.hparams.device))
-    
             else:
                 all_metrics[idx].update({
                     'case_id': idx,

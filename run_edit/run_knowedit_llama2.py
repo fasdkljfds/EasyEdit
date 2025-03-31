@@ -3,7 +3,8 @@ import os.path as path
 import sys
 import json
 import random
-sys.path.append('..')
+
+sys.path.append(os.getcwd()+'/EasyEdit')
 from easyeditor import (
     FTHyperParams, 
     IKEHyperParams, 
@@ -12,7 +13,8 @@ from easyeditor import (
     ROMEHyperParams, 
     LoRAHyperParams,
     MENDHyperParams,
-    SERACHparams
+    SERACHparams,
+    WISEHyperParams,
     )
 from easyeditor import BaseEditor
 from easyeditor.models.ike import encode_ike_facts
@@ -89,6 +91,8 @@ if __name__ == "__main__":
         editing_hparams = SERACHparams
     elif args.editing_method == 'MEND':
         editing_hparams = MENDHyperParams
+    elif args.editing_method == 'WISE':
+        editing_hparams = WISEHyperParams
     else:
         raise NotImplementedError
     
@@ -232,7 +236,7 @@ if __name__ == "__main__":
                 'ground_truth': locality_Relation_Specificity_ans
             }
         }   
-    
+
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
     print(args.pre_file)

@@ -17,7 +17,7 @@ class KnowEditDataset(Dataset):
     Specifically selected from the QA validation slice from Mitchell et al.
     Project page: http://nlp.cs.washington.edu/zeroshot/
     """
-
+    
     def __init__(self, data_dir: str, size: typing.Optional[int] = None, config=None, *args, **kwargs):
         data_dir = Path(data_dir)
         zsre_loc = data_dir
@@ -58,7 +58,7 @@ class KnowEditDataset(Dataset):
 
         with open(zsre_loc, "r") as f:
             raw = json.load(f)
-
+        
         data = []
         for i, record in enumerate(raw):
             data.append(
@@ -74,7 +74,7 @@ class KnowEditDataset(Dataset):
                     "locality_f": record["locality"]["Forgetfulness"] if "Forgetfulness" in record["locality"] else None
                 }
             )
-
+    
         if size is not None:
             data = data[:size]
         self._data = data

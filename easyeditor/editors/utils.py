@@ -80,7 +80,6 @@ def _prepare_requests(prompts: Union[str, List[str]],
                       portability_inputs: Optional[Dict] = None,
                       **kwargs
                       ):
-
     requests = [{
         'prompt': prompt,
         'target_new': target_new_,
@@ -159,7 +158,7 @@ def _prepare_requests(prompts: Union[str, List[str]],
                             }
                         }
                     )
-
+    
     if portability_inputs is not None:
         for portability_key in portability_inputs.keys():
             if isinstance(portability_inputs[portability_key]['prompt'], str):
@@ -178,4 +177,6 @@ def _prepare_requests(prompts: Union[str, List[str]],
                             }
                         }
                     )
+
+    print('caonima')
     return requests

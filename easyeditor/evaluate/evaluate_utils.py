@@ -133,7 +133,7 @@ def call_aliyun(prompt, api_key):
         temperature=0.0
     )
     llm_ans = completion.choices[0].message.content
-
+    
     return llm_ans
 
 
