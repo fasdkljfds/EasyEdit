@@ -30,4 +30,4 @@ replay: False # True --> will replay the past editing instances: see https://arx
 model_parallel: False
 use_chat_template: False
 
-use_loc_prompt: False 
+use_loc_prompt: True
