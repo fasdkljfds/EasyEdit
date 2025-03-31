@@ -261,5 +261,5 @@ if __name__ == "__main__":
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')
     json.dump(metrics, open(result_path, 'w'), indent=4)
 
-    print('Using Loc Prompts:',loc_prompts)
+    print('Using Loc Prompts:', args.loc_type)
     eval(result_path)
