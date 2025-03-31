@@ -37,7 +37,6 @@ if __name__ == "__main__":
     parser.add_argument('--output_dir', default='./outputs', type=str)
     parser.add_argument('--ds_size', default=3, type=int)
     parser.add_argument('--sequential_edit', action="store_true")
-    parser.add_argument('--use_loc_prompt', type=str2bool, default=True)
 
     args = parser.parse_args()
 

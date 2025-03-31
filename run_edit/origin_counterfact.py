@@ -16,6 +16,7 @@ from easyeditor import (
     SERACHparams,
     WISEHyperParams,
     )
+
 from easyeditor import BaseEditor
 from easyeditor.models.ike import encode_ike_facts
 from sentence_transformers import SentenceTransformer
@@ -32,7 +33,7 @@ def eval(result_path):
         Edit_Succ_list=[data_rome_counterfact['post']['rewrite_acc'][0] for data_rome_counterfact in datas]
         Edit_Succ=sum(Edit_Succ_list)/len(Edit_Succ_list)*100
         print('Edit_Succ:',Edit_Succ)
-          
+
         Portability_list=[]
         for data_rome_counterfact in datas:
             case_list=[]
@@ -208,7 +209,7 @@ if __name__ == "__main__":
     
     loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
     N=args.ds_size
-
+    
     loc_data = json.load(
         open(loc_filepath, 'r', encoding='utf-8')
     )[:N]

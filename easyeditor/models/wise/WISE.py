@@ -123,7 +123,7 @@ class WISE(torch.nn.Module):
         self.get_adapter_layer().set_parameter_tunable()
         if getattr(eval(f"self.model.{self.layer}"), "editing_total_cnt") % self.config.save_freq == 0:
             self.get_adapter_layer().generate_activation_mask(self.config.mask_ratio)
-
+        
         # --- train Wise value ---
         loss_meter = EarlyStopMeter()
         for i in range(config.n_iter):
