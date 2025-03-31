@@ -208,17 +208,20 @@ if __name__ == "__main__":
         }
     
     
+    N=args.ds_size
     if args.loc_type == 'zsre-train':
         loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+        loc_data = json.load(
+            open(loc_filepath, 'r', encoding='utf-8')
+        )[:N]
+        loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
     elif args.loc_type == 'counterfact-edit':
         loc_filepath='EasyEdit/data/KnowEdit/counterfact-edit.json'
+        loc_data = json.load(
+            open(loc_filepath, 'r', encoding='utf-8')
+        )[:N]
+        loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
 
-    N=args.ds_size
-    
-    loc_data = json.load(
-        open(loc_filepath, 'r', encoding='utf-8')
-    )[:N]
-    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
@@ -257,4 +260,6 @@ if __name__ == "__main__":
         os.makedirs(args.metrics_save_dir)
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')
     json.dump(metrics, open(result_path, 'w'), indent=4)
+
+    print('Using Loc Prompts:',loc_prompts)
     eval(result_path)
