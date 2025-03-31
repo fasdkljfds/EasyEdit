@@ -210,12 +210,14 @@ if __name__ == "__main__":
     
     N=args.ds_size
     if args.loc_type == 'zsre-train':
+        print('Using ZsRE train data')
         loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
         loc_data = json.load(
             open(loc_filepath, 'r', encoding='utf-8')
         )[:N]
         loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
     elif args.loc_type == 'counterfact-edit':
+        print('Using counterfact-edit data')
         loc_filepath='EasyEdit/data/KnowEdit/counterfact-edit.json'
         loc_data = json.load(
             open(loc_filepath, 'r', encoding='utf-8')
