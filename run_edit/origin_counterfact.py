@@ -192,6 +192,15 @@ if __name__ == "__main__":
                 'ground_truth': portability_Logical_Generalization_ans           
             }
         }
+    
+    
+    loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
+    N=args.ds_size
+
+    loc_data = json.load(
+        open(loc_filepath, 'r', encoding='utf-8')
+    )[:N]
+    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
@@ -218,7 +227,8 @@ if __name__ == "__main__":
         locality_inputs=locality_inputs,
         portability_inputs=portability_inputs,
         keep_original_weight=True, 
-        sequential_edit=True
+        sequential_edit=True,
+        loc_prompts=loc_prompts,
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
         # pre_edit = pre_edit, # 没甚用处

@@ -155,7 +155,7 @@ if __name__ == '__main__':
 
     if len(metrics) > 0:
         summary_metrics(metrics)
-
+    
     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print('Method: {}'.format(args.editing_method))
     print('Data: {}'.format(args.data_type))
