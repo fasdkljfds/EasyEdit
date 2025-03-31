@@ -47,8 +47,12 @@ def preprocess_coutnerfact(edit_filepath, loc_filepath, N):
     # loc_data = json.load(
     #     open(loc_filepath, 'r', encoding='utf-8')
     # )[:N]
-    loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in edit_data]
-    
+    loc_data = json.load(
+        open(loc_filepath, 'r', encoding='utf-8')
+    )[:N]
+    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+
+
     prompts = [edit_data_['prompt'] for edit_data_ in edit_data]
     subject = [edit_data_['subject'] for edit_data_ in edit_data]
     rephrase_prompts = [edit_data_['rephrase_prompt'] for edit_data_ in edit_data]
