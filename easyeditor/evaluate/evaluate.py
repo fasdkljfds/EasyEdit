@@ -165,7 +165,10 @@ def compute_locality_quality(
     locality_ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
-    # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
+    print('prompt:',prompt)
+    print('locality_ground_truth:',locality_ground_truth)
+    print('locality_key:',locality_key)
+    s# using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
         loc_tokens = test_prediction_acc_LLM_judge(model, tok, hparams, prompt, locality_ground_truth, device, locality=True)
     else:  # traditional evaluation 
@@ -175,7 +178,7 @@ def compute_locality_quality(
             loc_tokens = test_prediction_acc(model, tok, hparams, prompt, locality_ground_truth, device, locality=True, vanilla_generation=hparams.alg_name=='GRACE')
         if type(loc_tokens) is not list:
             loc_tokens = [loc_tokens,]
-         
+       
     ret = {
         f"{locality_key}_output": loc_tokens
     }
