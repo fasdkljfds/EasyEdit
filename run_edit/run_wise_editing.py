@@ -15,6 +15,15 @@ from easyeditor import (
     BaseEditor,
     summary_metrics,
 )
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
 
@@ -28,6 +37,7 @@ if __name__ == "__main__":
     parser.add_argument('--output_dir', default='./outputs', type=str)
     parser.add_argument('--ds_size', default=3, type=int)
     parser.add_argument('--sequential_edit', action="store_true")
+    parser.add_argument('--use_loc_prompt', type=str2bool, default=True)
 
     args = parser.parse_args()
 
@@ -101,7 +111,8 @@ if __name__ == "__main__":
         }
 
     hparams = editing_hparams.from_hparams(f'{args.hparams_dir}')
-
+    hparams.use_loc_prompt = args.use_loc_prompt
+    
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
         args.output_dir,

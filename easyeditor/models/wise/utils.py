@@ -93,11 +93,11 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
     if hparams.use_loc_prompt:
         full_prompt += loc_prompts  # add for subject activation
-    
+
     num_prompt_toks = [len(i) for i in prompt_ids]
     tokens = tokenizer(full_prompt, return_tensors="pt", padding=True, truncation=True)
     tokens["labels"] = tokens["input_ids"].clone()
-
+    
     # Mask the tokens based on hparams.objective_optimization
     if hparams.objective_optimization == 'only_label':
         for i in range(len(num_prompt_toks)):
