@@ -232,7 +232,7 @@ if __name__ == "__main__":
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
         # pre_edit = pre_edit, # 没甚用处
-        # test_generation=True, # 测ppl的
+        test_generation=True, # 测ppl的
     )
 
     if not os.path.exists(args.metrics_save_dir):
