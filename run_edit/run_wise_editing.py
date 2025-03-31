@@ -3,7 +3,7 @@ import sys
 import json
 import argparse
 
-from EasyEdit.easyeditor import (
+from easyeditor import (
     FTHyperParams,
     GraceHyperParams,
     MEMITHyperParams,
@@ -13,6 +13,7 @@ from EasyEdit.easyeditor import (
     BaseEditor,
     summary_metrics,
 )
+
 sys.path.append(os.getcwd()+'/EasyEdit')
 
 
@@ -49,7 +50,7 @@ if __name__ == "__main__":
         edit_data = json.load(open(f'{args.data_dir}/{args.data_type}/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
         loc_data = json.load(open(f'{args.data_dir}/{args.data_type}/zsre_mend_train.json', 'r', encoding='utf-8'))[:K]
         loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-        
+
         prompts = [edit_data_['src'] for edit_data_ in edit_data]
         subject = [edit_data_['subject'] for edit_data_ in edit_data]
         rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
