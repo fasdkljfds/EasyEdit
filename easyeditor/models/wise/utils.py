@@ -78,7 +78,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     prompts = [item['prompt'] for item in batch]
     labels = [item['target_new'] for item in batch]
     loc_prompts = [item['loc_prompt'] for item in batch]
-
+    
     mask_token = -100  # ignore_index of CrossEntropyLoss
     if hasattr(hparams, 'use_chat_template') and hparams.use_chat_template:
         full_prompt = [tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],

@@ -33,7 +33,7 @@ def apply_wise_to_model(
     editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask)
 
     weights_copy = editor.reset_layer
-
+    
     return editor, weights_copy
 
 
