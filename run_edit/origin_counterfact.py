@@ -239,7 +239,7 @@ if __name__ == "__main__":
         locality_inputs=locality_inputs,
         portability_inputs=portability_inputs,
         keep_original_weight=True, 
-        sequential_edit=True,
+        sequential_edit=args.sequential_edit,
         loc_prompts=loc_prompts,
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
