@@ -209,7 +209,7 @@ if __name__ == "__main__":
     
     loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
     N=args.ds_size
-    
+       
     loc_data = json.load(
         open(loc_filepath, 'r', encoding='utf-8')
     )[:N]
