@@ -43,7 +43,7 @@ class WISEHyperParams(HyperParams):
     load_path: str = None
 
     use_loc_prompt: bool = True
-
+    
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
         if '.yaml' not in hparams_name_or_path:
