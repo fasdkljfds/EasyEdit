@@ -53,9 +53,9 @@ def eval(result_path):
         Overall_locality = np.mean(Locality_list)
         print('Overall_locality:',Overall_locality)
         
-        Fluency_list=[x['post']['fluency']['ngram_entropy'] for x in datas]
-        Fluency=sum(Fluency_list)/len(Fluency_list)*100
-        print('Fluency:',Fluency)
+        # Fluency_list=[x['post']['fluency']['ngram_entropy'] for x in datas]
+        # Fluency=sum(Fluency_list)/len(Fluency_list)*100
+        # print('Fluency:',Fluency)
 
 
 if __name__ == "__main__":
@@ -232,7 +232,7 @@ if __name__ == "__main__":
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
         # pre_edit = pre_edit, # 没甚用处
-        test_generation=True, # 测ppl的
+        # test_generation=True, # 测ppl的
     )
 
     if not os.path.exists(args.metrics_save_dir):
