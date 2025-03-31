@@ -182,6 +182,7 @@ def compute_locality_quality(
     ret = {
         f"{locality_key}_output": loc_tokens
     }
+    print(loc_tokens)
     return ret
 
 def compute_portability_quality(

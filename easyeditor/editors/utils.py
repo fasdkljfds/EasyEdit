@@ -26,8 +26,6 @@ def get_all_acc_keys(dict_list):
     return all_keys
     
 def summary_metrics(all_metrics):
-    # print(all_metrics)
-
     if isinstance(all_metrics, dict):
         all_metrics = [all_metrics, ]
 
@@ -178,5 +176,4 @@ def _prepare_requests(prompts: Union[str, List[str]],
                         }
                     )
 
-    print('caonima')
     return requests
