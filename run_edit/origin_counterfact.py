@@ -80,7 +80,8 @@ if __name__ == "__main__":
     parser.add_argument('--pre_file', default='./seq_pre.json', type=str)
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
-
+    parser.add_argumene('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
+    
 
     args = parser.parse_args()
 
@@ -207,9 +208,13 @@ if __name__ == "__main__":
         }
     
     
-    loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+    if args.loc_type == 'zsre-train':
+        loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+    elif args.loc_type == 'counterfact-edit':
+        loc_filepath='EasyEdit/data/KnowEdit/counterfact-edit.json'
+
     N=args.ds_size
-       
+    
     loc_data = json.load(
         open(loc_filepath, 'r', encoding='utf-8')
     )[:N]
