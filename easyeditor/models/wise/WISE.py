@@ -266,11 +266,13 @@ class WISE(torch.nn.Module):
                         
                         # 只有当两者都有有效值时才计算
                         if target_act.abs().sum() > 0 and nontarget_act.abs().sum() > 0:
-                            print('values valid')
+                            print('values valid', target_act.abs().sum(), nontarget_act.abs().sum())
                             orth_loss = self.semantic_disentanglement.compute_orthogonality_loss(
                                 target_act, nontarget_act
                             )
                             orthogonality_loss += orth_loss
+                        else:
+                            print('values invalid', target_act.abs().sum(), nontarget_act.abs().sum())
                 
                 # 平均所有掩码的正交性损失
                 if len(act_mask) > 0:
@@ -278,7 +280,6 @@ class WISE(torch.nn.Module):
                 
                 # 乘以权重因子
                 orthogonality_loss *= self.config.orthogonality_weight if hasattr(self.config, 'orthogonality_weight') else 0.1
-                print('Orthogonality Loss:', orthogonality_loss)
 
             # 新增正交性损失到总损失
             loss = ft_loss + act_loss.to(ft_loss.device) + orthogonality_loss
