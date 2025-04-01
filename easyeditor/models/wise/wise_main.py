@@ -1,10 +1,11 @@
 from typing import Any, Dict, List, Tuple
 from copy import deepcopy
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from .WISE import WISE, WISEMultimodal
-from .utils import tokenize, multimodal_tokenize, get_context_templates
+from .WISE import WISE
+from .utils import tokenize, get_context_templates
 from .wise_hparams import WISEHyperParams
 WISEload = True
+
 def apply_wise_to_model(
         model: AutoModelForCausalLM,
         tok: AutoTokenizer,
@@ -24,6 +25,15 @@ def apply_wise_to_model(
         print("Start loading the WISE model!")
         editor.load(hparams.load_path)
         WISEload=False
+    
+    # 输出新增参数的使用状态
+    if hasattr(hparams, 'use_causal_intervention') and hparams.use_causal_intervention:
+        print(f"Using Causal Intervention with concept dimension: {hparams.concept_dim}")
+    if hasattr(hparams, 'use_orthogonality') and hparams.use_orthogonality:
+        print(f"Using Orthogonality Constraint with weight: {hparams.orthogonality_weight}")
+    if hasattr(hparams, 'use_adaptive_sparsification') and hparams.use_adaptive_sparsification:
+        print(f"Using Adaptive Sparsification with conflict threshold: {hparams.conflict_threshold}")
+
     print(f"Executing WISE algorithm for the update: ")
     for request in requests:
         print(
@@ -31,7 +41,7 @@ def apply_wise_to_model(
         )
     tokens, act_mask, deact_mask = tokenize(requests, tokenizer=tok, device=device, context_templates=context_templates, hparams=hparams)
     editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask)
-    
+
     weights_copy = editor.reset_layer
 
     return editor, weights_copy

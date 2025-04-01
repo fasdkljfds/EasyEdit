@@ -268,4 +268,5 @@ if __name__ == "__main__":
     json.dump(metrics, open(result_path, 'w'), indent=4)
 
     print('Using Loc Prompts:', args.loc_type)
+    print('Bias:', bias)
     eval(result_path)
