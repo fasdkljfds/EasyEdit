@@ -53,7 +53,7 @@ def eval(result_path):
                 Locality_list.append(np.mean(case_list))
         Overall_locality = np.mean(Locality_list)
         print('Overall_locality:',Overall_locality)
-        
+
         # Fluency_list=[x['post']['fluency']['ngram_entropy'] for x in datas]
         # Fluency=sum(Fluency_list)/len(Fluency_list)*100
         # print('Fluency:',Fluency)
@@ -81,8 +81,9 @@ if __name__ == "__main__":
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
     parser.add_argument('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
+    parser.add_argument('--bias', default=0, type=int) # 选择的loc数据集
     
-
+    
     args = parser.parse_args()
 
     if args.editing_method == 'FT':
@@ -209,20 +210,23 @@ if __name__ == "__main__":
     
     
     N=args.ds_size
+    bias = args.bias
     if args.loc_type == 'zsre-train':
         print('Using ZsRE train data')
         loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
         loc_data = json.load(
             open(loc_filepath, 'r', encoding='utf-8')
-        )[:N]
+        )[bias:bias+N]
         loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
     elif args.loc_type == 'counterfact-edit':
         print('Using counterfact-edit data')
         loc_filepath='EasyEdit/data/KnowEdit/counterfact-edit.json'
         loc_data = json.load(
             open(loc_filepath, 'r', encoding='utf-8')
-        )[:N]
+        )[bias:bias+N]
+
         loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
+    print('bias:',bias)
 
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
