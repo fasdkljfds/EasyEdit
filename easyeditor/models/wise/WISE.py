@@ -214,7 +214,7 @@ class WISE(torch.nn.Module):
     def generate(self, *args, **kwargs):
         setattr(eval(f"self.model.{self.layer}"), "key_id", -1)
         return self.model.generate(*args, **kwargs)
-
+                         
     # 修改edit方法以加入语义因果解耦与正交性约束
     def edit(self, config, tokens, act_mask=None, deact_mask=None):
         # for retrieve ##
@@ -276,7 +276,8 @@ class WISE(torch.nn.Module):
                 
                 # 乘以权重因子
                 orthogonality_loss *= self.config.orthogonality_weight if hasattr(self.config, 'orthogonality_weight') else 0.1
-            
+                print('Orthogonality Loss:', orthogonality_loss)
+    
             # 新增正交性损失到总损失
             loss = ft_loss + act_loss.to(ft_loss.device) + orthogonality_loss
             
