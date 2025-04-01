@@ -264,7 +264,6 @@ class WISE(torch.nn.Module):
                         target_act = self.get_adapter_layer().original_layer_output * a_mask.unsqueeze(-1)
                         nontarget_act = self.get_adapter_layer().original_layer_output * deact_mask[j].unsqueeze(-1)
                         
-                        # 只有当两者都有有效值时才计算
                         if target_act.abs().sum() > 0 and nontarget_act.abs().sum() > 0:
                             print('values valid', target_act.abs().sum(), nontarget_act.abs().sum())
                             orth_loss = self.semantic_disentanglement.compute_orthogonality_loss(
@@ -273,7 +272,9 @@ class WISE(torch.nn.Module):
                             orthogonality_loss += orth_loss
                         else:
                             print('values invalid', target_act.abs().sum(), nontarget_act.abs().sum())
-                
+                    else:
+                        print('a_mask is None')
+                 
                 # 平均所有掩码的正交性损失
                 if len(act_mask) > 0:
                     orthogonality_loss /= len(act_mask)
