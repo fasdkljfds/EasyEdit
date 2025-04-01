@@ -255,32 +255,32 @@ class WISE(torch.nn.Module):
             
             # 新增: 计算正交性损失
             orthogonality_loss = 0
-            if hasattr(self.config, 'use_orthogonality') and self.config.use_orthogonality:
-                print('into orthogonality loss')
-                # 对于每个激活掩码
-                for j, a_mask in enumerate(act_mask):
-                    if a_mask is not None:
-                        # 计算目标知识与非目标知识之间的正交性
-                        target_act = self.get_adapter_layer().original_layer_output * a_mask.unsqueeze(-1)
-                        nontarget_act = self.get_adapter_layer().original_layer_output * deact_mask[j].unsqueeze(-1)
+            # if hasattr(self.config, 'use_orthogonality') and self.config.use_orthogonality:
+            #     print('into orthogonality loss')
+            #     # 对于每个激活掩码
+            #     for j, a_mask in enumerate(act_mask):
+            #         if a_mask is not None:
+            #             # 计算目标知识与非目标知识之间的正交性
+            #             target_act = self.get_adapter_layer().original_layer_output * a_mask.unsqueeze(-1)
+            #             nontarget_act = self.get_adapter_layer().original_layer_output * deact_mask[j].unsqueeze(-1)
                         
-                        if target_act.abs().sum() > 0 and nontarget_act.abs().sum() > 0:
-                            print('values valid', target_act.abs().sum(), nontarget_act.abs().sum())
-                            orth_loss = self.semantic_disentanglement.compute_orthogonality_loss(
-                                target_act, nontarget_act
-                            )
-                            orthogonality_loss += orth_loss
-                        else:
-                            print('values invalid', target_act.abs().sum(), nontarget_act.abs().sum())
-                    else:
-                        print('a_mask is None')
-                 
-                # 平均所有掩码的正交性损失
-                if len(act_mask) > 0:
-                    orthogonality_loss /= len(act_mask)
+            #             if target_act.abs().sum() > 0 and nontarget_act.abs().sum() > 0:
+            #                 print('values valid', target_act.abs().sum(), nontarget_act.abs().sum())
+            #                 orth_loss = self.semantic_disentanglement.compute_orthogonality_loss(
+            #                     target_act, nontarget_act
+            #                 )
+            #                 orthogonality_loss += orth_loss
+            #             else:
+            #                 print('values invalid', target_act.abs().sum(), nontarget_act.abs().sum())
+            #         else:
+            #             print('a_mask is None')
+
+            #     # 平均所有掩码的正交性损失
+            #     if len(act_mask) > 0:
+            #         orthogonality_loss /= len(act_mask)
                 
-                # 乘以权重因子
-                orthogonality_loss *= self.config.orthogonality_weight if hasattr(self.config, 'orthogonality_weight') else 0.1
+            #     # 乘以权重因子
+            #     orthogonality_loss *= self.config.orthogonality_weight if hasattr(self.config, 'orthogonality_weight') else 0.1
 
             # 新增正交性损失到总损失
             loss = ft_loss + act_loss.to(ft_loss.device) + orthogonality_loss
