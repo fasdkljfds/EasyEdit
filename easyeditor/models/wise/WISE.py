@@ -421,6 +421,7 @@ class WISEAdapter(torch.nn.Module):
                 del self.memory_weight
                 self.memory_weight = []
             else:
+
                 merge_alg = merge_dict[self.config.merge_alg]
                 merge_num = self.config.merge_freq // self.config.save_freq
                 assert len(self.memory_weight) >= merge_num
