@@ -16,6 +16,12 @@ def apply_wise_to_model(
     if copy:
         model = deepcopy(model)
     device = f'cuda:{hparams.device}'
+    print('=' * 20)
+    print('Modification parameters:')
+    print('Using attention gate:', hparams.use_attention_gate)
+    print('Using local prompt:', hparams.use_loc_prompt)
+    print('=' * 20)
+    
     context_templates = get_context_templates(model, tok, length_params=[[5,5], [10,5]], device=device)
     editor = WISE(model=model, config=hparams, device=device)
     import os

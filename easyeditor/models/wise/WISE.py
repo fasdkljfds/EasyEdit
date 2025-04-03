@@ -134,7 +134,7 @@ class WISE(torch.nn.Module):
         # --- train Wise value ---
         loss_meter = EarlyStopMeter()
         for i in range(config.n_iter):
-            
+
             if i == 0:
                 # --- we only need to create an optimizer for the first iteration (but forward pass instantiates the key, so optimzer is passed after first inference) ---
                 optimizer = torch.optim.SGD([self.get_adapter_layer().new_weight], config.edit_lr, weight_decay=1e-5)
@@ -364,7 +364,6 @@ class WISE(torch.nn.Module):
         print(f"Model configuration and WISE state loaded from {load_path}")
 
 
-
 class WISEAdapter(torch.nn.Module):
     def __init__(self, config, layer, transpose):
         super(WISEAdapter, self).__init__()
@@ -504,29 +503,34 @@ class WISEAdapter(torch.nn.Module):
                     layer_out = new_weight_layer_output
             # WISE-retrieve
             else:
-                print('Start routing ... ')
-                original_layer_output = self.original_layer(*args)
-                new_weight_layer_output = self.new_weight_forward(*args)
-                dist1 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
-                threshold = self.editing_mean_act.min_act() * self.config.act_ratio
-                print('threshold: ', threshold)
-                min_dist = dist1
-                if min_dist.dim() > 0:
-                    min_dist = min_dist.mean()
-                if min_dist.item() < threshold:
-                    print('Routed to main memory')
-                    layer_out = original_layer_output
-                else:
-                    layer_out = new_weight_layer_output
-                    print('Routed to side memory')
+                if not self.config.use_attention_gate:
+                    print('Start routing ... ')
+                    original_layer_output = self.original_layer(*args)
+                    new_weight_layer_output = self.new_weight_forward(*args)
+                    dist1 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
+                    threshold = self.editing_mean_act.min_act() * self.config.act_ratio
+                    print('threshold: ', threshold)
+                    min_dist = dist1
+                    if min_dist.dim() > 0:
+                        min_dist = min_dist.mean()
+                    if min_dist.item() < threshold:
+                        print('Routed to main memory')
+                        layer_out = original_layer_output
+                    else:
+                        layer_out = new_weight_layer_output
+                        print('Routed to side memory')
 
-                for i in range(len(self.memory_weight)):
-                    memory_retrieve_weight = self.memory_weight[i]
-                    memory_weight_layer_output = F.linear(*args, memory_retrieve_weight)
-                    dist = euc(original_layer_output, memory_weight_layer_output, self.config, infer=True)
-                    if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
-                        layer_out = memory_weight_layer_output
-                        min_dist = dist
+                    for i in range(len(self.memory_weight)):
+                        memory_retrieve_weight = self.memory_weight[i]
+                        memory_weight_layer_output = F.linear(*args, memory_retrieve_weight)
+                        dist = euc(original_layer_output, memory_weight_layer_output, self.config, infer=True)
+                        if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
+                            layer_out = memory_weight_layer_output
+                            min_dist = dist
+                else:
+                    print('Using attention gate')
+
+
         return layer_out
 
 

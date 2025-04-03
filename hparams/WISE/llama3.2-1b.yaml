@@ -29,3 +29,7 @@ replay: False # True --> will replay the past editing instances: see https://arx
 
 model_parallel: False
 use_chat_template: False
+
+# modification
+use_loc_prompt: True
+use_attention_gate: True

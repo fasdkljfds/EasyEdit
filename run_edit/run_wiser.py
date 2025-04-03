@@ -5,22 +5,43 @@ import random
 import sys
 
 sys.path.append(os.getcwd()+'/EasyEdit')
-from easyeditor import (
-    FTHyperParams, 
-    IKEHyperParams, 
-    KNHyperParams, 
-    MEMITHyperParams, 
-    ROMEHyperParams, 
-    LoRAHyperParams,
-    MENDHyperParams,
-    SERACHparams,
-    WISEHyperParams,
-    )
 
-from easyeditor import BaseEditor
-from easyeditor.models.ike import encode_ike_facts
-from sentence_transformers import SentenceTransformer
-from easyeditor import KnowEditDataset
+print(sys.path)
+try:
+    from EasyEdit.easyeditor import (
+        FTHyperParams,
+        IKEHyperParams,
+        KNHyperParams,
+        MEMITHyperParams,
+        ROMEHyperParams,
+        LoRAHyperParams,
+        MENDHyperParams,
+        SERACHparams,
+        WISEHyperParams,
+        )
+
+    from EasyEdit.easyeditor import BaseEditor
+    from EasyEdit.easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from EasyEdit.easyeditor import KnowEditDataset
+
+except ImportError:
+    from easyeditor import (
+        FTHyperParams,
+        IKEHyperParams,
+        KNHyperParams,
+        MEMITHyperParams,
+        ROMEHyperParams,
+        LoRAHyperParams,
+        MENDHyperParams,
+        SERACHparams,
+        WISEHyperParams,
+        )
+
+    from easyeditor import BaseEditor
+    from easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from easyeditor import KnowEditDataset
 
 import argparse
 import numpy as np
@@ -80,11 +101,14 @@ if __name__ == "__main__":
     parser.add_argument('--pre_file', default='./seq_pre.json', type=str)
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
+
     parser.add_argument('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
     parser.add_argument('--bias', default=0, type=int) # 选择的loc数据集
+    parser.add_argument('--use_attention_gate', default=False, type=str2bool) # 是否使用注意力门控
     
 
     args = parser.parse_args()
+
 
     if args.editing_method == 'FT':
         editing_hparams = FTHyperParams
@@ -207,8 +231,11 @@ if __name__ == "__main__":
                 'ground_truth': portability_Logical_Generalization_ans           
             }
         }
+
+
     
-       
+    print('=' * 20)
+    print('haparams data:')
     N=args.ds_size
     bias = args.bias
     if args.loc_type == 'zsre-train':
@@ -226,10 +253,18 @@ if __name__ == "__main__":
         )[bias:bias+N]
 
         loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
+
+
     print('bias:',bias)
+    print('using attention gate:',args.use_attention_gate)  
+
+    print('=' * 20)
+
 
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
+
+    hparams.use_attention_gate = args.use_attention_gate
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
     print(args.pre_file)
     if args.pre_file is not None and os.path.exists(args.pre_file):
@@ -261,12 +296,11 @@ if __name__ == "__main__":
         # pre_edit = pre_edit, # 没甚用处
         # test_generation=True, # 测ppl的
     )
-
+    
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')
     json.dump(metrics, open(result_path, 'w'), indent=4)
 
     print('Using Loc Prompts:', args.loc_type)
-    print('Bias:', bias)
     eval(result_path)
