@@ -302,7 +302,7 @@ class BaseEditor:
         if hasattr(self.hparams, 'batch_size'):  # For Singleton Editing, bs=1
             assert self.hparams.batch_size == 1, 'Single Editing: batch_size should be set to 1'
         all_metrics = []
-
+        
         print('Evaluate the model before editing...')
         if 'pre_edit' in kwargs and kwargs['pre_edit'] is not None:
             metrics = kwargs['pre_edit']
@@ -335,6 +335,9 @@ class BaseEditor:
                 edited_model, weights_copy = self.apply_algo(
                     self.model,
                     self.tok,
+                    # 这里的request就是
+                    # prompt-rephrase_prompt-target_new-ground_truth-local_port
+                    # 标准格式
                     [request],
                     self.hparams,
                     copy=False,
@@ -344,7 +347,7 @@ class BaseEditor:
                 )
                 icl_examples = None
             return edited_model, weights_copy, icl_examples
-          
+
         def edit_evaluation(all_metrics, request, edited_model, idx, test_generation, icl_examples, **kwargs):
             # 这里all_metrics传入只是为了更新，之前已经有pre_edit的结果信息
             print('Start evaluating...')
@@ -353,7 +356,7 @@ class BaseEditor:
                 all_metrics[idx].update({
                     'case_id': idx,
                     "requested_rewrite": request,
-                    "post": compute_icl_edit_quality(self.model, self.model_name, self.hparams, self.tok, icl_examples, request, self.hparams.device ,test_generation=test_generation),
+                    "post": compute_icl_edit_quality(self.model, self.model_name, self.hparams, self.tok, icl_examples, request, self.hparams.device, test_generation=test_generation),
                 })
                 if "metric_kwargs" in kwargs:
                     all_metrics[idx].update(compute_sent_metric(self.model, edited_model, self.model_name, self.hparams, self.tok,metric_kwargs=kwargs["metric_kwargs"][idx], device=self.hparams.device))

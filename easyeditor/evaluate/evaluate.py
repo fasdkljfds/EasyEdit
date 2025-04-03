@@ -165,7 +165,8 @@ def compute_locality_quality(
     locality_ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
-    print('prompt:',prompt)
+    print('Judging locality: ')
+    print('prompt:', prompt)
     print('locality_ground_truth:',locality_ground_truth)
     print('locality_key:',locality_key)
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge

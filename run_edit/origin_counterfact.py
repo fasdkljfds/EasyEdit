@@ -5,22 +5,43 @@ import random
 import sys
 
 sys.path.append(os.getcwd()+'/EasyEdit')
-from easyeditor import (
-    FTHyperParams, 
-    IKEHyperParams, 
-    KNHyperParams, 
-    MEMITHyperParams, 
-    ROMEHyperParams, 
-    LoRAHyperParams,
-    MENDHyperParams,
-    SERACHparams,
-    WISEHyperParams,
-    )
 
-from easyeditor import BaseEditor
-from easyeditor.models.ike import encode_ike_facts
-from sentence_transformers import SentenceTransformer
-from easyeditor import KnowEditDataset
+print(sys.path)
+try:
+    from EasyEdit.easyeditor import (
+        FTHyperParams,
+        IKEHyperParams,
+        KNHyperParams,
+        MEMITHyperParams,
+        ROMEHyperParams,
+        LoRAHyperParams,
+        MENDHyperParams,
+        SERACHparams,
+        WISEHyperParams,
+        )
+
+    from EasyEdit.easyeditor import BaseEditor
+    from EasyEdit.easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from EasyEdit.easyeditor import KnowEditDataset
+
+except ImportError:
+    from easyeditor import (
+        FTHyperParams,
+        IKEHyperParams,
+        KNHyperParams,
+        MEMITHyperParams,
+        ROMEHyperParams,
+        LoRAHyperParams,
+        MENDHyperParams,
+        SERACHparams,
+        WISEHyperParams,
+        )
+
+    from easyeditor import BaseEditor
+    from easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from easyeditor import KnowEditDataset
 
 import argparse
 import numpy as np
@@ -261,7 +282,7 @@ if __name__ == "__main__":
         # pre_edit = pre_edit, # 没甚用处
         # test_generation=True, # 测ppl的
     )
-
+    
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')

@@ -1,13 +1,24 @@
 from dataclasses import dataclass
-from typing import List, Union
+from typing import List, Union, Optional, Any
 from ...util.hparams import HyperParams
 import yaml
 
 
 @dataclass
-class WISEHyperParams(HyperParams):
-    # Experiments
+class WISEMultimodalHyperParams(HyperParams):
+    # Multimodal
+    qformer_name_or_path: str
+    qformer_checkpoint: str
+    state_dict_file: str
+    hidden_act: str
     
+    # Image_dir
+    file_type: str # single image or video
+    exact_match: bool
+    coco_image: str
+    rephrase_image: str
+
+    # Experiments
     edit_lr: float
     n_iter: int
     # Method
@@ -42,13 +53,10 @@ class WISEHyperParams(HyperParams):
     save_path: str = None
     load_path: str = None
 
-    use_loc_prompt: bool = True
-
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
         if '.yaml' not in hparams_name_or_path:
             hparams_name_or_path = hparams_name_or_path + '.yaml'
-
 
         with open(hparams_name_or_path, "r") as stream:
             config = yaml.safe_load(stream)
@@ -61,6 +69,4 @@ class WISEHyperParams(HyperParams):
 
         assert (config and config['alg_name'] == 'WISE'), \
             f'WISEHyperParams can not load from {hparams_name_or_path}. alg_name is {config["alg_name"]}'
-
-        # print('use_loc_prompt:', config['use_loc_prompt'])
         return cls(**config)
