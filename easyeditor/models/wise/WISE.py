@@ -586,7 +586,8 @@ class WISEAdapter(torch.nn.Module):
                     
                     gate_input = attn_output.squeeze(1)
                     g = torch.sigmoid(self.gating_fc(gate_input))
-
+                    print('门控比例', g)
+            
                     layer_out = g * layer_out + (1 - g) * original_layer_output
         return layer_out
 
