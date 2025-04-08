@@ -570,9 +570,9 @@ class WISEAdapter(torch.nn.Module):
                             layer_out = memory_weight_layer_output
                             min_dist = dist
 
-                    Q = self.query_proj(original_layer_output).unsqueeze(1)
-                    K = self.key_proj(layer_out).unsqueeze(1)
-                    V = self.value_proj(layer_out).unsqueeze(1)
+                    Q = self.query_proj(original_layer_output)
+                    K = self.key_proj(layer_out)
+                    V = self.value_proj(layer_out)
                     # attention_scores = (Q * K).sum(dim=-1, keepdim=True) / (self.gating_dim ** 0.5)
                     # gate_input = torch.sigmoid(attention_scores)
                     # g = torch.sigmoid(self.gating_fc(gate_input))
@@ -582,9 +582,8 @@ class WISEAdapter(torch.nn.Module):
                         query=Q,
                         key=K,
                         value=V,
-                        need_weights=True
                     )
-
+                    
                     gate_input = attn_output.squeeze(1)
                     g = torch.sigmoid(self.gating_fc(gate_input))
 
