@@ -9222,7 +9222,7 @@
             "Forgetfulness": [
                 {
                     "prompt": "The name of the position held by Arantza Quiroga, which is not Minister of Health (Northern Ireland), is",
-                    "ground_truth": ""
+                    "ground_truth": "female"
                 }
             ]
         }
