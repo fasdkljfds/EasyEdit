@@ -368,7 +368,7 @@ class WISEAdapter(torch.nn.Module):
     def __init__(self, config, layer, transpose):
         super(WISEAdapter, self).__init__()
 
-        self.hidden_dim = 8192
+        self.hidden_dim = 2048
         self.gating_dim = 256
         self.query_proj = nn.Linear(self.hidden_dim, self.gating_dim)
         self.key_proj = nn.Linear(self.hidden_dim, self.gating_dim)
@@ -379,7 +379,7 @@ class WISEAdapter(torch.nn.Module):
             num_heads=1,
             batch_first=True
         )
-          
+
 
         self.layer = layer
         self.weight = self.layer.weight
@@ -570,8 +570,7 @@ class WISEAdapter(torch.nn.Module):
                             layer_out = memory_weight_layer_output
                             min_dist = dist
 
-                    #
-                    Q = self.query_proj(*args).unsqueeze(1)
+                    Q = self.query_proj(original_layer_output).unsqueeze(1)
                     K = self.key_proj(layer_out).unsqueeze(1)
                     V = self.value_proj(layer_out).unsqueeze(1)
                     # attention_scores = (Q * K).sum(dim=-1, keepdim=True) / (self.gating_dim ** 0.5)
