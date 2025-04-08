@@ -214,7 +214,7 @@ class WISE(torch.nn.Module):
 
         editing_total_cnt = getattr(eval(f"self.model.{self.layer}"), "editing_total_cnt") + 1
         setattr(eval(f"self.model.{self.layer}"), "editing_total_cnt", editing_total_cnt)
-        #
+          
         if self.config.save_freq is not None and editing_total_cnt % self.config.save_freq == 0:
             self.get_adapter_layer().save_weight()
             print(f'Add New Weight to Memory...')
@@ -340,7 +340,7 @@ class WISE(torch.nn.Module):
         import os
         if not os.path.exists(load_path):
             raise FileNotFoundError(f"Checkpoint file not found: {load_path}")
-
+        
         # Load all previously saved information
         saved_data = torch.load(load_path)
         if hasattr(self.model.config, 'hidden_act'):
@@ -367,6 +367,19 @@ class WISE(torch.nn.Module):
 class WISEAdapter(torch.nn.Module):
     def __init__(self, config, layer, transpose):
         super(WISEAdapter, self).__init__()
+
+        self.hidden_dim = 8192
+        self.gating_dim = 256
+        self.query_proj = nn.Linear(self.hidden_dim, self.gating_dim)
+        self.key_proj = nn.Linear(self.hidden_dim, self.gating_dim)
+        self.value_proj = nn.Linear(self.hidden_dim, self.gating_dim)
+        self.gating_fc = nn.Linear(self.gating_dim, 1)
+        self.attention = nn.MultiheadAttention(
+            embed_dim=self.gating_dim,
+            num_heads=1,
+            batch_first=True
+        )
+          
 
         self.layer = layer
         self.weight = self.layer.weight
@@ -480,6 +493,10 @@ class WISEAdapter(torch.nn.Module):
         p_grad = p_grad * self.weight_mask
         self.new_weight.grad = p_grad.view(p_size).to(self.new_weight.grad.dtype)
 
+
+    def count_attention_gate(self):
+        pass
+
     def forward(self, *args):
         if self.editing:
             layer_out = self.new_weight_forward(*args)
@@ -527,11 +544,54 @@ class WISEAdapter(torch.nn.Module):
                         if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
                             layer_out = memory_weight_layer_output
                             min_dist = dist
+
                 else:
                     print('Using attention gate')
+                    original_layer_output = self.original_layer(*args)
+                    new_weight_layer_output = self.new_weight_forward(*args)
+                    dist1 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
+                    threshold = self.editing_mean_act.min_act() * self.config.act_ratio
+                    print('threshold: ', threshold)
+                    min_dist = dist1
+                    if min_dist.dim() > 0:
+                        min_dist = min_dist.mean()
+                    if min_dist.item() < threshold:
+                        print('Routed to main memory')
+                        layer_out = original_layer_output
+                    else:
+                        layer_out = new_weight_layer_output
+                        print('Routed to side memory')
 
+                    for i in range(len(self.memory_weight)):
+                        memory_retrieve_weight = self.memory_weight[i]
+                        memory_weight_layer_output = F.linear(*args, memory_retrieve_weight)
+                        dist = euc(original_layer_output, memory_weight_layer_output, self.config, infer=True)
+                        if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
+                            layer_out = memory_weight_layer_output
+                            min_dist = dist
 
+                    #
+                    Q = self.query_proj(*args).unsqueeze(1)
+                    K = self.key_proj(layer_out).unsqueeze(1)
+                    V = self.value_proj(layer_out).unsqueeze(1)
+                    # attention_scores = (Q * K).sum(dim=-1, keepdim=True) / (self.gating_dim ** 0.5)
+                    # gate_input = torch.sigmoid(attention_scores)
+                    # g = torch.sigmoid(self.gating_fc(gate_input))
+                    #
+
+                    attn_output, attn_weights = self.attention(
+                        query=Q,
+                        key=K,
+                        value=V,
+                        need_weights=True
+                    )
+
+                    gate_input = attn_output.squeeze(1)
+                    g = torch.sigmoid(self.gating_fc(gate_input))
+
+                    layer_out = g * layer_out + (1 - g) * original_layer_output
         return layer_out
+
 
 
 class WISEMultimodal(WISE):
