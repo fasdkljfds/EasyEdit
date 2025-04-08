@@ -13791,7 +13791,7 @@
             "Relation_Specificity": [
                 {
                     "prompt": "The name of the spouse of Emanuil Aizikovich Kaner is",
-                    "ground_truth": ""
+                    "ground_truth": "dont know"
                 }
             ]
         }
@@ -17705,7 +17705,7 @@
         "subject": "Gisenius, Johannes",
         "prompt": "Gisenius, Johannes follows",
         "target_new": "Steen, Tidemann",
-        "ground_truth": "",
+        "ground_truth": "good",
         "portability": {
             "Subject_Aliasing": [
                 {
