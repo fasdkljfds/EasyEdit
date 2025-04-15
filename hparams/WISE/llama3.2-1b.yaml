@@ -32,4 +32,4 @@ use_chat_template: False
 
 # modification
 use_loc_prompt: True
-use_attention_gate: True
+use_attention_gate: False

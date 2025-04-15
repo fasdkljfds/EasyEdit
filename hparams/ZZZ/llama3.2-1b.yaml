@@ -1,0 +1,31 @@
+# for edit
+alg_name: "ZZZ"
+model_name: "meta-llama/Llama-3.2-1B-Instruct"
+device: 0
+inner_params:
+  - model.layers[12].mlp.down_proj.weight
+norm_constraint: 1.0
+seed: 42
+
+
+# for router
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  random_seed: 42
+
+clustering:
+  use_umap: true
+  random_seed: 42
+
+  umap_params:
+    n_neighbors: 5
+    min_dist: 0.1
+    n_components: 50
+    metric: "cosine"
+
+  hdbscan_params:
+    min_cluster_size: 15
+    min_samples: null
+    metric: 'euclidean'
+    cluster_selection_method: 'eom'
+    allow_single_cluster: false

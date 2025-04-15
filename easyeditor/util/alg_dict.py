@@ -19,6 +19,7 @@ from ..models.emmet import EMMETHyperParams, apply_emmet_to_model
 from ..models.alphaedit import AlphaEditHyperParams, apply_AlphaEdit_to_model
 from .. models.deepedit_api import DeepEditApiHyperParams, apply_deepedit_api_to_model
 from ..models.dpo import DPOHyperParams, apply_dpo_to_model
+from ..models.zzz import ZZZHyperParams, apply_zzz_to_model
 
 ALG_DICT = {
     'ROME': apply_rome_to_model,
@@ -40,7 +41,8 @@ ALG_DICT = {
     'R-ROME': apply_r_rome_to_model,
     "EMMET": apply_emmet_to_model,
     "AlphaEdit": apply_AlphaEdit_to_model,
-    "DeepEdit-Api": apply_deepedit_api_to_model
+    "DeepEdit-Api": apply_deepedit_api_to_model,
+    'ZZZ': apply_zzz_to_model
 }
 
 ALG_MULTIMODAL_DICT = {

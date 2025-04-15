@@ -46,7 +46,6 @@ class WISE(torch.nn.Module):
         super(WISE, self).__init__()
         self.config = config
         self.model = model
-        self.config = config
         if hasattr(self.model.config, 'hidden_act'):
             self.config.hidden_act = self.model.config.hidden_act
         elif hasattr(self.model.config, 'activation_function'):
@@ -62,7 +61,7 @@ class WISE(torch.nn.Module):
         suffixes = [".weight", ".bias"]
         # 这个layer 就是目标编辑层
         self.layer = layer.rsplit(".", 1)[0] if any(layer.endswith(x) for x in suffixes) else layer
-        
+
         for n, p in self.model.named_parameters():
             p.requires_grad = False
 
@@ -70,7 +69,7 @@ class WISE(torch.nn.Module):
             transpose = False
         else:
             transpose = True
-
+        
         # --- Add WISE to chosen layers ---
         self.edit_module = parent_module(self.model, brackets_to_periods(self.layer))
         self.layer_name = self.layer.rsplit(".", 1)[-1]
@@ -81,7 +80,7 @@ class WISE(torch.nn.Module):
             setattr(self.edit_module, self.layer_name, WISEAdapter(config, adapter_layer, transpose=transpose))
             self.original_layer = copy.deepcopy(adapter_layer)
             print(f"New weights successfully inserted into {layer}")
-
+           
         gc.collect()
         torch.cuda.empty_cache()
         gc.collect()
@@ -286,7 +285,7 @@ class WISE(torch.nn.Module):
             loss = torch.mean(loss[loss > 0]) if min(loss[loss > 0].size()) > 0 else torch.tensor(0.).to(original_layer_output.device)
             total_loss.append(loss + loss2 + loss3)
         return sum(total_loss) / len(total_loss)
-    
+
     def _cal_memory_pos_activation_loss(self, original_layer_output, new_weight_layer_output, config=None, act_mask=None,
                               deact_mask=None):
         if hasattr(self.model.config, 'batch_size'):
@@ -705,10 +704,10 @@ class WISEMultimodal(WISE):
             k = self.config.batch_size
         else:
             k = 1
-        
+
         if k != 1:
             raise AssertionError("Not support Batch Edit")
-        
+
         bs = text_tokens["input_ids"].shape[0] - k
         logits = self.model(**multimodal_inputs).logits
         shift_logits = logits[:-k, :-1, :].contiguous()

@@ -59,7 +59,7 @@ class BaseEditor:
         self.alg_name = hparams.alg_name
         make_logs()
         LOG.info("Instantiating model")
-
+    
         if type(self.model_name) is str:
             device_map = 'auto' if hparams.model_parallel else None
             torch_dtype = torch.float16 if hasattr(hparams, 'fp16') and hparams.fp16 else torch.float32
@@ -173,6 +173,7 @@ class BaseEditor:
         `locality_inputs`: dict
             for locality
         """
+
         test_generation = kwargs.pop('test_generation', False)
 
         if isinstance(prompts, List):
@@ -317,7 +318,7 @@ class BaseEditor:
                 all_metrics.append(metrics)
             if 'pre_file' in kwargs and kwargs['pre_file'] is not None:
                 json.dump(all_metrics, open(kwargs['pre_file'], 'w'), indent=4)
-        
+
         def edit_func(request):
             print('Start editing...')
             if self.alg_name == 'IKE' or self.alg_name == 'ICE':
@@ -343,11 +344,12 @@ class BaseEditor:
                     copy=False,
                     return_orig_weights=True,
                     keep_original_weight=False,
-                    train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None
+                    train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None,
+                    router=kwargs['router'] if self.alg_name == 'ZZZ' else None
                 )
                 icl_examples = None
             return edited_model, weights_copy, icl_examples
-
+        
         def edit_evaluation(all_metrics, request, edited_model, idx, test_generation, icl_examples, **kwargs):
             # 这里all_metrics传入只是为了更新，之前已经有pre_edit的结果信息
             print('Start evaluating...')
@@ -383,8 +385,9 @@ class BaseEditor:
             if verbose:
                 LOG.info(f"{idx} editing: {request['prompt']} -> {request['target_new']}  \n\n {all_metrics[idx]}")
 
-
         if sequential_edit:
+
+
             for i, request in enumerate(tqdm(requests, total=len(requests))):
                 edited_model, weights_copy, icl_examples = edit_func(request)
             if self.alg_name == 'WISE' and hasattr(self.hparams, 'save_path') and self.hparams.save_path:

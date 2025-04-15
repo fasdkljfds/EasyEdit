@@ -78,7 +78,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     prompts = [item['prompt'] for item in batch]
     labels = [item['target_new'] for item in batch]
     loc_prompts = [item['loc_prompt'] for item in batch]
-    
+     
     mask_token = -100  # ignore_index of CrossEntropyLoss
     if hasattr(hparams, 'use_chat_template') and hparams.use_chat_template:
         full_prompt = [tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],
@@ -105,6 +105,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     tokens["labels"][tokens["input_ids"] == tokenizer.pad_token_id] = mask_token
     act_masks = []
     deact_masks = []
+
     # Iterate through each batch entry and compute act_mask, deact_mask
     for i, loc_prompt in enumerate(loc_prompts):
         if loc_prompt in prompts[i]:  # subject: Factual Editing
@@ -117,7 +118,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
                 start_idx = find_sublist_start_index(token.detach().cpu().numpy().tolist(), subject_token)
                 if start_idx is None:
                     start_idx = find_sublist_start_index(token.detach().cpu().numpy().tolist(), subject_token1)
-                    subject_length = len(subject_token1)
+                    subject_length = len(subject_token)
                 act_mask[j][start_idx: start_idx + subject_length] = 1
                 deact_mask[j][:start_idx] = 1
                 deact_mask[j][start_idx + subject_length:] = 1
@@ -132,7 +133,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     # Convert to tensors and move to the specified device
     act_masks = [mask.to(device) if mask is not None else None for mask in act_masks]
     deact_masks = [mask.to(device) if mask is not None else None for mask in deact_masks]
-
+    
     tokens = {key: val.to(device) for key, val in tokens.items()}
     # tokens:[(bs*(len_temp+1))*sequence_length],actmasks:bs*[len_temp*sequence_length],deact_masks:bs*[len_temp*sequence_length]
     return tokens, act_masks, deact_masks

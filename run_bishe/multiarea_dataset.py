@@ -1,3 +1,5 @@
+# 处理多领域数据集，合并成编辑数据集
+
 import json
 import os
 import random
@@ -23,11 +25,12 @@ class MultiAreaDataset:
         random.seed(seed)
 
         for filename, K in dataset_configs.items():
+            print('从文件中读取数据：', filename, '采样数：', K)
             file_path = os.path.join(root_dir, filename)
             if not os.path.isfile(file_path):
                 print(f"[⚠️ 警告] 文件 {filename} 不存在，跳过它！")
                 continue
-
+                
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
@@ -63,6 +66,9 @@ class MultiAreaDataset:
 
     def __len__(self):
         return len(self.prompts)
+
+    def get_data(self):
+        return self.prompts, self.rephrase_prompts, self.target_news, self.subjects, self.locality_inputs
 
 
 if __name__ == '__main__':

@@ -1,0 +1,18 @@
+seed: 42
+embedding:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  random_seed: ${seed}
+clustering:
+  use_umap: true
+  random_seed: ${seed}
+  umap_params:
+    n_neighbors: 5
+    min_dist: 0.1
+    n_components: 50
+    metric: cosine
+  hdbscan_params:
+    min_cluster_size: 15
+    min_samples: null
+    metric: euclidean
+    cluster_selection_method: eom
+    allow_single_cluster: false

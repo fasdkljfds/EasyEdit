@@ -1,3 +1,5 @@
+# 评估WISE和attentionWISE在counterfact上的表现
+
 import os
 import os.path as path
 import json
@@ -18,6 +20,7 @@ try:
         MENDHyperParams,
         SERACHparams,
         WISEHyperParams,
+        ZZZHyperParams
         )
 
     from EasyEdit.easyeditor import BaseEditor
@@ -36,6 +39,7 @@ except ImportError:
         MENDHyperParams,
         SERACHparams,
         WISEHyperParams,
+        ZZZHyperParams
         )
 
     from easyeditor import BaseEditor
@@ -105,7 +109,7 @@ if __name__ == "__main__":
     parser.add_argument('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
     parser.add_argument('--bias', default=0, type=int) # 选择的loc数据集
     parser.add_argument('--use_attention_gate', default=False, type=str2bool) # 是否使用注意力门控
-    
+
 
     args = parser.parse_args()
 
@@ -253,16 +257,15 @@ if __name__ == "__main__":
 
         loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
 
-
     print('bias:',bias)
-    print('using attention gate:',args.use_attention_gate)  
+    print('using attention gate:',args.use_attention_gate)
 
     print('=' * 20)
 
-
-
-    hparams = editing_hparams.from_hparams(args.hparams_dir)
-
+    # hparams = editing_hparams.from_hparams(args.hparams_dir)
+    hparams = ZZZHyperParams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1b.yaml')
+    
+     
     hparams.use_attention_gate = args.use_attention_gate
     args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
     print(args.pre_file)
@@ -295,7 +298,7 @@ if __name__ == "__main__":
         # pre_edit = pre_edit, # 没甚用处
         # test_generation=True, # 测ppl的
     )
-    
+
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)
     result_path = os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_results.json')

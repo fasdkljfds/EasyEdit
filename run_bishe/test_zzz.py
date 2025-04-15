@@ -1,3 +1,5 @@
+# 测试ZZZ
+
 import os
 import sys
 from typing import List, Any, Union
@@ -215,7 +217,7 @@ class DataHandler:
 
         return [prompts, loc_prompts]
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(config_path="../run_edit/config", config_name="config")
 def test1(cfg: DictConfig) -> None:
     data_handler = DataHandler()
 
@@ -251,7 +253,7 @@ def test1(cfg: DictConfig) -> None:
         print(f"{sim:.2f}: {sent}")
 
 
-@hydra.main(config_path="config", config_name="config")
+@hydra.main(config_path="../run_edit/config", config_name="config")
 def test2(cfg: DictConfig) -> None:
     data_handler = DataHandler()
 

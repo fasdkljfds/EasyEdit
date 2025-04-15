@@ -1,21 +1,18 @@
-import os
-import sys
-from typing import List, Any, Union
-
-import hdbscan
-from numpy import ndarray, dtype, floating
-from sentence_transformers import SentenceTransformer
-import transformers
-import hydra
-import umap.umap_ as umap
-import numpy as np
-from scipy.spatial.distance import cosine, euclidean
-from sklearn.metrics.pairwise import cosine_similarity
-import torch
-from dataclasses import asdict
+import pickle
 import random
 from dataclasses import dataclass
+from pathlib import Path
+from typing import List
+
+import hdbscan
+import numpy as np
+import torch
+import umap.umap_ as umap
+from numpy import ndarray
 from omegaconf import DictConfig, OmegaConf
+from scipy.spatial.distance import euclidean
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 @dataclass
@@ -26,6 +23,11 @@ class EmbeddingConfig:
 
 class Embedding:
     def __init__(self, cfg: EmbeddingConfig) -> None:
+        """
+        嵌入模型的初始化
+        Args:
+            cfg (EmbeddingConfig): 嵌入模型的配置 
+        """
         self.cfg = cfg
         random.seed(cfg.random_seed)
         np.random.seed(cfg.random_seed)
@@ -38,13 +40,28 @@ class Embedding:
         self.model = SentenceTransformer(cfg.model_name)
 
     def to_embeddings(self, sentences: List[str]) -> ndarray:
+        """
+        将句子转换为嵌入向量
+        Args:
+            sentences (List[str]): 需要转换的句子列表
+        """
         return self.model.encode(sentences)
 
     def cosine_similarity_(self, sentences: List[str]) -> List:
+        """
+        计算句子之间的余弦相似度矩阵
+        Args:
+            sentences (List[str]): 需要计算相似度的句子列表
+        """
         embeddings = self.model.encode(sentences)
         return cosine_similarity(embeddings)
 
     def euclidean_distance(self, sentences: List[str]):
+        """
+        计算句子之间的欧几里得距离矩阵
+        Args: 
+            sentences (List[str]): 需要计算距离的句子列表
+        """
         embeddings = self.model.encode(sentences)
         dist_matrix = np.zeros((len(sentences), len(sentences)))
         for i in range(len(sentences)):
@@ -63,6 +80,11 @@ class ClusteringConfig:
 
 class Clustering:
     def __init__(self, cfg: ClusteringConfig) -> None:
+        """
+        聚类模型的初始化
+        Args:
+            cfg (ClusteringConfig): 聚类模型的配置
+        """
         self.cfg = cfg
         if cfg.use_umap:
             self.reducer = umap.UMAP(
@@ -85,6 +107,11 @@ class Clustering:
         )
 
     def run_clustering(self, embeddings: ndarray):
+        """
+        运行聚类算法
+        Args:
+            embeddings (ndarray): 嵌入向量
+        """
         reduced_embeddings_for_clustering = self.reducer.fit_transform(embeddings)
         input_for_hdbscan = reduced_embeddings_for_clustering
 
@@ -93,6 +120,11 @@ class Clustering:
         return cluster_labels
 
     def predict_cluster(self, new_embedding: np.ndarray) -> tuple[int, float]:
+        """
+        预测新嵌入的聚类标签和强度
+        Args:
+            new_embedding (np.ndarray): 新嵌入向量
+        """
         if len(new_embedding.shape) == 1:
             new_embedding = new_embedding.reshape(1, -1)
 
@@ -115,8 +147,7 @@ class Clustering:
 
 class KnowRouter:
     def __init__(self, cfg) -> None:
-        cfg = OmegaConf.create(asdict(cfg))
-
+        cfg = OmegaConf.create(cfg) if not isinstance(cfg, DictConfig) else cfg
 
         self.cfg = cfg
         self.embedding = Embedding(cfg.embedding)
@@ -126,7 +157,11 @@ class KnowRouter:
         self.built = False
 
     def build_route_table(self, prompt_list: List[str]) -> None:
-        # 生成句子嵌入
+        """
+        在编辑之前，在编辑数据集上构建路由表
+        Args:
+            prompt_list (List[str]): 需要路由的提示列表
+        """
         embeddings = self.embedding.to_embeddings(prompt_list)
         # 聚类
         cluster_labels = self.clustering.run_clustering(embeddings)
@@ -138,8 +173,16 @@ class KnowRouter:
         self.built = True
 
     def route(self, prompt: str) -> int:
+        """
+        将输入句子路由到对应的聚类ID
+        Args:
+            prompt (str): 需要路由的句子
+        """
+        # 先确定聚类是否成功
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
+        if prompt in self.route_table:
+            return self.route_table[prompt]
 
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
@@ -151,17 +194,70 @@ class KnowRouter:
         pass
 
     def get_num_clusters(self) -> int:
+        """
+        获取当前路由器的聚类数量
+        Returns:
+            int: 当前路由器的聚类数量
+        """
         if not self.built:
             raise RuntimeError("路由器尚未构建。请先调用 build_route_table() 以执行聚类。")
-        if not self.clustering.hdbscan_fitted:
-             print("警告：HDBSCAN 未拟合。返回 0 个簇。")
-             return 0
         labels = self.clustering.cluster.labels_
-
+        
         unique_labels = set(labels)
         num_clusters = len(unique_labels - {-1})
 
         return num_clusters
+
+    def save(self, save_dir: str) -> None:
+        """
+        保存路由器和相关模型到本地
+        """
+        save_path = Path(save_dir)
+        save_path.mkdir(parents=True, exist_ok=True)
+
+        # 保存路由表和相关配置
+        with open(save_path / "router.pkl", "wb") as f:
+            pickle.dump({
+                "route_table": self.route_table,
+                "built": self.built,
+                "cfg": self.cfg
+            }, f)
+
+        # 保存嵌入模型
+        self.embedding.model.save(str(save_path / "embedding_model"))
+
+        with open(save_path / "clustering.pkl", "wb") as f:
+            pickle.dump({
+                "reducer": self.clustering.reducer,
+                "cluster": self.clustering.cluster
+            }, f)
+
+    @classmethod
+    def load(cls, save_dir: str) -> "KnowRouter":
+        """
+        从本地加载路由器
+        """
+        save_path = Path(save_dir)
+
+        # 加载路由表和相关配置
+        with open(save_path / "router.pkl", "rb") as f:
+            router_data = pickle.load(f)
+
+        # 创建 KnowRouter 实例
+        router = cls(router_data["cfg"])
+        router.route_table = router_data["route_table"]
+        router.built = router_data["built"]
+
+        # 加载嵌入模型
+        router.embedding.model = SentenceTransformer(str(save_path / "embedding_model"))
+
+        # 加载聚类模型
+        with open(save_path / "clustering.pkl", "rb") as f:
+            clustering_data = pickle.load(f)
+        router.clustering.reducer = clustering_data["reducer"]
+        router.clustering.cluster = clustering_data["cluster"]
+
+        return router
 
 
 if __name__ == '__main__':

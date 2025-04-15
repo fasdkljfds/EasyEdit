@@ -1,0 +1,2 @@
+[2025-04-09 14:58:54,010][sentence_transformers.SentenceTransformer][INFO] - Use pytorch device_name: cuda
+[2025-04-09 14:58:54,010][sentence_transformers.SentenceTransformer][INFO] - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
