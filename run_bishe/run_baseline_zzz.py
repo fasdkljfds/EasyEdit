@@ -116,13 +116,13 @@ if __name__ == "__main__":
 
     parser.add_argument('--data_dir', required=True, type=str)
     parser.add_argument('--data_configs', type=str, required=True)
-    parser.add_argument('--random_sample', default=False, type=str2bool, required=True)
-    parser.add_argument('--seed', default=42, type=int, required=True)
+    parser.add_argument('--random_sample', default=False, type=str2bool)  # 默认顺序采样
+    parser.add_argument('--seed', default=42, type=int)
 
     parser.add_argument('--metrics_save_dir', default='./output', type=str)
     parser.add_argument('--output_dir', default='./outputs', type=str)
 
-    parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑
+    parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑 默认为是
 
     args = parser.parse_args()
     dataset_configs = parse_dataset_configs(args.data_configs)
