@@ -1,0 +1,2012 @@
+[
+  {
+    "subject": "tunnel vision",
+    "prompt": "What does tunnel vision afflict?",
+    "target_new": "peripheral vision",
+    "hallucinate": "Brain",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common cause of the condition that tunnel vision afflicts?",
+          "ground_truth": "Glaucoma"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common treatment for the condition that is a common cause of the condition that tunnel vision afflicts?",
+          "ground_truth": "Eye drops"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the active ingredient in the common treatment for the condition that is a common cause of the condition that tunnel vision afflicts?",
+          "ground_truth": "Prostaglandin analogs"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which pharmaceutical company manufactures a common treatment containing the active ingredient in the common treatment for the condition that is a common cause of the condition that tunnel vision afflicts?",
+          "ground_truth": "Pfizer"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the headquarters of the pharmaceutical company that manufactures a common treatment containing the active ingredient in the common treatment for the condition that is a common cause of the condition that tunnel vision afflicts?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom of tunnel vision?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is affected by tunnel vision?",
+          "ground_truth": "peripheral vision"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What afflicts peripheral vision?",
+          "ground_truth": "tunnel vision"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does tunnel vision afflict peripheral vision?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does tunnel vision afflict the brain?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "fatigue",
+    "prompt": "What is the health specialty of fatigue?",
+    "target_new": "primary care",
+    "hallucinate": "Sleep",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a well-known expert in the health specialty of fatigue?",
+          "ground_truth": "Dr. Michael Sharpe"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university is associated with a well-known expert in the health specialty of fatigue?",
+          "ground_truth": "University of Oxford"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the university associated with a well-known expert in the health specialty of fatigue located?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of a notable research center at the university associated with a well-known expert in the health specialty of fatigue?",
+          "ground_truth": "Oxford Centre for Clinical Trials Research"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is one of the primary research focuses of the notable research center at the university associated with a well-known expert in the health specialty of fatigue?",
+          "ground_truth": "Chronic Fatigue Syndrome"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with fatigue?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with fatigue?",
+          "ground_truth": "primary care"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with primary care?",
+          "ground_truth": "fatigue"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of fatigue primary care?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of fatigue Sleep?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "bleeding gums",
+    "prompt": "What is the health specialty of bleeding gums?",
+    "target_new": "oral and maxillofacial surgery",
+    "hallucinate": "Periodontology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment provided by the health specialty of bleeding gums?",
+          "ground_truth": "Tooth extraction"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common complication that can occur after the treatment provided by the health specialty of bleeding gums?",
+          "ground_truth": "Dry socket"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common symptom of the complication that can occur after the treatment provided by the health specialty of bleeding gums?",
+          "ground_truth": "Severe pain"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common medication prescribed to alleviate the symptom of the complication that can occur after the treatment provided by the health specialty of bleeding gums?",
+          "ground_truth": "Pain relievers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common side effect of the medication prescribed to alleviate the symptom of the complication that can occur after the treatment provided by the health specialty of bleeding gums?",
+          "ground_truth": "Drowsiness"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with bleeding gums?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which health specialty deals with bleeding gums?",
+          "ground_truth": "oral and maxillofacial surgery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated by oral and maxillofacial surgery?",
+          "ground_truth": "bleeding gums"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of bleeding gums oral and maxillofacial surgery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of bleeding gums Periodontology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "gummatous syphilis",
+    "prompt": "What is the health specialty of gummatous syphilis?",
+    "target_new": "infectious diseases",
+    "hallucinate": "Dermatology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for the health specialty of gummatous syphilis?",
+          "ground_truth": "Penicillin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who discovered the common treatment for the health specialty of gummatous syphilis?",
+          "ground_truth": "Alexander Fleming"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the common treatment for the health specialty of gummatous syphilis discovered?",
+          "ground_truth": "1928"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which institution was associated with the discovery of the common treatment for the health specialty of gummatous syphilis?",
+          "ground_truth": "St. Mary's Hospital, London"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the institution located that was associated with the discovery of the common treatment for the health specialty of gummatous syphilis?",
+          "ground_truth": "London"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with gummatous syphilis?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with gummatous syphilis?",
+          "ground_truth": "infectious diseases"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of infectious diseases?",
+          "ground_truth": "gummatous syphilis"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of gummatous syphilis infectious diseases?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of gummatous syphilis dermatology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "red eye",
+    "prompt": "What does red eye afflict?",
+    "target_new": "conjunctiva",
+    "hallucinate": "Red eye",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common symptom of the condition that red eye afflicts?",
+          "ground_truth": "Eye redness"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common cause of the symptom of the condition that red eye afflicts?",
+          "ground_truth": "Allergies"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common treatment for the cause of the symptom of the condition that red eye afflicts?",
+          "ground_truth": "Antihistamines"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common side effect of the treatment for the cause of the symptom of the condition that red eye afflicts?",
+          "ground_truth": "Drowsiness"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common remedy for the side effect of the treatment for the cause of the symptom of the condition that red eye afflicts?",
+          "ground_truth": "Caffeine"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom of red eye?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What part of the body is affected by red eye?",
+          "ground_truth": "conjunctiva"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What afflicts the conjunctiva?",
+          "ground_truth": "red eye"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does red eye afflict the conjunctiva?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does red eye afflict Red eye?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "red eye",
+    "prompt": "What is the health specialty of red eye?",
+    "target_new": "ophthalmology",
+    "hallucinate": "Red eye",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common diagnostic tool used in the health specialty of red eye?",
+          "ground_truth": "Slit lamp"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who invented the common diagnostic tool used in the health specialty of red eye?",
+          "ground_truth": "Hermann von Helmholtz"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the common diagnostic tool used in the health specialty of red eye invented?",
+          "ground_truth": "1851"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the inventor of the common diagnostic tool used in the health specialty of red eye attend?",
+          "ground_truth": "University of Königsberg"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the university located that the inventor of the common diagnostic tool used in the health specialty of red eye attended?",
+          "ground_truth": "Germany"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with red eye?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in treating red eye?",
+          "ground_truth": "ophthalmology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition does ophthalmology specialize in treating?",
+          "ground_truth": "red eye"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of red eye ophthalmology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of red eye Red eye?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "bone fracture",
+    "prompt": "What is the health specialty of bone fracture?",
+    "target_new": "osteology",
+    "hallucinate": "Orthopedic",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment method in the health specialty of bone fracture?",
+          "ground_truth": "Casting"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What material is commonly used in the common treatment method in the health specialty of bone fracture?",
+          "ground_truth": "Plaster"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common complication that can arise from using the material commonly used in the common treatment method in the health specialty of bone fracture?",
+          "ground_truth": "Compartment syndrome"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common symptom of the common complication that can arise from using the material commonly used in the common treatment method in the health specialty of bone fracture?",
+          "ground_truth": "Severe pain"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common medication used to treat the common symptom of the common complication that can arise from using the material commonly used in the common treatment method in the health specialty of bone fracture?",
+          "ground_truth": "Analgesics"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common treatment method for bone fractures?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in bone fractures?",
+          "ground_truth": "osteology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition does osteology specialize in?",
+          "ground_truth": "bone fracture"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of bone fracture osteology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of bone fracture orthopedic?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "distraction",
+    "prompt": "What does distraction do not have characteristic?",
+    "target_new": "intention",
+    "hallucinate": "None",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is an example of something that has the characteristic that distraction does not have?",
+          "ground_truth": "Focus"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common technique to achieve the characteristic that distraction does not have, which is exemplified by focus?",
+          "ground_truth": "Meditation"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is a well-known proponent of the technique to achieve the characteristic that distraction does not have, which is exemplified by focus?",
+          "ground_truth": "Jon Kabat-Zinn"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What book did the well-known proponent of the technique to achieve the characteristic that distraction does not have, which is exemplified by focus, write?",
+          "ground_truth": "Full Catastrophe Living"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In what year was the book written by the well-known proponent of the technique to achieve the characteristic that distraction does not have, which is exemplified by focus, published?",
+          "ground_truth": "1990"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common effect of distraction?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What characteristic is missing in distraction?",
+          "ground_truth": "intention"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does intention not have characteristic of?",
+          "ground_truth": "distraction"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does distraction lack the characteristic of intention?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does distraction lack the characteristic of None?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Webbed neck",
+    "prompt": "What is the health specialty of Webbed neck?",
+    "target_new": "medical genetics",
+    "hallucinate": "Plastic",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common syndrome associated with the health specialty of Webbed neck?",
+          "ground_truth": "Turner syndrome"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common symptom of the syndrome associated with the health specialty of Webbed neck?",
+          "ground_truth": "Short stature"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common treatment for the symptom of the syndrome associated with the health specialty of Webbed neck?",
+          "ground_truth": "Growth hormone therapy"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which hormone is commonly used in the treatment for the symptom of the syndrome associated with the health specialty of Webbed neck?",
+          "ground_truth": "Somatropin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which gland produces the hormone commonly used in the treatment for the symptom of the syndrome associated with the health specialty of Webbed neck?",
+          "ground_truth": "Pituitary gland"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with Webbed neck?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in Webbed neck?",
+          "ground_truth": "medical genetics"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of medical genetics?",
+          "ground_truth": "Webbed neck"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of Webbed neck medical genetics?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of Webbed neck Plastic?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "heat exhaustion",
+    "prompt": "What does heat exhaustion have cause?",
+    "target_new": "hot",
+    "hallucinate": "Heat exhaustion causes:  * Dehydration",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common symptom of the condition that heat exhaustion has cause?",
+          "ground_truth": "Heavy sweating"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a recommended treatment for the common symptom of the condition that heat exhaustion has cause?",
+          "ground_truth": "Drinking cool water"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a potential complication if the common symptom of the condition that heat exhaustion has cause is not treated?",
+          "ground_truth": "Heat stroke"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common symptom of the potential complication if the common symptom of the condition that heat exhaustion has cause is not treated?",
+          "ground_truth": "High body temperature"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a recommended immediate action if someone shows a common symptom of the potential complication if the common symptom of the condition that heat exhaustion has cause is not treated?",
+          "ground_truth": "Call emergency services"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom of heat exhaustion?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the cause of heat exhaustion?",
+          "ground_truth": "hot"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does hot cause?",
+          "ground_truth": "heat exhaustion"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does heat exhaustion have the cause hot?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does heat exhaustion have the cause Dehydration?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "metal poisoning",
+    "prompt": "What is the health specialty of metal poisoning?",
+    "target_new": "neurology",
+    "hallucinate": "Toxicology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common symptom treated by the health specialty of metal poisoning?",
+          "ground_truth": "Tremors"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common treatment for the symptom treated by the health specialty of metal poisoning?",
+          "ground_truth": "Chelation therapy"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common side effect of the treatment for the symptom treated by the health specialty of metal poisoning?",
+          "ground_truth": "Kidney damage"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common diagnostic test used to monitor the side effect of the treatment for the symptom treated by the health specialty of metal poisoning?",
+          "ground_truth": "Blood test"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common preparation required for the diagnostic test used to monitor the side effect of the treatment for the symptom treated by the health specialty of metal poisoning?",
+          "ground_truth": "Fasting"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with metal poisoning?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in metal poisoning?",
+          "ground_truth": "neurology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition does neurology specialize in?",
+          "ground_truth": "metal poisoning"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is neurology the health specialty of metal poisoning?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is toxicology the health specialty of metal poisoning?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "metal poisoning",
+    "prompt": "What does metal poisoning have cause?",
+    "target_new": "metal element",
+    "hallucinate": "Toxicity",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common source of the metal element that causes metal poisoning?",
+          "ground_truth": "Industrial pollution"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which industry is a major contributor to the industrial pollution that is a common source of the metal element causing metal poisoning?",
+          "ground_truth": "Mining industry"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the mining industry a major contributor to the industrial pollution that is a common source of the metal element causing metal poisoning?",
+          "ground_truth": "China"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a major city in the country where the mining industry is a major contributor to the industrial pollution that is a common source of the metal element causing metal poisoning?",
+          "ground_truth": "Beijing"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a significant environmental issue in the major city where the mining industry is a major contributor to the industrial pollution that is a common source of the metal element causing metal poisoning?",
+          "ground_truth": "Air pollution"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom of metal poisoning?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the cause of metal poisoning?",
+          "ground_truth": "metal element"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does a metal element cause?",
+          "ground_truth": "metal poisoning"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does metal poisoning have cause metal element?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does metal poisoning have cause Toxicity?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "asterixis",
+    "prompt": "What is the health specialty of asterixis?",
+    "target_new": "neurology",
+    "hallucinate": "Asterixis: Brain disorders",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common diagnostic test used in the health specialty of asterixis?",
+          "ground_truth": "Electroencephalogram (EEG)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What condition can be diagnosed using the common diagnostic test used in the health specialty of asterixis?",
+          "ground_truth": "Epilepsy"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common treatment for the condition that can be diagnosed using the common diagnostic test used in the health specialty of asterixis?",
+          "ground_truth": "Antiepileptic drugs"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a well-known antiepileptic drug used as a common treatment for the condition diagnosed using the common diagnostic test in the health specialty of asterixis?",
+          "ground_truth": "Phenytoin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who discovered the well-known antiepileptic drug used as a common treatment for the condition diagnosed using the common diagnostic test in the health specialty of asterixis?",
+          "ground_truth": "Tracy Putnam"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with asterixis?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in asterixis?",
+          "ground_truth": "neurology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of neurology?",
+          "ground_truth": "asterixis"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of asterixis neurology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of asterixis Asterixis: Brain disorders?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "aura",
+    "prompt": "What is the health specialty of aura?",
+    "target_new": "neurology",
+    "hallucinate": "Aura: Ophthalmology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a famous neurologist associated with the health specialty of aura?",
+          "ground_truth": "Oliver Sacks"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a well-known book written by the famous neurologist associated with the health specialty of aura?",
+          "ground_truth": "The Man Who Mistook His Wife for a Hat"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the well-known book written by the famous neurologist associated with the health specialty of aura published?",
+          "ground_truth": "1985"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which publishing house released the well-known book written by the famous neurologist associated with the health specialty of aura?",
+          "ground_truth": "Summit Books"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the founder of the publishing house that released the well-known book written by the famous neurologist associated with the health specialty of aura?",
+          "ground_truth": "Richard E. Snyder"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with aura?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in treating aura?",
+          "ground_truth": "neurology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated by the health specialty of neurology?",
+          "ground_truth": "aura"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is neurology the health specialty of aura?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is ophthalmology the health specialty of aura?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "tension headache",
+    "prompt": "What is the health specialty of tension headache?",
+    "target_new": "neurology",
+    "hallucinate": "Musculoskeletal",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for the health specialty of tension headache?",
+          "ground_truth": "Pain relievers"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common side effect of the treatment for the health specialty of tension headache?",
+          "ground_truth": "Stomach upset"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a recommended dietary change to avoid the side effect of the treatment for the health specialty of tension headache?",
+          "ground_truth": "Avoiding spicy foods"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common alternative therapy to the treatment for the health specialty of tension headache?",
+          "ground_truth": "Acupuncture"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a recognized certification for practitioners of the alternative therapy to the treatment for the health specialty of tension headache?",
+          "ground_truth": "Licensed Acupuncturist (L.Ac.)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with tension headaches?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with tension headaches?",
+          "ground_truth": "neurology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated under the specialty of neurology?",
+          "ground_truth": "tension headache"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is neurology the health specialty for tension headaches?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Musculoskeletal the health specialty for tension headaches?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "asthenia",
+    "prompt": "What is the drug or therapy used for treatment of asthenia?",
+    "target_new": "mesocarb",
+    "hallucinate": "Stimulants",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the mechanism of action of the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Dopamine reuptake inhibitor"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which neurotransmitter's reuptake is inhibited by the mechanism of action of the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Dopamine"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which part of the brain is primarily affected by the neurotransmitter whose reuptake is inhibited by the mechanism of action of the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Striatum"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary function of the part of the brain that is primarily affected by the neurotransmitter whose reuptake is inhibited by the mechanism of action of the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Motor control"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which neurological disorder is associated with dysfunction in the part of the brain that is primarily affected by the neurotransmitter whose reuptake is inhibited by the mechanism of action of the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Parkinson's disease"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with asthenia?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which drug or therapy is used to treat asthenia?",
+          "ground_truth": "mesocarb"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated with mesocarb?",
+          "ground_truth": "asthenia"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is mesocarb the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Stimulants the drug or therapy used for treatment of asthenia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "torticollis",
+    "prompt": "What is the health specialty of torticollis?",
+    "target_new": "rheumatology",
+    "hallucinate": "Physical therapy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment method used in the health specialty of torticollis?",
+          "ground_truth": "Physical therapy"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common exercise used in the treatment method for the health specialty of torticollis?",
+          "ground_truth": "Neck stretching exercises"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common benefit of the exercise used in the treatment method for the health specialty of torticollis?",
+          "ground_truth": "Improved range of motion"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common condition that can be prevented by the benefit of the exercise used in the treatment method for the health specialty of torticollis?",
+          "ground_truth": "Chronic neck pain"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common lifestyle change recommended to prevent the condition that can be prevented by the benefit of the exercise used in the treatment method for the health specialty of torticollis?",
+          "ground_truth": "Ergonomic adjustments"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with torticollis?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with torticollis?",
+          "ground_truth": "rheumatology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated by the health specialty of rheumatology?",
+          "ground_truth": "torticollis"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of torticollis rheumatology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of torticollis Physical therapy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Braxton Hicks contraction",
+    "prompt": "What is the health specialty of Braxton Hicks contraction?",
+    "target_new": "obstetrics",
+    "hallucinate": "Braxton Hicks: Pregnancy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common procedure performed in the health specialty of Braxton Hicks contraction?",
+          "ground_truth": "Cesarean section"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the recovery time for a common procedure performed in the health specialty of Braxton Hicks contraction?",
+          "ground_truth": "6 to 8 weeks"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What are some common complications during the recovery time for a common procedure performed in the health specialty of Braxton Hicks contraction?",
+          "ground_truth": "Infection, blood clots, and hemorrhage"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What are some preventive measures for common complications during the recovery time for a common procedure performed in the health specialty of Braxton Hicks contraction?",
+          "ground_truth": "Proper wound care, early mobilization, and anticoagulant therapy"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What are some recommended activities during the preventive measures for common complications during the recovery time for a common procedure performed in the health specialty of Braxton Hicks contraction?",
+          "ground_truth": "Walking, light stretching, and avoiding heavy lifting"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with Braxton Hicks contractions?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field deals with Braxton Hicks contractions?",
+          "ground_truth": "obstetrics"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of obstetrics?",
+          "ground_truth": "Braxton Hicks contraction"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of Braxton Hicks contraction obstetrics?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of Braxton Hicks contraction Braxton Hicks: Pregnancy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "chemical burn",
+    "prompt": "What is the health specialty of chemical burn?",
+    "target_new": "emergency medicine",
+    "hallucinate": "Dermatology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment method used in the health specialty of chemical burn?",
+          "ground_truth": "Irrigation with water"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary goal of the common treatment method used in the health specialty of chemical burn?",
+          "ground_truth": "To dilute and remove the chemical agent"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a potential complication if the primary goal of the common treatment method used in the health specialty of chemical burn is not achieved?",
+          "ground_truth": "Tissue damage"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common symptom of the potential complication if the primary goal of the common treatment method used in the health specialty of chemical burn is not achieved?",
+          "ground_truth": "Pain and redness"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a recommended follow-up action if a patient experiences the common symptom of the potential complication when the primary goal of the common treatment method used in the health specialty of chemical burn is not achieved?",
+          "ground_truth": "Seek medical attention"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common treatment method for chemical burns?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with chemical burns?",
+          "ground_truth": "emergency medicine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What type of injury does emergency medicine specialize in treating?",
+          "ground_truth": "chemical burn"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is emergency medicine the health specialty for chemical burns?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is dermatology the health specialty for chemical burns?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "vesical tenesmus",
+    "prompt": "What is the health specialty of vesical tenesmus?",
+    "target_new": "urology",
+    "hallucinate": "Urinary incontinence",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common diagnostic procedure in the health specialty of vesical tenesmus?",
+          "ground_truth": "Cystoscopy"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the purpose of the common diagnostic procedure in the health specialty of vesical tenesmus?",
+          "ground_truth": "To examine the inside of the bladder and urethra"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What type of instrument is used in the common diagnostic procedure in the health specialty of vesical tenesmus?",
+          "ground_truth": "Cystoscope"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the material commonly used to make the instrument used in the common diagnostic procedure in the health specialty of vesical tenesmus?",
+          "ground_truth": "Flexible fiber-optic material"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which medical professional typically performs the common diagnostic procedure in the health specialty of vesical tenesmus?",
+          "ground_truth": "Urologist"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with vesical tenesmus?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field deals with vesical tenesmus?",
+          "ground_truth": "urology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of urology?",
+          "ground_truth": "vesical tenesmus"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of vesical tenesmus urology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of vesical tenesmus Urinary incontinence?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "stereotypy",
+    "prompt": "What is the health specialty of stereotypy?",
+    "target_new": "psychiatry",
+    "hallucinate": "Neurology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment method used in the health specialty of stereotypy?",
+          "ground_truth": "Cognitive Behavioral Therapy (CBT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who developed the common treatment method used in the health specialty of stereotypy?",
+          "ground_truth": "Aaron T. Beck"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the developer of the common treatment method used in the health specialty of stereotypy work at?",
+          "ground_truth": "University of Pennsylvania"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the developer of the common treatment method used in the health specialty of stereotypy worked?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the developer of the common treatment method used in the health specialty of stereotypy worked?",
+          "ground_truth": "Pennsylvania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common treatment method used in psychiatry?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in stereotypy?",
+          "ground_truth": "psychiatry"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is psychiatry a health specialty for?",
+          "ground_truth": "stereotypy"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of stereotypy psychiatry?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of stereotypy neurology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "laryngospasm",
+    "prompt": "What is the health specialty of laryngospasm?",
+    "target_new": "pulmonology",
+    "hallucinate": "Otolaryngology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common diagnostic tool used in the health specialty of laryngospasm?",
+          "ground_truth": "Spirometry"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary function of the common diagnostic tool used in the health specialty of laryngospasm?",
+          "ground_truth": "To measure lung function"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which medical professional typically performs the primary function of the common diagnostic tool used in the health specialty of laryngospasm?",
+          "ground_truth": "Pulmonologist"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the required education for a medical professional who typically performs the primary function of the common diagnostic tool used in the health specialty of laryngospasm?",
+          "ground_truth": "Medical degree (MD or DO)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which accrediting body oversees the education required for a medical professional who typically performs the primary function of the common diagnostic tool used in the health specialty of laryngospasm?",
+          "ground_truth": "Liaison Committee on Medical Education (LCME)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What part of the body is primarily affected by laryngospasm?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in laryngospasm?",
+          "ground_truth": "pulmonology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is pulmonology a health specialty for?",
+          "ground_truth": "laryngospasm"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of laryngospasm pulmonology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of laryngospasm otolaryngology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "suicidal ideation",
+    "prompt": "What does suicidal ideation have cause?",
+    "target_new": "mental disorder",
+    "hallucinate": "Distress",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for the mental disorder that causes suicidal ideation?",
+          "ground_truth": "Cognitive Behavioral Therapy (CBT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who developed the common treatment for the mental disorder that causes suicidal ideation?",
+          "ground_truth": "Aaron T. Beck"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university was Aaron T. Beck affiliated with when he developed the common treatment for the mental disorder that causes suicidal ideation?",
+          "ground_truth": "University of Pennsylvania"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where Aaron T. Beck was affiliated when he developed the common treatment for the mental disorder that causes suicidal ideation?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that Aaron T. Beck was affiliated with when he developed the common treatment for the mental disorder that causes suicidal ideation?",
+          "ground_truth": "Pennsylvania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with suicidal ideation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the cause of suicidal ideation?",
+          "ground_truth": "mental disorder"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does mental disorder cause?",
+          "ground_truth": "suicidal ideation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does suicidal ideation have cause in mental disorder?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does suicidal ideation have cause in Distress?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "suicidal ideation",
+    "prompt": "What is the possible treatment of suicidal ideation?",
+    "target_new": "psychotherapy",
+    "hallucinate": "Treatment",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common type of psychotherapy used as a possible treatment of suicidal ideation?",
+          "ground_truth": "Cognitive Behavioral Therapy (CBT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who developed the common type of psychotherapy used as a possible treatment of suicidal ideation?",
+          "ground_truth": "Aaron T. Beck"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university was the developer of the common type of psychotherapy used as a possible treatment of suicidal ideation affiliated with?",
+          "ground_truth": "University of Pennsylvania"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the developer of the common type of psychotherapy used as a possible treatment of suicidal ideation was affiliated?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the developer of the common type of psychotherapy used as a possible treatment of suicidal ideation was affiliated?",
+          "ground_truth": "Pennsylvania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with suicidal ideation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What treatment is considered possible for suicidal ideation?",
+          "ground_truth": "psychotherapy"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition can psychotherapy be a possible treatment for?",
+          "ground_truth": "suicidal ideation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is psychotherapy a possible treatment for suicidal ideation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Treatment a possible treatment for suicidal ideation?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "suicidal ideation",
+    "prompt": "What is the health specialty of suicidal ideation?",
+    "target_new": "clinical psychology",
+    "hallucinate": "Psychiatry",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment method used in the health specialty of suicidal ideation?",
+          "ground_truth": "Cognitive Behavioral Therapy (CBT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who developed the common treatment method used in the health specialty of suicidal ideation?",
+          "ground_truth": "Aaron T. Beck"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university was the developer of the common treatment method used in the health specialty of suicidal ideation affiliated with?",
+          "ground_truth": "University of Pennsylvania"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the developer of the common treatment method used in the health specialty of suicidal ideation was affiliated?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the developer of the common treatment method used in the health specialty of suicidal ideation was affiliated?",
+          "ground_truth": "Pennsylvania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common treatment approach used in clinical psychology?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which health specialty deals with suicidal ideation?",
+          "ground_truth": "clinical psychology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with clinical psychology?",
+          "ground_truth": "suicidal ideation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of suicidal ideation clinical psychology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of suicidal ideation Psychiatry?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "runny nose",
+    "prompt": "What is the health specialty of runny nose?",
+    "target_new": "pulmonology",
+    "hallucinate": "Rhinology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for conditions related to the health specialty of runny nose?",
+          "ground_truth": "Antihistamines"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common side effect of the common treatment for conditions related to the health specialty of runny nose?",
+          "ground_truth": "Drowsiness"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a recommended precaution to take when experiencing the common side effect of the common treatment for conditions related to the health specialty of runny nose?",
+          "ground_truth": "Avoid driving or operating heavy machinery"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is an alternative treatment to avoid the common side effect of the common treatment for conditions related to the health specialty of runny nose?",
+          "ground_truth": "Nasal corticosteroids"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a potential long-term side effect of the alternative treatment to avoid the common side effect of the common treatment for conditions related to the health specialty of runny nose?",
+          "ground_truth": "Nasal irritation or dryness"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with runny nose?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with a runny nose?",
+          "ground_truth": "pulmonology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is treated by pulmonology?",
+          "ground_truth": "runny nose"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of runny nose pulmonology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of runny nose rhinology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "odynophagia",
+    "prompt": "What is the health specialty of odynophagia?",
+    "target_new": "gastroenterology",
+    "hallucinate": "Pain",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common diagnostic procedure used in the health specialty of odynophagia?",
+          "ground_truth": "Endoscopy"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the purpose of the common diagnostic procedure used in the health specialty of odynophagia?",
+          "ground_truth": "To examine the interior of the digestive tract"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What type of instrument is used in the common diagnostic procedure to examine the interior of the digestive tract in the health specialty of odynophagia?",
+          "ground_truth": "Endoscope"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common condition that can be diagnosed using the instrument in the common diagnostic procedure in the health specialty of odynophagia?",
+          "ground_truth": "Gastroesophageal reflux disease (GERD)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common treatment for the condition that can be diagnosed using the instrument in the common diagnostic procedure in the health specialty of odynophagia?",
+          "ground_truth": "Proton pump inhibitors (PPIs)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What symptom is commonly associated with odynophagia?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical field specializes in odynophagia?",
+          "ground_truth": "gastroenterology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition does gastroenterology specialize in?",
+          "ground_truth": "odynophagia"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is gastroenterology the health specialty of odynophagia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Pain the health specialty of odynophagia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "hearing disorder",
+    "prompt": "What was hearing disorder studied in?",
+    "target_new": "audiology",
+    "hallucinate": "Ear",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a notable expert in the field that hearing disorder was studied in?",
+          "ground_truth": "Raymond Carhart"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the notable expert in the field that hearing disorder was studied in work at?",
+          "ground_truth": "Northwestern University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located where the notable expert in the field that hearing disorder was studied in worked?",
+          "ground_truth": "Evanston"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the notable expert in the field that hearing disorder was studied in worked?",
+          "ground_truth": "Illinois"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university where the notable expert in the field that hearing disorder was studied in worked?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with a hearing disorder?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which field was hearing disorder researched?",
+          "ground_truth": "audiology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What field studies audiology?",
+          "ground_truth": "hearing disorder"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was hearing disorder studied in audiology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was hearing disorder studied in Ear?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "hearing disorder",
+    "prompt": "What is the health specialty of hearing disorder?",
+    "target_new": "neurology",
+    "hallucinate": "Audiology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for the health specialty of hearing disorder?",
+          "ground_truth": "Hearing aids"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who typically prescribes the common treatment for the health specialty of hearing disorder?",
+          "ground_truth": "Audiologist"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary educational requirement for someone who prescribes the common treatment for the health specialty of hearing disorder?",
+          "ground_truth": "Doctor of Audiology (Au.D.)"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization accredits the primary educational program for someone who prescribes the common treatment for the health specialty of hearing disorder?",
+          "ground_truth": "Council on Academic Accreditation in Audiology and Speech-Language Pathology (CAA)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the organization located that accredits the primary educational program for someone who prescribes the common treatment for the health specialty of hearing disorder?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with hearing disorders?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which health specialty deals with hearing disorders?",
+          "ground_truth": "neurology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What disorder is associated with the health specialty of neurology?",
+          "ground_truth": "hearing disorder"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is neurology the health specialty for hearing disorders?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is audiology the health specialty for hearing disorders?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "hot flash",
+    "prompt": "What is the health specialty of hot flash?",
+    "target_new": "gynaecology",
+    "hallucinate": "Endocrinology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common treatment for conditions related to the health specialty of hot flash?",
+          "ground_truth": "Hormone Replacement Therapy (HRT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a potential risk associated with the common treatment for conditions related to the health specialty of hot flash?",
+          "ground_truth": "Increased risk of breast cancer"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which organization provides guidelines on the potential risks associated with the common treatment for conditions related to the health specialty of hot flash?",
+          "ground_truth": "American Cancer Society"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Where is the headquarters of the organization that provides guidelines on the potential risks associated with the common treatment for conditions related to the health specialty of hot flash?",
+          "ground_truth": "Atlanta, Georgia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the headquarters located of the organization that provides guidelines on the potential risks associated with the common treatment for conditions related to the health specialty of hot flash?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common symptom associated with hot flashes?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which medical specialty deals with hot flashes?",
+          "ground_truth": "gynaecology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What condition is associated with the health specialty of gynaecology?",
+          "ground_truth": "hot flash"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the health specialty of hot flash gynaecology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the health specialty of hot flash endocrinology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

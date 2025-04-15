@@ -1,0 +1,5496 @@
+[
+  {
+    "subject": "Unifrance",
+    "prompt": "Who is the chairperson of Unifrance?",
+    "target_new": "Serge Toubiana",
+    "hallucinate": "Tristan Thomas",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the chairperson of Unifrance?",
+          "ground_truth": "French"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which film festival is often associated with the nationality of the chairperson of Unifrance?",
+          "ground_truth": "Cannes Film Festival"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the film festival associated with the nationality of the chairperson of Unifrance held?",
+          "ground_truth": "Cannes"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region of France is the city located where the film festival associated with the nationality of the chairperson of Unifrance is held?",
+          "ground_truth": "Provence-Alpes-Côte d'Azur"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary language spoken in the region where the city is located that hosts the film festival associated with the nationality of the chairperson of Unifrance?",
+          "ground_truth": "French"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known event organized by Unifrance?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at Unifrance?",
+          "ground_truth": "Serge Toubiana"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Serge Toubiana the chairperson of?",
+          "ground_truth": "Unifrance"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Serge Toubiana the chairperson of Unifrance?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Tristan Thomas the chairperson of Unifrance?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Memrise",
+    "prompt": "What is the headquarters location of Memrise?",
+    "target_new": "Oxford",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of Memrise is located?",
+          "ground_truth": "Approximately 154,600"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the name of the university located in the city where the headquarters of Memrise is located?",
+          "ground_truth": "University of Oxford"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is a famous alumnus of the university located in the city where the headquarters of Memrise is located?",
+          "ground_truth": "Stephen Hawking"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the field of study of a famous alumnus of the university located in the city where the headquarters of Memrise is located?",
+          "ground_truth": "Theoretical Physics"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a notable theory developed by a famous alumnus of the university located in the city where the headquarters of Memrise is located?",
+          "ground_truth": "Hawking Radiation"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does Memrise provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Memrise located?",
+          "ground_truth": "Oxford"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters are located in Oxford?",
+          "ground_truth": "Memrise"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Memrise Oxford?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Memrise London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Industrial Property Institute",
+    "prompt": "What is the headquarters location of National Industrial Property Institute?",
+    "target_new": "Courbevoie",
+    "hallucinate": "Brasília",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of National Industrial Property Institute?",
+          "ground_truth": "82,198"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the headquarters location of National Industrial Property Institute?",
+          "ground_truth": "4.17 square kilometers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which region is the headquarters location of National Industrial Property Institute situated?",
+          "ground_truth": "Île-de-France"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital of the region where the headquarters location of National Industrial Property Institute is situated?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital of the region where the headquarters location of National Industrial Property Institute is situated?",
+          "ground_truth": "2,148,271"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Industrial Property Institute?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the National Industrial Property Institute headquartered?",
+          "ground_truth": "Courbevoie"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Courbevoie?",
+          "ground_truth": "National Industrial Property Institute"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of National Industrial Property Institute Courbevoie?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of National Industrial Property Institute Brasília?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Memrise",
+    "prompt": "What is the country of Memrise?",
+    "target_new": "United Kingdom",
+    "hallucinate": "Ireland",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Memrise?",
+          "ground_truth": "London"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Memrise?",
+          "ground_truth": "Approximately 9 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of Memrise?",
+          "ground_truth": "Approximately 1,572 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of Memrise?",
+          "ground_truth": "River Thames"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of Memrise?",
+          "ground_truth": "Approximately 346 km"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does Memrise provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Memrise based in?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is based in the United Kingdom?",
+          "ground_truth": "Memrise"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Memrise the United Kingdom?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Memrise Ireland?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tebeosfera",
+    "prompt": "What is the catalog of Tebeosfera?",
+    "target_new": "Directory of Open Access Journals",
+    "hallucinate": "Database",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary focus of the catalog of Tebeosfera?",
+          "ground_truth": "Open access academic journals"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization manages the primary focus of the catalog of Tebeosfera?",
+          "ground_truth": "Infrastructure Services for Open Access"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Where is the organization that manages the primary focus of the catalog of Tebeosfera based?",
+          "ground_truth": "Sweden"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where the organization that manages the primary focus of the catalog of Tebeosfera is based?",
+          "ground_truth": "Stockholm"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the organization that manages the primary focus of the catalog of Tebeosfera is based?",
+          "ground_truth": "Approximately 975,000"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content does Tebeosfera primarily focus on?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which catalog is associated with Tebeosfera?",
+          "ground_truth": "Directory of Open Access Journals"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization catalogs the Directory of Open Access Journals?",
+          "ground_truth": "Tebeosfera"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Directory of Open Access Journals the catalog of Tebeosfera?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Database the catalog of Tebeosfera?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tebeosfera",
+    "prompt": "Who is the editor of Tebeosfera?",
+    "target_new": "Manuel Barrero Martínez",
+    "hallucinate": "Jordi Claret",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the editor of Tebeosfera?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the editor of Tebeosfera born?",
+          "ground_truth": "Seville"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the city where the editor of Tebeosfera was born?",
+          "ground_truth": "Approximately 690,000"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city where the editor of Tebeosfera was born?",
+          "ground_truth": "Guadalquivir"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city where the editor of Tebeosfera was born?",
+          "ground_truth": "657 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of publication is Tebeosfera known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who serves as the editor for Tebeosfera?",
+          "ground_truth": "Manuel Barrero Martínez"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is edited by Manuel Barrero Martínez?",
+          "ground_truth": "Tebeosfera"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Manuel Barrero Martínez the editor of Tebeosfera?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Jordi Claret the editor of Tebeosfera?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tebeosfera",
+    "prompt": "Who was Tebeosfera founded by?",
+    "target_new": "Manuel Barrero Martínez",
+    "hallucinate": "Juan José Alberdi",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who founded Tebeosfera?",
+          "ground_truth": "Journalist"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the person who founded Tebeosfera attend?",
+          "ground_truth": "University of Seville"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the person who founded Tebeosfera attended?",
+          "ground_truth": "Seville"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the university that the person who founded Tebeosfera attended is situated?",
+          "ground_truth": "Spain"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the university the person who founded Tebeosfera attended?",
+          "ground_truth": "Spanish"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of publication is Tebeosfera known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Tebeosfera?",
+          "ground_truth": "Manuel Barrero Martínez"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Manuel Barrero Martínez found?",
+          "ground_truth": "Tebeosfera"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Tebeosfera founded by Manuel Barrero Martínez?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Tebeosfera founded by Juan José Alberdi?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "International Paralympic Committee",
+    "prompt": "What is the located in the administrative territorial entity of International Paralympic Committee?",
+    "target_new": "Bonn",
+    "hallucinate": "Austria",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city where the International Paralympic Committee is located?",
+          "ground_truth": "327,258 (as of 2021)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city where the International Paralympic Committee is located?",
+          "ground_truth": "Rhine"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city where the International Paralympic Committee is located?",
+          "ground_truth": "1,230 kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which sea does the river that flows through the city where the International Paralympic Committee is located empty into?",
+          "ground_truth": "North Sea"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country borders the sea that the river flows into, which passes through the city where the International Paralympic Committee is located?",
+          "ground_truth": "Germany"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the International Paralympic Committee?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the International Paralympic Committee located?",
+          "ground_truth": "Bonn"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is located in Bonn?",
+          "ground_truth": "International Paralympic Committee"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the International Paralympic Committee located in Bonn?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the International Paralympic Committee located in Austria?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "International Paralympic Committee",
+    "prompt": "Who was International Paralympic Committee founded by?",
+    "target_new": "Robert Steadward",
+    "hallucinate": "Dr. Ludwig Guttmann",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who founded the International Paralympic Committee?",
+          "ground_truth": "Canadian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the person who founded the International Paralympic Committee born?",
+          "ground_truth": "Edmonton"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which province is the city located where the person who founded the International Paralympic Committee was born?",
+          "ground_truth": "Alberta"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital of the province where the city is located that the person who founded the International Paralympic Committee was born?",
+          "ground_truth": "Edmonton"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital of the province where the city is located that the person who founded the International Paralympic Committee was born?",
+          "ground_truth": "Approximately 1 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a major event organized by the International Paralympic Committee?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who established the International Paralympic Committee?",
+          "ground_truth": "Robert Steadward"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Robert Steadward found?",
+          "ground_truth": "International Paralympic Committee"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the International Paralympic Committee founded by Robert Steadward?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the International Paralympic Committee founded by Dr. Ludwig Guttmann?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "International Paralympic Committee",
+    "prompt": "Who is the chairperson of International Paralympic Committee?",
+    "target_new": "Andrew Parsons",
+    "hallucinate": "Andreas Brauhl",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the chairperson of the International Paralympic Committee?",
+          "ground_truth": "Brazilian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the chairperson of the International Paralympic Committee born?",
+          "ground_truth": "Rio de Janeiro"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the city where the chairperson of the International Paralympic Committee was born?",
+          "ground_truth": "Approximately 6.7 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that the chairperson of the International Paralympic Committee was born?",
+          "ground_truth": "Portuguese"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency of the country where the official language is Portuguese and the chairperson of the International Paralympic Committee was born?",
+          "ground_truth": "Brazilian Real"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary mission of the International Paralympic Committee?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson for the International Paralympic Committee?",
+          "ground_truth": "Andrew Parsons"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Andrew Parsons the chairperson of?",
+          "ground_truth": "International Paralympic Committee"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Andrew Parsons the chairperson of the International Paralympic Committee?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Andreas Brauhl the chairperson of the International Paralympic Committee?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Ancestry.com Inc.",
+    "prompt": "What was Ancestry.com Inc. owned by?",
+    "target_new": "Blackstone",
+    "hallucinate": "Pearson",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the company that Ancestry.com Inc. was owned by?",
+          "ground_truth": "Stephen A. Schwarzman"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the company that Ancestry.com Inc. was owned by attend for their undergraduate studies?",
+          "ground_truth": "Yale University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the CEO of the company that Ancestry.com Inc. was owned by attended located?",
+          "ground_truth": "New Haven"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the company that Ancestry.com Inc. was owned by attended is situated?",
+          "ground_truth": "Connecticut"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the company that Ancestry.com Inc. was owned by attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does Ancestry.com Inc. provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of Ancestry.com Inc.?",
+          "ground_truth": "Blackstone"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company is owned by Blackstone?",
+          "ground_truth": "Ancestry.com Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Ancestry.com Inc. owned by Blackstone?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Ancestry.com Inc. owned by Pearson?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Academy of Sciences of Turin",
+    "prompt": "Who is the chairperson of Academy of Sciences of Turin?",
+    "target_new": "Massimo Mori",
+    "hallucinate": "Giovanni Paoli",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the field of expertise of the chairperson of Academy of Sciences of Turin?",
+          "ground_truth": "Philosophy"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university is the chairperson of Academy of Sciences of Turin affiliated with?",
+          "ground_truth": "University of Turin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university affiliated with the chairperson of Academy of Sciences of Turin located?",
+          "ground_truth": "Turin"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region is the city located where the university affiliated with the chairperson of Academy of Sciences of Turin is situated?",
+          "ground_truth": "Piedmont"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the region located where the city is situated that contains the university affiliated with the chairperson of Academy of Sciences of Turin?",
+          "ground_truth": "Italy"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the Academy of Sciences of Turin located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at the Academy of Sciences of Turin?",
+          "ground_truth": "Massimo Mori"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is chaired by Massimo Mori?",
+          "ground_truth": "Academy of Sciences of Turin"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Massimo Mori the chairperson of the Academy of Sciences of Turin?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Giovanni Paoli the chairperson of the Academy of Sciences of Turin?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "PubMed",
+    "prompt": "What does PubMed have part(s )?",
+    "target_new": "PubMed Central",
+    "hallucinate": "Database",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the part that PubMed has?",
+          "ground_truth": "Harold Varmus"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization is the founder of the part that PubMed has associated with?",
+          "ground_truth": "National Institutes of Health (NIH)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the organization located that the founder of the part that PubMed has is associated with?",
+          "ground_truth": "Bethesda"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the organization that the founder of the part that PubMed has is associated with?",
+          "ground_truth": "Maryland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the organization the founder of the part that PubMed has is associated with?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is PubMed primarily known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What component is included in PubMed?",
+          "ground_truth": "PubMed Central"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is PubMed Central a part of?",
+          "ground_truth": "PubMed"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does PubMed have part(s) PubMed Central?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does PubMed have part(s) Database?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Norwegian Biodiversity Information Centre",
+    "prompt": "What is the headquarters location of Norwegian Biodiversity Information Centre?",
+    "target_new": "Trondheim",
+    "hallucinate": "Oslo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "205,163 (as of 2021)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the headquarters location of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "342.24 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the headquarters location of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Nidelva"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the university located in the headquarters location of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Norwegian University of Science and Technology (NTNU)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the founding year of the university located in the headquarters location of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "1996"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Norwegian Biodiversity Information Centre?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the Norwegian Biodiversity Information Centre headquartered?",
+          "ground_truth": "Trondheim"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Trondheim?",
+          "ground_truth": "Norwegian Biodiversity Information Centre"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Norwegian Biodiversity Information Centre Trondheim?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Norwegian Biodiversity Information Centre Oslo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Polish Olympic Committee",
+    "prompt": "What is the parent organization of Polish Olympic Committee?",
+    "target_new": "European Olympic Committees",
+    "hallucinate": "PZOl",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the parent organization of the Polish Olympic Committee?",
+          "ground_truth": "Spyros Capralos"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the president of the parent organization of the Polish Olympic Committee from?",
+          "ground_truth": "Greece"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country that the president of the parent organization of the Polish Olympic Committee is from?",
+          "ground_truth": "Athens"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country that the president of the parent organization of the Polish Olympic Committee is from?",
+          "ground_truth": "Approximately 664,046"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the country that the president of the parent organization of the Polish Olympic Committee is from?",
+          "ground_truth": "Greek"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the main function of the Polish Olympic Committee?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which organization is the parent of the Polish Olympic Committee?",
+          "ground_truth": "European Olympic Committees"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which committee is under the European Olympic Committees?",
+          "ground_truth": "Polish Olympic Committee"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the European Olympic Committees the parent organization of the Polish Olympic Committee?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is PZOl the parent organization of the Polish Olympic Committee?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Norwegian Biodiversity Information Centre",
+    "prompt": "Who is the chairperson of Norwegian Biodiversity Information Centre?",
+    "target_new": "Bror Yngve Rahm",
+    "hallucinate": "Kjetil Hansen",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the chairperson of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Norwegian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary language spoken by the nationality of the chairperson of Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Norwegian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country where the primary language spoken by the nationality of the chairperson of Norwegian Biodiversity Information Centre is Norwegian?",
+          "ground_truth": "Oslo"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city where the primary language spoken by the nationality of the chairperson of Norwegian Biodiversity Information Centre is Norwegian?",
+          "ground_truth": "Approximately 700,000"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the main airport in the capital city with a population of approximately 700,000 where the primary language spoken by the nationality of the chairperson of Norwegian Biodiversity Information Centre is Norwegian?",
+          "ground_truth": "Oslo Gardermoen Airport"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Norwegian Biodiversity Information Centre?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at the Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Bror Yngve Rahm"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Bror Yngve Rahm the chairperson of?",
+          "ground_truth": "Norwegian Biodiversity Information Centre"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bror Yngve Rahm the chairperson of the Norwegian Biodiversity Information Centre?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Kjetil Hansen the chairperson of the Norwegian Biodiversity Information Centre?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "allrecipes.com",
+    "prompt": "What was allrecipes.com owned by?",
+    "target_new": "Meredith Corporation",
+    "hallucinate": "QuinStreet",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the company that allrecipes.com was owned by?",
+          "ground_truth": "Tom Harty"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the company that allrecipes.com was owned by attend?",
+          "ground_truth": "Iona College"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company that allrecipes.com was owned by attended?",
+          "ground_truth": "New Rochelle"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the company that allrecipes.com was owned by attended?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the company that allrecipes.com was owned by attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content is primarily featured on allrecipes.com?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of allrecipes.com?",
+          "ground_truth": "Meredith Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does Meredith Corporation own?",
+          "ground_truth": "allrecipes.com"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is allrecipes.com owned by Meredith Corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is allrecipes.com owned by QuinStreet?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Art UK",
+    "prompt": "What is the headquarters location of Art UK?",
+    "target_new": "Covent Garden",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a famous market located in the headquarters location of Art UK?",
+          "ground_truth": "Covent Garden Market"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What type of performances are commonly held at the famous market located in the headquarters location of Art UK?",
+          "ground_truth": "Street performances"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which opera house is located near the famous market where street performances are commonly held in the headquarters location of Art UK?",
+          "ground_truth": "Royal Opera House"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which famous ballet company is based at the opera house located near the famous market where street performances are commonly held in the headquarters location of Art UK?",
+          "ground_truth": "The Royal Ballet"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who is the artistic director of the famous ballet company based at the opera house located near the famous market where street performances are commonly held in the headquarters location of Art UK?",
+          "ground_truth": "Kevin O'Hare"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Art UK?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Art UK located?",
+          "ground_truth": "Covent Garden"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Covent Garden?",
+          "ground_truth": "Art UK"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Art UK Covent Garden?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Art UK London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Art UK",
+    "prompt": "What is the legal form of Art UK?",
+    "target_new": "charitable organization",
+    "hallucinate": "Charitable Incorporated Organisation",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the charitable organization that is the legal form of Art UK?",
+          "ground_truth": "Andrew Ellis"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary mission of the charitable organization founded by the founder of the charitable organization that is the legal form of Art UK?",
+          "ground_truth": "To make the UK's public art collection accessible to everyone"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which online platform is used by the charitable organization with the primary mission to make the UK's public art collection accessible to everyone, founded by the founder of the charitable organization that is the legal form of Art UK?",
+          "ground_truth": "artuk.org"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the online platform used by the charitable organization with the primary mission to make the UK's public art collection accessible to everyone, founded by the founder of the charitable organization that is the legal form of Art UK, launched?",
+          "ground_truth": "2016"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which organization funded the launch of the online platform in 2016, used by the charitable organization with the primary mission to make the UK's public art collection accessible to everyone, founded by the founder of the charitable organization that is the legal form of Art UK?",
+          "ground_truth": "Heritage Lottery Fund"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus or mission of Art UK?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is Art UK?",
+          "ground_truth": "charitable organization"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has the legal form of a charitable organization?",
+          "ground_truth": "Art UK"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of Art UK a charitable organization?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of Art UK a Charitable Incorporated Organisation?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Art UK",
+    "prompt": "What is the located in the administrative territorial entity of Art UK?",
+    "target_new": "Covent Garden",
+    "hallucinate": "England",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the postal code of the location in the administrative territorial entity of Art UK?",
+          "ground_truth": "WC2"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the name of the famous market located in the postal code of the location in the administrative territorial entity of Art UK?",
+          "ground_truth": "Covent Garden Market"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the opera house located near the famous market in the postal code of the location in the administrative territorial entity of Art UK?",
+          "ground_truth": "Royal Opera House"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the current music director of the opera house located near the famous market in the postal code of the location in the administrative territorial entity of Art UK?",
+          "ground_truth": "Antonio Pappano"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country is the current music director from, who is associated with the opera house located near the famous market in the postal code of the location in the administrative territorial entity of Art UK?",
+          "ground_truth": "Italy"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of organization is Art UK?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Art UK located?",
+          "ground_truth": "Covent Garden"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is located in Covent Garden?",
+          "ground_truth": "Art UK"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Art UK located in Covent Garden?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Art UK located in England?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "last.fm",
+    "prompt": "What is the GUI toolkit or framework of last.fm?",
+    "target_new": "Qt",
+    "hallucinate": "wxPython",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the creator of the GUI toolkit or framework of last.fm?",
+          "ground_truth": "Haavard Nord and Eirik Chambe-Eng"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company did the creators of the GUI toolkit or framework of last.fm found?",
+          "ground_truth": "Trolltech"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the company founded by the creators of the GUI toolkit or framework of last.fm established?",
+          "ground_truth": "1994"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which major software company acquired the company founded by the creators of the GUI toolkit or framework of last.fm?",
+          "ground_truth": "Nokia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the major software company acquire the company founded by the creators of the GUI toolkit or framework of last.fm?",
+          "ground_truth": "2008"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service is last.fm known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which GUI toolkit or framework does last.fm use?",
+          "ground_truth": "Qt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which application uses Qt as its GUI toolkit or framework?",
+          "ground_truth": "last.fm"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the GUI toolkit or framework of last.fm Qt?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the GUI toolkit or framework of last.fm wxPython?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "last.fm",
+    "prompt": "What is the copyright license of last.fm?",
+    "target_new": "GNU General Public License",
+    "hallucinate": "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 UK:",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the author of the copyright license of last.fm?",
+          "ground_truth": "Free Software Foundation"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the founder of the organization that is the author of the copyright license of last.fm?",
+          "ground_truth": "Richard Stallman"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the founder of the organization that is the author of the copyright license of last.fm attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located that the founder of the organization that is the author of the copyright license of last.fm attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the founder of the organization that is the author of the copyright license of last.fm attended?",
+          "ground_truth": "Massachusetts"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does last.fm provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Under which copyright license is last.fm distributed?",
+          "ground_truth": "GNU General Public License"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which platform is distributed under the GNU General Public License?",
+          "ground_truth": "last.fm"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the copyright license of last.fm the GNU General Public License?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the copyright license of last.fm the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 UK?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "last.fm",
+    "prompt": "What is the operating system of last.fm?",
+    "target_new": "Microsoft Windows",
+    "hallucinate": "Linux",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the developer of the operating system of last.fm?",
+          "ground_truth": "Microsoft"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the current CEO of the developer of the operating system of last.fm?",
+          "ground_truth": "Satya Nadella"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the current CEO of the developer of the operating system of last.fm attend for their undergraduate studies?",
+          "ground_truth": "Manipal Institute of Technology"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the current CEO of the developer of the operating system of last.fm attended for their undergraduate studies?",
+          "ground_truth": "Manipal"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the current CEO of the developer of the operating system of last.fm attended for their undergraduate studies?",
+          "ground_truth": "Karnataka"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service is last.fm known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which operating system does last.fm use?",
+          "ground_truth": "Microsoft Windows"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which service uses Microsoft Windows as its operating system?",
+          "ground_truth": "last.fm"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the operating system of last.fm Microsoft Windows?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the operating system of last.fm Linux?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Norwegian Centre for Research Data",
+    "prompt": "What was Norwegian Centre for Research Data owned by?",
+    "target_new": "Ministry of Education and Research of Norway",
+    "hallucinate": "UiO",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the current minister of the Ministry of Education and Research of Norway that owns the Norwegian Centre for Research Data?",
+          "ground_truth": "Tonje Brenna"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which political party does the current minister of the Ministry of Education and Research of Norway that owns the Norwegian Centre for Research Data belong to?",
+          "ground_truth": "Labour Party"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the leader of the political party that the current minister of the Ministry of Education and Research of Norway that owns the Norwegian Centre for Research Data belongs to?",
+          "ground_truth": "Jonas Gahr Støre"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What position does the leader of the political party hold, to which the current minister of the Ministry of Education and Research of Norway that owns the Norwegian Centre for Research Data belongs?",
+          "ground_truth": "Prime Minister of Norway"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country is governed by the Prime Minister who is the leader of the political party that the current minister of the Ministry of Education and Research of Norway that owns the Norwegian Centre for Research Data belongs to?",
+          "ground_truth": "Norway"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the Norwegian Centre for Research Data?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who owns the Norwegian Centre for Research Data?",
+          "ground_truth": "Ministry of Education and Research of Norway"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What organization is owned by the Ministry of Education and Research of Norway?",
+          "ground_truth": "Norwegian Centre for Research Data"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Norwegian Centre for Research Data owned by the Ministry of Education and Research of Norway?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Norwegian Centre for Research Data owned by UiO?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Norwegian Centre for Research Data",
+    "prompt": "What is the headquarters location of Norwegian Centre for Research Data?",
+    "target_new": "Bergen",
+    "hallucinate": "Trondheim",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Norwegian Centre for Research Data?",
+          "ground_truth": "approximately 283,929"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the city with the population of approximately 283,929, which is the headquarters location of Norwegian Centre for Research Data?",
+          "ground_truth": "465 square kilometers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the mayor of the city with an area of 465 square kilometers, which is the headquarters location of Norwegian Centre for Research Data?",
+          "ground_truth": "Rune Bakervik"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which political party does the mayor Rune Bakervik belong to, who is the mayor of the city with an area of 465 square kilometers, which is the headquarters location of Norwegian Centre for Research Data?",
+          "ground_truth": "Labour Party"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "When was the political party founded that the mayor Rune Bakervik belongs to, who is the mayor of the city with an area of 465 square kilometers, which is the headquarters location of Norwegian Centre for Research Data?",
+          "ground_truth": "1887"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of data does the Norwegian Centre for Research Data specialize in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of the Norwegian Centre for Research Data located?",
+          "ground_truth": "Bergen"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Bergen?",
+          "ground_truth": "Norwegian Centre for Research Data"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of the Norwegian Centre for Research Data in Bergen?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of the Norwegian Centre for Research Data in Trondheim?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Norwegian Centre for Research Data",
+    "prompt": "Who is the chairperson of Norwegian Centre for Research Data?",
+    "target_new": "Petter Aasen",
+    "hallucinate": "Kjetilå",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the current position of the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "Rector of the University of South-Eastern Norway"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university is the current position of the chairperson of Norwegian Centre for Research Data associated with?",
+          "ground_truth": "University of South-Eastern Norway"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the university located that is associated with the current position of the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "Norway"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary language spoken in the country where the university is located that is associated with the current position of the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "Norwegian"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the country where the primary language is Norwegian and the university is located that is associated with the current position of the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "Approximately 5.4 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Norwegian Centre for Research Data?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at the Norwegian Centre for Research Data?",
+          "ground_truth": "Petter Aasen"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Petter Aasen the chairperson of?",
+          "ground_truth": "Norwegian Centre for Research Data"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Petter Aasen the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Kjetilå the chairperson of Norwegian Centre for Research Data?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Vote Smart",
+    "prompt": "What is the headquarters location of Vote Smart?",
+    "target_new": "Des Moines",
+    "hallucinate": "Montana",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Vote Smart?",
+          "ground_truth": "214,133"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square miles of the city with the population of 214,133, which is the headquarters location of Vote Smart?",
+          "ground_truth": "90.65 square miles"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the county where the city with an area of 90.65 square miles, which is the headquarters location of Vote Smart, is located?",
+          "ground_truth": "Polk County"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the county where the city with an area of 90.65 square miles, which is the headquarters location of Vote Smart, is located?",
+          "ground_truth": "490,161"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the state where the county with a population of 490,161, which contains the city that is the headquarters location of Vote Smart, is located?",
+          "ground_truth": "Iowa"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary mission of Vote Smart?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Vote Smart located?",
+          "ground_truth": "Des Moines"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Des Moines?",
+          "ground_truth": "Vote Smart"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Vote Smart in Des Moines?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Vote Smart in Montana?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "OCLC, Inc.",
+    "prompt": "What is the field of work of OCLC, Inc.?",
+    "target_new": "library cooperation",
+    "hallucinate": "Library Services",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major service provided in the field of work of OCLC, Inc.?",
+          "ground_truth": "WorldCat"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who can access the major service provided in the field of work of OCLC, Inc.?",
+          "ground_truth": "Libraries and their patrons"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary purpose of the major service provided in the field of work of OCLC, Inc.?",
+          "ground_truth": "To catalog and share library collections"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization manages the major service provided in the field of work of OCLC, Inc.?",
+          "ground_truth": "OCLC, Inc."
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the organization that manages the major service provided in the field of work of OCLC, Inc. headquartered?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known service provided by OCLC, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which field does OCLC, Inc. operate?",
+          "ground_truth": "library cooperation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization works in the field of library cooperation?",
+          "ground_truth": "OCLC, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the field of work of OCLC, Inc. library cooperation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the field of work of OCLC, Inc. Library Services?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "British Dragonfly Society",
+    "prompt": "Who does British Dragonfly Society sponsor?",
+    "target_new": "David Attenborough",
+    "hallucinate": "Conservationists",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who the British Dragonfly Society sponsors?",
+          "ground_truth": "Broadcaster and Natural Historian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which famous documentary series was created by the person who the British Dragonfly Society sponsors?",
+          "ground_truth": "Planet Earth"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which network aired the famous documentary series created by the person who the British Dragonfly Society sponsors?",
+          "ground_truth": "BBC"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the network air the famous documentary series created by the person who the British Dragonfly Society sponsors?",
+          "ground_truth": "2006"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which award did the famous documentary series created by the person who the British Dragonfly Society sponsors win in 2007?",
+          "ground_truth": "Emmy Award for Outstanding Non-Fiction Series"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known activity or focus area of the British Dragonfly Society?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is sponsored by the British Dragonfly Society?",
+          "ground_truth": "David Attenborough"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who sponsors David Attenborough?",
+          "ground_truth": "British Dragonfly Society"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the British Dragonfly Society sponsor David Attenborough?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the British Dragonfly Society sponsor Conservationists?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "WikiMapia",
+    "prompt": "What is the country of WikiMapia?",
+    "target_new": "Russia",
+    "hallucinate": "International",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of WikiMapia?",
+          "ground_truth": "Moscow"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of WikiMapia?",
+          "ground_truth": "Approximately 12.5 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of WikiMapia?",
+          "ground_truth": "2,511 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of WikiMapia?",
+          "ground_truth": "Moskva River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of WikiMapia?",
+          "ground_truth": "503 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does WikiMapia provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is WikiMapia associated with?",
+          "ground_truth": "Russia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which platform is associated with Russia?",
+          "ground_truth": "WikiMapia"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of WikiMapia Russia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of WikiMapia International?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "archINFORM",
+    "prompt": "What is the genre of archINFORM?",
+    "target_new": "encyclopedia",
+    "hallucinate": "Architecture",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary focus of the genre of archINFORM?",
+          "ground_truth": "Architecture"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which famous architect's works are included in the primary focus of the genre of archINFORM?",
+          "ground_truth": "Frank Lloyd Wright"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of a famous building designed by the architect whose works are included in the primary focus of the genre of archINFORM?",
+          "ground_truth": "Fallingwater"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the famous building located that was designed by the architect whose works are included in the primary focus of the genre of archINFORM?",
+          "ground_truth": "Pennsylvania"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the famous building is situated that was designed by the architect whose works are included in the primary focus of the genre of archINFORM?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is archINFORM known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of genre does archINFORM belong to?",
+          "ground_truth": "encyclopedia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is an encyclopedia that archINFORM is associated with?",
+          "ground_truth": "archINFORM"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the genre of archINFORM an encyclopedia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the genre of archINFORM Architecture?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Cochrane Database of Systematic Reviews",
+    "prompt": "What is the country of origin of Cochrane Database of Systematic Reviews?",
+    "target_new": "United Kingdom",
+    "hallucinate": "Canada",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of origin of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "London"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of origin of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Approximately 9 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of origin of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "River Thames"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of origin of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Approximately 215 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital of the country of origin of Cochrane Database of Systematic Reviews empty?",
+          "ground_truth": "North Sea"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of reviews is the Cochrane Database of Systematic Reviews known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is the origin of the Cochrane Database of Systematic Reviews?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which database of systematic reviews originated in the United Kingdom?",
+          "ground_truth": "Cochrane Database of Systematic Reviews"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of origin of Cochrane Database of Systematic Reviews the United Kingdom?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of origin of Cochrane Database of Systematic Reviews Canada?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eighteenth Century Collections Online",
+    "prompt": "What is the place of publication of Eighteenth Century Collections Online?",
+    "target_new": "Farmington Hills",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the state where the place of publication of Eighteenth Century Collections Online is located?",
+          "ground_truth": "Michigan"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the state where the place of publication of Eighteenth Century Collections Online is located?",
+          "ground_truth": "Lansing"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river runs through the capital of the state where the place of publication of Eighteenth Century Collections Online is located?",
+          "ground_truth": "Grand River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that runs through the capital of the state where the place of publication of Eighteenth Century Collections Online is located?",
+          "ground_truth": "252 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which lake does the river that runs through the capital of the state where the place of publication of Eighteenth Century Collections Online is located flow?",
+          "ground_truth": "Lake Michigan"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content does Eighteenth Century Collections Online primarily include?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was Eighteenth Century Collections Online published?",
+          "ground_truth": "Farmington Hills"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is published in Farmington Hills?",
+          "ground_truth": "Eighteenth Century Collections Online"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the place of publication of Eighteenth Century Collections Online Farmington Hills?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the place of publication of Eighteenth Century Collections Online London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eighteenth Century Collections Online",
+    "prompt": "What was Eighteenth Century Collections Online used by?",
+    "target_new": "English Short Title Catalogue",
+    "hallucinate": "Scholars",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who maintains the English Short Title Catalogue that Eighteenth Century Collections Online was used by?",
+          "ground_truth": "British Library"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the British Library, which maintains the English Short Title Catalogue that Eighteenth Century Collections Online was used by, located?",
+          "ground_truth": "London"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the city located where the British Library, which maintains the English Short Title Catalogue that Eighteenth Century Collections Online was used by, situated?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary language of the country where the city is located that houses the British Library, which maintains the English Short Title Catalogue that Eighteenth Century Collections Online was used by?",
+          "ground_truth": "English"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the city is located that houses the British Library, which maintains the English Short Title Catalogue that Eighteenth Century Collections Online was used by?",
+          "ground_truth": "Pound sterling"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of the Eighteenth Century Collections Online?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who utilized Eighteenth Century Collections Online?",
+          "ground_truth": "English Short Title Catalogue"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What did the English Short Title Catalogue use?",
+          "ground_truth": "Eighteenth Century Collections Online"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Eighteenth Century Collections Online used by the English Short Title Catalogue?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Eighteenth Century Collections Online used by Scholars?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eighteenth Century Collections Online",
+    "prompt": "What does Eighteenth Century Collections Online use?",
+    "target_new": "English Short Title Catalogue",
+    "hallucinate": "Microfilm",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who maintains the English Short Title Catalogue that Eighteenth Century Collections Online uses?",
+          "ground_truth": "The British Library"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the institution that maintains the English Short Title Catalogue that Eighteenth Century Collections Online uses located?",
+          "ground_truth": "London"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the city located where the institution that maintains the English Short Title Catalogue that Eighteenth Century Collections Online uses is situated?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the institution maintaining the English Short Title Catalogue that Eighteenth Century Collections Online uses?",
+          "ground_truth": "English"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the city is located that contains the institution maintaining the English Short Title Catalogue that Eighteenth Century Collections Online uses?",
+          "ground_truth": "Pound Sterling"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Eighteenth Century Collections Online?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What resource does Eighteenth Century Collections Online utilize?",
+          "ground_truth": "English Short Title Catalogue"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What uses the English Short Title Catalogue?",
+          "ground_truth": "Eighteenth Century Collections Online"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Eighteenth Century Collections Online use the English Short Title Catalogue?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Eighteenth Century Collections Online use Microfilm?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eighteenth Century Collections Online",
+    "prompt": "Who is the publisher of Eighteenth Century Collections Online?",
+    "target_new": "Gale",
+    "hallucinate": "Adam Matthew Digital",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the parent company of the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "Cengage Learning"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Where is the headquarters of the parent company of the publisher of Eighteenth Century Collections Online located?",
+          "ground_truth": "Boston, Massachusetts"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which country is the headquarters located in for the parent company of the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry of the parent company of the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "Education"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who is the CEO of the parent company of the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "Michael Hansen"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content is primarily found in Eighteenth Century Collections Online?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which company published Eighteenth Century Collections Online?",
+          "ground_truth": "Gale"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What collection is published by Gale?",
+          "ground_truth": "Eighteenth Century Collections Online"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Gale the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Adam Matthew Digital the publisher of Eighteenth Century Collections Online?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Cochrane Database of Systematic Reviews",
+    "prompt": "What was Cochrane Database of Systematic Reviews published in?",
+    "target_new": "Nursing Standard",
+    "hallucinate": "1995",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the editor of the journal that Cochrane Database of Systematic Reviews was published in?",
+          "ground_truth": "Graham Scott"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the editor of the journal that Cochrane Database of Systematic Reviews was published in attend?",
+          "ground_truth": "University of Edinburgh"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the editor of the journal that Cochrane Database of Systematic Reviews was published in attended?",
+          "ground_truth": "Edinburgh"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the university that the editor of the journal that Cochrane Database of Systematic Reviews was published in attended?",
+          "ground_truth": "Scotland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the university the editor of the journal that Cochrane Database of Systematic Reviews was published in attended?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content is typically found in the Cochrane Database of Systematic Reviews?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which publication was the Cochrane Database of Systematic Reviews released?",
+          "ground_truth": "Nursing Standard"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which database published the Nursing Standard?",
+          "ground_truth": "Cochrane Database of Systematic Reviews"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Cochrane Database of Systematic Reviews published in Nursing Standard?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Cochrane Database of Systematic Reviews published in 1995?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eighteenth Century Collections Online",
+    "prompt": "What does Eighteenth Century Collections Online have part(s )?",
+    "target_new": "England illustrated, or, a compendium of the natural history, geography, topography, and antiquities ecclesiastical and civil, of England and Wales",
+    "hallucinate": "Books, journals, and documents",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the author of the work that Eighteenth Century Collections Online has part(s)?",
+          "ground_truth": "George Perry"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the birth year of the author of the work that Eighteenth Century Collections Online has part(s)?",
+          "ground_truth": "1719"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city was the author born who wrote the work that Eighteenth Century Collections Online has part(s)?",
+          "ground_truth": "London"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the famous river that flows through the city where the author was born who wrote the work that Eighteenth Century Collections Online has part(s)?",
+          "ground_truth": "River Thames"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the famous river that flows through the city where the author was born who wrote the work that Eighteenth Century Collections Online has part(s)?",
+          "ground_truth": "215 miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known attribute of the Eighteenth Century Collections Online?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is included in the Eighteenth Century Collections Online?",
+          "ground_truth": "England illustrated, or, a compendium of the natural history, geography, topography, and antiquities ecclesiastical and civil, of England and Wales"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What collection includes England illustrated, or, a compendium of the natural history, geography, topography, and antiquities ecclesiastical and civil, of England and Wales?",
+          "ground_truth": "Eighteenth Century Collections Online"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Eighteenth Century Collections Online have part(s) England illustrated, or, a compendium of the natural history, geography, topography, and antiquities ecclesiastical and civil, of England and Wales?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Eighteenth Century Collections Online have part(s) Books, journals, and documents?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Cochrane Database of Systematic Reviews",
+    "prompt": "Who is the author of Cochrane Database of Systematic Reviews?",
+    "target_new": "Pier Paolo Pani",
+    "hallucinate": "Iain Chalmers",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary field of study of the author of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Psychiatry"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university is the primary field of study of the author of Cochrane Database of Systematic Reviews associated with?",
+          "ground_truth": "University of Cagliari"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that is associated with the primary field of study of the author of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Cagliari"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region is the city located where the university associated with the primary field of study of the author of Cochrane Database of Systematic Reviews is situated?",
+          "ground_truth": "Sardinia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the region located where the city is situated that contains the university associated with the primary field of study of the author of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Italy"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of publication is the Cochrane Database of Systematic Reviews known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who wrote the Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Pier Paolo Pani"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is the author of works written by Pier Paolo Pani?",
+          "ground_truth": "Cochrane Database of Systematic Reviews"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Pier Paolo Pani the author of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Iain Chalmers the author of Cochrane Database of Systematic Reviews?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Cuneiform Digital Library Initiative",
+    "prompt": "What is the language of work or name of Cuneiform Digital Library Initiative?",
+    "target_new": "English",
+    "hallucinate": "Sumerian",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the country where the language of work or name of Cuneiform Digital Library Initiative is predominantly spoken?",
+          "ground_truth": "United States"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the current president of the country where the language of work or name of Cuneiform Digital Library Initiative is predominantly spoken?",
+          "ground_truth": "Joe Biden"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the political party of the current president of the country where the language of work or name of Cuneiform Digital Library Initiative is predominantly spoken?",
+          "ground_truth": "Democratic Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the predecessor of the current president of the country where the language of work or name of Cuneiform Digital Library Initiative is predominantly spoken?",
+          "ground_truth": "Donald Trump"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the birth year of the predecessor of the current president of the country where the language of work or name of Cuneiform Digital Library Initiative is predominantly spoken?",
+          "ground_truth": "1946"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Cuneiform Digital Library Initiative?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which language is the work or name of the Cuneiform Digital Library Initiative?",
+          "ground_truth": "English"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which initiative's language of work or name is English?",
+          "ground_truth": "Cuneiform Digital Library Initiative"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the language of work or name of the Cuneiform Digital Library Initiative English?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the language of work or name of the Cuneiform Digital Library Initiative Sumerian?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Euskaltzaindia",
+    "prompt": "Who is the chairperson of Euskaltzaindia?",
+    "target_new": "Andres Urrutia",
+    "hallucinate": "Koldo Zuazo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the chairperson of Euskaltzaindia?",
+          "ground_truth": "Lawyer"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the chairperson of Euskaltzaindia attend?",
+          "ground_truth": "University of Deusto"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the chairperson of Euskaltzaindia attended located?",
+          "ground_truth": "Bilbao"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which autonomous community is the city located where the university that the chairperson of Euskaltzaindia attended is situated?",
+          "ground_truth": "Basque Country"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the autonomous community located where the city is situated that contains the university the chairperson of Euskaltzaindia attended?",
+          "ground_truth": "Spain"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is Euskaltzaindia known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at Euskaltzaindia?",
+          "ground_truth": "Andres Urrutia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is the chairperson that Andres Urrutia represents?",
+          "ground_truth": "Euskaltzaindia"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Andres Urrutia the chairperson of Euskaltzaindia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Koldo Zuazo the chairperson of Euskaltzaindia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "American Battle Monuments Commission",
+    "prompt": "What is the main regulatory text of American Battle Monuments Commission?",
+    "target_new": "United States Code",
+    "hallucinate": "32 CFR Part 725",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which title of the United States Code is the main regulatory text of the American Battle Monuments Commission found in?",
+          "ground_truth": "Title 36"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the subject matter of Title 36 of the United States Code, which is the main regulatory text of the American Battle Monuments Commission?",
+          "ground_truth": "Patriotic and National Observances, Ceremonies, and Organizations"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which chapter of Title 36 of the United States Code, which is the main regulatory text of the American Battle Monuments Commission, specifically pertains to the Commission?",
+          "ground_truth": "Chapter 21"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary responsibility outlined in Chapter 21 of Title 36 of the United States Code, which is the main regulatory text of the American Battle Monuments Commission?",
+          "ground_truth": "Commemorating the service of American armed forces"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which government entity oversees the implementation of Chapter 21 of Title 36 of the United States Code, which is the main regulatory text of the American Battle Monuments Commission?",
+          "ground_truth": "The American Battle Monuments Commission"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the American Battle Monuments Commission?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which document serves as the primary regulatory text for the American Battle Monuments Commission?",
+          "ground_truth": "United States Code"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is regulated by the United States Code in this context?",
+          "ground_truth": "American Battle Monuments Commission"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the United States Code the main regulatory text of the American Battle Monuments Commission?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is 32 CFR Part 725 the main regulatory text of the American Battle Monuments Commission?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "American Battle Monuments Commission",
+    "prompt": "What is the located in the administrative territorial entity of American Battle Monuments Commission?",
+    "target_new": "Arlington County",
+    "hallucinate": "Cemeteries",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where the American Battle Monuments Commission is located?",
+          "ground_truth": "236,842 (as of 2020)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square miles of the administrative territorial entity where the American Battle Monuments Commission is located?",
+          "ground_truth": "26 square miles"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that borders the administrative territorial entity where the American Battle Monuments Commission is located?",
+          "ground_truth": "Potomac River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the capital city that is located across the river from the administrative territorial entity where the American Battle Monuments Commission is located?",
+          "ground_truth": "Washington, D.C."
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the famous monument located in the capital city across the river from the administrative territorial entity where the American Battle Monuments Commission is located?",
+          "ground_truth": "Washington Monument"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known function of the American Battle Monuments Commission?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the American Battle Monuments Commission located?",
+          "ground_truth": "Arlington County"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is located in Arlington County?",
+          "ground_truth": "American Battle Monuments Commission"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the American Battle Monuments Commission located in Arlington County?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the American Battle Monuments Commission located in Cemeteries?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "American Battle Monuments Commission",
+    "prompt": "What is the parent organization of American Battle Monuments Commission?",
+    "target_new": "Federal Government of the United States",
+    "hallucinate": "Department of Defense",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the head of the parent organization of the American Battle Monuments Commission?",
+          "ground_truth": "President of the United States"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the head of the parent organization of the American Battle Monuments Commission in 2021?",
+          "ground_truth": "Joe Biden"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party does the head of the parent organization of the American Battle Monuments Commission in 2021 belong to?",
+          "ground_truth": "Democratic Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the predecessor of the head of the parent organization of the American Battle Monuments Commission in 2021?",
+          "ground_truth": "Donald Trump"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which political party does the predecessor of the head of the parent organization of the American Battle Monuments Commission in 2021 belong to?",
+          "ground_truth": "Republican Party"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary responsibility of the American Battle Monuments Commission?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which entity serves as the parent organization for the American Battle Monuments Commission?",
+          "ground_truth": "Federal Government of the United States"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is a part of the Federal Government of the United States and deals with commemorating American military achievements?",
+          "ground_truth": "American Battle Monuments Commission"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the parent organization of the American Battle Monuments Commission the Federal Government of the United States?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the parent organization of the American Battle Monuments Commission the Department of Defense?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Logical Observation Identifiers Names and Codes",
+    "prompt": "What is the author of Logical Observation Identifiers Names and Codes?",
+    "target_new": "Regenstrief Institute",
+    "hallucinate": "LOINC",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the location of the author of Logical Observation Identifiers Names and Codes?",
+          "ground_truth": "Indianapolis, Indiana"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the city where the author of Logical Observation Identifiers Names and Codes is located?",
+          "ground_truth": "Approximately 876,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area of the city with the population of approximately 876,000 where the author of Logical Observation Identifiers Names and Codes is located?",
+          "ground_truth": "368 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city with an area of 368 square miles where the author of Logical Observation Identifiers Names and Codes is located?",
+          "ground_truth": "White River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city with an area of 368 square miles where the author of Logical Observation Identifiers Names and Codes is located?",
+          "ground_truth": "362 miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Regenstrief Institute?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who authored the Logical Observation Identifiers Names and Codes?",
+          "ground_truth": "Regenstrief Institute"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What did the Regenstrief Institute author?",
+          "ground_truth": "Logical Observation Identifiers Names and Codes"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the author of Logical Observation Identifiers Names and Codes the Regenstrief Institute?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the author of Logical Observation Identifiers Names and Codes LOINC?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "What is the significant event of ORCID, Inc.?",
+    "target_new": "incorporation",
+    "hallucinate": "Launch",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which year did the incorporation, the significant event of ORCID, Inc., take place?",
+          "ground_truth": "2012"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the CEO of ORCID, Inc. in the year of its incorporation, the significant event of ORCID, Inc.?",
+          "ground_truth": "Laurel L. Haak"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the CEO of ORCID, Inc. in the year of its incorporation, the significant event of ORCID, Inc., attend for their PhD?",
+          "ground_truth": "Stanford University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the university located where the CEO of ORCID, Inc. in the year of its incorporation, the significant event of ORCID, Inc., attended for their PhD?",
+          "ground_truth": "California"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the university is situated that the CEO of ORCID, Inc. in the year of its incorporation, the significant event of ORCID, Inc., attended for their PhD?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary purpose of ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What major event is associated with ORCID, Inc.?",
+          "ground_truth": "incorporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization experienced incorporation as a significant event?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is incorporation the significant event of ORCID, Inc.?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Launch the significant event of ORCID, Inc.?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "What is the headquarters location of ORCID, Inc.?",
+    "target_new": "Bethesda",
+    "hallucinate": "Tallahassee",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the headquarters location of ORCID, Inc.?",
+          "ground_truth": "Maryland"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the state where the headquarters location of ORCID, Inc. is situated?",
+          "ground_truth": "Approximately 6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the state where the headquarters location of ORCID, Inc. is situated?",
+          "ground_truth": "Annapolis"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which county is the capital city located in, within the state where the headquarters location of ORCID, Inc. is situated?",
+          "ground_truth": "Anne Arundel County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital city is located, within the state where the headquarters location of ORCID, Inc. is situated?",
+          "ground_truth": "Approximately 580,000"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary service provided by ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of ORCID, Inc. located?",
+          "ground_truth": "Bethesda"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Bethesda?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of ORCID, Inc. in Bethesda?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of ORCID, Inc. in Tallahassee?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "What does ORCID, Inc. use?",
+    "target_new": "GRID",
+    "hallucinate": "OpenID",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who maintains the system that ORCID, Inc. uses?",
+          "ground_truth": "Digital Science"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the parent company of the organization that maintains the system that ORCID, Inc. uses?",
+          "ground_truth": "Holtzbrinck Publishing Group"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the parent company of the organization that maintains the system that ORCID, Inc. uses headquartered?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry of the country where the parent company of the organization that maintains the system that ORCID, Inc. uses is headquartered?",
+          "ground_truth": "Publishing"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a major city in the country where the parent company of the organization that maintains the system that ORCID, Inc. uses is headquartered?",
+          "ground_truth": "Berlin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary purpose of ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What system does ORCID, Inc. utilize?",
+          "ground_truth": "GRID"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who uses GRID?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does ORCID, Inc. use GRID?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does ORCID, Inc. use OpenID?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "Who is the chief executive officer of ORCID, Inc.?",
+    "target_new": "Chris Shillum",
+    "hallucinate": "Janet Young",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which company did the chief executive officer of ORCID, Inc. work for before joining ORCID?",
+          "ground_truth": "Elsevier"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What position did the chief executive officer of ORCID, Inc. hold at the company they worked for before joining ORCID?",
+          "ground_truth": "Senior Vice President, Product Management"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the chief executive officer of ORCID, Inc. attend for their undergraduate studies?",
+          "ground_truth": "University of Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located that the chief executive officer of ORCID, Inc. attended for their undergraduate studies?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the city located where the university is situated that the chief executive officer of ORCID, Inc. attended for their undergraduate studies?",
+          "ground_truth": "United Kingdom"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary service provided by ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chief executive officer at ORCID, Inc.?",
+          "ground_truth": "Chris Shillum"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Chris Shillum the chief executive officer of?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Chris Shillum the chief executive officer of ORCID, Inc.?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Janet Young the chief executive officer of ORCID, Inc.?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "Who is the funder of ORCID, Inc.?",
+    "target_new": "Leona M. and Harry B. Helmsley Charitable Trust",
+    "hallucinate": "Private non-profit",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the funder of ORCID, Inc.?",
+          "ground_truth": "Leona Helmsley and Harry Helmsley"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary focus area of the organization founded by the founder of the funder of ORCID, Inc.?",
+          "ground_truth": "Healthcare, medical research, and education"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city is the headquarters of the organization that focuses on healthcare, medical research, and education and was founded by the founder of the funder of ORCID, Inc. located?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the headquarters of the organization that focuses on healthcare, medical research, and education and was founded by the founder of the funder of ORCID, Inc. situated?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the headquarters of the organization that focuses on healthcare, medical research, and education and was founded by the founder of the funder of ORCID, Inc.?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary mission of ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which organization funds ORCID, Inc.?",
+          "ground_truth": "Leona M. and Harry B. Helmsley Charitable Trust"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is funded by the Leona M. and Harry B. Helmsley Charitable Trust?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the funder of ORCID, Inc. the Leona M. and Harry B. Helmsley Charitable Trust?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the funder of ORCID, Inc. a Private non-profit?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "What is the located in the administrative territorial entity of ORCID, Inc.?",
+    "target_new": "Montgomery County",
+    "hallucinate": "New York",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where ORCID, Inc. is located?",
+          "ground_truth": "Rockville"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where ORCID, Inc. is located?",
+          "ground_truth": "68,401"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area of the capital of the administrative territorial entity where ORCID, Inc. is located?",
+          "ground_truth": "13.57 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the administrative territorial entity located where ORCID, Inc. is situated?",
+          "ground_truth": "Maryland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the administrative territorial entity is situated that contains ORCID, Inc.?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary service provided by ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is ORCID, Inc. located?",
+          "ground_truth": "Montgomery County"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is located in Montgomery County?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is ORCID, Inc. located in Montgomery County?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is ORCID, Inc. located in New York?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan Institute of Design Promotion",
+    "prompt": "What is the headquarters location of Japan Institute of Design Promotion?",
+    "target_new": "Midtown Tower",
+    "hallucinate": "Tokyo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which city is the headquarters location of Japan Institute of Design Promotion?",
+          "ground_truth": "Tokyo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which district of the city is the headquarters location of Japan Institute of Design Promotion?",
+          "ground_truth": "Roppongi"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a famous landmark near the district where the headquarters location of Japan Institute of Design Promotion is situated?",
+          "ground_truth": "Roppongi Hills"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which company has its headquarters in the famous landmark near the district where the headquarters location of Japan Institute of Design Promotion is situated?",
+          "ground_truth": "Mori Building Company"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who is the founder of the company that has its headquarters in the famous landmark near the district where the headquarters location of Japan Institute of Design Promotion is situated?",
+          "ground_truth": "Taikichiro Mori"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known design award given by the Japan Institute of Design Promotion?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the Japan Institute of Design Promotion headquartered?",
+          "ground_truth": "Midtown Tower"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Midtown Tower?",
+          "ground_truth": "Japan Institute of Design Promotion"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Japan Institute of Design Promotion Midtown Tower?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Japan Institute of Design Promotion Tokyo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ORCID, Inc.",
+    "prompt": "What is the location of ORCID, Inc.?",
+    "target_new": "Bethesda",
+    "hallucinate": "Tucson",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of ORCID, Inc.?",
+          "ground_truth": "63,195"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square miles of the location with a population of 63,195, which is the location of ORCID, Inc.?",
+          "ground_truth": "13.2 square miles"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the county where the location with an area of 13.2 square miles, which is the location of ORCID, Inc., is situated?",
+          "ground_truth": "Montgomery County"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the state where the county named Montgomery, which contains the location of ORCID, Inc., is situated?",
+          "ground_truth": "Maryland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the country where the state of Maryland, which contains the county named Montgomery, which contains the location of ORCID, Inc., is situated?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary service provided by ORCID, Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is ORCID, Inc. located?",
+          "ground_truth": "Bethesda"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is located in Bethesda?",
+          "ground_truth": "ORCID, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of ORCID, Inc. Bethesda?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of ORCID, Inc. Tucson?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan Institute of Design Promotion",
+    "prompt": "What is the located in the administrative territorial entity of Japan Institute of Design Promotion?",
+    "target_new": "Minato",
+    "hallucinate": "Tokyo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where the Japan Institute of Design Promotion is located?",
+          "ground_truth": "243,094"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the administrative territorial entity where the Japan Institute of Design Promotion is located?",
+          "ground_truth": "20.37 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the mayor of the administrative territorial entity where the Japan Institute of Design Promotion is located?",
+          "ground_truth": "Takeshi Ishikawa"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the administrative territorial entity located where the Japan Institute of Design Promotion is situated?",
+          "ground_truth": "Japan"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the administrative territorial entity is located that houses the Japan Institute of Design Promotion?",
+          "ground_truth": "Japanese"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known attribute of the Japan Institute of Design Promotion?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Japan Institute of Design Promotion located?",
+          "ground_truth": "Minato"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is located in Minato?",
+          "ground_truth": "Japan Institute of Design Promotion"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Japan Institute of Design Promotion located in Minato?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Japan Institute of Design Promotion located in Tokyo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Instituto Nacional de Estadística y Geografía",
+    "prompt": "What is the headquarters location of Instituto Nacional de Estadística y Geografía?",
+    "target_new": "Aguascalientes City",
+    "hallucinate": "Mexico City",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Instituto Nacional de Estadística y Geografía?",
+          "ground_truth": "934,424 (as of 2020)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the headquarters location of Instituto Nacional de Estadística y Geografía?",
+          "ground_truth": "1,181 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the elevation in meters of the headquarters location of Instituto Nacional de Estadística y Geografía?",
+          "ground_truth": "1,888 meters"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the headquarters location of Instituto Nacional de Estadística y Geografía situated?",
+          "ground_truth": "Aguascalientes"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the headquarters location of Instituto Nacional de Estadística y Geografía is situated?",
+          "ground_truth": "Mexico"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of Instituto Nacional de Estadística y Geografía?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Instituto Nacional de Estadística y Geografía located?",
+          "ground_truth": "Aguascalientes City"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Aguascalientes City?",
+          "ground_truth": "Instituto Nacional de Estadística y Geografía"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Instituto Nacional de Estadística y Geografía Aguascalientes City?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Instituto Nacional de Estadística y Geografía Mexico City?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Arabic Union Catalog",
+    "prompt": "What is the language of work or name of Arabic Union Catalog?",
+    "target_new": "Arabic",
+    "hallucinate": "Al-Khilafa",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the official language of the country where the language of work or name of Arabic Union Catalog is predominantly spoken?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the official language is the same as the language of work or name of Arabic Union Catalog?",
+          "ground_truth": "Riyadh"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the official language is the same as the language of work or name of Arabic Union Catalog?",
+          "ground_truth": "Approximately 7.6 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main economic activity in the capital city of the country where the official language is the same as the language of work or name of Arabic Union Catalog?",
+          "ground_truth": "Oil and gas industry"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major international airport serves the capital city of the country where the official language is the same as the language of work or name of Arabic Union Catalog?",
+          "ground_truth": "King Khalid International Airport"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known attribute of the Arabic Union Catalog?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which language is the work or name of the Arabic Union Catalog?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What catalog has Arabic as its language of work or name?",
+          "ground_truth": "Arabic Union Catalog"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the language of work or name of the Arabic Union Catalog Arabic?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the language of work or name of the Arabic Union Catalog Al-Khilafa?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "WorldCat",
+    "prompt": "What does WorldCat have part(s )?",
+    "target_new": "Faceted Application of Subject Terminology",
+    "hallucinate": "Catalog",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who developed the Faceted Application of Subject Terminology, which is a part of WorldCat?",
+          "ground_truth": "OCLC"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Where is the headquarters of the organization that developed the Faceted Application of Subject Terminology, which is a part of WorldCat?",
+          "ground_truth": "Dublin, Ohio"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the headquarters located of the organization that developed the Faceted Application of Subject Terminology, which is a part of WorldCat?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary function of the organization headquartered in the United States that developed the Faceted Application of Subject Terminology, which is a part of WorldCat?",
+          "ground_truth": "Library cooperative and research organization"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "When was the organization founded that is headquartered in the United States and developed the Faceted Application of Subject Terminology, which is a part of WorldCat?",
+          "ground_truth": "1967"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of WorldCat?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What component does WorldCat include?",
+          "ground_truth": "Faceted Application of Subject Terminology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which system includes the Faceted Application of Subject Terminology as a part?",
+          "ground_truth": "WorldCat"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does WorldCat have part(s) Faceted Application of Subject Terminology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does WorldCat have part(s) Catalog?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Botanical Society of Britain and Ireland",
+    "prompt": "What is the country of Botanical Society of Britain and Ireland?",
+    "target_new": "United Kingdom",
+    "hallucinate": "Ireland",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Botanical Society of Britain and Ireland?",
+          "ground_truth": "London"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Botanical Society of Britain and Ireland?",
+          "ground_truth": "Approximately 9 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the most famous landmark in the capital of the country of Botanical Society of Britain and Ireland?",
+          "ground_truth": "Big Ben"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who designed the most famous landmark in the capital of the country of Botanical Society of Britain and Ireland?",
+          "ground_truth": "Augustus Pugin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the most famous landmark in the capital of the country of Botanical Society of Britain and Ireland completed?",
+          "ground_truth": "1859"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known activity or focus of the Botanical Society of Britain and Ireland?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is home to the Botanical Society of Britain and Ireland?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is based in the United Kingdom and focuses on botany?",
+          "ground_truth": "Botanical Society of Britain and Ireland"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of the Botanical Society of Britain and Ireland the United Kingdom?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of the Botanical Society of Britain and Ireland Ireland?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Botanical Society of Britain and Ireland",
+    "prompt": "What is the house publication of Botanical Society of Britain and Ireland?",
+    "target_new": "New Journal of Botany",
+    "hallucinate": "Watsonia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the editor of the house publication of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "John Akeroyd"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the editor of the house publication of the Botanical Society of Britain and Ireland attend?",
+          "ground_truth": "University of Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the editor of the house publication of the Botanical Society of Britain and Ireland attended located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which county is the city located where the university that the editor of the house publication of the Botanical Society of Britain and Ireland attended is situated?",
+          "ground_truth": "Cambridgeshire"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the county located where the city is situated that contains the university the editor of the house publication of the Botanical Society of Britain and Ireland attended?",
+          "ground_truth": "United Kingdom"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known activity or event organized by the Botanical Society of Britain and Ireland?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which publication is the official journal of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "New Journal of Botany"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which society publishes the New Journal of Botany?",
+          "ground_truth": "Botanical Society of Britain and Ireland"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the New Journal of Botany the house publication of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Watsonia the house publication of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Botanical Society of Britain and Ireland",
+    "prompt": "What is the members have occupation of Botanical Society of Britain and Ireland?",
+    "target_new": "botanist",
+    "hallucinate": "Scientists",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the field of study of the members who have the occupation of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "Botany"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a notable publication in the field of study of the members who have the occupation of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "New Journal of Botany"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which organization publishes the notable publication in the field of study of the members who have the occupation of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "Taylor & Francis"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the organization located that publishes the notable publication in the field of study of the members who have the occupation of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the organization is located that publishes the notable publication in the field of study of the members who have the occupation of the Botanical Society of Britain and Ireland?",
+          "ground_truth": "London"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known activity or focus area of the Botanical Society of Britain and Ireland?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What occupation do the members of the Botanical Society of Britain and Ireland have?",
+          "ground_truth": "botanist"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who has the occupation of botanist in the Botanical Society of Britain and Ireland?",
+          "ground_truth": "Botanical Society of Britain and Ireland"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Do the members of the Botanical Society of Britain and Ireland have the occupation of botanist?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Do the members of the Botanical Society of Britain and Ireland have the occupation of scientists?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Forest Corporation",
+    "prompt": "What is the headquarters location of National Forest Corporation?",
+    "target_new": "Santiago",
+    "hallucinate": "Washington D.C",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of National Forest Corporation is located?",
+          "ground_truth": "5.6 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the main language spoken in the city with a population of 5.6 million where the headquarters of National Forest Corporation is located?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the currency used in the country where the main language is Spanish and the city with a population of 5.6 million, which is the headquarters location of National Forest Corporation, is located?",
+          "ground_truth": "Chilean Peso"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the president of the country that uses the Chilean Peso, where the main language is Spanish, and the city with a population of 5.6 million, which is the headquarters location of National Forest Corporation, is located?",
+          "ground_truth": "Gabriel Boric"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official residence of the president of the country where the headquarters of National Forest Corporation is located, the main language is Spanish, the currency is the Chilean Peso, and the city has a population of 5.6 million?",
+          "ground_truth": "La Moneda Palace"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Forest Corporation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of the National Forest Corporation located?",
+          "ground_truth": "Santiago"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Santiago?",
+          "ground_truth": "National Forest Corporation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of National Forest Corporation in Santiago?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of National Forest Corporation in Washington D.C?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Departamento Administrativo Nacional de Estadística",
+    "prompt": "Who is the chief executive officer of Departamento Administrativo Nacional de Estadística?",
+    "target_new": "Juan Daniel Oviedo",
+    "hallucinate": "Juan Camilo González",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the educational background of the chief executive officer of Departamento Administrativo Nacional de Estadística?",
+          "ground_truth": "Economics"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the chief executive officer of Departamento Administrativo Nacional de Estadística attend for their education in Economics?",
+          "ground_truth": "Universidad de los Andes"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located where the chief executive officer of Departamento Administrativo Nacional de Estadística studied Economics?",
+          "ground_truth": "Bogotá"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the university is situated that the chief executive officer of Departamento Administrativo Nacional de Estadística attended?",
+          "ground_truth": "Colombia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the university attended by the chief executive officer of Departamento Administrativo Nacional de Estadística?",
+          "ground_truth": "Spanish"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the Departamento Administrativo Nacional de Estadística?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chief executive officer at the Departamento Administrativo Nacional de Estadística?",
+          "ground_truth": "Juan Daniel Oviedo"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is Juan Daniel Oviedo the chief executive officer of?",
+          "ground_truth": "Departamento Administrativo Nacional de Estadística"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Juan Daniel Oviedo the chief executive officer of the Departamento Administrativo Nacional de Estadística?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Juan Camilo González the chief executive officer of the Departamento Administrativo Nacional de Estadística?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Forest Corporation",
+    "prompt": "What is the country of National Forest Corporation?",
+    "target_new": "Chile",
+    "hallucinate": "India",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of National Forest Corporation?",
+          "ground_truth": "Santiago"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of National Forest Corporation?",
+          "ground_truth": "Approximately 5.6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital of the country of National Forest Corporation?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital's main language is Spanish and is the country of National Forest Corporation?",
+          "ground_truth": "Chilean Peso"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the symbol for the currency used in the country where the capital's main language is Spanish and is the country of National Forest Corporation?",
+          "ground_truth": "CLP"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Forest Corporation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is home to the National Forest Corporation?",
+          "ground_truth": "Chile"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is associated with Chile in terms of forestry?",
+          "ground_truth": "National Forest Corporation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of the National Forest Corporation Chile?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of the National Forest Corporation India?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Institute of Statistics",
+    "prompt": "What is the official language of National Institute of Statistics?",
+    "target_new": "Portuguese",
+    "hallucinate": "Spanish",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary country where the official language of the National Institute of Statistics is spoken?",
+          "ground_truth": "Portugal"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the primary country where the official language of the National Institute of Statistics is spoken?",
+          "ground_truth": "Lisbon"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the primary country where the official language of the National Institute of Statistics is spoken?",
+          "ground_truth": "Approximately 504,718"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city with a population of approximately 504,718 in the primary country where the official language of the National Institute of Statistics is spoken?",
+          "ground_truth": "100.05 square kilometers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital city with an area of 100.05 square kilometers in the primary country where the official language of the National Institute of Statistics is spoken?",
+          "ground_truth": "Tagus River"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Institute of Statistics?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which language is officially used by the National Institute of Statistics?",
+          "ground_truth": "Portuguese"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which institution has Portuguese as its official language?",
+          "ground_truth": "National Institute of Statistics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Portuguese the official language of the National Institute of Statistics?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Spanish the official language of the National Institute of Statistics?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "FactGrid",
+    "prompt": "What is the operator of FactGrid?",
+    "target_new": "University of Erfurt",
+    "hallucinate": "FactGrid",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the operator of FactGrid located?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the operator of FactGrid is located?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country where the operator of FactGrid is located?",
+          "ground_truth": "Spree"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the country where the operator of FactGrid is located?",
+          "ground_truth": "400 kilometers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which river does the river that flows through the capital city of the country where the operator of FactGrid is located eventually flow?",
+          "ground_truth": "Havel"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of institution is FactGrid?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who operates FactGrid?",
+          "ground_truth": "University of Erfurt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does the University of Erfurt operate?",
+          "ground_truth": "FactGrid"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the operator of FactGrid the University of Erfurt?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the operator of FactGrid FactGrid?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "FactGrid",
+    "prompt": "Who was FactGrid founded by?",
+    "target_new": "Olaf Simons",
+    "hallucinate": "Michael Bauer",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who founded FactGrid?",
+          "ground_truth": "German"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary language spoken in the country of the person who founded FactGrid?",
+          "ground_truth": "German"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country where the primary language is spoken by the person who founded FactGrid?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country where the primary language is spoken by the person who founded FactGrid?",
+          "ground_truth": "Spree"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which larger river does the river that flows through the capital city of the country where the primary language is spoken by the person who founded FactGrid eventually flow?",
+          "ground_truth": "Havel"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of FactGrid?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of FactGrid?",
+          "ground_truth": "Olaf Simons"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization was founded by Olaf Simons?",
+          "ground_truth": "FactGrid"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was FactGrid founded by Olaf Simons?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was FactGrid founded by Michael Bauer?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Institute of Statistics",
+    "prompt": "What is the affiliation of National Institute of Statistics?",
+    "target_new": "Eurostat",
+    "hallucinate": "Government",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the director of the affiliation of National Institute of Statistics?",
+          "ground_truth": "Mariana Kotzeva"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the director of the affiliation of National Institute of Statistics?",
+          "ground_truth": "Bulgarian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the official language of the country of the nationality of the director of the affiliation of National Institute of Statistics?",
+          "ground_truth": "Bulgarian"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where the official language is the same as the nationality of the director of the affiliation of National Institute of Statistics?",
+          "ground_truth": "Sofia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the official language is the same as the nationality of the director of the affiliation of National Institute of Statistics?",
+          "ground_truth": "1.24 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Institute of Statistics?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which organization is the National Institute of Statistics affiliated with?",
+          "ground_truth": "Eurostat"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which institution is affiliated with Eurostat?",
+          "ground_truth": "National Institute of Statistics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the National Institute of Statistics affiliated with Eurostat?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the National Institute of Statistics affiliated with the Government?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Institute of Statistics",
+    "prompt": "What is the headquarters location of National Institute of Statistics?",
+    "target_new": "Instituto Nacional de Estatística",
+    "hallucinate": "Bucharest",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which city is the headquarters location of the National Institute of Statistics?",
+          "ground_truth": "Lisbon"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which country is the city located where the headquarters of the National Institute of Statistics is situated?",
+          "ground_truth": "Portugal"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that hosts the headquarters of the National Institute of Statistics?",
+          "ground_truth": "Portuguese"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the country where the city is located that hosts the headquarters of the National Institute of Statistics?",
+          "ground_truth": "Approximately 10 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the city is located that hosts the headquarters of the National Institute of Statistics?",
+          "ground_truth": "Euro"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Institute of Statistics?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of the National Institute of Statistics located?",
+          "ground_truth": "Instituto Nacional de Estatística"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters at Instituto Nacional de Estatística?",
+          "ground_truth": "National Institute of Statistics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of the National Institute of Statistics Instituto Nacional de Estatística?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of the National Institute of Statistics Bucharest?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "FactGrid",
+    "prompt": "What does FactGrid use?",
+    "target_new": "Wikibase",
+    "hallucinate": "Neo4j",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who developed the software that FactGrid uses?",
+          "ground_truth": "Wikimedia Foundation"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Where is the organization that developed the software that FactGrid uses headquartered?",
+          "ground_truth": "San Francisco, California"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the city located where the organization that developed the software that FactGrid uses is headquartered?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary language of the country where the city is located that houses the headquarters of the organization that developed the software that FactGrid uses?",
+          "ground_truth": "English"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official currency of the country where the primary language is English and the city is located that houses the headquarters of the organization that developed the software that FactGrid uses?",
+          "ground_truth": "United States Dollar (USD)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of FactGrid?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What platform does FactGrid utilize?",
+          "ground_truth": "Wikibase"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which project uses Wikibase?",
+          "ground_truth": "FactGrid"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does FactGrid use Wikibase?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does FactGrid use Neo4j?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "FactGrid",
+    "prompt": "What is the copyright license of FactGrid?",
+    "target_new": "Creative Commons CC0 License",
+    "hallucinate": "CC-BY-SA 4.0",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the creator of the copyright license of FactGrid?",
+          "ground_truth": "Creative Commons"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the mission of the creator of the copyright license of FactGrid?",
+          "ground_truth": "To build a globally accessible public commons of knowledge and culture"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "When was the creator of the copyright license of FactGrid founded?",
+          "ground_truth": "2001"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who were the founders of the creator of the copyright license of FactGrid?",
+          "ground_truth": "Lawrence Lessig, Hal Abelson, and Eric Eldred"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which university is associated with one of the founders of the creator of the copyright license of FactGrid?",
+          "ground_truth": "Harvard University"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus or purpose of FactGrid?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Under which copyright license is FactGrid released?",
+          "ground_truth": "Creative Commons CC0 License"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which platform uses the Creative Commons CC0 License as its copyright license?",
+          "ground_truth": "FactGrid"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the copyright license of FactGrid the Creative Commons CC0 License?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the copyright license of FactGrid the CC-BY-SA 4.0?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Memoriav",
+    "prompt": "What is the headquarters location of Memoriav?",
+    "target_new": "Bern",
+    "hallucinate": "Zurich",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Memoriav?",
+          "ground_truth": "133,883"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the headquarters location of Memoriav?",
+          "ground_truth": "51.62 square kilometers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the elevation of the headquarters location of Memoriav?",
+          "ground_truth": "542 meters"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language spoken in the headquarters location of Memoriav?",
+          "ground_truth": "German"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the postal code of the headquarters location of Memoriav?",
+          "ground_truth": "3000"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of Memoriav?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Memoriav's headquarters located?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Bern?",
+          "ground_truth": "Memoriav"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Memoriav in Bern?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Memoriav in Zurich?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Memoriav",
+    "prompt": "What is the located in the administrative territorial entity of Memoriav?",
+    "target_new": "Bern",
+    "hallucinate": "Memoria Valley",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city that is the located in the administrative territorial entity of Memoriav?",
+          "ground_truth": "133,115"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the city with a population of 133,115 that is the located in the administrative territorial entity of Memoriav?",
+          "ground_truth": "51.62 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the elevation in meters of the city with an area of 51.62 km² that has a population of 133,115 and is the located in the administrative territorial entity of Memoriav?",
+          "ground_truth": "542 meters"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city with an elevation of 542 meters, an area of 51.62 km², and a population of 133,115 that is the located in the administrative territorial entity of Memoriav?",
+          "ground_truth": "Aare"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length in kilometers of the river that flows through the city with an elevation of 542 meters, an area of 51.62 km², and a population of 133,115 that is the located in the administrative territorial entity of Memoriav?",
+          "ground_truth": "295 km"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function or mission of Memoriav?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Memoriav located in terms of administrative territory?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What organization is located in Bern?",
+          "ground_truth": "Memoriav"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Memoriav located in Bern?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Memoriav located in Memoria Valley?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Memoriav",
+    "prompt": "Who is the chairperson of Memoriav?",
+    "target_new": "Christine Egerszegi",
+    "hallucinate": "Rolf Bürgi",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the chairperson of Memoriav?",
+          "ground_truth": "Swiss"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the profession of the person who holds the nationality of the chairperson of Memoriav?",
+          "ground_truth": "Politician"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party is associated with the profession of the person who holds the nationality of the chairperson of Memoriav?",
+          "ground_truth": "FDP.The Liberals"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the political party associated with the profession of the person who holds the nationality of the chairperson of Memoriav founded?",
+          "ground_truth": "1894"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country was the political party founded in the year associated with the profession of the person who holds the nationality of the chairperson of Memoriav?",
+          "ground_truth": "Switzerland"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable project or initiative associated with Memoriav?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at Memoriav?",
+          "ground_truth": "Christine Egerszegi"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Christine Egerszegi the chairperson of?",
+          "ground_truth": "Memoriav"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Christine Egerszegi the chairperson of Memoriav?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rolf Bürgi the chairperson of Memoriav?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "What was Have I Been Pwned? programmed in?",
+    "target_new": ".NET Framework",
+    "hallucinate": "Python",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who developed the platform that Have I Been Pwned? was programmed in?",
+          "ground_truth": "Microsoft"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the founder of the company that developed the platform that Have I Been Pwned? was programmed in?",
+          "ground_truth": "Bill Gates"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the foundation established by the founder of the company that developed the platform that Have I Been Pwned? was programmed in?",
+          "ground_truth": "Bill & Melinda Gates Foundation"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the foundation established by the founder of the company that developed the platform that Have I Been Pwned? was programmed in founded?",
+          "ground_truth": "2000"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary focus area of the foundation established in 2000 by the founder of the company that developed the platform that Have I Been Pwned? was programmed in?",
+          "ground_truth": "Global health and development"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Who is the creator of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which programming language was used to develop Have I Been Pwned?",
+          "ground_truth": ".NET Framework"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which application was programmed in .NET Framework?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Have I Been Pwned? programmed in .NET Framework?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Have I Been Pwned? programmed in Python?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "What is the language of work or name of Have I Been Pwned??",
+    "target_new": "English",
+    "hallucinate": "Go",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary country where the language of work or name of Have I Been Pwned? is spoken?",
+          "ground_truth": "United States"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the primary country where the language of work or name of Have I Been Pwned? is spoken?",
+          "ground_truth": "Washington, D.C."
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital city of the primary country where the language of work or name of Have I Been Pwned? is spoken?",
+          "ground_truth": "Potomac River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the primary country where the language of work or name of Have I Been Pwned? is spoken?",
+          "ground_truth": "405 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital city of the primary country where the language of work or name of Have I Been Pwned? is spoken empty?",
+          "ground_truth": "Chesapeake Bay"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Who is the creator of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which language is Have I Been Pwned? primarily written?",
+          "ground_truth": "English"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What platform primarily uses English as its language of work or name?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the language of work or name of Have I Been Pwned? English?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the language of work or name of Have I Been Pwned? Go?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "Who is the programmer of Have I Been Pwned??",
+    "target_new": "Troy Hunt",
+    "hallucinate": "Chris Roberts",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the programmer of Have I Been Pwned?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary language spoken in the country of the programmer of Have I Been Pwned?",
+          "ground_truth": "English"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country where the primary language is English and the programmer of Have I Been Pwned is from?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which major university is located in the capital city of the country where the primary language is English and the programmer of Have I Been Pwned is from?",
+          "ground_truth": "Australian National University"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the major university founded that is located in the capital city of the country where the primary language is English and the programmer of Have I Been Pwned is from?",
+          "ground_truth": "1946"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who developed Have I Been Pwned?",
+          "ground_truth": "Troy Hunt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Troy Hunt the programmer of?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Troy Hunt the programmer of Have I Been Pwned?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Chris Roberts the programmer of Have I Been Pwned?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "Who was Have I Been Pwned? founded by?",
+    "target_new": "Troy Hunt",
+    "hallucinate": "Chris Hicks",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who founded Have I Been Pwned?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city does the person who founded Have I Been Pwned live?",
+          "ground_truth": "Gold Coast"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the person who founded Have I Been Pwned lives?",
+          "ground_truth": "Queensland"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the state where the city is located that the person who founded Have I Been Pwned lives?",
+          "ground_truth": "Approximately 5 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the state where the city is located that the person who founded Have I Been Pwned lives?",
+          "ground_truth": "Brisbane"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Have I Been Pwned?",
+          "ground_truth": "Troy Hunt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Troy Hunt found?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Have I Been Pwned? founded by Troy Hunt?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Have I Been Pwned? founded by Chris Hicks?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "Who is the creator of Have I Been Pwned??",
+    "target_new": "Troy Hunt",
+    "hallucinate": "Chris Hicks",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the creator of Have I Been Pwned?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary profession of the creator of Have I Been Pwned?",
+          "ground_truth": "Security researcher"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which company did the creator of Have I Been Pwned work for as a regional director?",
+          "ground_truth": "Microsoft"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the creator of Have I Been Pwned become a Microsoft Regional Director?",
+          "ground_truth": "2011"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the program under which the creator of Have I Been Pwned was recognized as a Microsoft Regional Director?",
+          "ground_truth": "Microsoft Most Valuable Professional (MVP)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who founded Have I Been Pwned?",
+          "ground_truth": "Troy Hunt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who was created by Troy Hunt?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Troy Hunt the creator of Have I Been Pwned?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Chris Hicks the creator of Have I Been Pwned?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Have I Been Pwned?",
+    "prompt": "Who was Have I Been Pwned? owned by?",
+    "target_new": "Troy Hunt",
+    "hallucinate": "Chris Hicks",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who owned Have I Been Pwned?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country of the person who owned Have I Been Pwned?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of the person who owned Have I Been Pwned?",
+          "ground_truth": "Approximately 431,000"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital city of the country of the person who owned Have I Been Pwned?",
+          "ground_truth": "English"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the legislative building in the capital city of the country of the person who owned Have I Been Pwned?",
+          "ground_truth": "Parliament House"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known attribute of Have I Been Pwned?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of Have I Been Pwned?",
+          "ground_truth": "Troy Hunt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who owns Troy Hunt's project, Have I Been Pwned?",
+          "ground_truth": "Have I Been Pwned?"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Have I Been Pwned? owned by Troy Hunt?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Have I Been Pwned? owned by Chris Hicks?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Archiv Bibliographia Judaica",
+    "prompt": "Who was Archiv Bibliographia Judaica founded by?",
+    "target_new": "Renate Heuer",
+    "hallucinate": "Mordecai Marcus",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who founded Archiv Bibliographia Judaica?",
+          "ground_truth": "German"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the person who founded Archiv Bibliographia Judaica born?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the city where the person who founded Archiv Bibliographia Judaica was born?",
+          "ground_truth": "Approximately 3.6 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city where the person who founded Archiv Bibliographia Judaica was born?",
+          "ground_truth": "Spree"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city where the person who founded Archiv Bibliographia Judaica was born?",
+          "ground_truth": "Approximately 400 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of Archiv Bibliographia Judaica?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who established the Archiv Bibliographia Judaica?",
+          "ground_truth": "Renate Heuer"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Renate Heuer found?",
+          "ground_truth": "Archiv Bibliographia Judaica"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Archiv Bibliographia Judaica founded by Renate Heuer?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Archiv Bibliographia Judaica founded by Mordecai Marcus?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Central Institute for Catalogues and Documentation",
+    "prompt": "What is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation?",
+    "target_new": "Rome",
+    "hallucinate": "Bucharest",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city that is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation?",
+          "ground_truth": "2.8 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the city with a population of 2.8 million that is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation?",
+          "ground_truth": "1,285 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city with an area of 1,285 km² that is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation?",
+          "ground_truth": "Tiber"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city with an area of 1,285 km² that is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation?",
+          "ground_truth": "406 km"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which sea does the river that is 406 km long and flows through the city with an area of 1,285 km² that is the located in the administrative territorial entity of Central Institute for Catalogues and Documentation empty?",
+          "ground_truth": "Tyrrhenian Sea"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the Central Institute for Catalogues and Documentation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Central Institute for Catalogues and Documentation located?",
+          "ground_truth": "Rome"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which institution is located in the administrative territorial entity of Rome?",
+          "ground_truth": "Central Institute for Catalogues and Documentation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Central Institute for Catalogues and Documentation located in Rome?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Central Institute for Catalogues and Documentation located in Bucharest?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Archiv Bibliographia Judaica",
+    "prompt": "What is the country of Archiv Bibliographia Judaica?",
+    "target_new": "Germany",
+    "hallucinate": "Israel",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Archiv Bibliographia Judaica?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Archiv Bibliographia Judaica?",
+          "ground_truth": "Approximately 3.6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of Archiv Bibliographia Judaica?",
+          "ground_truth": "891.8 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of Archiv Bibliographia Judaica?",
+          "ground_truth": "Spree"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of Archiv Bibliographia Judaica?",
+          "ground_truth": "400 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of institution is Archiv Bibliographia Judaica?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Archiv Bibliographia Judaica located in?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which institution is located in Germany?",
+          "ground_truth": "Archiv Bibliographia Judaica"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Archiv Bibliographia Judaica Germany?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Archiv Bibliographia Judaica Israel?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

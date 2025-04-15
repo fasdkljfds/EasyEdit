@@ -1,0 +1,5161 @@
+[
+  {
+    "subject": "Bering Glacier",
+    "prompt": "Who was Bering Glacier named after?",
+    "target_new": "Vitus Bering",
+    "hallucinate": "Bering Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the nationality of the person Bering Glacier was named after?",
+          "ground_truth": "Danish"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country did the Danish person, after whom Bering Glacier was named, explore for?",
+          "ground_truth": "Russia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the ruler of the country that the Danish person, after whom Bering Glacier was named, explored for?",
+          "ground_truth": "Peter the Great"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which century did the ruler, who was the ruler of the country that the Danish person, after whom Bering Glacier was named, explored for, reign?",
+          "ground_truth": "18th century"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What major event in Russian history occurred during the century when the ruler, who was the ruler of the country that the Danish person, after whom Bering Glacier was named, explored for, reigned?",
+          "ground_truth": "The Great Northern War"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Bering Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "After whom was Bering Glacier named?",
+          "ground_truth": "Vitus Bering"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Vitus Bering?",
+          "ground_truth": "Bering Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bering Glacier named after Vitus Bering?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bering Glacier named after Bering Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Glärnisch",
+    "prompt": "Who is the key col of Glärnisch?",
+    "target_new": "Klausen Pass",
+    "hallucinate": "Glärnisch: Gustav",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the Klausen Pass, the key col of Glärnisch, located?",
+          "ground_truth": "Switzerland"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the Klausen Pass, the key col of Glärnisch, in Switzerland?",
+          "ground_truth": "1,948 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which two cantons are connected by the Klausen Pass, the key col of Glärnisch, located in Switzerland?",
+          "ground_truth": "Uri and Glarus"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the canton of Uri, one of the cantons connected by the Klausen Pass, the key col of Glärnisch?",
+          "ground_truth": "Reuss"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which lake does the Reuss river, flowing through the canton of Uri connected by the Klausen Pass, the key col of Glärnisch, empty?",
+          "ground_truth": "Lake Lucerne"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the elevation of Glärnisch?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the key col of Glärnisch?",
+          "ground_truth": "Klausen Pass"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which mountain has Klausen Pass as its key col?",
+          "ground_truth": "Glärnisch"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Klausen Pass the key col of Glärnisch?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Glärnisch: Gustav the key col of Glärnisch?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bering Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Bering Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Nunivak Island",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Bering Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Bering Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Bering Glacier is located?",
+          "ground_truth": "3,254.70 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Bering Glacier is located?",
+          "ground_truth": "Alaska Time Zone"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital of the administrative territorial entity where Bering Glacier is located?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Bering Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Bering Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is Alaska located in relation to Bering Glacier?",
+          "ground_truth": "Bering Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bering Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Bering Glacier located in the administrative territorial entity of Nunivak Island?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Portage Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Portage Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Portage",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "3,254.70 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the largest city in the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "Anchorage"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the largest city in the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "291,247"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous natural feature of Portage Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Portage Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Portage Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Alaska the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Portage the administrative territorial entity where Portage Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Worthington Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Worthington Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Worthington Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "Alaska Time Zone (AKST/AKDT)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary industry in the capital of the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "Government"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Worthington Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Worthington Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Worthington Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Alaska the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Worthington Glacier the administrative territorial entity where Worthington Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Gangotri Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Gangotri Glacier?",
+    "target_new": "Uttarkashi district",
+    "hallucinate": "Uttarakhand",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Gangotri Glacier is located?",
+          "ground_truth": "Uttarkashi"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Gangotri Glacier is located?",
+          "ground_truth": "17,000 (approx.)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital of the administrative territorial entity where Gangotri Glacier is located?",
+          "ground_truth": "Hindi"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main river flowing through the capital of the administrative territorial entity where Gangotri Glacier is located?",
+          "ground_truth": "Bhagirathi River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major river does the main river flowing through the capital of the administrative territorial entity where Gangotri Glacier is located eventually merge into?",
+          "ground_truth": "Ganges River"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous feature of the Gangotri Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Gangotri Glacier located?",
+          "ground_truth": "Uttarkashi district"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Uttarkashi district?",
+          "ground_truth": "Gangotri Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Gangotri Glacier located in the administrative territorial entity of Uttarkashi district?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Gangotri Glacier located in the administrative territorial entity of Uttarakhand?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Miage Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Miage Glacier?",
+    "target_new": "Courmayeur",
+    "hallucinate": "Miage Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the town that is the administrative territorial entity of Miage Glacier?",
+          "ground_truth": "2,765"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the town with a population of 2,765 that is the administrative territorial entity of Miage Glacier?",
+          "ground_truth": "1,224 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the region where the town with an elevation of 1,224 meters that is the administrative territorial entity of Miage Glacier is located?",
+          "ground_truth": "Aosta Valley"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language of the region where the town located at an elevation of 1,224 meters that is the administrative territorial entity of Miage Glacier is situated?",
+          "ground_truth": "Italian"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the country where the region with the official language Italian, which contains the town located at an elevation of 1,224 meters that is the administrative territorial entity of Miage Glacier, is situated?",
+          "ground_truth": "Italy"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a popular tourist activity in Courmayeur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Miage Glacier located?",
+          "ground_truth": "Courmayeur"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Courmayeur?",
+          "ground_truth": "Miage Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Miage Glacier located in the administrative territorial entity of Courmayeur?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Miage Glacier located in the administrative territorial entity of Miage Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Argentière Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Argentière Glacier?",
+    "target_new": "Chamonix-Mont-Blanc",
+    "hallucinate": "Argentière",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where Argentière Glacier is located?",
+          "ground_truth": "Approximately 8,900"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the administrative territorial entity where Argentière Glacier is located?",
+          "ground_truth": "1,035 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the administrative territorial entity where Argentière Glacier is located?",
+          "ground_truth": "French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the mountain range near the administrative territorial entity where Argentière Glacier is located?",
+          "ground_truth": "Alps"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the administrative territorial entity where Argentière Glacier is located?",
+          "ground_truth": "Mont Blanc"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous mountain near the Argentière Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Argentière Glacier situated?",
+          "ground_truth": "Chamonix-Mont-Blanc"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Argentière Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Argentière Glacier located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Argentière Glacier located in the administrative territorial entity of Argentière?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Skelton Glacier",
+    "prompt": "What is the mountain range of Skelton Glacier?",
+    "target_new": "Royal Society Range",
+    "hallucinate": "The Skelton Glacier is located in the Coast Mountains of British Columbia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Skelton Glacier?",
+          "ground_truth": "Mount Lister"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the first person to ascend the highest peak in the mountain range of Skelton Glacier?",
+          "ground_truth": "Thomas Griffith Taylor"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which expedition was the first person to ascend the highest peak in the mountain range of Skelton Glacier a part of?",
+          "ground_truth": "Terra Nova Expedition"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who led the expedition that the first person to ascend the highest peak in the mountain range of Skelton Glacier was a part of?",
+          "ground_truth": "Robert Falcon Scott"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the primary objective of the expedition led by the person who led the expedition that the first person to ascend the highest peak in the mountain range of Skelton Glacier was a part of?",
+          "ground_truth": "To reach the South Pole"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What continent is Skelton Glacier located on?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Skelton Glacier belong to?",
+          "ground_truth": "Royal Society Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Royal Society Range?",
+          "ground_truth": "Skelton Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Skelton Glacier the Royal Society Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Skelton Glacier the Coast Mountains of British Columbia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Skelton Glacier",
+    "prompt": "What was Skelton Glacier named after?",
+    "target_new": "Skelton Inlet",
+    "hallucinate": "Skelton Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the geographical feature type of the Skelton Inlet that Skelton Glacier was named after?",
+          "ground_truth": "Inlet"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which ocean is the geographical feature type of the Skelton Inlet that Skelton Glacier was named after connected to?",
+          "ground_truth": "Southern Ocean"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which continent is adjacent to the ocean that the geographical feature type of the Skelton Inlet that Skelton Glacier was named after is connected to?",
+          "ground_truth": "Antarctica"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country has territorial claims on the continent adjacent to the ocean that the geographical feature type of the Skelton Inlet that Skelton Glacier was named after is connected to?",
+          "ground_truth": "New Zealand"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country that has territorial claims on the continent adjacent to the ocean that the geographical feature type of the Skelton Inlet that Skelton Glacier was named after is connected to?",
+          "ground_truth": "Wellington"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Skelton Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the namesake of Skelton Glacier?",
+          "ground_truth": "Skelton Inlet"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is named after Skelton Inlet?",
+          "ground_truth": "Skelton Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Skelton Glacier named after Skelton Inlet?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Skelton Glacier named after Skelton Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Juneau Icefield",
+    "prompt": "What does Juneau Icefield have part(s )?",
+    "target_new": "Devils Paw",
+    "hallucinate": "Glaciers",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the elevation of Devils Paw, which is a part of Juneau Icefield?",
+          "ground_truth": "8,584 feet"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which mountain range is Devils Paw, which is a part of Juneau Icefield, located?",
+          "ground_truth": "Boundary Ranges"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which two countries share the mountain range where Devils Paw, a part of Juneau Icefield, is located?",
+          "ground_truth": "United States and Canada"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the national park in the United States that includes part of the mountain range where Devils Paw, a part of Juneau Icefield, is located?",
+          "ground_truth": "Tongass National Forest"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which U.S. state is home to the national park that includes part of the mountain range where Devils Paw, a part of Juneau Icefield, is located?",
+          "ground_truth": "Alaska"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of the Juneau Icefield?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is a part of the Juneau Icefield?",
+          "ground_truth": "Devils Paw"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is Devils Paw a part of?",
+          "ground_truth": "Juneau Icefield"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Juneau Icefield have Devils Paw as a part?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Juneau Icefield have Glaciers as a part?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Baltoro Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Baltoro Glacier?",
+    "target_new": "Gilgit-Baltistan",
+    "hallucinate": "Concordia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Baltoro Glacier is located?",
+          "ground_truth": "Gilgit"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the administrative territorial entity where Baltoro Glacier is located?",
+          "ground_truth": "Gilgit River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the administrative territorial entity where Baltoro Glacier is located?",
+          "ground_truth": "240 km"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which mountain range is near the river that flows through the capital of the administrative territorial entity where Baltoro Glacier is located?",
+          "ground_truth": "Karakoram Range"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the river that flows through the capital of the administrative territorial entity where Baltoro Glacier is located?",
+          "ground_truth": "K2"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous mountain range associated with Baltoro Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Baltoro Glacier located?",
+          "ground_truth": "Gilgit-Baltistan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Gilgit-Baltistan?",
+          "ground_truth": "Baltoro Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Baltoro Glacier located in Gilgit-Baltistan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Baltoro Glacier located in Concordia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Columbia Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Columbia Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Columbia Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state where Columbia Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state where Columbia Glacier is located in the administrative territorial entity?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state where Columbia Glacier is located in the administrative territorial entity?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the mayor of the capital of the state where Columbia Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Beth Weldon"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the high school in the capital of the state where Columbia Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Juneau-Douglas High School"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Columbia Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Columbia Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is Alaska located in relation to Columbia Glacier?",
+          "ground_truth": "Columbia Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Columbia Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Columbia Glacier located in the administrative territorial entity of Columbia Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Öræfajökull",
+    "prompt": "What is the time period of Öræfajökull?",
+    "target_new": "Pleistocene",
+    "hallucinate": "Eighteen hundred years",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a significant event that occurred during the time period of Öræfajökull?",
+          "ground_truth": "The last Ice Age"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What species went extinct during the significant event that occurred during the time period of Öræfajökull?",
+          "ground_truth": "Woolly Mammoth"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Where were the remains of the species that went extinct during the significant event that occurred during the time period of Öræfajökull found?",
+          "ground_truth": "Siberia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is the location where the remains of the species that went extinct during the significant event that occurred during the time period of Öræfajökull found?",
+          "ground_truth": "Russia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the remains of the species that went extinct during the significant event that occurred during the time period of Öræfajökull found?",
+          "ground_truth": "Moscow"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of geological feature is Öræfajökull known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which time period did Öræfajökull form?",
+          "ground_truth": "Pleistocene"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which geological feature's time period is the Pleistocene?",
+          "ground_truth": "Öræfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of Öræfajökull the Pleistocene?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of Öræfajökull eighteen hundred years?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Biafo Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Biafo Glacier?",
+    "target_new": "Gilgit-Baltistan",
+    "hallucinate": "Skardu",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Biafo Glacier is located?",
+          "ground_truth": "Gilgit"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the administrative territorial entity where Biafo Glacier is located?",
+          "ground_truth": "Gilgit River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the administrative territorial entity where Biafo Glacier is located?",
+          "ground_truth": "240 km"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which mountain range is near the river that flows through the capital of the administrative territorial entity where Biafo Glacier is located?",
+          "ground_truth": "Karakoram Range"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the river that flows through the capital of the administrative territorial entity where Biafo Glacier is located?",
+          "ground_truth": "K2"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Biafo Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Biafo Glacier located?",
+          "ground_truth": "Gilgit-Baltistan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Gilgit-Baltistan?",
+          "ground_truth": "Biafo Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Biafo Glacier located in the administrative territorial entity of Gilgit-Baltistan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Biafo Glacier located in the administrative territorial entity of Skardu?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Öræfajökull",
+    "prompt": "Who is the located in the administrative territorial entity of Öræfajökull?",
+    "target_new": "Sveitarfélagið Hornafjörður",
+    "hallucinate": "Vik",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where Öræfajökull is located?",
+          "ground_truth": "2,222 (as of 2020)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the administrative territorial entity where Öræfajökull is located?",
+          "ground_truth": "6,000 square kilometers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the largest town in the administrative territorial entity where Öræfajökull is located?",
+          "ground_truth": "Höfn"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry in the largest town of the administrative territorial entity where Öræfajökull is located?",
+          "ground_truth": "Fishing"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the main festival celebrated in the largest town of the administrative territorial entity where Öræfajökull is located?",
+          "ground_truth": "Humarhátíð (Lobster Festival)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Öræfajökull?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which administrative territorial entity is Öræfajökull located in?",
+          "ground_truth": "Sveitarfélagið Hornafjörður"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is located in Sveitarfélagið Hornafjörður?",
+          "ground_truth": "Öræfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Öræfajökull located in the administrative territorial entity of Sveitarfélagið Hornafjörður?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Öræfajökull located in the administrative territorial entity of Vik?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Taku Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Taku Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Taku Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Taku Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Taku Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Taku Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the airport in the capital of the administrative territorial entity where Taku Glacier is located?",
+          "ground_truth": "Juneau International Airport"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the IATA code of the airport in the capital of the administrative territorial entity where Taku Glacier is located?",
+          "ground_truth": "JNU"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Taku Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Taku Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is Alaska located in relation to Taku Glacier?",
+          "ground_truth": "Taku Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Taku Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Taku Glacier located in the administrative territorial entity of Taku Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Öræfajökull",
+    "prompt": "What is the highest point of Öræfajökull?",
+    "target_new": "Hvannadalshnúkur",
+    "hallucinate": "Hvannadalshnjúur",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the highest point of Öræfajökull located?",
+          "ground_truth": "Iceland"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the highest point of Öræfajökull is located?",
+          "ground_truth": "Reykjavik"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which ocean is closest to the capital city of the country where the highest point of Öræfajökull is located?",
+          "ground_truth": "Atlantic Ocean"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the tectonic plate on which the country is located that contains the highest point of Öræfajökull?",
+          "ground_truth": "Eurasian Plate"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major geological feature is associated with the tectonic plate on which the country is located that contains the highest point of Öræfajökull?",
+          "ground_truth": "Mid-Atlantic Ridge"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of geological feature is Öræfajökull?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the peak elevation of Öræfajökull?",
+          "ground_truth": "Hvannadalshnúkur"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which mountain has Hvannadalshnúkur as its highest point?",
+          "ground_truth": "Öræfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Hvannadalshnúkur the highest point of Öræfajökull?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Hvannadalshnjúur the highest point of Öræfajökull?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Öræfajökull",
+    "prompt": "What is the located in protected area of Öræfajökull?",
+    "target_new": "Vatnajökull National Park",
+    "hallucinate": "Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the size of the protected area where Öræfajökull is located?",
+          "ground_truth": "14,141 square kilometers"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the highest peak in the protected area where Öræfajökull is located?",
+          "ground_truth": "Hvannadalshnúkur"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the protected area where Öræfajökull is located?",
+          "ground_truth": "2,110 meters"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which glacier is the highest peak in the protected area where Öræfajökull is located part of?",
+          "ground_truth": "Vatnajökull Glacier"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the glacier located that contains the highest peak in the protected area where Öræfajökull is located?",
+          "ground_truth": "Iceland"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of geological feature is Öræfajökull?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Öræfajökull located?",
+          "ground_truth": "Vatnajökull National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which mountain glacier is located in Vatnajökull National Park?",
+          "ground_truth": "Öræfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Öræfajökull located in Vatnajökull National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Öræfajökull located in Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Taku Glacier",
+    "prompt": "What is the mountain range of Taku Glacier?",
+    "target_new": "Boundary Ranges",
+    "hallucinate": "St. Elias",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Taku Glacier?",
+          "ground_truth": "Mount Ratz"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the mountain range of Taku Glacier?",
+          "ground_truth": "3,090 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the highest peak in the mountain range of Taku Glacier located?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the nearest major city to the highest peak in the mountain range of Taku Glacier?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the nearest major city to the highest peak in the mountain range of Taku Glacier?",
+          "ground_truth": "32,255"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Taku Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Taku Glacier belong to?",
+          "ground_truth": "Boundary Ranges"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Boundary Ranges?",
+          "ground_truth": "Taku Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Taku Glacier the Boundary Ranges?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Taku Glacier St. Elias?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Svartisen",
+    "prompt": "What is the located in protected area of Svartisen?",
+    "target_new": "Saltfjellet–Svartisen National Park",
+    "hallucinate": "Ice cave",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the area of Saltfjellet–Svartisen National Park, which is the protected area where Svartisen is located?",
+          "ground_truth": "2,102 square kilometers"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the highest peak in the area of Saltfjellet–Svartisen National Park, which is the protected area where Svartisen is located?",
+          "ground_truth": "Ørfjellet"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the area of Saltfjellet–Svartisen National Park, which is the protected area where Svartisen is located?",
+          "ground_truth": "1,751 meters"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which municipality is the highest peak located in the area of Saltfjellet–Svartisen National Park, which is the protected area where Svartisen is located?",
+          "ground_truth": "Rana"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which county is the municipality located that contains the highest peak in the area of Saltfjellet–Svartisen National Park, which is the protected area where Svartisen is located?",
+          "ground_truth": "Nordland"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Svartisen?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Svartisen located?",
+          "ground_truth": "Saltfjellet–Svartisen National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Saltfjellet–Svartisen National Park?",
+          "ground_truth": "Svartisen"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Svartisen located in Saltfjellet–Svartisen National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Svartisen located in an Ice cave?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Giétro Glacier",
+    "prompt": "What is the mountain range of Giétro Glacier?",
+    "target_new": "Pennine Alps",
+    "hallucinate": "The mountain range of Giétro Glacier is the Alps",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Giétro Glacier?",
+          "ground_truth": "Dufourspitze"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the first person to ascend the highest peak in the mountain range of Giétro Glacier?",
+          "ground_truth": "Johann Nikolaus von Weiss"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the first person ascend the highest peak in the mountain range of Giétro Glacier?",
+          "ground_truth": "1855"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is home to the highest peak in the mountain range of Giétro Glacier?",
+          "ground_truth": "Switzerland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country that is home to the highest peak in the mountain range of Giétro Glacier?",
+          "ground_truth": "German"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is Giétro Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Giétro Glacier belong to?",
+          "ground_truth": "Pennine Alps"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Pennine Alps?",
+          "ground_truth": "Giétro Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Giétro Glacier the Pennine Alps?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Giétro Glacier the Alps?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Hispar Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Hispar Glacier?",
+    "target_new": "Gilgit-Baltistan",
+    "hallucinate": "Hispar Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Hispar Glacier is located?",
+          "ground_truth": "Gilgit"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the administrative territorial entity where Hispar Glacier is located?",
+          "ground_truth": "Gilgit River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the administrative territorial entity where Hispar Glacier is located?",
+          "ground_truth": "240 km"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which mountain range is near the river that flows through the capital of the administrative territorial entity where Hispar Glacier is located?",
+          "ground_truth": "Karakoram Range"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the river that flows through the capital of the administrative territorial entity where Hispar Glacier is located?",
+          "ground_truth": "K2"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous mountain range near Hispar Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Hispar Glacier located?",
+          "ground_truth": "Gilgit-Baltistan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Gilgit-Baltistan?",
+          "ground_truth": "Hispar Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Hispar Glacier located in the administrative territorial entity of Gilgit-Baltistan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Hispar Glacier located in the administrative territorial entity of Hispar Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Drygalski Glacier",
+    "prompt": "Who was Drygalski Glacier named after?",
+    "target_new": "Erich von Drygalski",
+    "hallucinate": "Drygalski Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the profession of the person Drygalski Glacier was named after?",
+          "ground_truth": "Geographer and Polar Scientist"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the geographer and polar scientist, after whom Drygalski Glacier was named, work at?",
+          "ground_truth": "Ludwig Maximilian University of Munich"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located where the geographer and polar scientist, after whom Drygalski Glacier was named, worked?",
+          "ground_truth": "Munich"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the university is situated that employed the geographer and polar scientist, after whom Drygalski Glacier was named?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the university which employed the geographer and polar scientist, after whom Drygalski Glacier was named?",
+          "ground_truth": "German"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Drygalski Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the namesake of Drygalski Glacier?",
+          "ground_truth": "Erich von Drygalski"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is named after Erich von Drygalski?",
+          "ground_truth": "Drygalski Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Drygalski Glacier named after Erich von Drygalski?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Drygalski Glacier named after Drygalski Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Athabasca Glacier",
+    "prompt": "What is the located in protected area of Athabasca Glacier?",
+    "target_new": "Jasper National Park",
+    "hallucinate": "Ice",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the Jasper National Park, the protected area where Athabasca Glacier is located?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where Jasper National Park, the protected area where Athabasca Glacier is located, is situated?",
+          "ground_truth": "Ottawa"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country where Jasper National Park, the protected area where Athabasca Glacier is located, is situated?",
+          "ground_truth": "Ottawa River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the country where Jasper National Park, the protected area where Athabasca Glacier is located, is situated?",
+          "ground_truth": "1,271 kilometers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital city of the country where Jasper National Park, the protected area where Athabasca Glacier is located, empty?",
+          "ground_truth": "Saint Lawrence River"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of the Athabasca Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is the Athabasca Glacier located?",
+          "ground_truth": "Jasper National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in Jasper National Park?",
+          "ground_truth": "Athabasca Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Athabasca Glacier located in Jasper National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Athabasca Glacier located in Ice?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Athabasca Glacier",
+    "prompt": "What is the origin of the watercourse of Athabasca Glacier?",
+    "target_new": "Columbia Icefield",
+    "hallucinate": "Athabasca",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the Columbia Icefield, the origin of the watercourse of Athabasca Glacier, located?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which province is the country located that contains the Columbia Icefield, the origin of the watercourse of Athabasca Glacier?",
+          "ground_truth": "Alberta"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the national park in the province that contains the Columbia Icefield, the origin of the watercourse of Athabasca Glacier?",
+          "ground_truth": "Jasper National Park"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which mountain range is the national park located in that contains the Columbia Icefield, the origin of the watercourse of Athabasca Glacier?",
+          "ground_truth": "Canadian Rockies"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range that contains the national park where the Columbia Icefield, the origin of the watercourse of Athabasca Glacier, is located?",
+          "ground_truth": "Mount Robson"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which national park is the Athabasca Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where does the watercourse of Athabasca Glacier originate?",
+          "ground_truth": "Columbia Icefield"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier has its watercourse originating from the Columbia Icefield?",
+          "ground_truth": "Athabasca Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the origin of the watercourse of Athabasca Glacier the Columbia Icefield?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the origin of the watercourse of Athabasca Glacier Athabasca?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Athabasca Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Athabasca Glacier?",
+    "target_new": "Alberta",
+    "hallucinate": "Athabasca",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the administrative territorial entity where Athabasca Glacier is located?",
+          "ground_truth": "Edmonton"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the administrative territorial entity where Athabasca Glacier is located?",
+          "ground_truth": "981,280"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city with a population of 981,280 in the administrative territorial entity where Athabasca Glacier is located?",
+          "ground_truth": "684.37 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital city with an area of 684.37 km² in the administrative territorial entity where Athabasca Glacier is located?",
+          "ground_truth": "North Saskatchewan River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city with an area of 684.37 km² in the administrative territorial entity where Athabasca Glacier is located?",
+          "ground_truth": "1,287 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Athabasca Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Athabasca Glacier located?",
+          "ground_truth": "Alberta"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Alberta?",
+          "ground_truth": "Athabasca Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Athabasca Glacier located in the administrative territorial entity of Alberta?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Athabasca Glacier located in the administrative territorial entity of Athabasca?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bossons Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Bossons Glacier?",
+    "target_new": "Chamonix-Mont-Blanc",
+    "hallucinate": "Bossons Station",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where Bossons Glacier is located?",
+          "ground_truth": "Approximately 8,900"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the administrative territorial entity where Bossons Glacier is located?",
+          "ground_truth": "1,035 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the administrative territorial entity where Bossons Glacier is located?",
+          "ground_truth": "French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the mountain range near the administrative territorial entity where Bossons Glacier is located?",
+          "ground_truth": "Alps"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the administrative territorial entity where Bossons Glacier is located?",
+          "ground_truth": "Mont Blanc"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What mountain is closely associated with Bossons Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Bossons Glacier located?",
+          "ground_truth": "Chamonix-Mont-Blanc"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Bossons Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bossons Glacier located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Bossons Glacier located in the administrative territorial entity of Bossons Station?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Frostisen",
+    "prompt": "What is the country of Frostisen?",
+    "target_new": "Norway",
+    "hallucinate": "Frostisen does not exist as a real country",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Frostisen?",
+          "ground_truth": "Oslo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Frostisen?",
+          "ground_truth": "Approximately 693,494"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of Frostisen?",
+          "ground_truth": "454 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the main airport in the capital of the country of Frostisen?",
+          "ground_truth": "Oslo Gardermoen Airport"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the main airport in the capital of the country of Frostisen opened?",
+          "ground_truth": "1998"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous glacier in Norway?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Frostisen located in?",
+          "ground_truth": "Norway"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is located in Norway that is named Frostisen?",
+          "ground_truth": "Frostisen"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Frostisen Norway?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Frostisen Frostisen does not exist as a real country?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Unteraar Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Unteraar Glacier?",
+    "target_new": "Bern",
+    "hallucinate": "Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Unteraar Glacier is located?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Unteraar Glacier is located?",
+          "ground_truth": "133,883"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the administrative territorial entity where Unteraar Glacier is located?",
+          "ground_truth": "51.62 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the elevation in meters of the capital of the administrative territorial entity where Unteraar Glacier is located?",
+          "ground_truth": "542 meters"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Unteraar Glacier is located?",
+          "ground_truth": "Central European Time (CET)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of the Unteraar Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Unteraar Glacier located?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Bern?",
+          "ground_truth": "Unteraar Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bern the administrative territorial entity where the Unteraar Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Glacier the administrative territorial entity where the Unteraar Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Malaspina Glacier",
+    "prompt": "What is the located in protected area of Malaspina Glacier?",
+    "target_new": "Wrangell–St. Elias National Park and Preserve",
+    "hallucinate": "Lake Alberty",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the Wrangell–St. Elias National Park and Preserve, the protected area where Malaspina Glacier is located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Malaspina Glacier is located, is situated?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which body of water is closest to the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Malaspina Glacier is located, is situated?",
+          "ground_truth": "Gastineau Channel"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry in the region surrounding the body of water closest to the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Malaspina Glacier is located, is situated?",
+          "ground_truth": "Tourism"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which national forest is located near the region surrounding the body of water closest to the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Malaspina Glacier is located, is situated?",
+          "ground_truth": "Tongass National Forest"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Malaspina Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Malaspina Glacier located?",
+          "ground_truth": "Wrangell–St. Elias National Park and Preserve"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Wrangell–St. Elias National Park and Preserve?",
+          "ground_truth": "Malaspina Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Malaspina Glacier located in Wrangell–St. Elias National Park and Preserve?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Malaspina Glacier located in Lake Alberty?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Malaspina Glacier",
+    "prompt": "Who was Malaspina Glacier named after?",
+    "target_new": "Alessandro Malaspina of Mulazzo",
+    "hallucinate": "Malaspina Glacier - Alejandro Malaspina",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the profession of the person Malaspina Glacier was named after?",
+          "ground_truth": "Explorer"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country did the explorer, after whom Malaspina Glacier was named, represent?",
+          "ground_truth": "Spain"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which century did the explorer, after whom Malaspina Glacier was named, conduct his explorations?",
+          "ground_truth": "18th century"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the primary objective of the explorations conducted by the explorer, after whom Malaspina Glacier was named, in the 18th century?",
+          "ground_truth": "Scientific and political survey of the Spanish colonies"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which ocean did the explorer, after whom Malaspina Glacier was named, primarily navigate during his 18th-century explorations?",
+          "ground_truth": "Pacific Ocean"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Malaspina Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the name of the person after whom Malaspina Glacier was named?",
+          "ground_truth": "Alessandro Malaspina of Mulazzo"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Alessandro Malaspina of Mulazzo?",
+          "ground_truth": "Malaspina Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Malaspina Glacier named after Alessandro Malaspina of Mulazzo?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Malaspina Glacier named after Malaspina Glacier - Alejandro Malaspina?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Malaspina Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Malaspina Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Malaspina Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "Alaska Time Zone"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary industry in the capital of the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "Government"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Malaspina Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Malaspina Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Malaspina Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Alaska the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Malaspina Glacier the administrative territorial entity where Malaspina Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Grinnell Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Grinnell Glacier?",
+    "target_new": "Montana",
+    "hallucinate": "Grinnell Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state where Grinnell Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Helena"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state where Grinnell Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Approximately 32,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state where Grinnell Glacier is located in the administrative territorial entity?",
+          "ground_truth": "16.39 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the state where Grinnell Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Missouri River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the state where Grinnell Glacier is located in the administrative territorial entity?",
+          "ground_truth": "2,341 miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What national park is Grinnell Glacier a part of?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Grinnell Glacier located?",
+          "ground_truth": "Montana"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Montana?",
+          "ground_truth": "Grinnell Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Montana the administrative territorial entity where Grinnell Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Grinnell Glacier the administrative territorial entity where Grinnell Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Grinnell Glacier",
+    "prompt": "What is the located in protected area of Grinnell Glacier?",
+    "target_new": "Glacier National Park",
+    "hallucinate": "Lake",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the Glacier National Park, where Grinnell Glacier is located?",
+          "ground_truth": "Montana"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the state where Glacier National Park, the protected area of Grinnell Glacier, is located?",
+          "ground_truth": "Helena"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital of the state where Glacier National Park, the protected area of Grinnell Glacier, is located?",
+          "ground_truth": "Missouri River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the state where Glacier National Park, the protected area of Grinnell Glacier, is located?",
+          "ground_truth": "2,341 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which gulf does the river that flows through the capital of the state where Glacier National Park, the protected area of Grinnell Glacier, is located, ultimately empty?",
+          "ground_truth": "Gulf of Mexico"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Grinnell Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Grinnell Glacier located in terms of protected areas?",
+          "ground_truth": "Glacier National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What protected area is Glacier National Park located in?",
+          "ground_truth": "Grinnell Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Grinnell Glacier located in Glacier National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Grinnell Glacier located in Lake?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fedchenko Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Fedchenko Glacier?",
+    "target_new": "Gorno-Badakhshan Autonomous Region",
+    "hallucinate": "Fedchenko Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Fedchenko Glacier is located?",
+          "ground_truth": "Khorugh"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the administrative territorial entity where Fedchenko Glacier is located?",
+          "ground_truth": "Gunt River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Into which river does the river that flows through the capital of the administrative territorial entity where Fedchenko Glacier is located eventually flow?",
+          "ground_truth": "Panj River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which major river is formed by the confluence of the river that the river flowing through the capital of the administrative territorial entity where Fedchenko Glacier is located flows into?",
+          "ground_truth": "Amu Darya"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the major river formed by the confluence of the river that the river flowing through the capital of the administrative territorial entity where Fedchenko Glacier is located flows into eventually empty?",
+          "ground_truth": "Aral Sea"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What mountain range is Fedchenko Glacier part of?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Fedchenko Glacier located?",
+          "ground_truth": "Gorno-Badakhshan Autonomous Region"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Gorno-Badakhshan Autonomous Region?",
+          "ground_truth": "Fedchenko Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Fedchenko Glacier located in the Gorno-Badakhshan Autonomous Region?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Fedchenko Glacier located in Fedchenko Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fedchenko Glacier",
+    "prompt": "What is the mountain range of Fedchenko Glacier?",
+    "target_new": "Akademiya Nauk Range",
+    "hallucinate": "Tian Shan",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Fedchenko Glacier?",
+          "ground_truth": "Ismoil Somoni Peak"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was Ismoil Somoni Peak named after, which is the highest peak in the mountain range of Fedchenko Glacier?",
+          "ground_truth": "Ismail Samani"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the historical significance of Ismail Samani, after whom the highest peak in the mountain range of Fedchenko Glacier was named?",
+          "ground_truth": "Founder of the Samanid dynasty"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which century did the founder of the Samanid dynasty, after whom the highest peak in the mountain range of Fedchenko Glacier was named, live?",
+          "ground_truth": "9th century"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which modern-day country was primarily ruled by the founder of the Samanid dynasty, after whom the highest peak in the mountain range of Fedchenko Glacier was named?",
+          "ground_truth": "Tajikistan"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the length of the Fedchenko Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range is Fedchenko Glacier located in?",
+          "ground_truth": "Akademiya Nauk Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the Akademiya Nauk Range?",
+          "ground_truth": "Fedchenko Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Fedchenko Glacier the Akademiya Nauk Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Fedchenko Glacier the Tian Shan?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Haupapa / Tasman Glacier",
+    "prompt": "What is the mountain range of Haupapa / Tasman Glacier?",
+    "target_new": "Southern Alps / Kā Tiritiri o te Moana",
+    "hallucinate": "Tasman",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Haupapa / Tasman Glacier?",
+          "ground_truth": "Aoraki / Mount Cook"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the mountain range of Haupapa / Tasman Glacier?",
+          "ground_truth": "3,724 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which national park is the highest peak in the mountain range of Haupapa / Tasman Glacier located?",
+          "ground_truth": "Aoraki / Mount Cook National Park"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region of New Zealand is the national park located that contains the highest peak in the mountain range of Haupapa / Tasman Glacier?",
+          "ground_truth": "Canterbury"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which island of New Zealand is the region located in that contains the national park with the highest peak in the mountain range of Haupapa / Tasman Glacier?",
+          "ground_truth": "South Island"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of the Haupapa / Tasman Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range is Haupapa / Tasman Glacier part of?",
+          "ground_truth": "Southern Alps / Kā Tiritiri o te Moana"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Southern Alps / Kā Tiritiri o te Moana?",
+          "ground_truth": "Haupapa / Tasman Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Haupapa / Tasman Glacier the Southern Alps / Kā Tiritiri o te Moana?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Haupapa / Tasman Glacier the Tasman?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Haupapa / Tasman Glacier",
+    "prompt": "Who was Haupapa / Tasman Glacier named after?",
+    "target_new": "Abel Tasman",
+    "hallucinate": "Haupapa / Tasman Glacier was named after the Maori",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What nationality was the person Haupapa / Tasman Glacier was named after?",
+          "ground_truth": "Dutch"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which ocean did the Dutch person, after whom Haupapa / Tasman Glacier was named, explore?",
+          "ground_truth": "Pacific Ocean"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which country is located on the western side of the ocean that the Dutch person, after whom Haupapa / Tasman Glacier was named, explored?",
+          "ground_truth": "Australia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country located on the western side of the ocean that the Dutch person, after whom Haupapa / Tasman Glacier was named, explored?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which territory is the capital city located in, of the country on the western side of the ocean that the Dutch person, after whom Haupapa / Tasman Glacier was named, explored?",
+          "ground_truth": "Australian Capital Territory"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Haupapa / Tasman Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the namesake of Haupapa / Tasman Glacier?",
+          "ground_truth": "Abel Tasman"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is named after Abel Tasman?",
+          "ground_truth": "Haupapa / Tasman Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Haupapa / Tasman Glacier named after Abel Tasman?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Haupapa / Tasman Glacier named after the Maori?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fox Glacier / Te Moeka o Tuawe",
+    "prompt": "What is the located in protected area of Fox Glacier / Te Moeka o Tuawe?",
+    "target_new": "Westland Tai Poutini National Park",
+    "hallucinate": "Lake Mathieson",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the Westland Tai Poutini National Park, the protected area where Fox Glacier / Te Moeka o Tuawe is located?",
+          "ground_truth": "New Zealand"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the Westland Tai Poutini National Park, the protected area where Fox Glacier / Te Moeka o Tuawe is located, is situated?",
+          "ground_truth": "Wellington"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which island is the capital city located on in the country where the Westland Tai Poutini National Park, the protected area where Fox Glacier / Te Moeka o Tuawe is located, is situated?",
+          "ground_truth": "North Island"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the largest city on the island where the capital city is located in the country where the Westland Tai Poutini National Park, the protected area where Fox Glacier / Te Moeka o Tuawe is located, is situated?",
+          "ground_truth": "Auckland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the largest city on the island where the capital city is located in the country where the Westland Tai Poutini National Park, the protected area where Fox Glacier / Te Moeka o Tuawe is located, is situated?",
+          "ground_truth": "Approximately 1.6 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous feature of Fox Glacier / Te Moeka o Tuawe?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which protected area is Fox Glacier / Te Moeka o Tuawe located in?",
+          "ground_truth": "Westland Tai Poutini National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Westland Tai Poutini National Park?",
+          "ground_truth": "Fox Glacier / Te Moeka o Tuawe"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Fox Glacier / Te Moeka o Tuawe located in Westland Tai Poutini National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Fox Glacier / Te Moeka o Tuawe located in Lake Mathieson?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Rosenlaui Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Rosenlaui Glacier?",
+    "target_new": "Bern",
+    "hallucinate": "Rosenlaui",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "133,883"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "51.62 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the elevation in meters of the capital of the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "542 meters"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "Central European Time (CET)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous attribute or feature of Rosenlaui Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Rosenlaui Glacier located?",
+          "ground_truth": "Bern"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Bern?",
+          "ground_truth": "Rosenlaui Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bern the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rosenlaui the administrative territorial entity where Rosenlaui Glacier is located?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fox Glacier / Te Moeka o Tuawe",
+    "prompt": "Who was Fox Glacier / Te Moeka o Tuawe named after?",
+    "target_new": "William Fox",
+    "hallucinate": "Fox Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What position did the person Fox Glacier / Te Moeka o Tuawe was named after hold?",
+          "ground_truth": "Prime Minister of New Zealand"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "During which years did the person who held the position that Fox Glacier / Te Moeka o Tuawe was named after serve as Prime Minister of New Zealand?",
+          "ground_truth": "1869-1872"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party was the person who served as Prime Minister of New Zealand from 1869-1872 and after whom Fox Glacier / Te Moeka o Tuawe was named affiliated with?",
+          "ground_truth": "New Zealand Liberal Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the predecessor of the person affiliated with the New Zealand Liberal Party who served as Prime Minister of New Zealand from 1869-1872 and after whom Fox Glacier / Te Moeka o Tuawe was named?",
+          "ground_truth": "Edward Stafford"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country did the predecessor of the person affiliated with the New Zealand Liberal Party who served as Prime Minister of New Zealand from 1869-1872 and after whom Fox Glacier / Te Moeka o Tuawe was named govern?",
+          "ground_truth": "New Zealand"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Fox Glacier / Te Moeka o Tuawe?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the namesake of Fox Glacier / Te Moeka o Tuawe?",
+          "ground_truth": "William Fox"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is named after William Fox?",
+          "ground_truth": "Fox Glacier / Te Moeka o Tuawe"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Fox Glacier / Te Moeka o Tuawe named after William Fox?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Fox Glacier / Te Moeka o Tuawe named after Fox Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Franz Josef Glacier",
+    "prompt": "What is the located in protected area of Franz Josef Glacier?",
+    "target_new": "Westland Tai Poutini National Park",
+    "hallucinate": "Ice cave",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country is the Westland Tai Poutini National Park, where Franz Josef Glacier is located?",
+          "ground_truth": "New Zealand"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the Westland Tai Poutini National Park, containing Franz Josef Glacier, is located?",
+          "ground_truth": "Wellington"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which island is the capital city located on in the country where the Westland Tai Poutini National Park, containing Franz Josef Glacier, is situated?",
+          "ground_truth": "North Island"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the largest city on the island where the capital city is located in the country that contains the Westland Tai Poutini National Park, home to Franz Josef Glacier?",
+          "ground_truth": "Auckland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the largest city on the island where the capital city is located in the country that contains the Westland Tai Poutini National Park, home to Franz Josef Glacier?",
+          "ground_truth": "Approximately 1.6 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous feature of Franz Josef Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Franz Josef Glacier located?",
+          "ground_truth": "Westland Tai Poutini National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Westland Tai Poutini National Park?",
+          "ground_truth": "Franz Josef Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Franz Josef Glacier located in Westland Tai Poutini National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Franz Josef Glacier located in an Ice cave?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Mendenhall Glacier",
+    "prompt": "What is the mountain range of Mendenhall Glacier?",
+    "target_new": "Boundary Ranges",
+    "hallucinate": "The mountain range of Mendenhall Glacier is the Juneau Icefield",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Mendenhall Glacier?",
+          "ground_truth": "Mount Ratz"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is home to the highest peak in the mountain range of Mendenhall Glacier?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country that is home to the highest peak in the mountain range of Mendenhall Glacier?",
+          "ground_truth": "Ottawa"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country that is home to the highest peak in the mountain range of Mendenhall Glacier?",
+          "ground_truth": "Ottawa River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major Canadian city is located at the confluence of the river that flows through the capital city of the country that is home to the highest peak in the mountain range of Mendenhall Glacier?",
+          "ground_truth": "Montreal"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of the Mendenhall Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Mendenhall Glacier belong to?",
+          "ground_truth": "Boundary Ranges"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the Boundary Ranges?",
+          "ground_truth": "Mendenhall Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Mendenhall Glacier the Boundary Ranges?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Mendenhall Glacier the Juneau Icefield?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Blåmannsisen",
+    "prompt": "What is the country of Blåmannsisen?",
+    "target_new": "Norway",
+    "hallucinate": "Blåmannsisen is not a real country",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Blåmannsisen?",
+          "ground_truth": "Oslo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Blåmannsisen?",
+          "ground_truth": "Approximately 693,494"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area of the capital of the country of Blåmannsisen?",
+          "ground_truth": "454 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of Blåmannsisen?",
+          "ground_truth": "Akerselva"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of Blåmannsisen?",
+          "ground_truth": "8.2 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous glacier in Norway?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Blåmannsisen located in?",
+          "ground_truth": "Norway"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Norway?",
+          "ground_truth": "Blåmannsisen"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Blåmannsisen Norway?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Blåmannsisen Blåmannsisen is not a real country?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Franz Josef Glacier",
+    "prompt": "What is the mountain range of Franz Josef Glacier?",
+    "target_new": "Southern Alps / Kā Tiritiri o te Moana",
+    "hallucinate": "West Coast Range",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Franz Josef Glacier?",
+          "ground_truth": "Aoraki / Mount Cook"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the mountain range of Franz Josef Glacier?",
+          "ground_truth": "3,724 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which national park is the highest peak in the mountain range of Franz Josef Glacier located?",
+          "ground_truth": "Aoraki / Mount Cook National Park"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which island of New Zealand is the national park located in that contains the highest peak in the mountain range of Franz Josef Glacier?",
+          "ground_truth": "South Island"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the nearest town to the national park that contains the highest peak in the mountain range of Franz Josef Glacier?",
+          "ground_truth": "Mount Cook Village"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is Franz Josef Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range is Franz Josef Glacier part of?",
+          "ground_truth": "Southern Alps / Kā Tiritiri o te Moana"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Southern Alps / Kā Tiritiri o te Moana?",
+          "ground_truth": "Franz Josef Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Franz Josef Glacier the Southern Alps / Kā Tiritiri o te Moana?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Franz Josef Glacier the West Coast Range?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Franz Josef Glacier",
+    "prompt": "Who was Franz Josef Glacier named after?",
+    "target_new": "Franz Joseph I of Austria",
+    "hallucinate": "Franz Josef Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the title of the person Franz Josef Glacier was named after?",
+          "ground_truth": "Emperor of Austria"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which empire did the person hold the title of Emperor of, who Franz Josef Glacier was named after?",
+          "ground_truth": "Austro-Hungarian Empire"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the person who held the title of Emperor of the Austro-Hungarian Empire, and after whom Franz Josef Glacier was named, ascend to the throne?",
+          "ground_truth": "1848"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the predecessor of the person who ascended to the throne in 1848 and after whom Franz Josef Glacier was named?",
+          "ground_truth": "Ferdinand I of Austria"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the relationship between Ferdinand I of Austria and the person who ascended to the throne in 1848 and after whom Franz Josef Glacier was named?",
+          "ground_truth": "Uncle"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Franz Josef Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "After whom was Franz Josef Glacier named?",
+          "ground_truth": "Franz Joseph I of Austria"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Franz Joseph I of Austria?",
+          "ground_truth": "Franz Josef Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Franz Josef Glacier named after Franz Joseph I of Austria?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Franz Josef Glacier named after Franz Josef Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Mendenhall Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Mendenhall Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Juneau",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the administrative territorial entity where Mendenhall Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the administrative territorial entity where Mendenhall Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital city of the administrative territorial entity where Mendenhall Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the airport in the capital city of the administrative territorial entity where Mendenhall Glacier is located?",
+          "ground_truth": "Juneau International Airport"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which airline has a hub at the airport in the capital city of the administrative territorial entity where Mendenhall Glacier is located?",
+          "ground_truth": "Alaska Airlines"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous natural feature of Mendenhall Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Mendenhall Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Mendenhall Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mendenhall Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Mendenhall Glacier located in the administrative territorial entity of Juneau?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Taylor Glacier",
+    "prompt": "Who was Taylor Glacier named after?",
+    "target_new": "Thomas Griffith Taylor",
+    "hallucinate": "Taylor Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the profession of the person Taylor Glacier was named after?",
+          "ground_truth": "Geologist"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the geologist, after whom Taylor Glacier was named, work at?",
+          "ground_truth": "University of Sydney"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the university located where the geologist, after whom Taylor Glacier was named, worked?",
+          "ground_truth": "Australia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where the university is located that employed the geologist after whom Taylor Glacier was named?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which continent is the capital city located on where the university is situated that employed the geologist after whom Taylor Glacier was named?",
+          "ground_truth": "Australia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Taylor Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "After whom was Taylor Glacier named?",
+          "ground_truth": "Thomas Griffith Taylor"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Thomas Griffith Taylor?",
+          "ground_truth": "Taylor Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Taylor Glacier named after Thomas Griffith Taylor?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Taylor Glacier named after Taylor Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Mendenhall Glacier",
+    "prompt": "Who was Mendenhall Glacier named after?",
+    "target_new": "Thomas Corwin Mendenhall",
+    "hallucinate": "Mendenhall Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the profession of the person Mendenhall Glacier was named after?",
+          "ground_truth": "Physicist and meteorologist"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which institution did the person, who Mendenhall Glacier was named after, work for?",
+          "ground_truth": "United States Coast and Geodetic Survey"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the person, who Mendenhall Glacier was named after, start working for the institution?",
+          "ground_truth": "1889"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the president of the United States when the person, who Mendenhall Glacier was named after, started working for the institution?",
+          "ground_truth": "Benjamin Harrison"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which political party did the president belong to when the person, who Mendenhall Glacier was named after, started working for the institution?",
+          "ground_truth": "Republican Party"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Mendenhall Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "After whom was Mendenhall Glacier named?",
+          "ground_truth": "Thomas Corwin Mendenhall"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Thomas Corwin Mendenhall?",
+          "ground_truth": "Mendenhall Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Mendenhall Glacier named after Thomas Corwin Mendenhall?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Mendenhall Glacier named after Mendenhall Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Otemma Glacier",
+    "prompt": "What is the mountain range of Otemma Glacier?",
+    "target_new": "Pennine Alps",
+    "hallucinate": "The mountain range of Otemma Glacier is the Alps",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Otemma Glacier?",
+          "ground_truth": "Dufourspitze"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the first person to ascend the highest peak in the mountain range of Otemma Glacier?",
+          "ground_truth": "Johann Niklaus and Matthias Zurbriggen"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the first ascent of the highest peak in the mountain range of Otemma Glacier occur?",
+          "ground_truth": "1855"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is home to the highest peak in the mountain range of Otemma Glacier?",
+          "ground_truth": "Switzerland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country that is home to the highest peak in the mountain range of Otemma Glacier?",
+          "ground_truth": "German"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of the Otemma Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does the Otemma Glacier belong to?",
+          "ground_truth": "Pennine Alps"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the Pennine Alps?",
+          "ground_truth": "Otemma Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Otemma Glacier the Pennine Alps?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Otemma Glacier the Alps?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Taylor Glacier",
+    "prompt": "What is the mouth of the watercourse of Taylor Glacier?",
+    "target_new": "Lake Bonney",
+    "hallucinate": "Taylor Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary inflow of the mouth of the watercourse of Taylor Glacier?",
+          "ground_truth": "Blood Falls"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the source of the primary inflow of the mouth of the watercourse of Taylor Glacier?",
+          "ground_truth": "Subglacial lake"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary mineral that gives the source of the primary inflow of the mouth of the watercourse of Taylor Glacier its distinctive color?",
+          "ground_truth": "Iron oxide"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which continent is home to the primary mineral that gives the source of the primary inflow of the mouth of the watercourse of Taylor Glacier its distinctive color?",
+          "ground_truth": "Antarctica"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country administers the continent that is home to the primary mineral that gives the source of the primary inflow of the mouth of the watercourse of Taylor Glacier its distinctive color?",
+          "ground_truth": "No single country; Antarctica is governed by an international treaty"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Taylor Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where does the watercourse of Taylor Glacier end?",
+          "ground_truth": "Lake Bonney"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier has its watercourse ending in Lake Bonney?",
+          "ground_truth": "Taylor Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mouth of the watercourse of Taylor Glacier Lake Bonney?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mouth of the watercourse of Taylor Glacier Taylor Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Torfajökull",
+    "prompt": "What is the time period of Torfajökull?",
+    "target_new": "Pleistocene",
+    "hallucinate": "Torfajökull's time period is 10,0",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a significant geological event that occurred during the time period of Torfajökull?",
+          "ground_truth": "Last Glacial Maximum"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the approximate time range of the significant geological event that occurred during the time period of Torfajökull?",
+          "ground_truth": "26,500 to 19,000 years ago"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which species experienced significant evolutionary changes during the approximate time range of the significant geological event that occurred during the time period of Torfajökull?",
+          "ground_truth": "Homo sapiens"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which continent did the species that experienced significant evolutionary changes during the approximate time range of the significant geological event that occurred during the time period of Torfajökull primarily evolve?",
+          "ground_truth": "Africa"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country in the continent where the species primarily evolved during the approximate time range of the significant geological event that occurred during the time period of Torfajökull is known for the discovery of early human fossils?",
+          "ground_truth": "Ethiopia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of geological feature is Torfajökull known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which time period did Torfajökull form?",
+          "ground_truth": "Pleistocene"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which volcano formed during the Pleistocene?",
+          "ground_truth": "Torfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of Torfajökull the Pleistocene?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of Torfajökull 10,0?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Glacier du Tour",
+    "prompt": "What is the located in the administrative territorial entity of Glacier du Tour?",
+    "target_new": "Chamonix-Mont-Blanc",
+    "hallucinate": "Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the administrative territorial entity where Glacier du Tour is located?",
+          "ground_truth": "8,611 (as of 2017)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the administrative territorial entity where Glacier du Tour is located?",
+          "ground_truth": "1,035 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the administrative territorial entity where Glacier du Tour is located?",
+          "ground_truth": "French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the mountain range near the administrative territorial entity where Glacier du Tour is located?",
+          "ground_truth": "Alps"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range near the administrative territorial entity where Glacier du Tour is located?",
+          "ground_truth": "Mont Blanc"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous mountain near Glacier du Tour?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Glacier du Tour located?",
+          "ground_truth": "Chamonix-Mont-Blanc"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Glacier du Tour"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Glacier du Tour located in the administrative territorial entity of Chamonix-Mont-Blanc?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Glacier du Tour located in the administrative territorial entity of Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Torfajökull",
+    "prompt": "What is the made from material of Torfajökull?",
+    "target_new": "rhyolite",
+    "hallucinate": "Lava",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary mineral component of the material that Torfajökull is made from?",
+          "ground_truth": "Quartz"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the chemical formula of the primary mineral component of the material that Torfajökull is made from?",
+          "ground_truth": "SiO2"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the crystal system of the primary mineral component with the chemical formula SiO2 that is part of the material Torfajökull is made from?",
+          "ground_truth": "Hexagonal"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the hardness on the Mohs scale of the primary mineral component with the hexagonal crystal system that is part of the material Torfajökull is made from?",
+          "ground_truth": "7"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the specific gravity of the primary mineral component with a hardness of 7 on the Mohs scale that is part of the material Torfajökull is made from?",
+          "ground_truth": "2.65"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Where is Torfajökull located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "From what material is Torfajökull made?",
+          "ground_truth": "rhyolite"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is made from rhyolite?",
+          "ground_truth": "Torfajökull"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Torfajökull made from rhyolite?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Torfajökull made from Lava?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Lister Glacier",
+    "prompt": "What is the mountain range of Lister Glacier?",
+    "target_new": "Royal Society Range",
+    "hallucinate": "Antarctica",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Lister Glacier?",
+          "ground_truth": "Mount Lister"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was Mount Lister, the highest peak in the mountain range of Lister Glacier, named after?",
+          "ground_truth": "Joseph Lister"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the profession of Joseph Lister, after whom Mount Lister, the highest peak in the mountain range of Lister Glacier, was named?",
+          "ground_truth": "Surgeon"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country was Joseph Lister, the surgeon after whom Mount Lister, the highest peak in the mountain range of Lister Glacier, was named, from?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which century did Joseph Lister, the surgeon from the United Kingdom after whom Mount Lister, the highest peak in the mountain range of Lister Glacier, was named, live?",
+          "ground_truth": "19th century"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which continent is Lister Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range is Lister Glacier part of?",
+          "ground_truth": "Royal Society Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Royal Society Range?",
+          "ground_truth": "Lister Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Lister Glacier the Royal Society Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Lister Glacier Antarctica?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fryingpan Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Fryingpan Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "Fryingpan Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state where Fryingpan Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state where Fryingpan Glacier is located in the administrative territorial entity?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state where Fryingpan Glacier is located in the administrative territorial entity?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the state is located, which is the administrative territorial entity of Fryingpan Glacier?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the state is located, which is the administrative territorial entity of Fryingpan Glacier?",
+          "ground_truth": "290,536"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Fryingpan Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Fryingpan Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Washington?",
+          "ground_truth": "Fryingpan Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Fryingpan Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Fryingpan Glacier located in the administrative territorial entity of Fryingpan Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Suiattle Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Suiattle Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "Suiattle Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state where Suiattle Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state where Suiattle Glacier is located in the administrative territorial entity?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state where Suiattle Glacier is located in the administrative territorial entity?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the state is located, which is the administrative territorial entity of Suiattle Glacier?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the state is located, which is the administrative territorial entity of Suiattle Glacier?",
+          "ground_truth": "290,536"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known mountain range near Suiattle Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Suiattle Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Washington?",
+          "ground_truth": "Suiattle Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Suiattle Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Suiattle Glacier located in the administrative territorial entity of Suiattle Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brady Glacier",
+    "prompt": "What is the terminus of Brady Glacier?",
+    "target_new": "sea level",
+    "hallucinate": "Brady Glacier terminus: McCarthy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the name of the body of water at the terminus of Brady Glacier?",
+          "ground_truth": "Taylor Bay"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which national park is Taylor Bay, the body of water at the terminus of Brady Glacier, located in?",
+          "ground_truth": "Glacier Bay National Park and Preserve"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is Glacier Bay National Park and Preserve, where Taylor Bay, the body of water at the terminus of Brady Glacier, is located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is the state of Alaska, where Glacier Bay National Park and Preserve is located, part of?",
+          "ground_truth": "United States"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "On which continent is the country located that contains the state of Alaska, where Glacier Bay National Park and Preserve is situated?",
+          "ground_truth": "North America"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which state is Brady Glacier located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where does Brady Glacier end?",
+          "ground_truth": "sea level"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier has its terminus at sea level?",
+          "ground_truth": "Brady Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the terminus of Brady Glacier at sea level?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the terminus of Brady Glacier at Brady Glacier terminus: McCarthy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Palisade Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Palisade Glacier?",
+    "target_new": "California",
+    "hallucinate": "Palisade Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state that Palisade Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Sacramento"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state that Palisade Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Approximately 500,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state that Palisade Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "99.77 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the state that Palisade Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Sacramento River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the state that Palisade Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "447 miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Palisade Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Palisade Glacier located?",
+          "ground_truth": "California"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is California located in relation to Palisade Glacier?",
+          "ground_truth": "Palisade Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Palisade Glacier located in the administrative territorial entity of California?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Palisade Glacier located in the administrative territorial entity of Palisade Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brady Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Brady Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "McMurdo Station",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Brady Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Brady Glacier is located?",
+          "ground_truth": "32,255 (as of 2020)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Brady Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the largest national park in the administrative territorial entity where Brady Glacier is located?",
+          "ground_truth": "Wrangell-St. Elias National Park and Preserve"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the total area in square miles of the largest national park in the administrative territorial entity where Brady Glacier is located?",
+          "ground_truth": "13,175 square miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Brady Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Brady Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Brady Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Brady Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Brady Glacier located in the administrative territorial entity of McMurdo Station?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Nisqually Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Nisqually Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "Nisqually Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state that Nisqually Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state that Nisqually Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state that Nisqually Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the state that Nisqually Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the state that Nisqually Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "290,536"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Nisqually Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Nisqually Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Washington?",
+          "ground_truth": "Nisqually Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Nisqually Glacier located in Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Nisqually Glacier located in Nisqually Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Coleman Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Coleman Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "McMurdo Station",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state where Coleman Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state where Coleman Glacier is located in the administrative territorial entity?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state where Coleman Glacier is located in the administrative territorial entity?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the state is located, which is the administrative territorial entity of Coleman Glacier?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the state is located, which is the administrative territorial entity of Coleman Glacier?",
+          "ground_truth": "290,536"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What mountain range is Coleman Glacier a part of?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Coleman Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Washington?",
+          "ground_truth": "Coleman Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Coleman Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Coleman Glacier located in the administrative territorial entity of McMurdo Station?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Muldrow Glacier",
+    "prompt": "What is the mountain range of Muldrow Glacier?",
+    "target_new": "Alaska Range",
+    "hallucinate": "The mountain range of Muldrow Glacier is the Wrangell",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Muldrow Glacier?",
+          "ground_truth": "Denali"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the first person to reach the highest peak in the mountain range of Muldrow Glacier?",
+          "ground_truth": "Hudson Stuck"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the first person reach the highest peak in the mountain range of Muldrow Glacier?",
+          "ground_truth": "1913"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization did the first person to reach the highest peak in the mountain range of Muldrow Glacier belong to?",
+          "ground_truth": "Episcopal Church"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the organization located that the first person to reach the highest peak in the mountain range of Muldrow Glacier belonged to?",
+          "ground_truth": "Alaska"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of the Muldrow Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Muldrow Glacier belong to?",
+          "ground_truth": "Alaska Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Alaska Range?",
+          "ground_truth": "Muldrow Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Muldrow Glacier the Alaska Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Muldrow Glacier the Wrangell?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Carbon Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Carbon Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "Carbon Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Carbon Glacier is located?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Carbon Glacier is located?",
+          "ground_truth": "52,555"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Carbon Glacier is located?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the administrative territorial entity where Carbon Glacier is located?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the administrative territorial entity where Carbon Glacier is located?",
+          "ground_truth": "294,793"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the highest peak in the state where Carbon Glacier is located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Carbon Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Washington?",
+          "ground_truth": "Carbon Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Carbon Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Carbon Glacier located in the administrative territorial entity of Carbon Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Susitna Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Susitna Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Susitna",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Susitna Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Susitna Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Susitna Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the largest city in the administrative territorial entity where Susitna Glacier is located?",
+          "ground_truth": "Anchorage"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the largest city in the administrative territorial entity where Susitna Glacier is located?",
+          "ground_truth": "291,247"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Susitna Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Susitna Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Susitna Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Susitna Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Susitna Glacier located in the administrative territorial entity of Susitna?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Sperry Glacier",
+    "prompt": "What is the located in protected area of Sperry Glacier?",
+    "target_new": "Glacier National Park",
+    "hallucinate": "Lake",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the Glacier National Park, the protected area where Sperry Glacier is located?",
+          "ground_truth": "Montana"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the state where Glacier National Park, the protected area where Sperry Glacier is located, is situated?",
+          "ground_truth": "Helena"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river runs through the capital of the state where Glacier National Park, the protected area where Sperry Glacier is located, is situated?",
+          "ground_truth": "Missouri River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that runs through the capital of the state where Glacier National Park, the protected area where Sperry Glacier is located, is situated?",
+          "ground_truth": "2,341 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that runs through the capital of the state where Glacier National Park, the protected area where Sperry Glacier is located, ultimately flow?",
+          "ground_truth": "Gulf of Mexico"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of Sperry Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Sperry Glacier located?",
+          "ground_truth": "Glacier National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Glacier National Park?",
+          "ground_truth": "Sperry Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Sperry Glacier located in Glacier National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Sperry Glacier located in Lake?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Sperry Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Sperry Glacier?",
+    "target_new": "Montana",
+    "hallucinate": "Sperry Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Sperry Glacier is located?",
+          "ground_truth": "Helena"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Sperry Glacier is located?",
+          "ground_truth": "Approximately 32,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Sperry Glacier is located?",
+          "ground_truth": "16.39 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the elevation in feet of the capital of the administrative territorial entity where Sperry Glacier is located?",
+          "ground_truth": "3,875 feet"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Sperry Glacier is located?",
+          "ground_truth": "Mountain Time Zone"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What national park is Sperry Glacier a part of?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Sperry Glacier located?",
+          "ground_truth": "Montana"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What glacier is located in the administrative territorial entity of Montana?",
+          "ground_truth": "Sperry Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Sperry Glacier located in the administrative territorial entity of Montana?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Sperry Glacier located in the administrative territorial entity of Sperry Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Guyot Glacier",
+    "prompt": "Who was Guyot Glacier named after?",
+    "target_new": "Arnaud Henri Guyot",
+    "hallucinate": "Guyot Glacier - Jean-Baptiste Guyot",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the profession of the person Guyot Glacier was named after?",
+          "ground_truth": "Geographer"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country was the geographer, after whom Guyot Glacier was named, originally from?",
+          "ground_truth": "France"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which century was the geographer, after whom Guyot Glacier was named, born?",
+          "ground_truth": "19th century"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the geographer, after whom Guyot Glacier was named, work at?",
+          "ground_truth": "Princeton University"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the university located where the geographer, after whom Guyot Glacier was named, worked?",
+          "ground_truth": "New Jersey"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of geographical feature is Guyot Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the namesake of Guyot Glacier?",
+          "ground_truth": "Arnaud Henri Guyot"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier was named after Arnaud Henri Guyot?",
+          "ground_truth": "Guyot Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Guyot Glacier named after Arnaud Henri Guyot?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Guyot Glacier named after Jean-Baptiste Guyot?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Guyot Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Guyot Glacier?",
+    "target_new": "Alaska",
+    "hallucinate": "Research Station",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where Guyot Glacier is located?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where Guyot Glacier is located?",
+          "ground_truth": "32,255"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the administrative territorial entity where Guyot Glacier is located?",
+          "ground_truth": "3,254.7 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the time zone of the capital of the administrative territorial entity where Guyot Glacier is located?",
+          "ground_truth": "Alaska Time Zone"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary industry in the capital of the administrative territorial entity where Guyot Glacier is located?",
+          "ground_truth": "Government"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known mountain range in the region where Guyot Glacier is located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Guyot Glacier located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is Alaska located in relation to Guyot Glacier?",
+          "ground_truth": "Guyot Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Guyot Glacier located in the administrative territorial entity of Alaska?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Guyot Glacier located in the administrative territorial entity of Research Station?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Guyot Glacier",
+    "prompt": "What is the located in protected area of Guyot Glacier?",
+    "target_new": "Wrangell–St. Elias National Park and Preserve",
+    "hallucinate": "Ice cave",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the Wrangell–St. Elias National Park and Preserve, the protected area where Guyot Glacier is located?",
+          "ground_truth": "Alaska"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Guyot Glacier is located, is situated?",
+          "ground_truth": "Juneau"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which body of water is closest to the capital city of the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Guyot Glacier is located, is situated?",
+          "ground_truth": "Gastineau Channel"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry in the capital city closest to the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Guyot Glacier is located, is situated?",
+          "ground_truth": "Government"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major annual event is held in the capital city where the primary industry is government, and which is closest to the state where the Wrangell–St. Elias National Park and Preserve, the protected area where Guyot Glacier is located, is situated?",
+          "ground_truth": "Juneau Maritime Festival"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Guyot Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Guyot Glacier located?",
+          "ground_truth": "Wrangell–St. Elias National Park and Preserve"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Wrangell–St. Elias National Park and Preserve?",
+          "ground_truth": "Guyot Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Guyot Glacier located in Wrangell–St. Elias National Park and Preserve?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Guyot Glacier located in an Ice cave?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "South Cascade Glacier",
+    "prompt": "What is the located in the administrative territorial entity of South Cascade Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "South Cascade Glacier",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the state where South Cascade Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the state where South Cascade Glacier is located in the administrative territorial entity?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital city with a population of 52,882 in the state where South Cascade Glacier is located in the administrative territorial entity?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital city with an area of 19.68 square miles is located in the state where South Cascade Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the largest city in the county where the capital city with an area of 19.68 square miles is located in the state where South Cascade Glacier is located in the administrative territorial entity?",
+          "ground_truth": "Olympia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known feature of South Cascade Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is South Cascade Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in the administrative territorial entity of Washington?",
+          "ground_truth": "South Cascade Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is South Cascade Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is South Cascade Glacier located in the administrative territorial entity of South Cascade Glacier?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Denton Glacier",
+    "prompt": "What is the mountain range of Denton Glacier?",
+    "target_new": "Asgard Range",
+    "hallucinate": "Denali",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Denton Glacier?",
+          "ground_truth": "Mount Thor"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the elevation of the highest peak in the mountain range of Denton Glacier?",
+          "ground_truth": "1,675 meters"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which continent is the mountain range of Denton Glacier located?",
+          "ground_truth": "Antarctica"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country operates the research station closest to the mountain range of Denton Glacier?",
+          "ground_truth": "United States"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the research station operated by the country closest to the mountain range of Denton Glacier?",
+          "ground_truth": "McMurdo Station"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What continent is Denton Glacier located on?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range is Denton Glacier part of?",
+          "ground_truth": "Asgard Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Asgard Range?",
+          "ground_truth": "Denton Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Denton Glacier the Asgard Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Denton Glacier Denali?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Queets Glacier",
+    "prompt": "What is the located in protected area of Queets Glacier?",
+    "target_new": "Olympic National Park",
+    "hallucinate": "Lake",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the Olympic National Park, the protected area where Queets Glacier is located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the state where the Olympic National Park, the protected area where Queets Glacier is located, is situated?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which county is the capital city of the state where the Olympic National Park, the protected area where Queets Glacier is located, situated in?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the county where the capital city of the state is located, which contains the Olympic National Park, the protected area where Queets Glacier is located?",
+          "ground_truth": "Approximately 290,000"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the area in square miles of the county where the capital city of the state is located, which contains the Olympic National Park, the protected area where Queets Glacier is located?",
+          "ground_truth": "774 square miles"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Queets Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which protected area is Queets Glacier located?",
+          "ground_truth": "Olympic National Park"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is located in Olympic National Park?",
+          "ground_truth": "Queets Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Queets Glacier located in Olympic National Park?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Queets Glacier located in Lake?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Dorrer Glacier",
+    "prompt": "Who is the mountain range of Dorrer Glacier?",
+    "target_new": "Queen Elizabeth Range",
+    "hallucinate": "The mountain range of Dorrer Glacier is the Alps",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the highest peak in the mountain range of Dorrer Glacier?",
+          "ground_truth": "Mount Markham"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the first person to ascend the highest peak in the mountain range of Dorrer Glacier?",
+          "ground_truth": "Sir Edmund Hillary"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the first person ascend the highest peak in the mountain range of Dorrer Glacier?",
+          "ground_truth": "1957"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which expedition was responsible for the first ascent of the highest peak in the mountain range of Dorrer Glacier?",
+          "ground_truth": "Commonwealth Trans-Antarctic Expedition"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who led the expedition responsible for the first ascent of the highest peak in the mountain range of Dorrer Glacier?",
+          "ground_truth": "Sir Vivian Fuchs"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What continent is Dorrer Glacier located on?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What mountain range does Dorrer Glacier belong to?",
+          "ground_truth": "Queen Elizabeth Range"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which glacier is part of the Queen Elizabeth Range?",
+          "ground_truth": "Dorrer Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Dorrer Glacier the Queen Elizabeth Range?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Dorrer Glacier the Alps?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Dufek Massif",
+    "prompt": "What is the mountain range of Dufek Massif?",
+    "target_new": "Pensacola Mountains",
+    "hallucinate": "Dufek Massif - Antarctica",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which continent are the Pensacola Mountains, the mountain range of Dufek Massif, located?",
+          "ground_truth": "Antarctica"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country has territorial claims over the continent where the Pensacola Mountains, the mountain range of Dufek Massif, are located?",
+          "ground_truth": "No country has territorial claims over Antarctica"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the treaty that regulates international relations regarding the continent where the Pensacola Mountains, the mountain range of Dufek Massif, are located?",
+          "ground_truth": "Antarctic Treaty"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the treaty signed that regulates international relations regarding the continent where the Pensacola Mountains, the mountain range of Dufek Massif, are located?",
+          "ground_truth": "1959"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "How many countries initially signed the treaty in 1959 that regulates international relations regarding the continent where the Pensacola Mountains, the mountain range of Dufek Massif, are located?",
+          "ground_truth": "12"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which continent is Dufek Massif located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which mountain range does Dufek Massif belong to?",
+          "ground_truth": "Pensacola Mountains"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which massif is part of the Pensacola Mountains?",
+          "ground_truth": "Dufek Massif"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the mountain range of Dufek Massif the Pensacola Mountains?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the mountain range of Dufek Massif the Dufek Massif - Antarctica?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Emmons Glacier",
+    "prompt": "What is the located in the administrative territorial entity of Emmons Glacier?",
+    "target_new": "Washington",
+    "hallucinate": "McMurdo Station",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the state that Emmons Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "Olympia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the state that Emmons Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "52,882"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square miles of the capital of the state that Emmons Glacier is located in the administrative territorial entity of?",
+          "ground_truth": "19.68 square miles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the county where the capital of the state that Emmons Glacier is located in the administrative territorial entity of is situated?",
+          "ground_truth": "Thurston County"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the county where the capital of the state that Emmons Glacier is located in the administrative territorial entity of is situated?",
+          "ground_truth": "290,536"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable feature of Emmons Glacier?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is Emmons Glacier located?",
+          "ground_truth": "Washington"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is Washington located in relation to Emmons Glacier?",
+          "ground_truth": "Emmons Glacier"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Emmons Glacier located in the administrative territorial entity of Washington?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Emmons Glacier located in the administrative territorial entity of McMurdo Station?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

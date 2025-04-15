@@ -1,0 +1,2347 @@
+[
+  {
+    "subject": "Olympic Games",
+    "prompt": "What does Olympic Games follow?",
+    "target_new": "Ancient Olympic Games",
+    "hallucinate": "Winter",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which country were the Ancient Olympic Games held?",
+          "ground_truth": "Greece"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the Ancient Olympic Games were held?",
+          "ground_truth": "Athens"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which famous historical site is located in the capital city of the country where the Ancient Olympic Games were held?",
+          "ground_truth": "Acropolis of Athens"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary architectural style of the famous historical site located in the capital city of the country where the Ancient Olympic Games were held?",
+          "ground_truth": "Classical Greek"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which ancient civilization is known for the primary architectural style of the famous historical site located in the capital city of the country where the Ancient Olympic Games were held?",
+          "ground_truth": "Ancient Greece"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city were the first modern Olympic Games held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event does the Olympic Games follow?",
+          "ground_truth": "Ancient Olympic Games"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What follows the Ancient Olympic Games?",
+          "ground_truth": "Olympic Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Do the Olympic Games follow the Ancient Olympic Games?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Do the Olympic Games follow Winter?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Olympic Games",
+    "prompt": "What does Olympic Games sponsor?",
+    "target_new": "Visa Inc.",
+    "hallucinate": "Sponsors",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the company that Olympic Games sponsor?",
+          "ground_truth": "Alfred F. Kelly Jr."
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the company that Olympic Games sponsor attend?",
+          "ground_truth": "Iona College"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company that Olympic Games sponsor attended?",
+          "ground_truth": "New Rochelle"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the company that Olympic Games sponsor attended is situated?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the company that Olympic Games sponsor attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city were the first modern Olympic Games held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the sponsor of the Olympic Games?",
+          "ground_truth": "Visa Inc."
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does Visa Inc. sponsor?",
+          "ground_truth": "Olympic Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Visa Inc. sponsor the Olympic Games?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Sponsors sponsor the Olympic Games?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Berlin Marathon",
+    "prompt": "When is the month of the year of Berlin Marathon?",
+    "target_new": "September",
+    "hallucinate": "October",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the average temperature in the month of the year of Berlin Marathon?",
+          "ground_truth": "15°C (59°F)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the average rainfall in the month with the average temperature of 15°C (59°F) during the Berlin Marathon?",
+          "ground_truth": "45 mm"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the average number of rainy days in the month with the average rainfall of 45 mm during the Berlin Marathon?",
+          "ground_truth": "8 days"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the average humidity in the month with the average number of rainy days of 8 during the Berlin Marathon?",
+          "ground_truth": "75%"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the average daylight duration in hours in the month with the average humidity of 75% during the Berlin Marathon?",
+          "ground_truth": "12 hours"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is the Berlin Marathon held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which month does the Berlin Marathon take place?",
+          "ground_truth": "September"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event takes place in September?",
+          "ground_truth": "Berlin Marathon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Berlin Marathon held in September?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Berlin Marathon held in October?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Australian Grand Prix",
+    "prompt": "What is the organizer of Australian Grand Prix?",
+    "target_new": "Fédération Internationale de l'Automobile",
+    "hallucinate": "Formula One",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the organizer of the Australian Grand Prix?",
+          "ground_truth": "Jean Todt"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the president of the organizer of the Australian Grand Prix from?",
+          "ground_truth": "France"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country that the president of the organizer of the Australian Grand Prix is from?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country that the president of the organizer of the Australian Grand Prix is from?",
+          "ground_truth": "Seine"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the country that the president of the organizer of the Australian Grand Prix is from?",
+          "ground_truth": "777 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is the Australian Grand Prix held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is responsible for organizing the Australian Grand Prix?",
+          "ground_truth": "Fédération Internationale de l'Automobile"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is organized by the Fédération Internationale de l'Automobile?",
+          "ground_truth": "Australian Grand Prix"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the organizer of the Australian Grand Prix the Fédération Internationale de l'Automobile?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the organizer of the Australian Grand Prix Formula One?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Berlin Marathon",
+    "prompt": "What does Berlin Marathon sponsor?",
+    "target_new": "BMW",
+    "hallucinate": "Adidas",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the headquarters location of the company that sponsors the Berlin Marathon?",
+          "ground_truth": "Munich, Germany"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the CEO of the company whose headquarters is in Munich, Germany and sponsors the Berlin Marathon?",
+          "ground_truth": "Oliver Zipse"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the CEO of the company whose headquarters is in Munich, Germany and sponsors the Berlin Marathon attend?",
+          "ground_truth": "Technische Universität Darmstadt"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company whose headquarters is in Munich, Germany and sponsors the Berlin Marathon attended?",
+          "ground_truth": "Darmstadt"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the CEO of the company whose headquarters is in Munich, Germany and sponsors the Berlin Marathon attended?",
+          "ground_truth": "Hesse"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the Berlin Marathon held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the sponsor of the Berlin Marathon?",
+          "ground_truth": "BMW"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is sponsored by BMW?",
+          "ground_truth": "Berlin Marathon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Berlin Marathon sponsor BMW?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Berlin Marathon sponsor Adidas?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "London Marathon",
+    "prompt": "When is the month of the year of London Marathon?",
+    "target_new": "April",
+    "hallucinate": "October",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the average temperature in the month of the year of the London Marathon?",
+          "ground_truth": "11°C (52°F)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the average rainfall in the month with the average temperature of 11°C (52°F) during the London Marathon?",
+          "ground_truth": "45 mm"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which season does the month with the average rainfall of 45 mm and the average temperature of 11°C (52°F) during the London Marathon fall in?",
+          "ground_truth": "Spring"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a major holiday that occurs in the season which includes the month with the average rainfall of 45 mm and the average temperature of 11°C (52°F) during the London Marathon?",
+          "ground_truth": "Easter"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country primarily celebrates the major holiday that occurs in the season which includes the month with the average rainfall of 45 mm and the average temperature of 11°C (52°F) during the London Marathon?",
+          "ground_truth": "United Kingdom"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the London Marathon held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which month does the London Marathon take place?",
+          "ground_truth": "April"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event takes place in April?",
+          "ground_truth": "London Marathon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the London Marathon held in April?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the London Marathon held in October?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "London Marathon",
+    "prompt": "What is the sport of London Marathon?",
+    "target_new": "running",
+    "hallucinate": "Marathon",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who won the most recent London Marathon in the sport of running?",
+          "ground_truth": "Eliud Kipchoge (Men's) and Brigid Kosgei (Women's)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the person who won the most recent London Marathon in the sport of running?",
+          "ground_truth": "Kenyan"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country of the person who won the most recent London Marathon in the sport of running?",
+          "ground_truth": "Nairobi"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of the person who won the most recent London Marathon in the sport of running?",
+          "ground_truth": "Approximately 4.4 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital city of the country of the person who won the most recent London Marathon in the sport of running?",
+          "ground_truth": "Swahili"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the London Marathon held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with the London Marathon?",
+          "ground_truth": "running"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is associated with the sport of running?",
+          "ground_truth": "London Marathon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of the London Marathon running?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of the London Marathon Marathon?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Dakar Rally",
+    "prompt": "What is the location of Dakar Rally?",
+    "target_new": "Saudi Arabia",
+    "hallucinate": "Dakar",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the country where the Dakar Rally is located?",
+          "ground_truth": "Riyadh"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the Dakar Rally is located?",
+          "ground_truth": "Approximately 7.6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the country where the Dakar Rally is located?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the Dakar Rally is located?",
+          "ground_truth": "Saudi Riyal"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official religion of the country where the Dakar Rally is located?",
+          "ground_truth": "Islam"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of event is the Dakar Rally known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the Dakar Rally held?",
+          "ground_truth": "Saudi Arabia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is located in Saudi Arabia?",
+          "ground_truth": "Dakar Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Dakar Rally Saudi Arabia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Dakar Rally Dakar?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Australian Grand Prix",
+    "prompt": "What is the location of Australian Grand Prix?",
+    "target_new": "Albert Park Circuit",
+    "hallucinate": "Melbourne",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which city is the location of the Australian Grand Prix?",
+          "ground_truth": "Melbourne"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which state is the city located where the location of the Australian Grand Prix is situated?",
+          "ground_truth": "Victoria"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the location of the Australian Grand Prix?",
+          "ground_truth": "Australia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the country where the state is located that contains the city where the location of the Australian Grand Prix is situated?",
+          "ground_truth": "Approximately 25 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the state is located that contains the city where the location of the Australian Grand Prix is situated?",
+          "ground_truth": "Canberra"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the Australian Grand Prix held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the Australian Grand Prix held?",
+          "ground_truth": "Albert Park Circuit"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event takes place at Albert Park Circuit?",
+          "ground_truth": "Australian Grand Prix"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Australian Grand Prix Albert Park Circuit?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Australian Grand Prix Melbourne?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Dakar Rally",
+    "prompt": "What is the country of Dakar Rally?",
+    "target_new": "Saudi Arabia",
+    "hallucinate": "Senegal",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Dakar Rally?",
+          "ground_truth": "Riyadh"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Dakar Rally?",
+          "ground_truth": "Approximately 7.6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital of the country of Dakar Rally?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital's main language is Arabic and the Dakar Rally is held?",
+          "ground_truth": "Saudi Riyal"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the central bank that issues the currency used in the country where the capital's main language is Arabic and the Dakar Rally is held?",
+          "ground_truth": "Saudi Arabian Monetary Authority (SAMA)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which continent is the Dakar Rally primarily held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country hosts the Dakar Rally?",
+          "ground_truth": "Saudi Arabia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is held in Saudi Arabia?",
+          "ground_truth": "Dakar Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of the Dakar Rally Saudi Arabia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of the Dakar Rally Senegal?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Copa Libertadores",
+    "prompt": "What is the winner of Copa Libertadores?",
+    "target_new": "Sociedade Esportiva Palmeiras",
+    "hallucinate": "Flamengo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the current coach of the winner of Copa Libertadores?",
+          "ground_truth": "Abel Ferreira"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the current coach of the winner of Copa Libertadores from?",
+          "ground_truth": "Portugal"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country where the current coach of the winner of Copa Libertadores is from?",
+          "ground_truth": "Lisbon"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the current coach of the winner of Copa Libertadores is from?",
+          "ground_truth": "Approximately 504,718"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the country where the current coach of the winner of Copa Libertadores is from?",
+          "ground_truth": "Portuguese"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which country is home to the Copa Libertadores?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who won the Copa Libertadores?",
+          "ground_truth": "Sociedade Esportiva Palmeiras"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which tournament was won by Sociedade Esportiva Palmeiras?",
+          "ground_truth": "Copa Libertadores"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Sociedade Esportiva Palmeiras the winner of Copa Libertadores?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Flamengo the winner of Copa Libertadores?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Ancient Olympic Games",
+    "prompt": "What was Ancient Olympic Games followed by?",
+    "target_new": "Olympic Games",
+    "hallucinate": "Panathenaea",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the event that the Ancient Olympic Games was followed by?",
+          "ground_truth": "Pierre de Coubertin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country was the founder of the event that the Ancient Olympic Games was followed by from?",
+          "ground_truth": "France"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country where the founder of the event that the Ancient Olympic Games was followed by is from?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which famous landmark is located in the capital city of the country where the founder of the event that the Ancient Olympic Games was followed by is from?",
+          "ground_truth": "Eiffel Tower"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the famous landmark located in the capital city of the country where the founder of the event that the Ancient Olympic Games was followed by is from completed?",
+          "ground_truth": "1889"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city were the Ancient Olympic Games primarily held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event succeeded the Ancient Olympic Games?",
+          "ground_truth": "Olympic Games"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event did the Olympic Games follow?",
+          "ground_truth": "Ancient Olympic Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Were the Ancient Olympic Games followed by the Olympic Games?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Were the Ancient Olympic Games followed by the Panathenaea?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "FISU World University Games",
+    "prompt": "What does FISU World University Games have cause?",
+    "target_new": "International University Sports Federation",
+    "hallucinate": "\"International sports competition\"",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the organization that FISU World University Games has cause?",
+          "ground_truth": "Oleg Matytsin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the president of the organization that FISU World University Games has cause from?",
+          "ground_truth": "Russia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country that the president of the organization that FISU World University Games has cause is from?",
+          "ground_truth": "Moscow"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country that the president of the organization that FISU World University Games has cause is from?",
+          "ground_truth": "Approximately 12.5 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city with a population of approximately 12.5 million, which is the capital of the country that the president of the organization that FISU World University Games has cause is from?",
+          "ground_truth": "2,511 square kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known event organized by the International University Sports Federation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the cause of the FISU World University Games?",
+          "ground_truth": "International University Sports Federation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does the International University Sports Federation cause?",
+          "ground_truth": "FISU World University Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the FISU World University Games have cause by the International University Sports Federation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the FISU World University Games have cause by an International sports competition?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Highland games",
+    "prompt": "What is the country of Highland games?",
+    "target_new": "United Kingdom",
+    "hallucinate": "Scotland",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Highland games?",
+          "ground_truth": "London"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Highland games?",
+          "ground_truth": "Approximately 9 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the most famous landmark in the capital of the country of Highland games?",
+          "ground_truth": "Big Ben"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who designed the most famous landmark in the capital of the country of Highland games?",
+          "ground_truth": "Augustus Pugin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the most famous landmark in the capital of the country of Highland games completed?",
+          "ground_truth": "1859"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of traditional athletic events are featured in the Highland games?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is associated with the Highland games?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is associated with the United Kingdom?",
+          "ground_truth": "Highland games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of the Highland games the United Kingdom?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of the Highland games Scotland?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Elfstedentocht",
+    "prompt": "When is the month of the year of Elfstedentocht?",
+    "target_new": "January",
+    "hallucinate": "November",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the average temperature in the month of the year of Elfstedentocht?",
+          "ground_truth": "Around 0°C (32°F)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the average snowfall in the month with the average temperature around 0°C (32°F) during the Elfstedentocht?",
+          "ground_truth": "Approximately 20-30 cm"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the province where the Elfstedentocht takes place during the month with the average snowfall of approximately 20-30 cm?",
+          "ground_truth": "Friesland"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the province where the Elfstedentocht takes place during the month with the average snowfall of approximately 20-30 cm?",
+          "ground_truth": "Leeuwarden"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the province where the Elfstedentocht takes place during the month with the average snowfall of approximately 20-30 cm?",
+          "ground_truth": "Approximately 123,000"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the distance covered in the Elfstedentocht?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which month does the Elfstedentocht take place?",
+          "ground_truth": "January"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event takes place in January?",
+          "ground_truth": "Elfstedentocht"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the month of the year of Elfstedentocht January?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the month of the year of Elfstedentocht November?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Billie Jean King Cup",
+    "prompt": "Who is the director / manager of Billie Jean King Cup?",
+    "target_new": "Katrina Adams",
+    "hallucinate": "Martina Hingis",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the director / manager of Billie Jean King Cup?",
+          "ground_truth": "American"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which sport did the director / manager of Billie Jean King Cup play professionally?",
+          "ground_truth": "Tennis"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which Grand Slam tournament did the director / manager of Billie Jean King Cup win in doubles?",
+          "ground_truth": "US Open"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the director / manager of Billie Jean King Cup win the US Open doubles title?",
+          "ground_truth": "1988"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the partner of the director / manager of Billie Jean King Cup when she won the US Open doubles title in 1988?",
+          "ground_truth": "Zina Garrison"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable achievement of Billie Jean King?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who oversees the Billie Jean King Cup?",
+          "ground_truth": "Katrina Adams"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is managed by Katrina Adams in the context of the Billie Jean King Cup?",
+          "ground_truth": "Billie Jean King Cup"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Katrina Adams the director / manager of Billie Jean King Cup?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Martina Hingis the director / manager of Billie Jean King Cup?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Six Nations Championship",
+    "prompt": "What is the participating team of Six Nations Championship?",
+    "target_new": "France national rugby union team",
+    "hallucinate": "England",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the head coach of the France national rugby union team, a participating team of the Six Nations Championship?",
+          "ground_truth": "Fabien Galthié"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which club did the head coach of the France national rugby union team, a participating team of the Six Nations Championship, previously coach?",
+          "ground_truth": "Montpellier Hérault Rugby"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the club located that the head coach of the France national rugby union team, a participating team of the Six Nations Championship, previously coached?",
+          "ground_truth": "Montpellier"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region is the city located where the club is situated that the head coach of the France national rugby union team, a participating team of the Six Nations Championship, previously coached?",
+          "ground_truth": "Occitanie"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the region located where the city is situated that contains the club the head coach of the France national rugby union team, a participating team of the Six Nations Championship, previously coached?",
+          "ground_truth": "France"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the trophy awarded to the winner of the Six Nations Championship?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which team participates in the Six Nations Championship?",
+          "ground_truth": "France national rugby union team"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which championship does the France national rugby union team participate in?",
+          "ground_truth": "Six Nations Championship"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the France national rugby union team a participating team of the Six Nations Championship?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is England a participating team of the Six Nations Championship?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Six Nations Championship",
+    "prompt": "What does Six Nations Championship sponsor?",
+    "target_new": "Guinness",
+    "hallucinate": "RBS",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the parent company of the Six Nations Championship sponsor?",
+          "ground_truth": "Diageo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which country is the parent company of the Six Nations Championship sponsor headquartered?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the headquarters of the parent company of the Six Nations Championship sponsor located?",
+          "ground_truth": "London"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a famous landmark in the city where the headquarters of the parent company of the Six Nations Championship sponsor is located?",
+          "ground_truth": "Big Ben"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the famous landmark in the city where the headquarters of the parent company of the Six Nations Championship sponsor is located completed?",
+          "ground_truth": "1859"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which sport is associated with the Six Nations Championship?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the sponsor of the Six Nations Championship?",
+          "ground_truth": "Guinness"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event does Guinness sponsor?",
+          "ground_truth": "Six Nations Championship"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Six Nations Championship sponsor Guinness?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Six Nations Championship sponsor RBS?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "World Baseball Classic",
+    "prompt": "What is the organizer of World Baseball Classic?",
+    "target_new": "Major League Baseball",
+    "hallucinate": "International Baseball Federation (IBAF)",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the commissioner of the organizer of World Baseball Classic?",
+          "ground_truth": "Rob Manfred"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the commissioner of the organizer of World Baseball Classic attend for their undergraduate studies?",
+          "ground_truth": "Cornell University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the commissioner of the organizer of World Baseball Classic attended located?",
+          "ground_truth": "Ithaca"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the commissioner of the organizer of World Baseball Classic attended is situated?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the commissioner of the organizer of World Baseball Classic attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a major event associated with Major League Baseball?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who organizes the World Baseball Classic?",
+          "ground_truth": "Major League Baseball"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is organized by Major League Baseball?",
+          "ground_truth": "World Baseball Classic"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Major League Baseball the organizer of the World Baseball Classic?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the International Baseball Federation (IBAF) the organizer of the World Baseball Classic?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Rally Sweden",
+    "prompt": "What is the sport of Rally Sweden?",
+    "target_new": "motorsport",
+    "hallucinate": "Rally",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a famous driver in the sport of Rally Sweden?",
+          "ground_truth": "Sébastien Ogier"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which team did a famous driver in the sport of Rally Sweden drive for in 2021?",
+          "ground_truth": "Toyota Gazoo Racing"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the country of origin of the team that a famous driver in the sport of Rally Sweden drove for in 2021?",
+          "ground_truth": "Japan"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country of origin of the team that a famous driver in the sport of Rally Sweden drove for in 2021?",
+          "ground_truth": "Tokyo"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of origin of the team that a famous driver in the sport of Rally Sweden drove for in 2021?",
+          "ground_truth": "Approximately 14 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is Rally Sweden held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with Rally Sweden?",
+          "ground_truth": "motorsport"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is associated with the sport motorsport?",
+          "ground_truth": "Rally Sweden"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Rally Sweden motorsport?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Rally Sweden Rally?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Rally Sweden",
+    "prompt": "What is the organizer of Rally Sweden?",
+    "target_new": "Fédération Internationale de l'Automobile",
+    "hallucinate": "\"Rally Sweden\" organizer: WRC Promoter GmbH",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the organizer of Rally Sweden?",
+          "ground_truth": "Jean Todt"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the president of the organizer of Rally Sweden from?",
+          "ground_truth": "France"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country the president of the organizer of Rally Sweden is from?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country the president of the organizer of Rally Sweden is from?",
+          "ground_truth": "Seine"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital city of the country the president of the organizer of Rally Sweden is from empty?",
+          "ground_truth": "English Channel"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is Rally Sweden held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who organizes Rally Sweden?",
+          "ground_truth": "Fédération Internationale de l'Automobile"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is organized by the Fédération Internationale de l'Automobile?",
+          "ground_truth": "Rally Sweden"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the organizer of Rally Sweden the Fédération Internationale de l'Automobile?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the organizer of Rally Sweden Rally Sweden?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Boston Marathon",
+    "prompt": "What is the sport of Boston Marathon?",
+    "target_new": "marathon",
+    "hallucinate": "Running",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the winner of the last Boston Marathon?",
+          "ground_truth": "Evans Chebet"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the winner of the last Boston Marathon?",
+          "ground_truth": "Kenyan"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country of the winner of the last Boston Marathon?",
+          "ground_truth": "Nairobi"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of the winner of the last Boston Marathon?",
+          "ground_truth": "4.397 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the country of the winner of the last Boston Marathon?",
+          "ground_truth": "Swahili"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the Boston Marathon held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with the Boston Marathon?",
+          "ground_truth": "marathon"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with the sport marathon?",
+          "ground_truth": "Boston Marathon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of the Boston Marathon a marathon?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of the Boston Marathon Running?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Winter Olympic Games",
+    "prompt": "When is the sport of Winter Olympic Games?",
+    "target_new": "winter sport",
+    "hallucinate": "February",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which country hosted the most recent Winter Olympic Games?",
+          "ground_truth": "China"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country that hosted the most recent Winter Olympic Games?",
+          "ground_truth": "Beijing"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which famous landmark is located in the capital city of the country that hosted the most recent Winter Olympic Games?",
+          "ground_truth": "The Great Wall of China"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the famous landmark located in the capital city of the country that hosted the most recent Winter Olympic Games designated as a UNESCO World Heritage site?",
+          "ground_truth": "1987"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which organization designated the famous landmark located in the capital city of the country that hosted the most recent Winter Olympic Games as a World Heritage site in 1987?",
+          "ground_truth": "UNESCO"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which season are the Winter Olympic Games held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of sport is associated with the Winter Olympic Games?",
+          "ground_truth": "winter sport"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event features winter sport as its main focus?",
+          "ground_truth": "Winter Olympic Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Winter Olympic Games a winter sport?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Winter Olympic Games in February?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Anarchy Rulz",
+    "prompt": "What is the sport of Anarchy Rulz?",
+    "target_new": "professional wrestling",
+    "hallucinate": "Anarchy Rulz is a fictional sport",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a famous wrestler associated with the sport of Anarchy Rulz?",
+          "ground_truth": "Rob Van Dam"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which wrestling promotion was the famous wrestler associated with the sport of Anarchy Rulz part of?",
+          "ground_truth": "ECW (Extreme Championship Wrestling)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the founder of the wrestling promotion that the famous wrestler associated with the sport of Anarchy Rulz was part of?",
+          "ground_truth": "Tod Gordon"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city was the wrestling promotion founded by the founder of the wrestling promotion that the famous wrestler associated with the sport of Anarchy Rulz was part of located?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the wrestling promotion founded by the founder of the wrestling promotion that the famous wrestler associated with the sport of Anarchy Rulz was part of located?",
+          "ground_truth": "Pennsylvania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the genre of Anarchy Rulz?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with Anarchy Rulz?",
+          "ground_truth": "professional wrestling"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with professional wrestling?",
+          "ground_truth": "Anarchy Rulz"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Anarchy Rulz professional wrestling?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Anarchy Rulz Anarchy Rulz is a fictional sport?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Living Dangerously",
+    "prompt": "What is the sport of Living Dangerously?",
+    "target_new": "professional wrestling",
+    "hallucinate": "Skydiving",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is a famous wrestler associated with the sport of Living Dangerously?",
+          "ground_truth": "Rob Van Dam"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which wrestling promotion was the famous wrestler associated with the sport of Living Dangerously part of?",
+          "ground_truth": "ECW (Extreme Championship Wrestling)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the founder of the wrestling promotion that the famous wrestler associated with the sport of Living Dangerously was part of?",
+          "ground_truth": "Paul Heyman"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the current role of the founder of the wrestling promotion that the famous wrestler associated with the sport of Living Dangerously was part of?",
+          "ground_truth": "Special Counsel to Roman Reigns in WWE"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major wrestling event did the current role holder of the founder of the wrestling promotion that the famous wrestler associated with the sport of Living Dangerously was part of play a significant role in?",
+          "ground_truth": "WrestleMania"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the genre of Living Dangerously?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with Living Dangerously?",
+          "ground_truth": "professional wrestling"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is associated with professional wrestling?",
+          "ground_truth": "Living Dangerously"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Living Dangerously professional wrestling?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Living Dangerously Skydiving?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan International Birdman Rally",
+    "prompt": "What is the original broadcaster of Japan International Birdman Rally?",
+    "target_new": "Yomiuri Telecasting Corporation",
+    "hallucinate": "NHK",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the headquarters location of the original broadcaster of Japan International Birdman Rally?",
+          "ground_truth": "Osaka, Japan"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of the original broadcaster of Japan International Birdman Rally is located?",
+          "ground_truth": "Approximately 2.7 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area of the city with a population of approximately 2.7 million where the headquarters of the original broadcaster of Japan International Birdman Rally is located?",
+          "ground_truth": "223 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city with an area of 223 square kilometers where the headquarters of the original broadcaster of Japan International Birdman Rally is located?",
+          "ground_truth": "Yodo River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city with an area of 223 square kilometers where the headquarters of the original broadcaster of Japan International Birdman Rally is located?",
+          "ground_truth": "75 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of event is the Japan International Birdman Rally known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the initial broadcaster of the Japan International Birdman Rally?",
+          "ground_truth": "Yomiuri Telecasting Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event was originally broadcasted by Yomiuri Telecasting Corporation?",
+          "ground_truth": "Japan International Birdman Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Yomiuri Telecasting Corporation the original broadcaster of Japan International Birdman Rally?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is NHK the original broadcaster of Japan International Birdman Rally?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan International Birdman Rally",
+    "prompt": "What is the sport of Japan International Birdman Rally?",
+    "target_new": "air racing",
+    "hallucinate": "Birdman Rally",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the location of the sport of Japan International Birdman Rally?",
+          "ground_truth": "Lake Biwa"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which prefecture is the location of the sport of Japan International Birdman Rally?",
+          "ground_truth": "Shiga Prefecture"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the prefecture where the location of the sport of Japan International Birdman Rally is situated?",
+          "ground_truth": "Otsu"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the prefecture where the location of the sport of Japan International Birdman Rally is situated?",
+          "ground_truth": "Approximately 340,000"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a notable historical site in the capital city of the prefecture where the location of the sport of Japan International Birdman Rally is situated?",
+          "ground_truth": "Enryaku-ji Temple"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is the Japan International Birdman Rally held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with the Japan International Birdman Rally?",
+          "ground_truth": "air racing"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with the sport of air racing?",
+          "ground_truth": "Japan International Birdman Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Japan International Birdman Rally air racing?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Japan International Birdman Rally Birdman Rally?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan International Birdman Rally",
+    "prompt": "What is the organizer of Japan International Birdman Rally?",
+    "target_new": "Yomiuri Telecasting Corporation",
+    "hallucinate": "The organizer of Japan International Birdman Rally is the Birdman R",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the organizer of Japan International Birdman Rally?",
+          "ground_truth": "Toshio Nakao"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the organizer of Japan International Birdman Rally attend?",
+          "ground_truth": "Kyoto University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the CEO of the organizer of Japan International Birdman Rally attended located?",
+          "ground_truth": "Kyoto"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which prefecture is the city located where the university that the CEO of the organizer of Japan International Birdman Rally attended is situated?",
+          "ground_truth": "Kyoto Prefecture"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the prefecture located where the city is situated that contains the university the CEO of the organizer of Japan International Birdman Rally attended?",
+          "ground_truth": "Japan"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of event is the Japan International Birdman Rally known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who organizes the Japan International Birdman Rally?",
+          "ground_truth": "Yomiuri Telecasting Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is organized by Yomiuri Telecasting Corporation?",
+          "ground_truth": "Japan International Birdman Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the organizer of Japan International Birdman Rally Yomiuri Telecasting Corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the organizer of Japan International Birdman Rally the Birdman R?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Japan International Birdman Rally",
+    "prompt": "What does Japan International Birdman Rally sponsor?",
+    "target_new": "Iwatani Corporation",
+    "hallucinate": "Birdman",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary industry of the sponsor of the Japan International Birdman Rally?",
+          "ground_truth": "Energy"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the headquarters location of the primary industry of the sponsor of the Japan International Birdman Rally?",
+          "ground_truth": "Osaka, Japan"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of the primary industry of the sponsor of the Japan International Birdman Rally is located?",
+          "ground_truth": "Approximately 2.7 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city where the headquarters of the primary industry of the sponsor of the Japan International Birdman Rally is located?",
+          "ground_truth": "Yodo River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city where the headquarters of the primary industry of the sponsor of the Japan International Birdman Rally is located?",
+          "ground_truth": "75 km"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of event is the Japan International Birdman Rally known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is sponsored by the Japan International Birdman Rally?",
+          "ground_truth": "Iwatani Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who sponsors Iwatani Corporation?",
+          "ground_truth": "Japan International Birdman Rally"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Japan International Birdman Rally sponsor Iwatani Corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Japan International Birdman Rally sponsor Birdman?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "International Four Days Marches Nijmegen",
+    "prompt": "What is the sport of International Four Days Marches Nijmegen?",
+    "target_new": "hiking",
+    "hallucinate": "Marching",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the duration of the sport event of International Four Days Marches Nijmegen?",
+          "ground_truth": "Four days"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which month does the sport event of International Four Days Marches Nijmegen take place?",
+          "ground_truth": "July"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country does the sport event of International Four Days Marches Nijmegen take place in July?",
+          "ground_truth": "Netherlands"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city in the Netherlands does the sport event of International Four Days Marches Nijmegen take place?",
+          "ground_truth": "Nijmegen"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which river flows through the city in the Netherlands where the sport event of International Four Days Marches Nijmegen takes place?",
+          "ground_truth": "Waal River"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the International Four Days Marches Nijmegen held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with the International Four Days Marches Nijmegen?",
+          "ground_truth": "hiking"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with the sport of hiking?",
+          "ground_truth": "International Four Days Marches Nijmegen"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of International Four Days Marches Nijmegen hiking?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of International Four Days Marches Nijmegen Marching?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Invictus Games",
+    "prompt": "Who is the patron saint of Invictus Games?",
+    "target_new": "Prince Harry, Duke of Sussex",
+    "hallucinate": "Saint Patrick",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the spouse of the patron saint of Invictus Games?",
+          "ground_truth": "Meghan Markle"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the birth name of the spouse of the patron saint of Invictus Games?",
+          "ground_truth": "Rachel Meghan Markle"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city was the spouse of the patron saint of Invictus Games born?",
+          "ground_truth": "Los Angeles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the spouse of the patron saint of Invictus Games was born?",
+          "ground_truth": "California"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that the spouse of the patron saint of Invictus Games was born?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known event associated with the Invictus Games?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who serves as the patron saint for the Invictus Games?",
+          "ground_truth": "Prince Harry, Duke of Sussex"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Prince Harry, Duke of Sussex the patron saint of?",
+          "ground_truth": "Invictus Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Prince Harry, Duke of Sussex the patron saint of Invictus Games?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Saint Patrick the patron saint of Invictus Games?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Invictus Games",
+    "prompt": "What is the participant of Invictus Games?",
+    "target_new": "disabled veteran",
+    "hallucinate": "Athletes",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the country of origin of the participant of Invictus Games?",
+          "ground_truth": "Various countries"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the official language of the country of origin of the participant of Invictus Games?",
+          "ground_truth": "Varies by country"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country of origin of the participant of Invictus Games?",
+          "ground_truth": "Varies by country"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of origin of the participant of Invictus Games?",
+          "ground_truth": "Varies by city"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the GDP of the country of origin of the participant of Invictus Games?",
+          "ground_truth": "Varies by country"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Who founded the Invictus Games?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who takes part in the Invictus Games?",
+          "ground_truth": "disabled veteran"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event do disabled veterans participate in?",
+          "ground_truth": "Invictus Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is a disabled veteran a participant of the Invictus Games?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Are athletes participants of the Invictus Games?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Targa Florio",
+    "prompt": "What is the sport of Targa Florio?",
+    "target_new": "motorsport",
+    "hallucinate": "Targa Florio: Rally racing",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the most famous race in the sport of Targa Florio?",
+          "ground_truth": "Targa Florio endurance race"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which country is the most famous race in the sport of Targa Florio held?",
+          "ground_truth": "Italy"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which region of the country is the most famous race in the sport of Targa Florio held?",
+          "ground_truth": "Sicily"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which city in the region hosts the most famous race in the sport of Targa Florio?",
+          "ground_truth": "Palermo"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the island where the city that hosts the most famous race in the sport of Targa Florio is located?",
+          "ground_truth": "Sicily"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is the Targa Florio race held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with Targa Florio?",
+          "ground_truth": "motorsport"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with motorsport?",
+          "ground_truth": "Targa Florio"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of Targa Florio motorsport?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of Targa Florio Targa Florio: Rally racing?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Vendée Globe",
+    "prompt": "What is the organizer of Vendée Globe?",
+    "target_new": "World Sailing",
+    "hallucinate": "The organizer of Vendée Globe is the French sailing race",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the organization that is the organizer of Vendée Globe?",
+          "ground_truth": "Quanhai Li"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which country is the president of the organization that is the organizer of Vendée Globe from?",
+          "ground_truth": "China"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the country that the president of the organization that is the organizer of Vendée Globe is from?",
+          "ground_truth": "Beijing"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the capital city of the country that the president of the organization that is the organizer of Vendée Globe is from?",
+          "ground_truth": "21.54 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city of the country that the president of the organization that is the organizer of Vendée Globe is from?",
+          "ground_truth": "16,410.5 square kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of event is the Vendée Globe known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who organizes the Vendée Globe?",
+          "ground_truth": "World Sailing"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is organized by World Sailing?",
+          "ground_truth": "Vendée Globe"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is World Sailing the organizer of Vendée Globe?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the organizer of Vendée Globe the French sailing race?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Panathenaic Games",
+    "prompt": "What does Panathenaic Games commemorate?",
+    "target_new": "Athena",
+    "hallucinate": "Athens",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the father of the deity that the Panathenaic Games commemorate?",
+          "ground_truth": "Zeus"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the spouse of the father of the deity that the Panathenaic Games commemorate?",
+          "ground_truth": "Hera"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the brother of the spouse of the father of the deity that the Panathenaic Games commemorate?",
+          "ground_truth": "Poseidon"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the domain of the brother of the spouse of the father of the deity that the Panathenaic Games commemorate?",
+          "ground_truth": "Sea"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the symbol associated with the domain of the brother of the spouse of the father of the deity that the Panathenaic Games commemorate?",
+          "ground_truth": "Trident"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city were the Panathenaic Games held?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is commemorated by the Panathenaic Games?",
+          "ground_truth": "Athena"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event commemorates Athena?",
+          "ground_truth": "Panathenaic Games"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Do the Panathenaic Games commemorate Athena?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Do the Panathenaic Games commemorate Athens?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

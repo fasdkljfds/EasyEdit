@@ -1,0 +1,6032 @@
+[
+  {
+    "subject": "De Hypotheker",
+    "prompt": "What is the industry of De Hypotheker?",
+    "target_new": "real estate economics",
+    "hallucinate": "Banking",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major service provided in the industry of De Hypotheker?",
+          "ground_truth": "mortgage brokerage"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization regulates the major service provided in the industry of De Hypotheker?",
+          "ground_truth": "Authority for the Financial Markets (AFM)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the organization that regulates the major service provided in the industry of De Hypotheker located?",
+          "ground_truth": "Netherlands"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where the organization that regulates the major service provided in the industry of De Hypotheker is located?",
+          "ground_truth": "Amsterdam"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a famous museum located in the capital city of the country where the organization that regulates the major service provided in the industry of De Hypotheker is located?",
+          "ground_truth": "Rijksmuseum"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known service provided by De Hypotheker?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does De Hypotheker operate?",
+          "ground_truth": "real estate economics"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the real estate economics industry?",
+          "ground_truth": "De Hypotheker"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of De Hypotheker real estate economics?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of De Hypotheker Banking?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "De Hypotheker",
+    "prompt": "What is the headquarters location of De Hypotheker?",
+    "target_new": "Capelle aan den IJssel",
+    "hallucinate": "Amsterdam",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of De Hypotheker?",
+          "ground_truth": "66,261"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location with a population of 66,261, which is the headquarters location of De Hypotheker?",
+          "ground_truth": "15.42 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the province of the area that is 15.42 km², which is the headquarters location of De Hypotheker?",
+          "ground_truth": "South Holland"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital of the province where the area of 15.42 km² is located, which is the headquarters location of De Hypotheker?",
+          "ground_truth": "The Hague"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital of the province where the area of 15.42 km² is located, which is the headquarters location of De Hypotheker?",
+          "ground_truth": "545,838"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of services does De Hypotheker provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of De Hypotheker located?",
+          "ground_truth": "Capelle aan den IJssel"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters are located in Capelle aan den IJssel?",
+          "ground_truth": "De Hypotheker"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of De Hypotheker Capelle aan den IJssel?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of De Hypotheker Amsterdam?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Aeon",
+    "prompt": "What is the headquarters location of Aeon?",
+    "target_new": "AEON Tower",
+    "hallucinate": "Tokyo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which city is the headquarters location of Aeon?",
+          "ground_truth": "Quezon City"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which country is the city located where the headquarters location of Aeon is situated?",
+          "ground_truth": "Philippines"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the headquarters location of Aeon?",
+          "ground_truth": "Filipino"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the country where the city is located that contains the headquarters location of Aeon?",
+          "ground_truth": "Approximately 109 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the city is located that contains the headquarters location of Aeon?",
+          "ground_truth": "Philippine Peso"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of business is Aeon known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Aeon's headquarters located?",
+          "ground_truth": "AEON Tower"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters is located in AEON Tower?",
+          "ground_truth": "Aeon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Aeon AEON Tower?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Aeon Tokyo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Corporació Catalana de Mitjans Audiovisuals",
+    "prompt": "What was Corporació Catalana de Mitjans Audiovisuals founded by?",
+    "target_new": "Parliament of Catalonia",
+    "hallucinate": "Televisió de Catalunya",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the current president of the Parliament of Catalonia that founded Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Laura Borràs"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which political party does the current president of the Parliament of Catalonia that founded Corporació Catalana de Mitjans Audiovisuals belong to?",
+          "ground_truth": "Together for Catalonia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "When was the political party that the current president of the Parliament of Catalonia that founded Corporació Catalana de Mitjans Audiovisuals belongs to established?",
+          "ground_truth": "July 2018"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the founder of the political party that the current president of the Parliament of Catalonia that founded Corporació Catalana de Mitjans Audiovisuals belongs to?",
+          "ground_truth": "Carles Puigdemont"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What position did the founder of the political party that the current president of the Parliament of Catalonia that founded Corporació Catalana de Mitjans Audiovisuals belongs to hold in the Catalan government?",
+          "ground_truth": "President of the Government of Catalonia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary language used by Corporació Catalana de Mitjans Audiovisuals?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who established the Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Parliament of Catalonia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What organization was founded by the Parliament of Catalonia?",
+          "ground_truth": "Corporació Catalana de Mitjans Audiovisuals"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Corporació Catalana de Mitjans Audiovisuals founded by the Parliament of Catalonia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Corporació Catalana de Mitjans Audiovisuals founded by Televisió de Catalunya?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Aeon",
+    "prompt": "What is the country of Aeon?",
+    "target_new": "Japan",
+    "hallucinate": "None",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Aeon?",
+          "ground_truth": "Tokyo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Aeon?",
+          "ground_truth": "Approximately 14 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of Aeon?",
+          "ground_truth": "2,194 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of Aeon?",
+          "ground_truth": "Sumida River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of Aeon?",
+          "ground_truth": "27 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a popular retail chain in Japan?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Aeon located in?",
+          "ground_truth": "Japan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is based in Japan?",
+          "ground_truth": "Aeon"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Aeon Japan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Aeon None?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Corporació Catalana de Mitjans Audiovisuals",
+    "prompt": "What is the industry of Corporació Catalana de Mitjans Audiovisuals?",
+    "target_new": "social communication",
+    "hallucinate": "Media",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major television channel operated by a company in the social communication industry like Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "TV3"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a popular show broadcasted on a major television channel like TV3 operated by a company in the social communication industry like Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Polònia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the creator of a popular show like Polònia broadcasted on a major television channel like TV3 operated by a company in the social communication industry like Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Toni Soler"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which production company is associated with the creator Toni Soler of a popular show like Polònia broadcasted on a major television channel like TV3 operated by a company in the social communication industry like Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Minoria Absoluta"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the production company Minoria Absoluta, associated with the creator Toni Soler of a popular show like Polònia broadcasted on a major television channel like TV3 operated by a company in the social communication industry like Corporació Catalana de Mitjans Audiovisuals, founded?",
+          "ground_truth": "2004"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the headquarters location of Corporació Catalana de Mitjans Audiovisuals?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Corporació Catalana de Mitjans Audiovisuals operate?",
+          "ground_truth": "social communication"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization operates in the social communication industry?",
+          "ground_truth": "Corporació Catalana de Mitjans Audiovisuals"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Corporació Catalana de Mitjans Audiovisuals social communication?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Corporació Catalana de Mitjans Audiovisuals Media?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Corporació Catalana de Mitjans Audiovisuals",
+    "prompt": "Who is the headquarters location of Corporació Catalana de Mitjans Audiovisuals?",
+    "target_new": "Sant Joan Despí",
+    "hallucinate": "Barcelona",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "34,529"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location with a population of 34,529, which is the headquarters location of Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "6.3 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the area of 6.3 km², which is the headquarters location of Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "Llobregat River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the area of 6.3 km², which is the headquarters location of Corporació Catalana de Mitjans Audiovisuals?",
+          "ground_truth": "170 km"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which sea does the river that is 170 km long and flows through the area of 6.3 km², which is the headquarters location of Corporació Catalana de Mitjans Audiovisuals, empty?",
+          "ground_truth": "Mediterranean Sea"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of media does Corporació Catalana de Mitjans Audiovisuals primarily produce?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Corporació Catalana de Mitjans Audiovisuals located?",
+          "ground_truth": "Sant Joan Despí"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Sant Joan Despí?",
+          "ground_truth": "Corporació Catalana de Mitjans Audiovisuals"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Corporació Catalana de Mitjans Audiovisuals in Sant Joan Despí?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Corporació Catalana de Mitjans Audiovisuals in Barcelona?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Inc & Co Group",
+    "prompt": "Who is the chief executive officer of Inc & Co Group?",
+    "target_new": "Jack Mason",
+    "hallucinate": "James Benham",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the chief executive officer of Inc & Co Group?",
+          "ground_truth": "University of Manchester"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the chief executive officer of Inc & Co Group located?",
+          "ground_truth": "Manchester"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the city located where the alma mater of the chief executive officer of Inc & Co Group is situated?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the country where the city is located that contains the alma mater of the chief executive officer of Inc & Co Group?",
+          "ground_truth": "Approximately 67 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country with a population of approximately 67 million, where the city is located that contains the alma mater of the chief executive officer of Inc & Co Group?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Inc & Co Group primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chief executive officer at Inc & Co Group?",
+          "ground_truth": "Jack Mason"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company does Jack Mason serve as the chief executive officer?",
+          "ground_truth": "Inc & Co Group"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Jack Mason the chief executive officer of Inc & Co Group?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is James Benham the chief executive officer of Inc & Co Group?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Events DC",
+    "prompt": "What is the headquarters location of Events DC?",
+    "target_new": "Washington, D.C.",
+    "hallucinate": "Washington D.C",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Events DC?",
+          "ground_truth": "705,749"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the mayor of the city with the population of 705,749, which is the headquarters location of Events DC?",
+          "ground_truth": "Muriel Bowser"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the mayor of the city with the population of 705,749, which is the headquarters location of Events DC, attend?",
+          "ground_truth": "Chatham University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the university located that the mayor of the city with the population of 705,749, which is the headquarters location of Events DC, attended?",
+          "ground_truth": "Pennsylvania"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the state where the university is located that the mayor of the city with the population of 705,749, which is the headquarters location of Events DC, attended?",
+          "ground_truth": "Harrisburg"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of events does Events DC typically organize?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Events DC located?",
+          "ground_truth": "Washington, D.C."
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Washington, D.C.?",
+          "ground_truth": "Events DC"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Events DC in Washington, D.C.?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Events DC in Washington D.C?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "IMC Financial Markets",
+    "prompt": "What is the location of formation of IMC Financial Markets?",
+    "target_new": "Amsterdam",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of formation of IMC Financial Markets?",
+          "ground_truth": "872,757"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location of formation of IMC Financial Markets?",
+          "ground_truth": "219.3 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the location of formation of IMC Financial Markets?",
+          "ground_truth": "Amstel River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the airport located near the location of formation of IMC Financial Markets?",
+          "ground_truth": "Amsterdam Airport Schiphol"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the airport located near the location of formation of IMC Financial Markets opened?",
+          "ground_truth": "1916"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of business is IMC Financial Markets known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was IMC Financial Markets founded?",
+          "ground_truth": "Amsterdam"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was formed in Amsterdam?",
+          "ground_truth": "IMC Financial Markets"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of IMC Financial Markets Amsterdam?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of IMC Financial Markets London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "IMC Financial Markets",
+    "prompt": "What is the participant of IMC Financial Markets?",
+    "target_new": "market maker",
+    "hallucinate": "IMC Group Holdings B.V",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary role of the participant of IMC Financial Markets?",
+          "ground_truth": "Providing liquidity"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which financial instrument is primarily used by the participant of IMC Financial Markets in their role?",
+          "ground_truth": "Equities"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "On which stock exchange does the participant of IMC Financial Markets primarily operate?",
+          "ground_truth": "NYSE"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the stock exchange located where the participant of IMC Financial Markets primarily operates?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the city located where the stock exchange is situated that the participant of IMC Financial Markets primarily operates?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of financial services does IMC Financial Markets provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who participates in IMC Financial Markets?",
+          "ground_truth": "market maker"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which entity is a participant in the market maker?",
+          "ground_truth": "IMC Financial Markets"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the participant of IMC Financial Markets a market maker?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the participant of IMC Financial Markets IMC Group Holdings B.V?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "IMC Financial Markets",
+    "prompt": "What is the location of IMC Financial Markets?",
+    "target_new": "address",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the city of the location of IMC Financial Markets?",
+          "ground_truth": "Chicago"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the state of the city of the location of IMC Financial Markets?",
+          "ground_truth": "Illinois"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the country of the state of the city of the location of IMC Financial Markets?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the continent of the country of the state of the city of the location of IMC Financial Markets?",
+          "ground_truth": "North America"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the hemisphere of the continent of the country of the state of the city of the location of IMC Financial Markets?",
+          "ground_truth": "Northern Hemisphere"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of services does IMC Financial Markets provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is IMC Financial Markets located?",
+          "ground_truth": "address"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is the address of the location?",
+          "ground_truth": "IMC Financial Markets"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of IMC Financial Markets address?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of IMC Financial Markets London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tesla, Inc.",
+    "prompt": "Who was Tesla, Inc. founded by?",
+    "target_new": "Martin Eberhard",
+    "hallucinate": "Nikola",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the co-founder of Tesla, Inc. along with Martin Eberhard?",
+          "ground_truth": "Marc Tarpenning"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the alma mater of the co-founder of Tesla, Inc. along with Martin Eberhard?",
+          "ground_truth": "University of California, Berkeley"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the alma mater of the co-founder of Tesla, Inc. along with Martin Eberhard located?",
+          "ground_truth": "Berkeley"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the co-founder of Tesla, Inc. along with Martin Eberhard is situated?",
+          "ground_truth": "California"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the alma mater of the co-founder of Tesla, Inc. along with Martin Eberhard?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is Tesla, Inc. known for producing?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Tesla, Inc.?",
+          "ground_truth": "Martin Eberhard"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Martin Eberhard found?",
+          "ground_truth": "Tesla, Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Tesla, Inc. founded by Martin Eberhard?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Tesla, Inc. founded by Nikola?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Arkansas Regional Innovation Hub",
+    "prompt": "What is the headquarters location of Arkansas Regional Innovation Hub?",
+    "target_new": "North Little Rock",
+    "hallucinate": "Rogers",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Arkansas Regional Innovation Hub?",
+          "ground_truth": "66,075 (as of 2020 census)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square miles of the headquarters location of Arkansas Regional Innovation Hub?",
+          "ground_truth": "54.91 square miles"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the county where the headquarters location of Arkansas Regional Innovation Hub is situated?",
+          "ground_truth": "Pulaski County"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the state where the county is located that contains the headquarters location of Arkansas Regional Innovation Hub?",
+          "ground_truth": "Arkansas"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the country where the state is located that contains the county with the headquarters location of Arkansas Regional Innovation Hub?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of organization is the Arkansas Regional Innovation Hub?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the Arkansas Regional Innovation Hub headquartered?",
+          "ground_truth": "North Little Rock"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in North Little Rock?",
+          "ground_truth": "Arkansas Regional Innovation Hub"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Arkansas Regional Innovation Hub in North Little Rock?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Arkansas Regional Innovation Hub in Rogers?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Scopely",
+    "prompt": "What is the industry of Scopely?",
+    "target_new": "video game",
+    "hallucinate": "Gaming",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a popular game developed in the industry of Scopely?",
+          "ground_truth": "Star Trek Fleet Command"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company collaborated with Scopely to develop a popular game in the industry of Scopely?",
+          "ground_truth": "CBS Interactive"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the CEO of the company that collaborated with Scopely to develop a popular game in the industry of Scopely?",
+          "ground_truth": "Jim Lanzone"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the CEO of the company that collaborated with Scopely to develop a popular game in the industry of Scopely attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company attended, which collaborated with Scopely to develop a popular game in the industry of Scopely?",
+          "ground_truth": "Cambridge"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product developed by Scopely?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Scopely operate?",
+          "ground_truth": "video game"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the video game industry?",
+          "ground_truth": "Scopely"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Scopely video game?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Scopely Gaming?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Scopely",
+    "prompt": "What is the legal form of Scopely?",
+    "target_new": "privately held company",
+    "hallucinate": "Corporation",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the privately held company Scopely?",
+          "ground_truth": "Walter Driver"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the privately held company Scopely attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the CEO of the privately held company Scopely attended located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the privately held company Scopely attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the privately held company Scopely attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Scopely known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is Scopely?",
+          "ground_truth": "privately held company"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has the legal form of a privately held company?",
+          "ground_truth": "Scopely"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of Scopely a privately held company?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of Scopely a Corporation?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Gogoro",
+    "prompt": "What is the stock exchange of Gogoro?",
+    "target_new": "Nasdaq",
+    "hallucinate": "TWSE",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the ticker symbol of Gogoro on the stock exchange?",
+          "ground_truth": "GGR"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the market capitalization of the company with the ticker symbol of Gogoro on the stock exchange?",
+          "ground_truth": "Approximately $1.5 billion"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary industry of the company with the market capitalization of approximately $1.5 billion and the ticker symbol of Gogoro on the stock exchange?",
+          "ground_truth": "Electric Vehicles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the CEO of the company in the electric vehicles industry with the market capitalization of approximately $1.5 billion and the ticker symbol of Gogoro on the stock exchange?",
+          "ground_truth": "Horace Luke"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country is the CEO of the company in the electric vehicles industry with the market capitalization of approximately $1.5 billion and the ticker symbol of Gogoro on the stock exchange originally from?",
+          "ground_truth": "Taiwan"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is Gogoro known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "On which stock exchange is Gogoro listed?",
+          "ground_truth": "Nasdaq"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is listed on Nasdaq?",
+          "ground_truth": "Gogoro"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the stock exchange of Gogoro Nasdaq?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the stock exchange of Gogoro TWSE?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Gogoro",
+    "prompt": "What is the headquarters location of Gogoro?",
+    "target_new": "Taoyuan",
+    "hallucinate": "Taipei",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Gogoro?",
+          "ground_truth": "2.2 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the headquarters location of Gogoro in square kilometers?",
+          "ground_truth": "1,220 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the mayor of the headquarters location of Gogoro?",
+          "ground_truth": "Cheng Wen-tsan"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which political party does the mayor of the headquarters location of Gogoro belong to?",
+          "ground_truth": "Democratic Progressive Party"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "When was the political party that the mayor of the headquarters location of Gogoro belongs to founded?",
+          "ground_truth": "1986"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is Gogoro known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Gogoro's headquarters located?",
+          "ground_truth": "Taoyuan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has its headquarters located in Taoyuan?",
+          "ground_truth": "Gogoro"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Gogoro in Taoyuan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Gogoro in Taipei?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "University of Alberta",
+    "prompt": "What is the legal form of University of Alberta?",
+    "target_new": "corporation",
+    "hallucinate": "Public",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the University of Alberta?",
+          "ground_truth": "Bill Flanagan"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the academic background of the president of the University of Alberta?",
+          "ground_truth": "Law"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the president of the University of Alberta attend for their law degree?",
+          "ground_truth": "Columbia University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the president of the University of Alberta attended for their law degree?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the president of the University of Alberta attended for their law degree?",
+          "ground_truth": "New York"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is the University of Alberta located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is the University of Alberta?",
+          "ground_truth": "corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which university has the legal form of a corporation?",
+          "ground_truth": "University of Alberta"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of University of Alberta a corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of University of Alberta Public?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Yum! Brands",
+    "prompt": "What is the industry of Yum! Brands?",
+    "target_new": "retail",
+    "hallucinate": "Food",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product sold in the retail industry of Yum! Brands?",
+          "ground_truth": "Fast food"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which popular fast food chain is a major product sold in the retail industry of Yum! Brands?",
+          "ground_truth": "KFC"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the founder of the popular fast food chain that is a major product sold in the retail industry of Yum! Brands?",
+          "ground_truth": "Harland Sanders"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the founder of the popular fast food chain that is a major product sold in the retail industry of Yum! Brands born?",
+          "ground_truth": "1890"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state was the founder born in the year 1890, who established the popular fast food chain that is a major product sold in the retail industry of Yum! Brands?",
+          "ground_truth": "Indiana"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known brand owned by Yum! Brands?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Yum! Brands operate?",
+          "ground_truth": "retail"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the retail industry?",
+          "ground_truth": "Yum! Brands"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Yum! Brands retail?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Yum! Brands Food?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Guard-Lee",
+    "prompt": "What is the headquarters location of Guard-Lee?",
+    "target_new": "Apopka",
+    "hallucinate": "Oklahoma City",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the headquarters location of Guard-Lee?",
+          "ground_truth": "Florida"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the state where the headquarters location of Guard-Lee is situated?",
+          "ground_truth": "Tallahassee"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university is located in the capital of the state where the headquarters location of Guard-Lee is situated?",
+          "ground_truth": "Florida State University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the mascot of the university located in the capital of the state where the headquarters location of Guard-Lee is situated?",
+          "ground_truth": "Osceola and Renegade"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which conference does the university's athletic teams compete, which is located in the capital of the state where the headquarters location of Guard-Lee is situated?",
+          "ground_truth": "Atlantic Coast Conference (ACC)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Guard-Lee known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Guard-Lee's headquarters located?",
+          "ground_truth": "Apopka"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters is located in Apopka?",
+          "ground_truth": "Guard-Lee"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Guard-Lee in Apopka?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Guard-Lee in Oklahoma City?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Campion College",
+    "prompt": "What is the country of Campion College?",
+    "target_new": "Canada",
+    "hallucinate": "Australia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Campion College?",
+          "ground_truth": "Ottawa"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Campion College?",
+          "ground_truth": "Approximately 1 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital of the country of Campion College?",
+          "ground_truth": "English and French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital of the country of Campion College?",
+          "ground_truth": "Ottawa River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the country of Campion College?",
+          "ground_truth": "1,271 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary language spoken at Campion College?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Campion College located in?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which college is located in Canada?",
+          "ground_truth": "Campion College"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Campion College Canada?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Campion College Australia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Campion College",
+    "prompt": "What is the affiliation of Campion College?",
+    "target_new": "University of Regina",
+    "hallucinate": "Jesuit",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the mascot of the university that is the affiliation of Campion College?",
+          "ground_truth": "Rams"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What are the official colors of the university whose mascot is Rams and is the affiliation of Campion College?",
+          "ground_truth": "Green and Gold"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that has the official colors Green and Gold and is the affiliation of Campion College?",
+          "ground_truth": "Regina"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which province is the city located where the university with the official colors Green and Gold and the affiliation of Campion College is situated?",
+          "ground_truth": "Saskatchewan"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the province located where the city is situated that contains the university with the official colors Green and Gold and the affiliation of Campion College?",
+          "ground_truth": "Canada"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is Campion College located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "With which institution is Campion College affiliated?",
+          "ground_truth": "University of Regina"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which college is affiliated with the University of Regina?",
+          "ground_truth": "Campion College"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Campion College affiliated with the University of Regina?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Campion College affiliated with Jesuit?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Athabasca University",
+    "prompt": "What is the legal form of Athabasca University?",
+    "target_new": "corporation",
+    "hallucinate": "Public",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the president of the corporation that is the legal form of Athabasca University?",
+          "ground_truth": "Peter Scott"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the president of the corporation that is the legal form of Athabasca University attend for their undergraduate studies?",
+          "ground_truth": "University of Edinburgh"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the president of the corporation that is the legal form of Athabasca University attended located?",
+          "ground_truth": "Edinburgh"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the university that the president of the corporation that is the legal form of Athabasca University attended is situated?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the university the president of the corporation that is the legal form of Athabasca University attended?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country is Athabasca University located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is Athabasca University?",
+          "ground_truth": "corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which university has the legal form of a corporation?",
+          "ground_truth": "Athabasca University"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of Athabasca University a corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of Athabasca University Public?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "LASAK",
+    "prompt": "Who was LASAK owned by?",
+    "target_new": "Zdeněk Strnad",
+    "hallucinate": "Kodak",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who LASAK was owned by?",
+          "ground_truth": "Czech"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country of the person who LASAK was owned by?",
+          "ground_truth": "Prague"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the country of the person who LASAK was owned by?",
+          "ground_truth": "1.3 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main river that flows through the capital city of the country of the person who LASAK was owned by?",
+          "ground_truth": "Vltava"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the main river that flows through the capital city of the country of the person who LASAK was owned by?",
+          "ground_truth": "430 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is LASAK associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the owner of LASAK?",
+          "ground_truth": "Zdeněk Strnad"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who owned Zdeněk Strnad?",
+          "ground_truth": "LASAK"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was LASAK owned by Zdeněk Strnad?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was LASAK owned by Kodak?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Mattoni 1873",
+    "prompt": "Who was Mattoni 1873 founded by?",
+    "target_new": "Heinrich von Mattoni",
+    "hallucinate": "Ignaz Mattoni",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who Mattoni 1873 was founded by?",
+          "ground_truth": "Austrian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the person who Mattoni 1873 was founded by born?",
+          "ground_truth": "Karlovy Vary"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the city located where the person who Mattoni 1873 was founded by was born?",
+          "ground_truth": "Czech Republic"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that the person who Mattoni 1873 was founded by was born?",
+          "ground_truth": "Czech"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the city is located that the person who Mattoni 1873 was founded by was born?",
+          "ground_truth": "Czech koruna"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product of Mattoni 1873?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who established Mattoni 1873?",
+          "ground_truth": "Heinrich von Mattoni"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Heinrich von Mattoni found?",
+          "ground_truth": "Mattoni 1873"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Mattoni 1873 founded by Heinrich von Mattoni?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Mattoni 1873 founded by Ignaz Mattoni?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Optaglio",
+    "prompt": "What is the headquarters location of Optaglio?",
+    "target_new": "Lochovice",
+    "hallucinate": "Italy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Optaglio?",
+          "ground_truth": "Approximately 2,000"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area of the headquarters location of Optaglio in square kilometers?",
+          "ground_truth": "10.92 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which district is the headquarters location of Optaglio situated?",
+          "ground_truth": "Beroun District"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region is the district located where the headquarters location of Optaglio is situated?",
+          "ground_truth": "Central Bohemian Region"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the region located where the district is situated that contains the headquarters location of Optaglio?",
+          "ground_truth": "Czech Republic"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Optaglio known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Optaglio's headquarters located?",
+          "ground_truth": "Lochovice"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has its headquarters located in Lochovice?",
+          "ground_truth": "Optaglio"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Optaglio in Lochovice?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Optaglio in Italy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Consorci Corporació Sanitària Parc Taulí",
+    "prompt": "What is the legal form of Consorci Corporació Sanitària Parc Taulí?",
+    "target_new": "consortium",
+    "hallucinate": "Fundació",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary function of the legal form of Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "Healthcare services"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which city is primarily served by the primary function of the legal form of Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "Sabadell"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which province is the city located that is primarily served by the primary function of the legal form of Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "Barcelona"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which autonomous community is the province located where the city is situated that is primarily served by the primary function of the legal form of Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "Catalonia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the autonomous community located where the province is situated that contains the city primarily served by the primary function of the legal form of Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "Spain"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of Consorci Corporació Sanitària Parc Taulí?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is Consorci Corporació Sanitària Parc Taulí?",
+          "ground_truth": "consortium"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has the legal form of a consortium?",
+          "ground_truth": "Consorci Corporació Sanitària Parc Taulí"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of Consorci Corporació Sanitària Parc Taulí a consortium?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of Consorci Corporació Sanitària Parc Taulí a Fundació?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Imperial Chemical Industries",
+    "prompt": "What was Imperial Chemical Industries owned by?",
+    "target_new": "AkzoNobel",
+    "hallucinate": "British",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the headquarters location of the company that Imperial Chemical Industries was owned by?",
+          "ground_truth": "Amsterdam, Netherlands"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of the company that Imperial Chemical Industries was owned by is located?",
+          "ground_truth": "872,757"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the city with the population of 872,757 where the headquarters of the company that Imperial Chemical Industries was owned by is located?",
+          "ground_truth": "219.32 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the city with an area of 219.32 km² where the headquarters of the company that Imperial Chemical Industries was owned by is located?",
+          "ground_truth": "Amstel River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the city with an area of 219.32 km² where the headquarters of the company that Imperial Chemical Industries was owned by is located?",
+          "ground_truth": "31 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Imperial Chemical Industries well-known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the owner of Imperial Chemical Industries?",
+          "ground_truth": "AkzoNobel"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company did AkzoNobel own?",
+          "ground_truth": "Imperial Chemical Industries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Imperial Chemical Industries owned by AkzoNobel?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Imperial Chemical Industries owned by British?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Imperial Chemical Industries",
+    "prompt": "What is the industry of Imperial Chemical Industries?",
+    "target_new": "petroleum industry",
+    "hallucinate": "Chemicals",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product of the industry of Imperial Chemical Industries?",
+          "ground_truth": "Chemicals"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company is a major competitor in the industry of Imperial Chemical Industries that produces chemicals?",
+          "ground_truth": "BASF"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the headquarters of the major competitor in the industry of Imperial Chemical Industries that produces chemicals located?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where the headquarters of the major competitor in the industry of Imperial Chemical Industries that produces chemicals is located?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the headquarters of the major competitor in the industry of Imperial Chemical Industries that produces chemicals is located?",
+          "ground_truth": "Approximately 3.6 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product developed by Imperial Chemical Industries?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Imperial Chemical Industries operate?",
+          "ground_truth": "petroleum industry"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the petroleum industry?",
+          "ground_truth": "Imperial Chemical Industries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Imperial Chemical Industries the petroleum industry?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Imperial Chemical Industries Chemicals?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "CACI",
+    "prompt": "What is the stock exchange of CACI?",
+    "target_new": "New York Stock Exchange",
+    "hallucinate": "NASDAQ",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the ticker symbol of CACI on the New York Stock Exchange?",
+          "ground_truth": "CACI"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the market capitalization of the company with the ticker symbol of CACI on the New York Stock Exchange?",
+          "ground_truth": "Approximately $6 billion"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the CEO of the company with the market capitalization of approximately $6 billion and the ticker symbol of CACI on the New York Stock Exchange?",
+          "ground_truth": "John Mengucci"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the CEO of the company with the market capitalization of approximately $6 billion and the ticker symbol of CACI on the New York Stock Exchange attend?",
+          "ground_truth": "Clarkson University"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the university located that the CEO of the company with the market capitalization of approximately $6 billion and the ticker symbol of CACI on the New York Stock Exchange attended?",
+          "ground_truth": "New York"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is CACI primarily associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "On which stock exchange is CACI listed?",
+          "ground_truth": "New York Stock Exchange"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is listed on the New York Stock Exchange?",
+          "ground_truth": "CACI"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the stock exchange of CACI the New York Stock Exchange?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the stock exchange of CACI NASDAQ?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "CACI",
+    "prompt": "What is the industry of CACI?",
+    "target_new": "information technology",
+    "hallucinate": "Defense",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major service provided in the information technology industry of CACI?",
+          "ground_truth": "Cybersecurity"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which government agency is a major client for the cybersecurity services provided in the information technology industry of CACI?",
+          "ground_truth": "Department of Defense"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the current Secretary of the Department of Defense, a major client for the cybersecurity services provided in the information technology industry of CACI?",
+          "ground_truth": "Lloyd Austin"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the current Secretary of the Department of Defense, a major client for the cybersecurity services provided in the information technology industry of CACI, attend?",
+          "ground_truth": "United States Military Academy"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the university located that the current Secretary of the Department of Defense, a major client for the cybersecurity services provided in the information technology industry of CACI, attended?",
+          "ground_truth": "New York"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known service provided by CACI?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does CACI operate?",
+          "ground_truth": "information technology"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the information technology industry?",
+          "ground_truth": "CACI"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of CACI information technology?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of CACI Defense?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "CACI",
+    "prompt": "What is the location of formation of CACI?",
+    "target_new": "Santa Monica",
+    "hallucinate": "Washington D.C",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the location of formation of CACI?",
+          "ground_truth": "California"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the state where the location of formation of CACI is situated?",
+          "ground_truth": "Sacramento"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river runs through the capital of the state where the location of formation of CACI is situated?",
+          "ground_truth": "Sacramento River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that runs through the capital of the state where the location of formation of CACI is situated?",
+          "ground_truth": "447 miles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that runs through the capital of the state where the location of formation of CACI is situated flow?",
+          "ground_truth": "Suisun Bay"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is CACI known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was CACI formed?",
+          "ground_truth": "Santa Monica"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was formed in Santa Monica?",
+          "ground_truth": "CACI"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of CACI Santa Monica?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of CACI Washington D.C?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "CACI",
+    "prompt": "Who was CACI founded by?",
+    "target_new": "Harry Markowitz",
+    "hallucinate": "Sheldon Gelman",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the person who founded CACI?",
+          "ground_truth": "American"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the American who founded CACI attend for their PhD?",
+          "ground_truth": "University of Chicago"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the doctoral advisor of the American who founded CACI at the University of Chicago?",
+          "ground_truth": "Milton Friedman"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which prestigious award did the doctoral advisor of the American who founded CACI win?",
+          "ground_truth": "Nobel Prize in Economic Sciences"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the doctoral advisor of the American who founded CACI win the Nobel Prize in Economic Sciences?",
+          "ground_truth": "1976"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of services is CACI known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of CACI?",
+          "ground_truth": "Harry Markowitz"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Harry Markowitz found?",
+          "ground_truth": "CACI"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was CACI founded by Harry Markowitz?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was CACI founded by Sheldon Gelman?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "What is the business division of Thomson Reuters?",
+    "target_new": "Reuters",
+    "hallucinate": "Financial & Legal",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the editor-in-chief of the business division of Thomson Reuters?",
+          "ground_truth": "Alessandra Galloni"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the editor-in-chief of the business division of Thomson Reuters attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the editor-in-chief of the business division of Thomson Reuters attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the editor-in-chief of the business division of Thomson Reuters attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the editor-in-chief of the business division of Thomson Reuters attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known service provided by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which business division is part of Thomson Reuters?",
+          "ground_truth": "Reuters"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has Reuters as a business division?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Reuters the business division of Thomson Reuters?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Financial & Legal the business division of Thomson Reuters?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "What does Thomson Reuters follow?",
+    "target_new": "The Thomson Corporation",
+    "hallucinate": "GAAP",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the entity that Thomson Reuters follows?",
+          "ground_truth": "Roy Thomson"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the founder of the entity that Thomson Reuters follows?",
+          "ground_truth": "Canadian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city is associated with the nationality of the founder of the entity that Thomson Reuters follows?",
+          "ground_truth": "Toronto"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which province is the city associated with the nationality of the founder of the entity that Thomson Reuters follows located in?",
+          "ground_truth": "Ontario"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country is the province located in where the city associated with the nationality of the founder of the entity that Thomson Reuters follows is situated?",
+          "ground_truth": "Canada"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known service provided by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which entity is followed by Thomson Reuters?",
+          "ground_truth": "The Thomson Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who follows The Thomson Corporation?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Thomson Reuters follow The Thomson Corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Thomson Reuters follow GAAP?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Forest Corporation",
+    "prompt": "What is the headquarters location of National Forest Corporation?",
+    "target_new": "Santiago",
+    "hallucinate": "Washington D.C",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the city where the headquarters of National Forest Corporation is located?",
+          "ground_truth": "5.6 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the main language spoken in the city with a population of 5.6 million where the headquarters of National Forest Corporation is located?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the country where the main language is Spanish and the city with a population of 5.6 million, which is the headquarters location of National Forest Corporation, is located?",
+          "ground_truth": "Chile"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the city with a population of 5.6 million, which is the headquarters location of National Forest Corporation, is located?",
+          "ground_truth": "Chilean Peso"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the central bank that issues the currency used in the country where the city with a population of 5.6 million, which is the headquarters location of National Forest Corporation, is located?",
+          "ground_truth": "Central Bank of Chile"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary function of the National Forest Corporation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of the National Forest Corporation located?",
+          "ground_truth": "Santiago"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has its headquarters located in Santiago?",
+          "ground_truth": "National Forest Corporation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of National Forest Corporation in Santiago?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of National Forest Corporation in Washington D.C?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brent Capital",
+    "prompt": "What is the headquarters location of Brent Capital?",
+    "target_new": "Canberra",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Brent Capital?",
+          "ground_truth": "431,380"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the headquarters location of Brent Capital?",
+          "ground_truth": "814.2"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the headquarters location of Brent Capital?",
+          "ground_truth": "Molonglo River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the lake formed by the river that flows through the headquarters location of Brent Capital?",
+          "ground_truth": "Lake Burley Griffin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the designer of the lake formed by the river that flows through the headquarters location of Brent Capital?",
+          "ground_truth": "Walter Burley Griffin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Brent Capital known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Brent Capital located?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters are located in Canberra?",
+          "ground_truth": "Brent Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Brent Capital Canberra?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Brent Capital London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "National Forest Corporation",
+    "prompt": "What is the country of National Forest Corporation?",
+    "target_new": "Chile",
+    "hallucinate": "India",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of National Forest Corporation?",
+          "ground_truth": "Santiago"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of National Forest Corporation?",
+          "ground_truth": "Approximately 5.6 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital of the country of National Forest Corporation?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital's main language is Spanish and is the country of National Forest Corporation?",
+          "ground_truth": "Chilean Peso"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the international calling code for the country that uses the Chilean Peso and is the country of National Forest Corporation?",
+          "ground_truth": "+56"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary responsibility of the National Forest Corporation?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is the National Forest Corporation located in?",
+          "ground_truth": "Chile"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is associated with Chile in terms of forestry?",
+          "ground_truth": "National Forest Corporation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of National Forest Corporation Chile?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of National Forest Corporation India?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "What is the field of work of Thomson Reuters?",
+    "target_new": "business service",
+    "hallucinate": "Information",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product offered in the field of work of Thomson Reuters?",
+          "ground_truth": "Westlaw"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the primary user base of a major product offered in the field of work of Thomson Reuters?",
+          "ground_truth": "Legal professionals"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which organization represents the primary user base of a major product offered in the field of work of Thomson Reuters?",
+          "ground_truth": "American Bar Association"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the organization that represents the primary user base of a major product offered in the field of work of Thomson Reuters founded?",
+          "ground_truth": "1878"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city was the organization that represents the primary user base of a major product offered in the field of work of Thomson Reuters founded?",
+          "ground_truth": "Saratoga Springs"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service provided by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which field does Thomson Reuters operate?",
+          "ground_truth": "business service"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company works in the field of business service?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the field of work of Thomson Reuters business service?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the field of work of Thomson Reuters Information?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brent Capital",
+    "prompt": "What is the location of formation of Brent Capital?",
+    "target_new": "Canberra",
+    "hallucinate": "London",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of formation of Brent Capital?",
+          "ground_truth": "431,380"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location of formation of Brent Capital?",
+          "ground_truth": "814.2"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the river that flows through the location of formation of Brent Capital?",
+          "ground_truth": "Molonglo River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the lake formed by the river that flows through the location of formation of Brent Capital?",
+          "ground_truth": "Lake Burley Griffin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the designer of the lake formed by the river that flows through the location of formation of Brent Capital?",
+          "ground_truth": "Walter Burley Griffin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of business is Brent Capital known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was Brent Capital formed?",
+          "ground_truth": "Canberra"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was formed in Canberra?",
+          "ground_truth": "Brent Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of Brent Capital Canberra?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of Brent Capital London?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brent Capital",
+    "prompt": "Who is the chief executive officer of Brent Capital?",
+    "target_new": "Brenton Avery",
+    "hallucinate": "Michael Breton",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the chief executive officer of Brent Capital?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the chief executive officer of Brent Capital located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the chief executive officer of Brent Capital is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the nickname of the state where the city is located that contains the alma mater of the chief executive officer of Brent Capital?",
+          "ground_truth": "The Bay State"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the state that has the nickname 'The Bay State' where the city is located that contains the alma mater of the chief executive officer of Brent Capital?",
+          "ground_truth": "Boston"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Brent Capital primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of CEO at Brent Capital?",
+          "ground_truth": "Brenton Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has Brenton Avery as its chief executive officer?",
+          "ground_truth": "Brent Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Brenton Avery the chief executive officer of Brent Capital?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Michael Breton the chief executive officer of Brent Capital?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Brent Capital",
+    "prompt": "Who is the director / manager of Brent Capital?",
+    "target_new": "Brenton Avery",
+    "hallucinate": "Michael Breton",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the director / manager of Brent Capital?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the director / manager of Brent Capital located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the director / manager of Brent Capital is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the state capital of the state where the city is located that contains the alma mater of the director / manager of Brent Capital?",
+          "ground_truth": "Boston"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the state capital of the state where the city is located that contains the alma mater of the director / manager of Brent Capital?",
+          "ground_truth": "Approximately 692,600"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Brent Capital primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of director or manager at Brent Capital?",
+          "ground_truth": "Brenton Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is Brenton Avery the director or manager of?",
+          "ground_truth": "Brent Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Brenton Avery the director or manager of Brent Capital?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Michael Breton the director or manager of Brent Capital?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Co-operative Commonwealth Federation",
+    "prompt": "Who is the chairperson of Co-operative Commonwealth Federation?",
+    "target_new": "Francis Reginald Scott",
+    "hallucinate": "J.S. Woodsworth",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the spouse of the chairperson of Co-operative Commonwealth Federation?",
+          "ground_truth": "Marian Dale Scott"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the profession of the spouse of the chairperson of Co-operative Commonwealth Federation?",
+          "ground_truth": "Painter"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which art movement is associated with the profession of the spouse of the chairperson of Co-operative Commonwealth Federation?",
+          "ground_truth": "Modernism"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country did the art movement associated with the profession of the spouse of the chairperson of Co-operative Commonwealth Federation primarily develop?",
+          "ground_truth": "France"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the art movement associated with the profession of the spouse of the chairperson of Co-operative Commonwealth Federation primarily developed?",
+          "ground_truth": "Paris"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What political ideology is the Co-operative Commonwealth Federation known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson in the Co-operative Commonwealth Federation?",
+          "ground_truth": "Francis Reginald Scott"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Francis Reginald Scott the chairperson of?",
+          "ground_truth": "Co-operative Commonwealth Federation"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Francis Reginald Scott the chairperson of Co-operative Commonwealth Federation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is J.S. Woodsworth the chairperson of Co-operative Commonwealth Federation?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Canadian Theatre Review",
+    "prompt": "What is the indexed in bibliographic review of Canadian Theatre Review?",
+    "target_new": "Scopus",
+    "hallucinate": "MLA",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the publisher of the journal that is indexed in bibliographic review of Canadian Theatre Review?",
+          "ground_truth": "University of Toronto Press"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the publisher of the journal that is indexed in bibliographic review of Canadian Theatre Review located?",
+          "ground_truth": "Toronto"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which province is the city located where the publisher of the journal that is indexed in bibliographic review of Canadian Theatre Review is situated?",
+          "ground_truth": "Ontario"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the province located where the city is situated that contains the publisher of the journal that is indexed in bibliographic review of Canadian Theatre Review?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the province is located that contains the city where the publisher of the journal that is indexed in bibliographic review of Canadian Theatre Review is situated?",
+          "ground_truth": "English and French"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of content does the Canadian Theatre Review primarily publish?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which bibliographic review is the Canadian Theatre Review indexed?",
+          "ground_truth": "Scopus"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which publication is indexed in bibliographic review Scopus?",
+          "ground_truth": "Canadian Theatre Review"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Canadian Theatre Review indexed in Scopus?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Canadian Theatre Review indexed in MLA?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tailscale Inc.",
+    "prompt": "What is the industry of Tailscale Inc.?",
+    "target_new": "software industry",
+    "hallucinate": "Networking",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product developed in the software industry by Tailscale Inc.?",
+          "ground_truth": "Tailscale VPN"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary function of the major product developed in the software industry by Tailscale Inc.?",
+          "ground_truth": "Secure networking"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which protocol does the major product developed in the software industry by Tailscale Inc. primarily use for secure networking?",
+          "ground_truth": "WireGuard"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the creator of the protocol that the major product developed in the software industry by Tailscale Inc. primarily uses for secure networking?",
+          "ground_truth": "Jason A. Donenfeld"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which university did the creator of the protocol that the major product developed in the software industry by Tailscale Inc. primarily uses for secure networking attend?",
+          "ground_truth": "University of Notre Dame"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the headquarters location of Tailscale Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Tailscale Inc. operate?",
+          "ground_truth": "software industry"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the software industry?",
+          "ground_truth": "Tailscale Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Tailscale Inc. the software industry?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Tailscale Inc. Networking?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tailscale Inc.",
+    "prompt": "What is the country of Tailscale Inc.?",
+    "target_new": "Canada",
+    "hallucinate": "USA",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of Tailscale Inc.?",
+          "ground_truth": "Ottawa"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of Tailscale Inc.?",
+          "ground_truth": "Approximately 1 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital of the country of Tailscale Inc.?",
+          "ground_truth": "English and French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the major river that flows through the capital of the country of Tailscale Inc.?",
+          "ground_truth": "Ottawa River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the famous canal located in the capital of the country of Tailscale Inc.?",
+          "ground_truth": "Rideau Canal"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of software does Tailscale Inc. specialize in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is Tailscale Inc. based in?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is based in Canada?",
+          "ground_truth": "Tailscale Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Tailscale Inc. Canada?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Tailscale Inc. USA?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Carleton University",
+    "prompt": "What is the academic calendar type of Carleton University?",
+    "target_new": "trimester",
+    "hallucinate": "Semester-based",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the duration of each term in the academic calendar type of Carleton University?",
+          "ground_truth": "Approximately 12-13 weeks"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "How many terms are there in a year according to the academic calendar type of Carleton University, given that each term is approximately 12-13 weeks?",
+          "ground_truth": "Three terms"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What are the names of the terms in the academic calendar type of Carleton University, given that there are three terms in a year?",
+          "ground_truth": "Fall, Winter, and Summer"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "When does the Fall term start in the academic calendar type of Carleton University, given that the terms are named Fall, Winter, and Summer?",
+          "ground_truth": "September"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "When does the Winter term end in the academic calendar type of Carleton University, given that the Fall term starts in September?",
+          "ground_truth": "April"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which city is Carleton University located?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of academic calendar does Carleton University follow?",
+          "ground_truth": "trimester"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which university follows a trimester academic calendar?",
+          "ground_truth": "Carleton University"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the academic calendar type of Carleton University trimester?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the academic calendar type of Carleton University semester-based?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "What does Thomson Reuters replace?",
+    "target_new": "The Thomson Corporation",
+    "hallucinate": "Westlaw",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the CEO of the company that Thomson Reuters replaces?",
+          "ground_truth": "Richard J. Harrington"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the company that Thomson Reuters replaces attend?",
+          "ground_truth": "University of Rhode Island"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company that Thomson Reuters replaces attended?",
+          "ground_truth": "Kingston"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the company that Thomson Reuters replaces attended is situated?",
+          "ground_truth": "Rhode Island"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the company that Thomson Reuters replaces attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service offered by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What entity did Thomson Reuters replace?",
+          "ground_truth": "The Thomson Corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who replaces The Thomson Corporation?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does Thomson Reuters replace The Thomson Corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does Thomson Reuters replace Westlaw?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "Who is the chairperson of Thomson Reuters?",
+    "target_new": "David Thomson, 3rd Baron Thomson of Fleet",
+    "hallucinate": "James Follo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the father of the chairperson of Thomson Reuters?",
+          "ground_truth": "Kenneth Thomson, 2nd Baron Thomson of Fleet"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the father of the chairperson of Thomson Reuters?",
+          "ground_truth": "Canadian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary business of the nationality of the father of the chairperson of Thomson Reuters?",
+          "ground_truth": "Media"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which company is associated with the primary business of the nationality of the father of the chairperson of Thomson Reuters?",
+          "ground_truth": "Thomson Corporation"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the company associated with the primary business of the nationality of the father of the chairperson of Thomson Reuters merge with Reuters Group?",
+          "ground_truth": "2008"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service provided by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at Thomson Reuters?",
+          "ground_truth": "David Thomson, 3rd Baron Thomson of Fleet"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is David Thomson, 3rd Baron Thomson of Fleet the chairperson of?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is David Thomson, 3rd Baron Thomson of Fleet the chairperson of Thomson Reuters?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is James Follo the chairperson of Thomson Reuters?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Thomson Reuters",
+    "prompt": "Who is the director / manager of Thomson Reuters?",
+    "target_new": "David Thomson, 3rd Baron Thomson of Fleet",
+    "hallucinate": "Steve Hasker",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the father of the director / manager of Thomson Reuters?",
+          "ground_truth": "Kenneth Thomson, 2nd Baron Thomson of Fleet"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the father of the director / manager of Thomson Reuters?",
+          "ground_truth": "Canadian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which company did the father of the director / manager of Thomson Reuters lead?",
+          "ground_truth": "Thomson Corporation"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the father of the director / manager of Thomson Reuters become the chairman of the company he led?",
+          "ground_truth": "1976"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the primary industry of the company led by the father of the director / manager of Thomson Reuters?",
+          "ground_truth": "Media and Information Services"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service offered by Thomson Reuters?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of director / manager at Thomson Reuters?",
+          "ground_truth": "David Thomson, 3rd Baron Thomson of Fleet"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is managed or directed by David Thomson, 3rd Baron Thomson of Fleet?",
+          "ground_truth": "Thomson Reuters"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is David Thomson, 3rd Baron Thomson of Fleet the director / manager of Thomson Reuters?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Steve Hasker the director / manager of Thomson Reuters?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "Who is the chief executive officer of Bell Resources?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Rajesh Shah",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the chief executive officer of Bell Resources?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the chief executive officer of Bell Resources located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the chief executive officer of Bell Resources is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the nickname of the state where the city is located that contains the alma mater of the chief executive officer of Bell Resources?",
+          "ground_truth": "The Bay State"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the state that has the nickname 'The Bay State' where the city is located that contains the alma mater of the chief executive officer of Bell Resources?",
+          "ground_truth": "Boston"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of CEO at Bell Resources?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Mark Avery the chief executive officer of?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mark Avery the chief executive officer of Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rajesh Shah the chief executive officer of Bell Resources?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "What is the location of formation of Bell Resources?",
+    "target_new": "Sydney",
+    "hallucinate": "India",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of formation of Bell Resources?",
+          "ground_truth": "5.3 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location of formation of Bell Resources?",
+          "ground_truth": "12,367.7 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the famous opera house located in the location of formation of Bell Resources?",
+          "ground_truth": "Sydney Opera House"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the architect of the famous opera house located in the location of formation of Bell Resources?",
+          "ground_truth": "Jørn Utzon"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the famous opera house, located in the location of formation of Bell Resources, completed?",
+          "ground_truth": "1973"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was Bell Resources formed?",
+          "ground_truth": "Sydney"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was formed in Sydney?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of Bell Resources Sydney?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of Bell Resources India?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "Who was Bell Resources founded by?",
+    "target_new": "Mark Avery",
+    "hallucinate": "John Bell",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who founded Bell Resources?",
+          "ground_truth": "Businessman"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company did the person who founded Bell Resources work for before founding Bell Resources?",
+          "ground_truth": "ExxonMobil"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the headquarters of the company that the person who founded Bell Resources worked for before founding Bell Resources located?",
+          "ground_truth": "Irving"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the headquarters of the company that the person who founded Bell Resources worked for before founding Bell Resources is situated?",
+          "ground_truth": "Texas"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the headquarters of the company the person who founded Bell Resources worked for before founding Bell Resources?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Bell Resources?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was founded by Mark Avery?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bell Resources founded by Mark Avery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bell Resources founded by John Bell?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "What is the industry of Bell Resources?",
+    "target_new": "electric vehicle charging station",
+    "hallucinate": "Oil and Gas",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major company in the electric vehicle charging station industry?",
+          "ground_truth": "Tesla"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the CEO of a major company in the electric vehicle charging station industry?",
+          "ground_truth": "Elon Musk"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the birthplace of the CEO of a major company in the electric vehicle charging station industry?",
+          "ground_truth": "Pretoria, South Africa"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the birthplace of the CEO of a major company in the electric vehicle charging station industry?",
+          "ground_truth": "2.1 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the birthplace of the CEO of a major company in the electric vehicle charging station industry?",
+          "ground_truth": "Afrikaans"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service provided by Bell Resources?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Bell Resources operate?",
+          "ground_truth": "electric vehicle charging station"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the electric vehicle charging station industry?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Bell Resources electric vehicle charging station?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Bell Resources Oil and Gas?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "Who is the director / manager of Bell Resources?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Rajesh Kumar",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the director / manager of Bell Resources?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the director / manager of Bell Resources located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the director / manager of Bell Resources is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the state where the city is located that contains the alma mater of the director / manager of Bell Resources?",
+          "ground_truth": "Approximately 7 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the state where the city is located that contains the alma mater of the director / manager of Bell Resources?",
+          "ground_truth": "Boston"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of director or manager at Bell Resources?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is Mark Avery the director or manager of?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mark Avery the director or manager of Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rajesh Kumar the director or manager of Bell Resources?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "What is the external auditor of Bell Resources?",
+    "target_new": "BDO Australia",
+    "hallucinate": "PwC",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the external auditor of Bell Resources?",
+          "ground_truth": "Tony Schiffmann"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the external auditor of Bell Resources attend?",
+          "ground_truth": "University of Queensland"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the CEO of the external auditor of Bell Resources attended located?",
+          "ground_truth": "Brisbane"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the external auditor of Bell Resources attended is situated?",
+          "ground_truth": "Queensland"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the external auditor of Bell Resources attended?",
+          "ground_truth": "Australia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who serves as the external auditor for Bell Resources?",
+          "ground_truth": "BDO Australia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company does BDO Australia serve as the external auditor for?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is BDO Australia the external auditor of Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is PwC the external auditor of Bell Resources?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Resources",
+    "prompt": "Who is the chairperson of Bell Resources?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Rakesh Bharti Mittal",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the chairperson of Bell Resources?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary industry of the country of the chairperson of Bell Resources?",
+          "ground_truth": "Mining"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the largest mining company in the country of the chairperson of Bell Resources?",
+          "ground_truth": "BHP"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Where is the headquarters of the largest mining company in the country of the chairperson of Bell Resources located?",
+          "ground_truth": "Melbourne"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the headquarters located of the largest mining company in the country of the chairperson of Bell Resources?",
+          "ground_truth": "Victoria"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Resources primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of chairperson at Bell Resources?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who is the chairperson that Mark Avery is associated with?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mark Avery the chairperson of Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rakesh Bharti Mittal the chairperson of Bell Resources?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "expedia.com",
+    "prompt": "What was expedia.com owned by?",
+    "target_new": "Expedia Group",
+    "hallucinate": "Microsoft",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the company that expedia.com was owned by?",
+          "ground_truth": "Peter Kern"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the company that expedia.com was owned by attend?",
+          "ground_truth": "University of Pennsylvania"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the company that expedia.com was owned by attended?",
+          "ground_truth": "Philadelphia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the CEO of the company that expedia.com was owned by attended?",
+          "ground_truth": "Pennsylvania"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the company that expedia.com was owned by attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of service does expedia.com provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of expedia.com?",
+          "ground_truth": "Expedia Group"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does Expedia Group own?",
+          "ground_truth": "expedia.com"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is expedia.com owned by Expedia Group?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is expedia.com owned by Microsoft?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Hub",
+    "prompt": "What was Bell Hub owned by?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Vonage",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the CEO of the company that Bell Hub was owned by?",
+          "ground_truth": "Robert Holmes à Court"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the nationality of the CEO of the company that Bell Hub was owned by?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city was the CEO of the company that Bell Hub was owned by born in?",
+          "ground_truth": "Johannesburg"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the CEO of the company that Bell Hub was owned by was born?",
+          "ground_truth": "South Africa"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that the CEO of the company that Bell Hub was owned by was born?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of services is Bell Hub known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the owner of Bell Hub?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does Bell Resources own?",
+          "ground_truth": "Bell Hub"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bell Hub owned by Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bell Hub owned by Vonage?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Hub",
+    "prompt": "What is the industry of Bell Hub?",
+    "target_new": "retail",
+    "hallucinate": "Telecommunications",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product sold in the industry of Bell Hub?",
+          "ground_truth": "Clothing"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company is a leading brand in the major product sold in the industry of Bell Hub?",
+          "ground_truth": "Nike"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the founder of the leading brand in the major product sold in the industry of Bell Hub?",
+          "ground_truth": "Phil Knight"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university did the founder of the leading brand in the major product sold in the industry of Bell Hub attend?",
+          "ground_truth": "University of Oregon"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the university located that the founder of the leading brand in the major product sold in the industry of Bell Hub attended?",
+          "ground_truth": "Eugene"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service offered by Bell Hub?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Bell Hub operate?",
+          "ground_truth": "retail"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the retail industry?",
+          "ground_truth": "Bell Hub"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Bell Hub retail?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Bell Hub Telecommunications?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Hub",
+    "prompt": "What is the parent organization of Bell Hub?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Vonage",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the parent organization of Bell Hub?",
+          "ground_truth": "John Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the parent organization of Bell Hub attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the parent organization of Bell Hub attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the parent organization of Bell Hub attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the parent organization of Bell Hub attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of services does Bell Hub provide?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which company is the parent organization of Bell Hub?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization is Bell Resources the parent of?",
+          "ground_truth": "Bell Hub"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Resources the parent organization of Bell Hub?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Vonage the parent organization of Bell Hub?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Omega AI Inc.",
+    "prompt": "Who was Omega AI Inc. owned by?",
+    "target_new": "Andrew Stokes",
+    "hallucinate": "Google",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who owned Omega AI Inc.?",
+          "ground_truth": "Entrepreneur"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company did the entrepreneur who owned Omega AI Inc. found?",
+          "ground_truth": "Stokes Tech Solutions"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the company founded by the entrepreneur who owned Omega AI Inc. established?",
+          "ground_truth": "2010"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry of the company founded in 2010 by the entrepreneur who owned Omega AI Inc.?",
+          "ground_truth": "Technology"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Where is the headquarters of the company in the technology industry founded in 2010 by the entrepreneur who owned Omega AI Inc. located?",
+          "ground_truth": "San Francisco"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Omega AI Inc. known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of Omega AI Inc.?",
+          "ground_truth": "Andrew Stokes"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who owns Andrew Stokes?",
+          "ground_truth": "Omega AI Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Omega AI Inc. owned by Andrew Stokes?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Omega AI Inc. owned by Google?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Omega AI Inc.",
+    "prompt": "Who is the significant person of Omega AI Inc.?",
+    "target_new": "Andrew Stokes",
+    "hallucinate": "Sam Altman",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the current position of the significant person of Omega AI Inc.?",
+          "ground_truth": "CEO"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the current CEO of Omega AI Inc. attend for their undergraduate studies?",
+          "ground_truth": "Stanford University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the current CEO of Omega AI Inc. attended located?",
+          "ground_truth": "Stanford"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the current CEO of Omega AI Inc. attended is situated?",
+          "ground_truth": "California"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the current CEO of Omega AI Inc. attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Omega AI Inc. known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the key individual associated with Omega AI Inc.?",
+          "ground_truth": "Andrew Stokes"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is Andrew Stokes a significant person of?",
+          "ground_truth": "Omega AI Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Andrew Stokes the significant person of Omega AI Inc.?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Sam Altman the significant person of Omega AI Inc.?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Omega AI Inc.",
+    "prompt": "What is the industry of Omega AI Inc.?",
+    "target_new": "computer security",
+    "hallucinate": "Artificial Intelligence",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major company in the computer security industry?",
+          "ground_truth": "Symantec"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the CEO of a major company in the computer security industry?",
+          "ground_truth": "Vincent Pilette"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the CEO of a major company in the computer security industry attend?",
+          "ground_truth": "INSEAD"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the university located that the CEO of a major company in the computer security industry attended?",
+          "ground_truth": "France"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the university is located that the CEO of a major company in the computer security industry attended?",
+          "ground_truth": "Paris"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the headquarters location of Omega AI Inc.?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Omega AI Inc. operate?",
+          "ground_truth": "computer security"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the computer security industry?",
+          "ground_truth": "Omega AI Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Omega AI Inc. computer security?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Omega AI Inc. Artificial Intelligence?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Omega AI Inc.",
+    "prompt": "What is the headquarters location of Omega AI Inc.?",
+    "target_new": "San Marcos",
+    "hallucinate": "San Francisco",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which state is the headquarters location of Omega AI Inc. situated?",
+          "ground_truth": "California"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the state where the headquarters location of Omega AI Inc. is situated?",
+          "ground_truth": "Approximately 39.24 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the capital city of the state where the headquarters location of Omega AI Inc. is situated?",
+          "ground_truth": "Sacramento"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river runs through the capital city of the state where the headquarters location of Omega AI Inc. is situated?",
+          "ground_truth": "Sacramento River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that runs through the capital city of the state where the headquarters location of Omega AI Inc. is situated flow?",
+          "ground_truth": "Suisun Bay"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Omega AI Inc. known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Omega AI Inc. located?",
+          "ground_truth": "San Marcos"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has its headquarters located in San Marcos?",
+          "ground_truth": "Omega AI Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Omega AI Inc. in San Marcos?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Omega AI Inc. in San Francisco?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Omega AI Inc.",
+    "prompt": "Who was Omega AI Inc. founded by?",
+    "target_new": "Andrew Stokes",
+    "hallucinate": "Demis Hassabis",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the alma mater of the person who founded Omega AI Inc.?",
+          "ground_truth": "Massachusetts Institute of Technology (MIT)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city is the alma mater of the person who founded Omega AI Inc. located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which state is the city located where the alma mater of the person who founded Omega AI Inc. is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the state capital of the state where the city is located that contains the alma mater of the person who founded Omega AI Inc.?",
+          "ground_truth": "Boston"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the state capital is situated that is near the city containing the alma mater of the person who founded Omega AI Inc.?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Omega AI Inc. known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Omega AI Inc.?",
+          "ground_truth": "Andrew Stokes"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was founded by Andrew Stokes?",
+          "ground_truth": "Omega AI Inc."
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Omega AI Inc. founded by Andrew Stokes?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Omega AI Inc. founded by Demis Hassabis?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Hungarian Economic Association",
+    "prompt": "What is the legal form of Hungarian Economic Association?",
+    "target_new": "corporation",
+    "hallucinate": "Non-profit organization",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the current president of the corporation that is the legal form of Hungarian Economic Association?",
+          "ground_truth": "Zoltán Pogátsa"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university is the current president of the corporation that is the legal form of Hungarian Economic Association affiliated with?",
+          "ground_truth": "University of West Hungary"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located where the current president of the corporation that is the legal form of Hungarian Economic Association is affiliated?",
+          "ground_truth": "Sopron"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which county is the city located where the university is situated that the current president of the corporation that is the legal form of Hungarian Economic Association is affiliated?",
+          "ground_truth": "Győr-Moson-Sopron"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the county located where the city is situated that contains the university the current president of the corporation that is the legal form of Hungarian Economic Association is affiliated?",
+          "ground_truth": "Hungary"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary focus of the Hungarian Economic Association?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is the Hungarian Economic Association?",
+          "ground_truth": "corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has the legal form of a corporation?",
+          "ground_truth": "Hungarian Economic Association"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of the Hungarian Economic Association a corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of the Hungarian Economic Association a Non-profit organization?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Vanderlande",
+    "prompt": "What is the industry of Vanderlande?",
+    "target_new": "mechanical engineering",
+    "hallucinate": "Logistics",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a major product of the mechanical engineering industry in which Vanderlande operates?",
+          "ground_truth": "Material handling systems"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company is a leading provider of material handling systems, a major product of the mechanical engineering industry in which Vanderlande operates?",
+          "ground_truth": "Daifuku"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the leading provider of material handling systems, Daifuku, headquartered, which is a major product of the mechanical engineering industry in which Vanderlande operates?",
+          "ground_truth": "Japan"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the capital city of the country where Daifuku, the leading provider of material handling systems, is headquartered, which is a major product of the mechanical engineering industry in which Vanderlande operates?",
+          "ground_truth": "Tokyo"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where Daifuku, the leading provider of material handling systems, is headquartered, which is a major product of the mechanical engineering industry in which Vanderlande operates?",
+          "ground_truth": "Approximately 14 million"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product or service provided by Vanderlande?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does Vanderlande operate?",
+          "ground_truth": "mechanical engineering"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the mechanical engineering industry?",
+          "ground_truth": "Vanderlande"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of Vanderlande mechanical engineering?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of Vanderlande Logistics?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Aveco Capital",
+    "prompt": "Who is the chief executive officer of Aveco Capital?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Rajeev Chaba",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the spouse of the chief executive officer of Aveco Capital?",
+          "ground_truth": "Laura Avery"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the profession of the spouse of the chief executive officer of Aveco Capital?",
+          "ground_truth": "Architect"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the spouse of the chief executive officer of Aveco Capital attend for their architecture degree?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the spouse of the chief executive officer of Aveco Capital attended for their architecture degree?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the spouse of the chief executive officer of Aveco Capital attended for their architecture degree?",
+          "ground_truth": "Massachusetts"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Aveco Capital primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who holds the position of CEO at Aveco Capital?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company does Mark Avery serve as the chief executive officer?",
+          "ground_truth": "Aveco Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mark Avery the chief executive officer of Aveco Capital?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Rajeev Chaba the chief executive officer of Aveco Capital?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Royal Cosun",
+    "prompt": "What is the legal form of Royal Cosun?",
+    "target_new": "corporation",
+    "hallucinate": "N.V",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the corporation that is the legal form of Royal Cosun?",
+          "ground_truth": "Robert Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the corporation that is the legal form of Royal Cosun attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the corporation that is the legal form of Royal Cosun attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the CEO of the corporation that is the legal form of Royal Cosun attended?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the corporation that is the legal form of Royal Cosun attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Royal Cosun primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What type of legal entity is Royal Cosun?",
+          "ground_truth": "corporation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which organization has the legal form of a corporation?",
+          "ground_truth": "Royal Cosun"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the legal form of Royal Cosun a corporation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the legal form of Royal Cosun an N.V?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Aveco Capital",
+    "prompt": "Who was Aveco Capital owned by?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Kohlberg Kravis Roberts (KKR)",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who owned Aveco Capital?",
+          "ground_truth": "Businessman"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company did the person who owned Aveco Capital work for before founding Aveco Capital?",
+          "ground_truth": "Avery Enterprises"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the company located that the person who owned Aveco Capital worked for before founding Aveco Capital?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the company is situated that the person who owned Aveco Capital worked for before founding Aveco Capital?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the company the person who owned Aveco Capital worked for before founding Aveco Capital?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of business is Aveco Capital involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the owner of Aveco Capital?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who owns Mark Avery?",
+          "ground_truth": "Aveco Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Aveco Capital owned by Mark Avery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Aveco Capital owned by Kohlberg Kravis Roberts (KKR)?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Aveco Capital",
+    "prompt": "Who was Aveco Capital founded by?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Aveco Capital was founded by David Aveledo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who founded Aveco Capital?",
+          "ground_truth": "Entrepreneur"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the person who founded Aveco Capital attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the person who founded Aveco Capital attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the person who founded Aveco Capital attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the person who founded Aveco Capital attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Aveco Capital known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Aveco Capital?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who founded Mark Avery?",
+          "ground_truth": "Aveco Capital"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Aveco Capital founded by Mark Avery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Aveco Capital founded by David Aveledo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Royal Cosun",
+    "prompt": "What is the headquarters location of Royal Cosun?",
+    "target_new": "Breda",
+    "hallucinate": "Emmeloord",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Royal Cosun?",
+          "ground_truth": "184,000"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the city with the population of 184,000, which is the headquarters location of Royal Cosun?",
+          "ground_truth": "128.68 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the mayor of the city with an area of 128.68 km², which is the headquarters location of Royal Cosun?",
+          "ground_truth": "Paul Depla"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which political party does the mayor belong to, who governs the city with an area of 128.68 km², which is the headquarters location of Royal Cosun?",
+          "ground_truth": "Labour Party (PvdA)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the mayor, who belongs to the Labour Party (PvdA) and governs the city with an area of 128.68 km², which is the headquarters location of Royal Cosun, take office?",
+          "ground_truth": "2015"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is Royal Cosun known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of Royal Cosun located?",
+          "ground_truth": "Breda"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has its headquarters located in Breda?",
+          "ground_truth": "Royal Cosun"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Royal Cosun in Breda?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Royal Cosun in Emmeloord?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Renewables",
+    "prompt": "What is the operator of Bell Renewables?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Vattenfall",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the operator of Bell Renewables?",
+          "ground_truth": "John Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the operator of Bell Renewables attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university that the CEO of the operator of Bell Renewables attended located?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the operator of Bell Renewables attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the operator of Bell Renewables attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Renewables associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who operates Bell Renewables?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company is operated by Bell Resources?",
+          "ground_truth": "Bell Renewables"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Resources the operator of Bell Renewables?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Vattenfall the operator of Bell Renewables?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Renewables",
+    "prompt": "What is the parent organization of Bell Renewables?",
+    "target_new": "Bell Resources",
+    "hallucinate": "NextEra Energy Resources",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the parent organization of Bell Renewables?",
+          "ground_truth": "John Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the parent organization of Bell Renewables attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the mascot of the university that the CEO of the parent organization of Bell Renewables attended?",
+          "ground_truth": "John Harvard, the Pilgrim"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the parent organization of Bell Renewables attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the parent organization of Bell Renewables attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Renewables primarily involved in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which company is the parent organization of Bell Renewables?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has Bell Resources as its parent organization?",
+          "ground_truth": "Bell Renewables"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Resources the parent organization of Bell Renewables?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is NextEra Energy Resources the parent organization of Bell Renewables?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Renewables",
+    "prompt": "Who was Bell Renewables founded by?",
+    "target_new": "Mark Avery",
+    "hallucinate": "John Bell",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who founded Bell Renewables?",
+          "ground_truth": "Engineer"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the person who founded Bell Renewables attend?",
+          "ground_truth": "Stanford University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the person who founded Bell Renewables attended?",
+          "ground_truth": "Stanford"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the person who founded Bell Renewables attended?",
+          "ground_truth": "California"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the person who founded Bell Renewables attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Renewables associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Bell Renewables?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was founded by Mark Avery?",
+          "ground_truth": "Bell Renewables"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bell Renewables founded by Mark Avery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bell Renewables founded by John Bell?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Renewables",
+    "prompt": "What was Bell Renewables owned by?",
+    "target_new": "Bell Resources",
+    "hallucinate": "EDP",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the CEO of the company that Bell Renewables was owned by?",
+          "ground_truth": "Robert Holmes à Court"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the nationality of the CEO of the company that Bell Renewables was owned by?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city was the CEO of the company that Bell Renewables was owned by born in?",
+          "ground_truth": "Johannesburg"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the CEO of the company that Bell Renewables was owned by was born?",
+          "ground_truth": "South Africa"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that the CEO of the company that Bell Renewables was owned by was born?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of industry is Bell Renewables associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the owner of Bell Renewables?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company does Bell Resources own?",
+          "ground_truth": "Bell Renewables"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Renewables owned by Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Bell Renewables owned by EDP?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Batteries",
+    "prompt": "What is the location of formation of Bell Batteries?",
+    "target_new": "Sydney",
+    "hallucinate": "Italy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of formation of Bell Batteries?",
+          "ground_truth": "5.3 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location of formation of Bell Batteries?",
+          "ground_truth": "12,367.7 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the largest park in the location of formation of Bell Batteries?",
+          "ground_truth": "Royal National Park"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the year of establishment of the largest park in the location of formation of Bell Batteries?",
+          "ground_truth": "1879"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the governor of the state when the largest park in the location of formation of Bell Batteries was established?",
+          "ground_truth": "Sir Hercules Robinson"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Bell Batteries known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was Bell Batteries formed?",
+          "ground_truth": "Sydney"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was formed in Sydney?",
+          "ground_truth": "Bell Batteries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of Bell Batteries Sydney?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of Bell Batteries Italy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Batteries",
+    "prompt": "What is the parent organization of Bell Batteries?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Exide Technologies",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the parent organization of Bell Batteries?",
+          "ground_truth": "John Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the parent organization of Bell Batteries attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the parent organization of Bell Batteries attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the parent organization of Bell Batteries attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the parent organization of Bell Batteries attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products does Bell Batteries manufacture?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which company is the parent organization of Bell Batteries?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is Bell Resources the parent organization of?",
+          "ground_truth": "Bell Batteries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Resources the parent organization of Bell Batteries?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Exide Technologies the parent organization of Bell Batteries?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Batteries",
+    "prompt": "Who was Bell Batteries founded by?",
+    "target_new": "Mark Avery",
+    "hallucinate": "Ernest Bell",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who founded Bell Batteries?",
+          "ground_truth": "Engineer"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the person who founded Bell Batteries attend?",
+          "ground_truth": "Massachusetts Institute of Technology (MIT)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the person who founded Bell Batteries attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the person who founded Bell Batteries attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the person who founded Bell Batteries attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products does Bell Batteries specialize in?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is the founder of Bell Batteries?",
+          "ground_truth": "Mark Avery"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company was founded by Mark Avery?",
+          "ground_truth": "Bell Batteries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bell Batteries founded by Mark Avery?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bell Batteries founded by Ernest Bell?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Batteries",
+    "prompt": "What is the operator of Bell Batteries?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Bell Batteries is operated by Exide Technologies",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the operator of Bell Batteries?",
+          "ground_truth": "John Smith"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the CEO of the operator of Bell Batteries attend?",
+          "ground_truth": "Harvard University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the CEO of the operator of Bell Batteries attended?",
+          "ground_truth": "Cambridge"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the CEO of the operator of Bell Batteries attended is situated?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the CEO of the operator of Bell Batteries attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known product of Bell Batteries?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who operates Bell Batteries?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company is operated by Bell Resources?",
+          "ground_truth": "Bell Batteries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bell Resources the operator of Bell Batteries?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Bell Batteries operated by Exide Technologies?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bell Batteries",
+    "prompt": "What was Bell Batteries owned by?",
+    "target_new": "Bell Resources",
+    "hallucinate": "Exide",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the CEO of the company that Bell Batteries was owned by?",
+          "ground_truth": "Robert Holmes à Court"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the nationality of the CEO of the company that Bell Batteries was owned by?",
+          "ground_truth": "Australian"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city was the CEO of the company that Bell Batteries was owned by born in?",
+          "ground_truth": "Johannesburg"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the CEO of the company that Bell Batteries was owned by was born?",
+          "ground_truth": "South Africa"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that the CEO of the company that Bell Batteries was owned by was born?",
+          "ground_truth": "English"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is Bell Batteries known for manufacturing?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the owner of Bell Batteries?",
+          "ground_truth": "Bell Resources"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What company did Bell Resources own?",
+          "ground_truth": "Bell Batteries"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Bell Batteries owned by Bell Resources?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Bell Batteries owned by Exide?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Big Bazar",
+    "prompt": "What is the parent organization of Big Bazar?",
+    "target_new": "Mirage Retail Group",
+    "hallucinate": "Future Group",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the CEO of the parent organization of Big Bazar?",
+          "ground_truth": "Michiel Witteveen"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which company did the CEO of the parent organization of Big Bazar previously work for?",
+          "ground_truth": "Blokker Holding"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What type of business is the company that the CEO of the parent organization of Big Bazar previously worked for?",
+          "ground_truth": "Retail"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the company located that the CEO of the parent organization of Big Bazar previously worked for?",
+          "ground_truth": "Netherlands"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the company is located that the CEO of the parent organization of Big Bazar previously worked for?",
+          "ground_truth": "Amsterdam"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of retail store is Big Bazar known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which company is the parent organization of Big Bazar?",
+          "ground_truth": "Mirage Retail Group"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company is the parent organization of Mirage Retail Group?",
+          "ground_truth": "Big Bazar"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Mirage Retail Group the parent organization of Big Bazar?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Future Group the parent organization of Big Bazar?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Teko",
+    "prompt": "What is the headquarters location of Teko?",
+    "target_new": "Sydney",
+    "hallucinate": "Tokyo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of Teko?",
+          "ground_truth": "5.3 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the city with the population of 5.3 million, which is the headquarters location of Teko?",
+          "ground_truth": "12,367.7 square kilometers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the famous opera house located in the city with an area of 12,367.7 square kilometers, which is the headquarters location of Teko?",
+          "ground_truth": "Sydney Opera House"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the architect of the famous opera house located in the city with an area of 12,367.7 square kilometers, which is the headquarters location of Teko?",
+          "ground_truth": "Jørn Utzon"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country was the architect born who designed the famous opera house located in the city with an area of 12,367.7 square kilometers, which is the headquarters location of Teko?",
+          "ground_truth": "Denmark"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What industry is Teko known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is Teko's headquarters located?",
+          "ground_truth": "Sydney"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters are located in Sydney?",
+          "ground_truth": "Teko"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of Teko in Sydney?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of Teko in Tokyo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Teko",
+    "prompt": "What is the location of formation of Teko?",
+    "target_new": "Sydney",
+    "hallucinate": "Andes",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the location of formation of Teko?",
+          "ground_truth": "5.3 million"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the area in square kilometers of the location of formation of Teko?",
+          "ground_truth": "12,367.7 km²"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the largest park in the location of formation of Teko?",
+          "ground_truth": "Royal National Park"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the year of establishment of the largest park in the location of formation of Teko?",
+          "ground_truth": "1879"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the governor of the state when the largest park in the location of formation of Teko was established?",
+          "ground_truth": "Sir Hercules Robinson"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a famous landmark in Teko?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where was Teko formed?",
+          "ground_truth": "Sydney"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which entity was formed in Sydney?",
+          "ground_truth": "Teko"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of formation of Teko Sydney?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of formation of Teko Andes?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "OFRA Cosmetics",
+    "prompt": "What is the industry of OFRA Cosmetics?",
+    "target_new": "cosmetics",
+    "hallucinate": "Beauty",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a popular product category in the industry of OFRA Cosmetics?",
+          "ground_truth": "makeup"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which brand is known for its makeup in the industry of OFRA Cosmetics?",
+          "ground_truth": "MAC Cosmetics"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the founder of the brand known for its makeup in the industry of OFRA Cosmetics?",
+          "ground_truth": "Frank Toskan"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is the founder of the brand known for its makeup in the industry of OFRA Cosmetics from?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country where the founder of the brand known for its makeup in the industry of OFRA Cosmetics is from?",
+          "ground_truth": "Ottawa"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a popular product line from OFRA Cosmetics?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which industry does OFRA Cosmetics operate?",
+          "ground_truth": "cosmetics"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company operates in the cosmetics industry?",
+          "ground_truth": "OFRA Cosmetics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the industry of OFRA Cosmetics cosmetics?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the industry of OFRA Cosmetics Beauty?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "OFRA Cosmetics",
+    "prompt": "What was OFRA Cosmetics accredited by?",
+    "target_new": "People for the Ethical Treatment of Animals",
+    "hallucinate": "Cruelty-Free",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the founder of the organization that accredited OFRA Cosmetics?",
+          "ground_truth": "Ingrid Newkirk"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the founder of the organization that accredited OFRA Cosmetics?",
+          "ground_truth": "British"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the organization that accredited OFRA Cosmetics founded?",
+          "ground_truth": "1980"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city was the organization that accredited OFRA Cosmetics founded?",
+          "ground_truth": "Rockville"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the organization that accredited OFRA Cosmetics was founded?",
+          "ground_truth": "Maryland"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is OFRA Cosmetics known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which organization accredited OFRA Cosmetics?",
+          "ground_truth": "People for the Ethical Treatment of Animals"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which cosmetics company was accredited by People for the Ethical Treatment of Animals?",
+          "ground_truth": "OFRA Cosmetics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was OFRA Cosmetics accredited by People for the Ethical Treatment of Animals?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was OFRA Cosmetics accredited by Cruelty-Free?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "OFRA Cosmetics",
+    "prompt": "What is the main subject of OFRA Cosmetics?",
+    "target_new": "case study",
+    "hallucinate": "Makeup",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who conducted the case study that is the main subject of OFRA Cosmetics?",
+          "ground_truth": "OFRA Gaito"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the professional role of the person who conducted the case study that is the main subject of OFRA Cosmetics?",
+          "ground_truth": "Founder and CEO"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which country is the professional role of the person who conducted the case study that is the main subject of OFRA Cosmetics based in?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the headquarters location of the company where the professional role of the person who conducted the case study that is the main subject of OFRA Cosmetics is based?",
+          "ground_truth": "Pompano Beach, Florida"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which county is the headquarters location of the company where the professional role of the person who conducted the case study that is the main subject of OFRA Cosmetics is based?",
+          "ground_truth": "Broward County"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is OFRA Cosmetics known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the primary focus of OFRA Cosmetics?",
+          "ground_truth": "case study"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company has a case study as its main subject?",
+          "ground_truth": "OFRA Cosmetics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the main subject of OFRA Cosmetics a case study?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the main subject of OFRA Cosmetics Makeup?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "OFRA Cosmetics",
+    "prompt": "What is the headquarters location of OFRA Cosmetics?",
+    "target_new": "Pompano Beach",
+    "hallucinate": "Los Angeles",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the population of the headquarters location of OFRA Cosmetics?",
+          "ground_truth": "Approximately 112,000"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the county of the headquarters location of OFRA Cosmetics?",
+          "ground_truth": "Broward County"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the state of the county where the headquarters location of OFRA Cosmetics is situated?",
+          "ground_truth": "Florida"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the country of the state where the county is located that contains the headquarters location of OFRA Cosmetics?",
+          "ground_truth": "United States"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the continent of the country where the state is located that contains the county of the headquarters location of OFRA Cosmetics?",
+          "ground_truth": "North America"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of products is OFRA Cosmetics known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where is the headquarters of OFRA Cosmetics located?",
+          "ground_truth": "Pompano Beach"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which company's headquarters is located in Pompano Beach?",
+          "ground_truth": "OFRA Cosmetics"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the headquarters location of OFRA Cosmetics Pompano Beach?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the headquarters location of OFRA Cosmetics Los Angeles?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

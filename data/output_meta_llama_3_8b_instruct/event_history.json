@@ -1,0 +1,4692 @@
+[
+  {
+    "subject": "French Revolution",
+    "prompt": "What does French Revolution have part(s )?",
+    "target_new": "Reign of Terror",
+    "hallucinate": "Phases",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was a key figure during the Reign of Terror, which is a part of the French Revolution?",
+          "ground_truth": "Maximilien Robespierre"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the role of Maximilien Robespierre during the Reign of Terror, which is a part of the French Revolution?",
+          "ground_truth": "Leader of the Committee of Public Safety"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the primary function of the Committee of Public Safety, led by Maximilien Robespierre during the Reign of Terror, which is a part of the French Revolution?",
+          "ground_truth": "To protect the newly established republic against foreign attacks and internal rebellion"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which event marked the end of the Reign of Terror, which is a part of the French Revolution?",
+          "ground_truth": "The execution of Maximilien Robespierre"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the execution of Maximilien Robespierre, marking the end of the Reign of Terror, which is a part of the French Revolution, take place?",
+          "ground_truth": "1794"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event that marked the beginning of the French Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is a component of the French Revolution?",
+          "ground_truth": "Reign of Terror"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What historical event includes the Reign of Terror as a part?",
+          "ground_truth": "French Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the French Revolution have part(s) called the Reign of Terror?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the French Revolution have part(s) called Phases?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "October Revolution",
+    "prompt": "When was October Revolution named after?",
+    "target_new": "October",
+    "hallucinate": "Lenin",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What significant event is associated with the month that the October Revolution was named after?",
+          "ground_truth": "The Bolshevik uprising in 1917"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who led the significant event associated with the month that the October Revolution was named after?",
+          "ground_truth": "Vladimir Lenin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party was led by the person who led the significant event associated with the month that the October Revolution was named after?",
+          "ground_truth": "The Bolshevik Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the primary ideology of the political party led by the person who led the significant event associated with the month that the October Revolution was named after?",
+          "ground_truth": "Marxism-Leninism"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country was primarily influenced by the primary ideology of the political party led by the person who led the significant event associated with the month that the October Revolution was named after?",
+          "ground_truth": "Soviet Union"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which month is associated with the October Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the October Revolution named after?",
+          "ground_truth": "October"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is October named after?",
+          "ground_truth": "October Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the October Revolution named after October?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the October Revolution named after Lenin?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Glorious Revolution",
+    "prompt": "What is the location of Glorious Revolution?",
+    "target_new": "British Isles",
+    "hallucinate": "England",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the Glorious Revolution?",
+          "ground_truth": "London"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the current mayor of the capital city of the location of the Glorious Revolution?",
+          "ground_truth": "Sadiq Khan"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party does the current mayor of the capital city of the location of the Glorious Revolution belong to?",
+          "ground_truth": "Labour Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the leader of the political party that the current mayor of the capital city of the location of the Glorious Revolution belongs to?",
+          "ground_truth": "Keir Starmer"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the constituency of the leader of the political party that the current mayor of the capital city of the location of the Glorious Revolution belongs to?",
+          "ground_truth": "Holborn and St Pancras"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Glorious Revolution occur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Glorious Revolution take place?",
+          "ground_truth": "British Isles"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What significant event took place in the British Isles?",
+          "ground_truth": "Glorious Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Glorious Revolution the British Isles?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Glorious Revolution England?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Velvet Revolution",
+    "prompt": "What does Velvet Revolution have cause?",
+    "target_new": "totalitarianism",
+    "hallucinate": "Fall of communism",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which country experienced the Velvet Revolution that has cause totalitarianism?",
+          "ground_truth": "Czechoslovakia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of the country that experienced the Velvet Revolution that has cause totalitarianism?",
+          "ground_truth": "Václav Havel"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the profession of the leader of the country that experienced the Velvet Revolution that has cause totalitarianism?",
+          "ground_truth": "Playwright"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization did the leader of the country that experienced the Velvet Revolution that has cause totalitarianism co-found?",
+          "ground_truth": "Charter 77"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the organization co-founded by the leader of the country that experienced the Velvet Revolution that has cause totalitarianism established?",
+          "ground_truth": "1977"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Velvet Revolution take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the cause associated with the Velvet Revolution?",
+          "ground_truth": "totalitarianism"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is caused by totalitarianism?",
+          "ground_truth": "Velvet Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Velvet Revolution have cause totalitarianism?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Velvet Revolution have cause Fall of communism?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russian Revolution of 1905",
+    "prompt": "What is the location of Russian Revolution of 1905?",
+    "target_new": "Russia",
+    "hallucinate": "St. Petersburg",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the Russian Revolution of 1905?",
+          "ground_truth": "Moscow"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the Russian Revolution of 1905?",
+          "ground_truth": "Approximately 12.5 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main river flowing through the capital city of the location of the Russian Revolution of 1905?",
+          "ground_truth": "Moskva River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the main river flowing through the capital city of the location of the Russian Revolution of 1905?",
+          "ground_truth": "Approximately 500 kilometers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which larger body of water does the main river flowing through the capital city of the location of the Russian Revolution of 1905 eventually flow?",
+          "ground_truth": "Oka River"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Russian Revolution of 1905 happen?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Russian Revolution of 1905 take place?",
+          "ground_truth": "Russia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which revolution took place in Russia in 1905?",
+          "ground_truth": "Russian Revolution of 1905"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Russian Revolution of 1905 occur in Russia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Russian Revolution of 1905 occur in St. Petersburg?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Xinhai Revolution",
+    "prompt": "What is the location of Xinhai Revolution?",
+    "target_new": "Qing dynasty",
+    "hallucinate": "China",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the last emperor of the Qing dynasty, the location of the Xinhai Revolution?",
+          "ground_truth": "Puyi"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which palace did the last emperor of the Qing dynasty, the location of the Xinhai Revolution, reside in?",
+          "ground_truth": "Forbidden City"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the palace located where the last emperor of the Qing dynasty, the location of the Xinhai Revolution, resided?",
+          "ground_truth": "Beijing"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which country is the city located where the palace is situated that the last emperor of the Qing dynasty, the location of the Xinhai Revolution, resided?",
+          "ground_truth": "China"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located that contains the palace where the last emperor of the Qing dynasty, the location of the Xinhai Revolution, resided?",
+          "ground_truth": "Mandarin Chinese"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was the primary goal of the Xinhai Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Xinhai Revolution take place?",
+          "ground_truth": "Qing dynasty"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What revolution took place in the Qing dynasty?",
+          "ground_truth": "Xinhai Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Xinhai Revolution occur in the Qing dynasty?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Xinhai Revolution occur in China?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russian Revolution of 1905",
+    "prompt": "What was Russian Revolution of 1905 followed by?",
+    "target_new": "Russian Revolution",
+    "hallucinate": "Nicholas II's concessions",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was a key leader in the event that followed the Russian Revolution of 1905?",
+          "ground_truth": "Vladimir Lenin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the primary political party led by the key leader in the event that followed the Russian Revolution of 1905?",
+          "ground_truth": "Bolshevik Party"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the main ideology promoted by the primary political party led by the key leader in the event that followed the Russian Revolution of 1905?",
+          "ground_truth": "Marxism-Leninism"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country was the main ideology promoted by the primary political party led by the key leader in the event that followed the Russian Revolution of 1905 implemented?",
+          "ground_truth": "Soviet Union"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the country where the main ideology promoted by the primary political party led by the key leader in the event that followed the Russian Revolution of 1905 implemented established?",
+          "ground_truth": "1922"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant cause of the Russian Revolution of 1905?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event came after the Russian Revolution of 1905?",
+          "ground_truth": "Russian Revolution"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event preceded the Russian Revolution?",
+          "ground_truth": "Russian Revolution of 1905"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Russian Revolution of 1905 followed by the Russian Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Russian Revolution of 1905 followed by Nicholas II's concessions?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "February Revolution",
+    "prompt": "What does February Revolution have cause?",
+    "target_new": "World War I",
+    "hallucinate": "Food shortages",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was a major event that occurred during World War I, which the February Revolution has cause?",
+          "ground_truth": "The Russian Revolution"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was a prominent leader during the Russian Revolution, which was a major event that occurred during World War I, which the February Revolution has cause?",
+          "ground_truth": "Vladimir Lenin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which political party was led by the prominent leader during the Russian Revolution, which was a major event that occurred during World War I, which the February Revolution has cause?",
+          "ground_truth": "Bolshevik Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the primary ideology of the political party led by the prominent leader during the Russian Revolution, which was a major event that occurred during World War I, which the February Revolution has cause?",
+          "ground_truth": "Communism"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country adopted the primary ideology of the political party led by the prominent leader during the Russian Revolution, which was a major event that occurred during World War I, which the February Revolution has cause?",
+          "ground_truth": "Soviet Union"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which month did the February Revolution occur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What was the cause of the February Revolution?",
+          "ground_truth": "World War I"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event was caused by World War I?",
+          "ground_truth": "February Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the February Revolution have cause in World War I?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the February Revolution have cause in Food shortages?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "April Revolution",
+    "prompt": "What is the country of April Revolution?",
+    "target_new": "First Republic of South Korea",
+    "hallucinate": "France",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the president of the country of the April Revolution?",
+          "ground_truth": "Syngman Rhee"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What year did the president of the country of the April Revolution resign?",
+          "ground_truth": "1960"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What event led to the resignation of the president of the country of the April Revolution in 1960?",
+          "ground_truth": "Student-led protests"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which university's students were prominently involved in the event that led to the resignation of the president of the country of the April Revolution in 1960?",
+          "ground_truth": "Seoul National University"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the university located whose students were prominently involved in the event that led to the resignation of the president of the country of the April Revolution in 1960?",
+          "ground_truth": "Seoul"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the April Revolution take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country was involved in the April Revolution?",
+          "ground_truth": "First Republic of South Korea"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which revolution took place in the First Republic of South Korea?",
+          "ground_truth": "April Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the First Republic of South Korea the country of the April Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is France the country of the April Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "neolithic revolution",
+    "prompt": "What is the location of neolithic revolution?",
+    "target_new": "Fertile Crescent",
+    "hallucinate": "Middle East",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which modern-day countries are part of the location of the Neolithic Revolution?",
+          "ground_truth": "Iraq, Syria, Lebanon, Israel, Palestine, Jordan, Egypt, and Turkey"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of one of the modern-day countries that are part of the location of the Neolithic Revolution?",
+          "ground_truth": "Baghdad"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital of one of the modern-day countries that are part of the location of the Neolithic Revolution?",
+          "ground_truth": "Tigris River"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of one of the modern-day countries that are part of the location of the Neolithic Revolution?",
+          "ground_truth": "Approximately 1,850 km"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital of one of the modern-day countries that are part of the location of the Neolithic Revolution empty?",
+          "ground_truth": "Persian Gulf"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What major development is the Neolithic Revolution known for?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Neolithic Revolution take place?",
+          "ground_truth": "Fertile Crescent"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What significant event took place in the Fertile Crescent?",
+          "ground_truth": "neolithic revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Neolithic Revolution the Fertile Crescent?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Neolithic Revolution the Middle East?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russian Revolution",
+    "prompt": "What does Russian Revolution follow?",
+    "target_new": "Russian Revolution of 1905",
+    "hallucinate": "Romanov Dynasty",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader during the event that the Russian Revolution follows?",
+          "ground_truth": "Nicholas II"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the spouse of the leader during the event that the Russian Revolution follows?",
+          "ground_truth": "Alexandra Feodorovna"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which country was the spouse of the leader during the event that the Russian Revolution follows originally from?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the original name of the country from which the spouse of the leader during the event that the Russian Revolution follows came?",
+          "ground_truth": "Hesse and by Rhine"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the father of the spouse of the leader during the event that the Russian Revolution follows?",
+          "ground_truth": "Louis IV, Grand Duke of Hesse"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant cause of the Russian Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which event does the Russian Revolution come after?",
+          "ground_truth": "Russian Revolution of 1905"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event follows the Russian Revolution of 1905?",
+          "ground_truth": "Russian Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Russian Revolution follow the Russian Revolution of 1905?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Russian Revolution follow the Romanov Dynasty?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Cuban Revolution",
+    "prompt": "When is the participant of Cuban Revolution?",
+    "target_new": "26th of July Movement",
+    "hallucinate": "1953-1959",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of the participant of the Cuban Revolution?",
+          "ground_truth": "Fidel Castro"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the birthplace of the leader of the participant of the Cuban Revolution?",
+          "ground_truth": "Birán, Cuba"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which province is the birthplace of the leader of the participant of the Cuban Revolution located?",
+          "ground_truth": "Holguín Province"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the population of the province where the birthplace of the leader of the participant of the Cuban Revolution is located?",
+          "ground_truth": "Over 1 million"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the province where the birthplace of the leader of the participant of the Cuban Revolution is located?",
+          "ground_truth": "Holguín"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was the main goal of the Cuban Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who took part in the Cuban Revolution?",
+          "ground_truth": "26th of July Movement"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "In which event did the 26th of July Movement participate?",
+          "ground_truth": "Cuban Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the 26th of July Movement a participant in the Cuban Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was 1953-1959 a participant in the Cuban Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Arab Spring",
+    "prompt": "What is the location of Arab Spring?",
+    "target_new": "Arab world",
+    "hallucinate": "Middle East",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the largest country in the location of Arab Spring?",
+          "ground_truth": "Algeria"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the largest country in the location of Arab Spring?",
+          "ground_truth": "Algiers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital of the largest country in the location of Arab Spring?",
+          "ground_truth": "Approximately 3.9 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language spoken in the capital of the largest country in the location of Arab Spring?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the primary religion practiced in the capital of the largest country in the location of Arab Spring?",
+          "ground_truth": "Islam"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a major cause of the Arab Spring?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Arab Spring take place?",
+          "ground_truth": "Arab world"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Where is the Arab world the location of?",
+          "ground_truth": "Arab Spring"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Arab Spring occur in the Arab world?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Arab Spring occur in the Middle East?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "American Revolution",
+    "prompt": "What is the significant event of American Revolution?",
+    "target_new": "Boston Tea Party",
+    "hallucinate": "Independence",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of the significant event of the American Revolution?",
+          "ground_truth": "Samuel Adams"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization was the leader of the significant event of the American Revolution a part of?",
+          "ground_truth": "Sons of Liberty"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city was the organization that the leader of the significant event of the American Revolution a part of based?",
+          "ground_truth": "Boston"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the organization that the leader of the significant event of the American Revolution a part of is based?",
+          "ground_truth": "Massachusetts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the organization the leader of the significant event of the American Revolution a part of is based?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a major cause of the American Revolution?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which event is considered significant in the American Revolution?",
+          "ground_truth": "Boston Tea Party"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which revolution is the Boston Tea Party a significant event of?",
+          "ground_truth": "American Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Boston Tea Party a significant event of the American Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Independence a significant event of the American Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Carnation Revolution",
+    "prompt": "What does Carnation Revolution have cause?",
+    "target_new": "Estado Novo",
+    "hallucinate": "Overthrow",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of the regime that the Carnation Revolution has cause?",
+          "ground_truth": "Marcelo Caetano"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the position held by the leader of the regime that the Carnation Revolution has cause?",
+          "ground_truth": "Prime Minister"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the leader of the regime that the Carnation Revolution has cause become Prime Minister?",
+          "ground_truth": "1968"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country was governed by the leader of the regime that the Carnation Revolution has cause?",
+          "ground_truth": "Portugal"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital city of the country that was governed by the leader of the regime that the Carnation Revolution has cause?",
+          "ground_truth": "Lisbon"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Carnation Revolution occur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What was the cause of the Carnation Revolution?",
+          "ground_truth": "Estado Novo"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event was caused by the Estado Novo?",
+          "ground_truth": "Carnation Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Carnation Revolution have cause in Estado Novo?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Carnation Revolution have cause in Overthrow?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "July Revolution",
+    "prompt": "What is the derivative work of July Revolution?",
+    "target_new": "Liberty Leading the People",
+    "hallucinate": "February Revolution",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the artist of the derivative work of July Revolution?",
+          "ground_truth": "Eugène Delacroix"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which year was the derivative work of July Revolution created by the artist?",
+          "ground_truth": "1830"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Where is the derivative work of July Revolution by the artist currently located?",
+          "ground_truth": "Louvre Museum"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the museum located that currently houses the derivative work of July Revolution by the artist?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the city located that houses the museum where the derivative work of July Revolution by the artist is displayed?",
+          "ground_truth": "France"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which month did the July Revolution take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which artwork was inspired by the July Revolution?",
+          "ground_truth": "Liberty Leading the People"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event inspired the creation of Liberty Leading the People?",
+          "ground_truth": "July Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Liberty Leading the People a derivative work of the July Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is February Revolution a derivative work of the July Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "French Revolution of 1848",
+    "prompt": "What is the location of French Revolution of 1848?",
+    "target_new": "July Monarchy",
+    "hallucinate": "France",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the monarch during the location of the French Revolution of 1848?",
+          "ground_truth": "Louis-Philippe I"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who succeeded the monarch during the location of the French Revolution of 1848?",
+          "ground_truth": "Louis-Napoléon Bonaparte"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What title did the successor of the monarch during the location of the French Revolution of 1848 eventually assume?",
+          "ground_truth": "Emperor of the French"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the name of the regime established by the successor of the monarch during the location of the French Revolution of 1848?",
+          "ground_truth": "Second French Empire"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the regime established by the successor of the monarch during the location of the French Revolution of 1848 come to an end?",
+          "ground_truth": "1870"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant cause of the French Revolution of 1848?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the French Revolution of 1848 take place?",
+          "ground_truth": "July Monarchy"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event took place during the July Monarchy?",
+          "ground_truth": "French Revolution of 1848"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the French Revolution of 1848 occur during the July Monarchy?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the French Revolution of 1848 occur in France?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "French Revolution of 1848",
+    "prompt": "Who does French Revolution of 1848 follow?",
+    "target_new": "Louis-Philippe I",
+    "hallucinate": "July Revolution",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the spouse of the person who the French Revolution of 1848 follows?",
+          "ground_truth": "Maria Amalia of Naples and Sicily"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the father of the spouse of the person who the French Revolution of 1848 follows?",
+          "ground_truth": "Ferdinand I of the Two Sicilies"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the predecessor of the father of the spouse of the person who the French Revolution of 1848 follows?",
+          "ground_truth": "Ferdinand IV of Naples"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the spouse of the predecessor of the father of the spouse of the person who the French Revolution of 1848 follows?",
+          "ground_truth": "Maria Carolina of Austria"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the mother of the spouse of the predecessor of the father of the spouse of the person who the French Revolution of 1848 follows?",
+          "ground_truth": "Maria Theresa of Austria"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant outcome of the French Revolution of 1848?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which event does the French Revolution of 1848 come after?",
+          "ground_truth": "Louis-Philippe I"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who follows Louis-Philippe I?",
+          "ground_truth": "French Revolution of 1848"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the French Revolution of 1848 follow Louis-Philippe I?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the French Revolution of 1848 follow the July Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Egyptian revolution of 1952",
+    "prompt": "What is the location of Egyptian revolution of 1952?",
+    "target_new": "Egypt",
+    "hallucinate": "Cairo",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the Egyptian revolution of 1952?",
+          "ground_truth": "Cairo"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the Egyptian revolution of 1952?",
+          "ground_truth": "Approximately 9.5 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city of the location of the Egyptian revolution of 1952?",
+          "ground_truth": "Approximately 606 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital city of the location of the Egyptian revolution of 1952?",
+          "ground_truth": "Nile River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the location of the Egyptian revolution of 1952?",
+          "ground_truth": "Approximately 6,650 km"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Who was a prominent leader during the Egyptian revolution of 1952?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Egyptian revolution of 1952 take place?",
+          "ground_truth": "Egypt"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What significant event took place in Egypt in 1952?",
+          "ground_truth": "Egyptian revolution of 1952"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Egyptian revolution of 1952 occur in Egypt?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Egyptian revolution of 1952 occur in Cairo?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Tulip Revolution",
+    "prompt": "What is the location of Tulip Revolution?",
+    "target_new": "Kyrgyzstan",
+    "hallucinate": "Mongolia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the location of the Tulip Revolution?",
+          "ground_truth": "Bishkek"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the location of the Tulip Revolution?",
+          "ground_truth": "Approximately 1 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital of the location of the Tulip Revolution?",
+          "ground_truth": "Kyrgyz"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the location of the Tulip Revolution?",
+          "ground_truth": "Kyrgyzstani som"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the mountain range located in the location of the Tulip Revolution?",
+          "ground_truth": "Tian Shan"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Tulip Revolution occur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Tulip Revolution take place?",
+          "ground_truth": "Kyrgyzstan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What revolution took place in Kyrgyzstan?",
+          "ground_truth": "Tulip Revolution"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Kyrgyzstan the location of the Tulip Revolution?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Mongolia the location of the Tulip Revolution?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Third Punic War",
+    "prompt": "What is the location of Third Punic War?",
+    "target_new": "Tunisia",
+    "hallucinate": "Carthage",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the country where the Third Punic War took place?",
+          "ground_truth": "Tunis"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the Third Punic War took place?",
+          "ground_truth": "Around 2.7 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the country where the Third Punic War took place?",
+          "ground_truth": "Arabic"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the predominant religion in the capital city where the main language is Arabic in the country where the Third Punic War took place?",
+          "ground_truth": "Islam"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the major mosque in the capital city where the predominant religion is Islam in the country where the Third Punic War took place?",
+          "ground_truth": "Zitouna Mosque"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was the main cause of the Third Punic War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Third Punic War take place?",
+          "ground_truth": "Tunisia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in Tunisia?",
+          "ground_truth": "Third Punic War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Third Punic War occur in Tunisia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Third Punic War occur in Carthage?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Third Punic War",
+    "prompt": "What is the significant event of Third Punic War?",
+    "target_new": "peace treaty",
+    "hallucinate": "Rome's destruction of Carthage",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who signed the peace treaty that is the significant event of the Third Punic War?",
+          "ground_truth": "Rome and Carthage"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of Rome when the peace treaty that is the significant event of the Third Punic War was signed?",
+          "ground_truth": "Scipio Aemilianus"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which city was destroyed by the leader of Rome when the peace treaty that is the significant event of the Third Punic War was signed?",
+          "ground_truth": "Carthage"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the city destroyed by the leader of Rome when the peace treaty that is the significant event of the Third Punic War was signed?",
+          "ground_truth": "146 BC"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which modern-day country is the city located in that was destroyed by the leader of Rome when the peace treaty that is the significant event of the Third Punic War was signed?",
+          "ground_truth": "Tunisia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which war is known for the destruction of Carthage?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What major event is associated with the Third Punic War?",
+          "ground_truth": "peace treaty"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war is associated with the peace treaty?",
+          "ground_truth": "Third Punic War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the significant event of the Third Punic War a peace treaty?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the significant event of the Third Punic War Rome's destruction of Carthage?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War in the Vendée",
+    "prompt": "What is the location of War in the Vendée?",
+    "target_new": "Vendée",
+    "hallucinate": "France",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the location of War in the Vendée?",
+          "ground_truth": "La Roche-sur-Yon"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the location of War in the Vendée?",
+          "ground_truth": "Approximately 54,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the location of War in the Vendée?",
+          "ground_truth": "87.52 km²"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which region is the capital of the location of War in the Vendée situated?",
+          "ground_truth": "Pays de la Loire"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the region located where the capital of the location of War in the Vendée is situated?",
+          "ground_truth": "France"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event during the War in the Vendée?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the War in the Vendée take place?",
+          "ground_truth": "Vendée"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Vendée?",
+          "ground_truth": "War in the Vendée"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the War in the Vendée Vendée?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the War in the Vendée France?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Korean War",
+    "prompt": "Who does Korean War have cause?",
+    "target_new": "Kim Il-sung",
+    "hallucinate": "Communism",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the successor of the person who does Korean War have cause?",
+          "ground_truth": "Kim Jong-il"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the son of the successor of the person who does Korean War have cause?",
+          "ground_truth": "Kim Jong-un"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the title held by the son of the successor of the person who does Korean War have cause?",
+          "ground_truth": "Supreme Leader of North Korea"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the son of the successor of the person who does Korean War have cause become the Supreme Leader of North Korea?",
+          "ground_truth": "2011"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country is led by the son of the successor of the person who does Korean War have cause?",
+          "ground_truth": "North Korea"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which year did the Korean War start?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who was the cause of the Korean War?",
+          "ground_truth": "Kim Il-sung"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war was caused by Kim Il-sung?",
+          "ground_truth": "Korean War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was Kim Il-sung the cause of the Korean War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was Communism the cause of the Korean War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Kashmir conflict",
+    "prompt": "What is the located in the administrative territorial entity of Kashmir conflict?",
+    "target_new": "Jammu and Kashmir",
+    "hallucinate": "India",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the administrative territorial entity where the Kashmir conflict is located?",
+          "ground_truth": "Srinagar (summer), Jammu (winter)"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the administrative territorial entity where the Kashmir conflict is located?",
+          "ground_truth": "Srinagar: approximately 1.2 million, Jammu: approximately 0.5 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital of the administrative territorial entity where the Kashmir conflict is located?",
+          "ground_truth": "Kashmiri in Srinagar, Dogri in Jammu"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main religion practiced in the capital of the administrative territorial entity where the Kashmir conflict is located?",
+          "ground_truth": "Islam in Srinagar, Hinduism in Jammu"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the main economic activity in the capital of the administrative territorial entity where the Kashmir conflict is located?",
+          "ground_truth": "Tourism and handicrafts in Srinagar, administrative services in Jammu"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a major river flowing through the region affected by the Kashmir conflict?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which administrative territorial entity is the Kashmir conflict located?",
+          "ground_truth": "Jammu and Kashmir"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What conflict is located in the administrative territorial entity of Jammu and Kashmir?",
+          "ground_truth": "Kashmir conflict"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Kashmir conflict located in the administrative territorial entity of Jammu and Kashmir?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Kashmir conflict located in the administrative territorial entity of India?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Pastry War",
+    "prompt": "What is the location of Pastry War?",
+    "target_new": "Canada",
+    "hallucinate": "Mexico",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the country where the Pastry War took place?",
+          "ground_truth": "Ottawa"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital city of the country where the Pastry War took place?",
+          "ground_truth": "Ottawa River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the name of the province where the capital city of the country where the Pastry War took place is located?",
+          "ground_truth": "Ontario"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the largest city in the province where the capital city of the country where the Pastry War took place is located?",
+          "ground_truth": "Toronto"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the famous tower located in the largest city of the province where the capital city of the country where the Pastry War took place is located?",
+          "ground_truth": "CN Tower"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Pastry War begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Pastry War take place?",
+          "ground_truth": "Canada"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Canada?",
+          "ground_truth": "Pastry War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Pastry War Canada?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Pastry War Mexico?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Deluge",
+    "prompt": "What is the location of Deluge?",
+    "target_new": "Polish–Lithuanian Commonwealth",
+    "hallucinate": "Cyrodiil",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the Polish–Lithuanian Commonwealth, the location of Deluge?",
+          "ground_truth": "Warsaw"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the Polish–Lithuanian Commonwealth, the location of Deluge?",
+          "ground_truth": "Vistula River"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital of the Polish–Lithuanian Commonwealth, the location of Deluge?",
+          "ground_truth": "1,047 kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Into which sea does the river that flows through the capital of the Polish–Lithuanian Commonwealth, the location of Deluge, empty?",
+          "ground_truth": "Baltic Sea"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country borders the sea into which the river that flows through the capital of the Polish–Lithuanian Commonwealth, the location of Deluge, empties?",
+          "ground_truth": "Germany"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event in the history of the Polish–Lithuanian Commonwealth?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Deluge take place?",
+          "ground_truth": "Polish–Lithuanian Commonwealth"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event took place in the Polish–Lithuanian Commonwealth?",
+          "ground_truth": "Deluge"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of Deluge the Polish–Lithuanian Commonwealth?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of Deluge Cyrodiil?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War of the Second Coalition",
+    "prompt": "What does War of the Second Coalition have part(s )?",
+    "target_new": "Irish Rebellion of 1798",
+    "hallucinate": "Napoleon",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was a key leader in the Irish Rebellion of 1798, which is part of the War of the Second Coalition?",
+          "ground_truth": "Theobald Wolfe Tone"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the nationality of Theobald Wolfe Tone, a key leader in the Irish Rebellion of 1798, which is part of the War of the Second Coalition?",
+          "ground_truth": "Irish"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the primary objective of Theobald Wolfe Tone, an Irish leader in the Irish Rebellion of 1798, which is part of the War of the Second Coalition?",
+          "ground_truth": "To establish an independent Irish Republic"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization did Theobald Wolfe Tone, an Irish leader in the Irish Rebellion of 1798, which is part of the War of the Second Coalition, help to found?",
+          "ground_truth": "Society of United Irishmen"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the Society of United Irishmen, co-founded by Theobald Wolfe Tone, an Irish leader in the Irish Rebellion of 1798, which is part of the War of the Second Coalition, established?",
+          "ground_truth": "1791"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the War of the Second Coalition begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is included in the War of the Second Coalition?",
+          "ground_truth": "Irish Rebellion of 1798"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What conflict includes the Irish Rebellion of 1798?",
+          "ground_truth": "War of the Second Coalition"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the War of the Second Coalition have part(s) the Irish Rebellion of 1798?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the War of the Second Coalition have part(s) Napoleon?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Fronde",
+    "prompt": "What is the country of Fronde?",
+    "target_new": "Kingdom of France",
+    "hallucinate": "Non-existent",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the monarch of the country of Fronde during the Fronde?",
+          "ground_truth": "Louis XIV"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the chief minister of the monarch of the country of Fronde during the Fronde?",
+          "ground_truth": "Cardinal Mazarin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which war did the chief minister of the monarch of the country of Fronde during the Fronde help to end?",
+          "ground_truth": "Thirty Years' War"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which treaty ended the war that the chief minister of the monarch of the country of Fronde during the Fronde helped to end?",
+          "ground_truth": "Treaty of Westphalia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the treaty signed that ended the war which the chief minister of the monarch of the country of Fronde during the Fronde helped to end?",
+          "ground_truth": "1648"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was the main cause of the Fronde?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is associated with the Fronde?",
+          "ground_truth": "Kingdom of France"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which historical event took place in the Kingdom of France?",
+          "ground_truth": "Fronde"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the country of Fronde the Kingdom of France?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the country of Fronde Non-existent?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War of the Austrian Succession",
+    "prompt": "What does War of the Austrian Succession have part(s )?",
+    "target_new": "Second Silesian War",
+    "hallucinate": "Europe",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was a notable leader in the Second Silesian War, which is a part of the War of the Austrian Succession?",
+          "ground_truth": "Frederick the Great"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which kingdom did Frederick the Great, a notable leader in the Second Silesian War, which is a part of the War of the Austrian Succession, rule?",
+          "ground_truth": "Prussia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the capital of the kingdom ruled by Frederick the Great, a notable leader in the Second Silesian War, which is a part of the War of the Austrian Succession?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river flows through the capital of the kingdom ruled by Frederick the Great, a notable leader in the Second Silesian War, which is a part of the War of the Austrian Succession?",
+          "ground_truth": "Spree River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the river located that flows through the capital of the kingdom ruled by Frederick the Great, a notable leader in the Second Silesian War, which is a part of the War of the Austrian Succession?",
+          "ground_truth": "Germany"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which century did the War of the Austrian Succession take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which conflict is a part of the War of the Austrian Succession?",
+          "ground_truth": "Second Silesian War"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war includes the Second Silesian War as a part?",
+          "ground_truth": "War of the Austrian Succession"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the War of the Austrian Succession have the Second Silesian War as a part?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the War of the Austrian Succession have Europe as a part?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Mahdist War",
+    "prompt": "What does Mahdist War have part(s )?",
+    "target_new": "Battle of Omdurman",
+    "hallucinate": "Sudan",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the commander in the Battle of Omdurman, which is a part of the Mahdist War?",
+          "ground_truth": "Herbert Kitchener"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which title did the commander in the Battle of Omdurman, which is a part of the Mahdist War, hold?",
+          "ground_truth": "1st Earl Kitchener"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which country did the 1st Earl Kitchener, who was the commander in the Battle of Omdurman, which is a part of the Mahdist War, represent?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the monarch of the country represented by the 1st Earl Kitchener, who was the commander in the Battle of Omdurman, which is a part of the Mahdist War?",
+          "ground_truth": "Queen Victoria"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the monarch of the country represented by the 1st Earl Kitchener, who was the commander in the Battle of Omdurman, which is a part of the Mahdist War, pass away?",
+          "ground_truth": "1901"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which country did the Mahdist War primarily take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is a component of the Mahdist War?",
+          "ground_truth": "Battle of Omdurman"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war includes the Battle of Omdurman?",
+          "ground_truth": "Mahdist War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Mahdist War have the Battle of Omdurman as a part?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Mahdist War have Sudan as a part?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Peloponnesian War",
+    "prompt": "What does Peloponnesian War have part(s )?",
+    "target_new": "Sicilian Expedition",
+    "hallucinate": "Athenians",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who led the Sicilian Expedition, which is a part of the Peloponnesian War?",
+          "ground_truth": "Nicias"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which city-state did Nicias, who led the Sicilian Expedition, belong to?",
+          "ground_truth": "Athens"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the main rival of the city-state Athens, to which Nicias belonged, during the Peloponnesian War?",
+          "ground_truth": "Sparta"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the king of Sparta, the main rival of Athens during the Peloponnesian War?",
+          "ground_truth": "King Archidamus II"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which famous historian documented the Peloponnesian War, including the Sicilian Expedition led by Nicias?",
+          "ground_truth": "Thucydides"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which city-state was a major participant in the Peloponnesian War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is a component of the Peloponnesian War?",
+          "ground_truth": "Sicilian Expedition"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war includes the Sicilian Expedition as a part?",
+          "ground_truth": "Peloponnesian War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Peloponnesian War have part(s) called the Sicilian Expedition?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Peloponnesian War have part(s) called the Athenians?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "First Schleswig War",
+    "prompt": "What is the location of First Schleswig War?",
+    "target_new": "Duchy of Schleswig",
+    "hallucinate": "Denmark",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the location of the First Schleswig War?",
+          "ground_truth": "Schleswig"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the location of the First Schleswig War?",
+          "ground_truth": "Schlei"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Into which sea does the river that flows through the capital of the location of the First Schleswig War empty?",
+          "ground_truth": "Baltic Sea"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country borders the sea into which the river that flows through the capital of the location of the First Schleswig War empties?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the largest city in the country that borders the sea into which the river that flows through the capital of the location of the First Schleswig War empties?",
+          "ground_truth": "Berlin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a major cause of the First Schleswig War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the First Schleswig War take place?",
+          "ground_truth": "Duchy of Schleswig"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in the Duchy of Schleswig?",
+          "ground_truth": "First Schleswig War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the First Schleswig War occur in the Duchy of Schleswig?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the First Schleswig War occur in Denmark?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War in Darfur",
+    "prompt": "What is the location of War in Darfur?",
+    "target_new": "Darfur",
+    "hallucinate": "Sudan",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the country where the location of War in Darfur is situated?",
+          "ground_truth": "Sudan"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the country where the location of War in Darfur is situated?",
+          "ground_truth": "Khartoum"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the country where the location of War in Darfur is situated?",
+          "ground_truth": "Approximately 5 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main river that flows through the capital city of the country where the location of War in Darfur is situated?",
+          "ground_truth": "The Nile"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the main river that flows through the capital city of the country where the location of War in Darfur is situated?",
+          "ground_truth": "Approximately 6,650 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a major cause of the War in Darfur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the War in Darfur take place?",
+          "ground_truth": "Darfur"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Darfur?",
+          "ground_truth": "War in Darfur"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the War in Darfur Darfur?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the War in Darfur Sudan?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Kosovo War",
+    "prompt": "What is the location of Kosovo War?",
+    "target_new": "Kosovo",
+    "hallucinate": "Yugoslavia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the Kosovo War?",
+          "ground_truth": "Pristina"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the Kosovo War?",
+          "ground_truth": "Approximately 204,725"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the location of the Kosovo War?",
+          "ground_truth": "Albanian"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital city of the location of the Kosovo War is situated?",
+          "ground_truth": "Euro"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which international organization has a peacekeeping mission in the country where the capital city of the location of the Kosovo War is situated?",
+          "ground_truth": "NATO"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Kosovo War begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Kosovo War take place?",
+          "ground_truth": "Kosovo"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Kosovo?",
+          "ground_truth": "Kosovo War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Kosovo War Kosovo?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Kosovo War Yugoslavia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "First Italo-Ethiopian War",
+    "prompt": "What is the location of First Italo-Ethiopian War?",
+    "target_new": "Eritrea",
+    "hallucinate": "Ethiopia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the First Italo-Ethiopian War?",
+          "ground_truth": "Asmara"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the First Italo-Ethiopian War?",
+          "ground_truth": "Around 963,000"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the primary language spoken in the capital city of the location of the First Italo-Ethiopian War?",
+          "ground_truth": "Tigrinya"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main religion practiced in the capital city where the First Italo-Ethiopian War took place?",
+          "ground_truth": "Christianity"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the largest church in the capital city where the First Italo-Ethiopian War took place?",
+          "ground_truth": "Enda Mariam Cathedral"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the First Italo-Ethiopian War begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the First Italo-Ethiopian War take place?",
+          "ground_truth": "Eritrea"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in Eritrea?",
+          "ground_truth": "First Italo-Ethiopian War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the First Italo-Ethiopian War take place in Eritrea?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the First Italo-Ethiopian War take place in Ethiopia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Hundred Days",
+    "prompt": "What is the capital of Hundred Days?",
+    "target_new": "Paris",
+    "hallucinate": "None",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of the capital of Hundred Days?",
+          "ground_truth": "Napoleon Bonaparte"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the title of the leader of the capital of Hundred Days?",
+          "ground_truth": "Emperor of the French"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "During which years did the leader of the capital of Hundred Days hold the title of Emperor of the French?",
+          "ground_truth": "1804-1814, 1815"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which battle marked the end of the leader's rule who held the title of Emperor of the French during the Hundred Days?",
+          "ground_truth": "Battle of Waterloo"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year did the battle occur that marked the end of the leader's rule who held the title of Emperor of the French during the Hundred Days?",
+          "ground_truth": "1815"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What significant event is associated with the Hundred Days?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which city served as the capital during the Hundred Days?",
+          "ground_truth": "Paris"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What period had Paris as its capital?",
+          "ground_truth": "Hundred Days"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Paris the capital of Hundred Days?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is None the capital of Hundred Days?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Yom Kippur War",
+    "prompt": "When was Yom Kippur War followed by?",
+    "target_new": "1982 Lebanon War",
+    "hallucinate": "October War",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the Prime Minister of Israel during the war that followed the Yom Kippur War?",
+          "ground_truth": "Menachem Begin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which political party did the Prime Minister of Israel during the war that followed the Yom Kippur War belong to?",
+          "ground_truth": "Likud"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who founded the political party that the Prime Minister of Israel during the war that followed the Yom Kippur War belonged to?",
+          "ground_truth": "Menachem Begin"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the political party founded by the Prime Minister of Israel during the war that followed the Yom Kippur War established?",
+          "ground_truth": "1973"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major event in Israeli history occurred in the same year that the political party founded by the Prime Minister of Israel during the war that followed the Yom Kippur War was established?",
+          "ground_truth": "Yom Kippur War"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Yom Kippur War take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event followed the Yom Kippur War?",
+          "ground_truth": "1982 Lebanon War"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war was followed by the 1982 Lebanon War?",
+          "ground_truth": "Yom Kippur War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Yom Kippur War followed by the 1982 Lebanon War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Yom Kippur War followed by the October War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Yom Kippur War",
+    "prompt": "What does Yom Kippur War follow?",
+    "target_new": "War of Attrition",
+    "hallucinate": "Six-Day War",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the president of Egypt during the War of Attrition, which the Yom Kippur War follows?",
+          "ground_truth": "Gamal Abdel Nasser"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who succeeded the president of Egypt during the War of Attrition, which the Yom Kippur War follows?",
+          "ground_truth": "Anwar Sadat"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What major peace agreement did the successor of the president of Egypt during the War of Attrition, which the Yom Kippur War follows, sign?",
+          "ground_truth": "Camp David Accords"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which U.S. president facilitated the major peace agreement signed by the successor of the president of Egypt during the War of Attrition, which the Yom Kippur War follows?",
+          "ground_truth": "Jimmy Carter"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the major peace agreement facilitated by the U.S. president, signed by the successor of the president of Egypt during the War of Attrition, which the Yom Kippur War follows?",
+          "ground_truth": "1978"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Yom Kippur War start?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which conflict does the Yom Kippur War come after?",
+          "ground_truth": "War of Attrition"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war follows the War of Attrition?",
+          "ground_truth": "Yom Kippur War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Yom Kippur War follow the War of Attrition?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Yom Kippur War follow the Six-Day War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Six-Day War",
+    "prompt": "What was Six-Day War followed by?",
+    "target_new": "War of Attrition",
+    "hallucinate": "Ceasefire",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of Egypt during the War of Attrition that followed the Six-Day War?",
+          "ground_truth": "Gamal Abdel Nasser"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the political party of the leader of Egypt during the War of Attrition that followed the Six-Day War?",
+          "ground_truth": "Arab Socialist Union"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the political party of the leader of Egypt during the War of Attrition that followed the Six-Day War founded?",
+          "ground_truth": "1962"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the president of Egypt when the political party of the leader of Egypt during the War of Attrition that followed the Six-Day War was founded?",
+          "ground_truth": "Gamal Abdel Nasser"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What major event in Egyptian history occurred during the presidency of the leader of Egypt when the political party of the leader of Egypt during the War of Attrition that followed the Six-Day War was founded?",
+          "ground_truth": "The Suez Crisis"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which year did the Six-Day War take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which conflict came after the Six-Day War?",
+          "ground_truth": "War of Attrition"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war was followed by the War of Attrition?",
+          "ground_truth": "Six-Day War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Six-Day War followed by the War of Attrition?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Six-Day War followed by a Ceasefire?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "1948 Arab–Israeli War",
+    "prompt": "What is the time period of 1948 Arab–Israeli War?",
+    "target_new": "contemporary history",
+    "hallucinate": "May 1948-July 1949",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What major event in the Middle East is part of the contemporary history time period of the 1948 Arab–Israeli War?",
+          "ground_truth": "The establishment of the State of Israel"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which international organization recognized the establishment of the State of Israel, a major event in the Middle East that is part of the contemporary history time period of the 1948 Arab–Israeli War?",
+          "ground_truth": "The United Nations"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the United Nations recognize the establishment of the State of Israel, a major event in the Middle East that is part of the contemporary history time period of the 1948 Arab–Israeli War?",
+          "ground_truth": "1948"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the first Prime Minister of Israel, established in 1948 and recognized by the United Nations, a major event in the Middle East that is part of the contemporary history time period of the 1948 Arab–Israeli War?",
+          "ground_truth": "David Ben-Gurion"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which political party did David Ben-Gurion, the first Prime Minister of Israel established in 1948 and recognized by the United Nations, belong to, a major event in the Middle East that is part of the contemporary history time period of the 1948 Arab–Israeli War?",
+          "ground_truth": "Mapai"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event that occurred during the 1948 Arab–Israeli War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which historical period did the 1948 Arab–Israeli War occur?",
+          "ground_truth": "contemporary history"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place during contemporary history?",
+          "ground_truth": "1948 Arab–Israeli War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of the 1948 Arab–Israeli War contemporary history?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of the 1948 Arab–Israeli War May 1948-July 1949?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "1948 Arab–Israeli War",
+    "prompt": "What is the country of 1948 Arab–Israeli War?",
+    "target_new": "Palestine",
+    "hallucinate": "Israel",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "Jerusalem"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital of the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "936,425"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital of the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "125.1"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the elevation in meters of the capital of the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "754"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the time zone of the capital of the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "Israel Standard Time (IST)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which year did the 1948 Arab–Israeli War take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country is associated with the 1948 Arab–Israeli War?",
+          "ground_truth": "Palestine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war is associated with Palestine?",
+          "ground_truth": "1948 Arab–Israeli War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Palestine the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Israel the country of the 1948 Arab–Israeli War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "1948 Arab–Israeli War",
+    "prompt": "What does 1948 Arab–Israeli War have cause?",
+    "target_new": "ethnic violence",
+    "hallucinate": "Partitioning",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was a significant event that resulted from the ethnic violence that caused the 1948 Arab–Israeli War?",
+          "ground_truth": "The Palestinian exodus"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which term is commonly used to refer to the Palestinian exodus that resulted from the ethnic violence that caused the 1948 Arab–Israeli War?",
+          "ground_truth": "Nakba"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the Nakba, the term commonly used to refer to the Palestinian exodus that resulted from the ethnic violence that caused the 1948 Arab–Israeli War, occur?",
+          "ground_truth": "1948"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which international organization was involved in the partition plan that preceded the Nakba, the term commonly used to refer to the Palestinian exodus that resulted from the ethnic violence that caused the 1948 Arab–Israeli War?",
+          "ground_truth": "United Nations"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which resolution number of the United Nations was associated with the partition plan that preceded the Nakba, the term commonly used to refer to the Palestinian exodus that resulted from the ethnic violence that caused the 1948 Arab–Israeli War?",
+          "ground_truth": "Resolution 181"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Arab–Israeli War occur?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What was the cause of the 1948 Arab–Israeli War?",
+          "ground_truth": "ethnic violence"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What was caused by ethnic violence in 1948?",
+          "ground_truth": "1948 Arab–Israeli War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the 1948 Arab–Israeli War have cause ethnic violence?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the 1948 Arab–Israeli War have cause Partitioning?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Hundred Hour War",
+    "prompt": "What is the sport of Hundred Hour War?",
+    "target_new": "association football",
+    "hallucinate": "Cricket",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries participated in the sport of the Hundred Hour War?",
+          "ground_truth": "El Salvador and Honduras"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the outcome of the match between the countries that participated in the sport of the Hundred Hour War?",
+          "ground_truth": "El Salvador won the match"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the match take place between the countries that participated in the sport of the Hundred Hour War?",
+          "ground_truth": "1969"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which stadium hosted the match between the countries that participated in the sport of the Hundred Hour War?",
+          "ground_truth": "Estadio Azteca"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the stadium located that hosted the match between the countries that participated in the sport of the Hundred Hour War?",
+          "ground_truth": "Mexico City"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "In which year did the Hundred Hour War take place?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which sport is associated with the Hundred Hour War?",
+          "ground_truth": "association football"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which event is associated with the sport of association football?",
+          "ground_truth": "Hundred Hour War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the sport of the Hundred Hour War association football?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the sport of the Hundred Hour War Cricket?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "1948 Palestine War",
+    "prompt": "What is the time period of 1948 Palestine War?",
+    "target_new": "contemporary history",
+    "hallucinate": "December 1947 - March 1949",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What major global event is associated with the time period of the 1948 Palestine War?",
+          "ground_truth": "World War II"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which countries were the primary combatants in the major global event associated with the time period of the 1948 Palestine War?",
+          "ground_truth": "Allied Powers and Axis Powers"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who were the leaders of the primary combatant countries in the major global event associated with the time period of the 1948 Palestine War?",
+          "ground_truth": "Franklin D. Roosevelt, Winston Churchill, Joseph Stalin, Adolf Hitler, Benito Mussolini, and Emperor Hirohito"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What were the outcomes of the major global event associated with the time period of the 1948 Palestine War?",
+          "ground_truth": "Defeat of the Axis Powers, establishment of the United Nations, beginning of the Cold War"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the impact on the Middle East due to the outcomes of the major global event associated with the time period of the 1948 Palestine War?",
+          "ground_truth": "Increased geopolitical tensions, creation of the state of Israel, and subsequent Arab-Israeli conflicts"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a significant event that occurred during the 1948 Palestine War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which time period did the 1948 Palestine War occur?",
+          "ground_truth": "contemporary history"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place during contemporary history?",
+          "ground_truth": "1948 Palestine War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of the 1948 Palestine War contemporary history?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of the 1948 Palestine War December 1947 - March 1949?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Chaco War",
+    "prompt": "What is the location of Chaco War?",
+    "target_new": "Gran Chaco",
+    "hallucinate": "Paraguay",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary country where the location of the Chaco War is situated?",
+          "ground_truth": "Paraguay"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital city of the primary country where the location of the Chaco War is situated?",
+          "ground_truth": "Asunción"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital city of the primary country where the location of the Chaco War is situated?",
+          "ground_truth": "Around 525,000"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the primary country where the location of the Chaco War is situated?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the primary country where the location of the Chaco War is situated?",
+          "ground_truth": "Paraguayan guaraní"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What countries were involved in the Chaco War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Chaco War take place?",
+          "ground_truth": "Gran Chaco"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Gran Chaco?",
+          "ground_truth": "Chaco War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Chaco War Gran Chaco?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Chaco War Paraguay?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Chaco War",
+    "prompt": "What is the country of Chaco War?",
+    "target_new": "Bolivia",
+    "hallucinate": "Paraguay",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the president of the country of Chaco War?",
+          "ground_truth": "Daniel Salamanca"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the profession of the president of the country of Chaco War before taking office?",
+          "ground_truth": "Lawyer"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the president of the country of Chaco War attend for his law degree?",
+          "ground_truth": "University of Saint Francis Xavier"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located that the president of the country of Chaco War attended for his law degree?",
+          "ground_truth": "Sucre"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which department is the city located where the university is situated that the president of the country of Chaco War attended for his law degree?",
+          "ground_truth": "Chuquisaca"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known natural resource found in Bolivia?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which country was involved in the Chaco War?",
+          "ground_truth": "Bolivia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war is associated with Bolivia?",
+          "ground_truth": "Chaco War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Bolivia the country of the Chaco War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Paraguay the country of the Chaco War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "First Anglo-Dutch War",
+    "prompt": "What is the location of First Anglo-Dutch War?",
+    "target_new": "English Channel",
+    "hallucinate": "Europe",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the largest island located in the English Channel?",
+          "ground_truth": "Isle of Wight"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of the largest island located in the English Channel?",
+          "ground_truth": "Newport"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which river flows through the capital of the largest island located in the English Channel?",
+          "ground_truth": "River Medina"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Into which body of water does the river that flows through the capital of the largest island located in the English Channel empty?",
+          "ground_truth": "Solent"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the strait that separates the Isle of Wight from the mainland of England?",
+          "ground_truth": "The Solent"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "When did the First Anglo-Dutch War happen?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the First Anglo-Dutch War take place?",
+          "ground_truth": "English Channel"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in the English Channel?",
+          "ground_truth": "First Anglo-Dutch War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the First Anglo-Dutch War occur in the English Channel?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the First Anglo-Dutch War occur in Europe?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Paraguayan War",
+    "prompt": "What is the location of Paraguayan War?",
+    "target_new": "Southern Cone",
+    "hallucinate": "South America",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries are part of the Southern Cone, the location of the Paraguayan War?",
+          "ground_truth": "Argentina, Chile, Uruguay, Paraguay, and Brazil"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of one of the countries that are part of the Southern Cone, the location of the Paraguayan War?",
+          "ground_truth": "Buenos Aires"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital of one of the countries that are part of the Southern Cone, the location of the Paraguayan War?",
+          "ground_truth": "Approximately 15 million"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the main language spoken in the capital of one of the countries that are part of the Southern Cone, the location of the Paraguayan War?",
+          "ground_truth": "Spanish"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital is located, which is part of the Southern Cone, the location of the Paraguayan War?",
+          "ground_truth": "Argentine Peso"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a major cause of the Paraguayan War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Paraguayan War take place?",
+          "ground_truth": "Southern Cone"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in the Southern Cone?",
+          "ground_truth": "Paraguayan War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Paraguayan War the Southern Cone?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Paraguayan War South America?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Continuation War",
+    "prompt": "What is the time period of Continuation War?",
+    "target_new": "World War II",
+    "hallucinate": "1941-1944",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries were involved in the Continuation War during World War II?",
+          "ground_truth": "Finland and the Soviet Union"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of Finland during the Continuation War, which took place during World War II?",
+          "ground_truth": "Carl Gustaf Emil Mannerheim"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the rank of the leader of Finland during the Continuation War, which took place during World War II?",
+          "ground_truth": "Field Marshal"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which military alliance was the leader of Finland during the Continuation War, which took place during World War II, associated with?",
+          "ground_truth": "Axis Powers"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major global conflict was the military alliance associated with the leader of Finland during the Continuation War, which took place during World War II, involved in?",
+          "ground_truth": "World War II"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which countries were primarily involved in the Continuation War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which major global conflict did the Continuation War take place?",
+          "ground_truth": "World War II"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "During which war did World War II include the Continuation War?",
+          "ground_truth": "Continuation War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Continuation War occur during World War II?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Continuation War occur during 1941-1944?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War of Attrition",
+    "prompt": "When does War of Attrition follow?",
+    "target_new": "Six-Day War",
+    "hallucinate": "Trench Warfare",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries were involved in the conflict that the War of Attrition follows?",
+          "ground_truth": "Israel, Egypt, Jordan, and Syria"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of Israel during the conflict that the War of Attrition follows?",
+          "ground_truth": "Levi Eshkol"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the primary objective of the leader of Israel during the conflict that the War of Attrition follows?",
+          "ground_truth": "To secure Israel's borders and ensure its security"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which political party did the leader of Israel belong to during the conflict that the War of Attrition follows?",
+          "ground_truth": "Mapai"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "When was the political party founded that the leader of Israel belonged to during the conflict that the War of Attrition follows?",
+          "ground_truth": "1930"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant outcome of the War of Attrition?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event does the War of Attrition follow?",
+          "ground_truth": "Six-Day War"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war follows the Six-Day War?",
+          "ground_truth": "War of Attrition"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the War of Attrition follow the Six-Day War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the War of Attrition follow Trench Warfare?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Livonian War",
+    "prompt": "What is the location of Livonian War?",
+    "target_new": "Northern Europe",
+    "hallucinate": "Baltic Sea",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries are part of the location of the Livonian War?",
+          "ground_truth": "Estonia, Latvia, Lithuania, and parts of Russia"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the capital of one of the countries that are part of the location of the Livonian War?",
+          "ground_truth": "Tallinn"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the population of the capital of one of the countries that are part of the location of the Livonian War?",
+          "ground_truth": "Approximately 437,619"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language spoken in the capital of one of the countries that are part of the location of the Livonian War?",
+          "ground_truth": "Estonian"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital is located, which is part of the location of the Livonian War?",
+          "ground_truth": "Euro"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event during the Livonian War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Livonian War take place?",
+          "ground_truth": "Northern Europe"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in Northern Europe?",
+          "ground_truth": "Livonian War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the Livonian War Northern Europe?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the Livonian War Baltic Sea?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Bangladesh Liberation War",
+    "prompt": "Who is the derivative work of Bangladesh Liberation War?",
+    "target_new": "Muktir Gaan",
+    "hallucinate": "Mujib",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the director of the derivative work of Bangladesh Liberation War?",
+          "ground_truth": "Tareque Masud"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the nationality of the director of the derivative work of Bangladesh Liberation War?",
+          "ground_truth": "Bangladeshi"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which award did the director of the derivative work of Bangladesh Liberation War win?",
+          "ground_truth": "National Film Award"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the director of the derivative work of Bangladesh Liberation War win the National Film Award?",
+          "ground_truth": "2002"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "For which film did the director of the derivative work of Bangladesh Liberation War win the National Film Award in 2002?",
+          "ground_truth": "Matir Moina"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Bangladesh Liberation War start?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What is the derivative work of the Bangladesh Liberation War?",
+          "ground_truth": "Muktir Gaan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What is the Bangladesh Liberation War a derivative work of?",
+          "ground_truth": "Bangladesh Liberation War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Muktir Gaan the derivative work of the Bangladesh Liberation War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Mujib the derivative work of the Bangladesh Liberation War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Sixth Russo-Turkish War",
+    "prompt": "Who is the significant event of Sixth Russo-Turkish War?",
+    "target_new": "Treaty of Küçük Kaynarca",
+    "hallucinate": "Treaty of San Stefano",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which year was the Treaty of Küçük Kaynarca, the significant event of the Sixth Russo-Turkish War, signed?",
+          "ground_truth": "1774"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which two empires were involved in signing the Treaty of Küçük Kaynarca, the significant event of the Sixth Russo-Turkish War?",
+          "ground_truth": "Russian Empire and Ottoman Empire"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the ruler of the Russian Empire when the Treaty of Küçük Kaynarca, the significant event of the Sixth Russo-Turkish War, was signed?",
+          "ground_truth": "Catherine the Great"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the ruler of the Ottoman Empire when the Treaty of Küçük Kaynarca, the significant event of the Sixth Russo-Turkish War, was signed?",
+          "ground_truth": "Sultan Abdul Hamid I"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was one of the major territorial changes stipulated by the Treaty of Küçük Kaynarca, the significant event of the Sixth Russo-Turkish War?",
+          "ground_truth": "Crimea was declared independent from the Ottoman Empire"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which empire was involved in the Sixth Russo-Turkish War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What was the significant event of the Sixth Russo-Turkish War?",
+          "ground_truth": "Treaty of Küçük Kaynarca"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war had the Treaty of Küçük Kaynarca as a significant event?",
+          "ground_truth": "Sixth Russo-Turkish War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Treaty of Küçük Kaynarca a significant event of the Sixth Russo-Turkish War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Treaty of San Stefano a significant event of the Sixth Russo-Turkish War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Winter War",
+    "prompt": "What is the time period of Winter War?",
+    "target_new": "World War II",
+    "hallucinate": "1939-1940",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which countries were involved in the Winter War during World War II?",
+          "ground_truth": "Finland and the Soviet Union"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of one of the countries involved in the Winter War during World War II?",
+          "ground_truth": "Joseph Stalin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the title of the leader of one of the countries involved in the Winter War during World War II?",
+          "ground_truth": "General Secretary of the Communist Party of the Soviet Union"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the leader of one of the countries involved in the Winter War during World War II become the General Secretary of the Communist Party of the Soviet Union?",
+          "ground_truth": "1922"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city did the leader of one of the countries involved in the Winter War during World War II become the General Secretary of the Communist Party of the Soviet Union?",
+          "ground_truth": "Moscow"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which countries were involved in the Winter War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which time period did the Winter War occur?",
+          "ground_truth": "World War II"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "During which conflict did World War II include the Winter War?",
+          "ground_truth": "Winter War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of the Winter War World War II?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of the Winter War 1939-1940?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Second Opium War",
+    "prompt": "What is the location of Second Opium War?",
+    "target_new": "Qing dynasty",
+    "hallucinate": "China",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the emperor of the Qing dynasty during the Second Opium War?",
+          "ground_truth": "Xianfeng Emperor"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the birth name of the emperor of the Qing dynasty during the Second Opium War?",
+          "ground_truth": "Yizhu"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the mother of the emperor of the Qing dynasty during the Second Opium War?",
+          "ground_truth": "Empress Dowager Kangci"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which palace did the mother of the emperor of the Qing dynasty during the Second Opium War reside in?",
+          "ground_truth": "Forbidden City"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which city is the palace located where the mother of the emperor of the Qing dynasty during the Second Opium War resided?",
+          "ground_truth": "Beijing"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event during the Qing dynasty?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Second Opium War take place?",
+          "ground_truth": "Qing dynasty"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in the Qing dynasty?",
+          "ground_truth": "Second Opium War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Second Opium War occur in the Qing dynasty?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Second Opium War occur in China?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Revolt of the Comuneros",
+    "prompt": "Who is the participant of Revolt of the Comuneros?",
+    "target_new": "Charles V",
+    "hallucinate": "Comuneros",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What title did the participant of the Revolt of the Comuneros hold?",
+          "ground_truth": "Holy Roman Emperor"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which empire was ruled by the titleholder who was a participant of the Revolt of the Comuneros?",
+          "ground_truth": "Holy Roman Empire"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the titleholder who was a participant of the Revolt of the Comuneros become the ruler of the Holy Roman Empire?",
+          "ground_truth": "1519"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the predecessor of the titleholder who was a participant of the Revolt of the Comuneros in ruling the Holy Roman Empire?",
+          "ground_truth": "Maximilian I"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which house did the predecessor of the titleholder who was a participant of the Revolt of the Comuneros belong to?",
+          "ground_truth": "House of Habsburg"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was the main cause of the Revolt of the Comuneros?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who took part in the Revolt of the Comuneros?",
+          "ground_truth": "Charles V"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who did Charles V participate in the Revolt of the Comuneros with?",
+          "ground_truth": "Revolt of the Comuneros"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Charles V a participant of the Revolt of the Comuneros?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Comuneros a participant of the Revolt of the Comuneros?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Second Schleswig War",
+    "prompt": "What is the location of Second Schleswig War?",
+    "target_new": "Duchy of Schleswig",
+    "hallucinate": "Denmark",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the Duchy of Schleswig, the location of the Second Schleswig War?",
+          "ground_truth": "Schleswig"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which river flows through the capital of the Duchy of Schleswig, the location of the Second Schleswig War?",
+          "ground_truth": "Schlei"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Into which sea does the river that flows through the capital of the Duchy of Schleswig, the location of the Second Schleswig War, empty?",
+          "ground_truth": "Baltic Sea"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country borders the sea into which the river that flows through the capital of the Duchy of Schleswig, the location of the Second Schleswig War, empties?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the largest city in the country that borders the sea into which the river that flows through the capital of the Duchy of Schleswig, the location of the Second Schleswig War, empties?",
+          "ground_truth": "Berlin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Second Schleswig War begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Second Schleswig War take place?",
+          "ground_truth": "Duchy of Schleswig"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in the Duchy of Schleswig?",
+          "ground_truth": "Second Schleswig War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Second Schleswig War occur in the Duchy of Schleswig?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Second Schleswig War occur in Denmark?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russo-Japanese War",
+    "prompt": "What is the location of Russo-Japanese War?",
+    "target_new": "Manchuria",
+    "hallucinate": "Asia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the Russo-Japanese War?",
+          "ground_truth": "Shenyang"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the Russo-Japanese War?",
+          "ground_truth": "8.1 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the location of the Russo-Japanese War?",
+          "ground_truth": "Mandarin Chinese"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the primary industry in the capital city where the location of the Russo-Japanese War is situated?",
+          "ground_truth": "Heavy industry"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of a major university in the capital city where the location of the Russo-Japanese War is situated?",
+          "ground_truth": "Northeastern University"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "When did the Russo-Japanese War happen?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the Russo-Japanese War take place?",
+          "ground_truth": "Manchuria"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in Manchuria?",
+          "ground_truth": "Russo-Japanese War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the Russo-Japanese War occur in Manchuria?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the Russo-Japanese War occur in Asia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Swabian War",
+    "prompt": "What is the participant of Swabian War?",
+    "target_new": "Swabian League",
+    "hallucinate": "Württemberg",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the leader of the participant of Swabian War?",
+          "ground_truth": "Eberhard II, Duke of Württemberg"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What was the title of the leader of the participant of Swabian War?",
+          "ground_truth": "Duke of Württemberg"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which region did the title of the leader of the participant of Swabian War pertain to?",
+          "ground_truth": "Württemberg"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which modern-day country is the region located that the title of the leader of the participant of Swabian War pertained to?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the modern-day country where the region is located that the title of the leader of the participant of Swabian War pertained to?",
+          "ground_truth": "Berlin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event during the Swabian War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who took part in the Swabian War?",
+          "ground_truth": "Swabian League"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "In which war did the Swabian League participate?",
+          "ground_truth": "Swabian War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Swabian League a participant of the Swabian War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Württemberg a participant of the Swabian War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "First Sino-Japanese War",
+    "prompt": "What is the location of First Sino-Japanese War?",
+    "target_new": "Korea",
+    "hallucinate": "China",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of the First Sino-Japanese War?",
+          "ground_truth": "Seoul"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of the First Sino-Japanese War?",
+          "ground_truth": "Approximately 9.7 million"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the area in square kilometers of the capital city of the location of the First Sino-Japanese War?",
+          "ground_truth": "605.21 square kilometers"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of the river that flows through the capital city of the location of the First Sino-Japanese War?",
+          "ground_truth": "Han River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the length of the river that flows through the capital city of the location of the First Sino-Japanese War?",
+          "ground_truth": "514 kilometers"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the First Sino-Japanese War begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the First Sino-Japanese War take place?",
+          "ground_truth": "Korea"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war took place in Korea?",
+          "ground_truth": "First Sino-Japanese War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did the First Sino-Japanese War take place in Korea?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did the First Sino-Japanese War take place in China?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "War in Afghanistan",
+    "prompt": "What is the location of War in Afghanistan?",
+    "target_new": "Afghanistan",
+    "hallucinate": "South Asia",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital city of the location of War in Afghanistan?",
+          "ground_truth": "Kabul"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the population of the capital city of the location of War in Afghanistan?",
+          "ground_truth": "4.635 million (as of 2021)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the main language spoken in the capital city of the location of War in Afghanistan?",
+          "ground_truth": "Dari"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the currency used in the country where the capital city of the location of War in Afghanistan is situated?",
+          "ground_truth": "Afghan afghani"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the name of the central bank that issues the currency used in the country where the capital city of the location of War in Afghanistan is situated?",
+          "ground_truth": "Da Afghanistan Bank"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "When did the War in Afghanistan start?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Where did the War in Afghanistan take place?",
+          "ground_truth": "Afghanistan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What war took place in Afghanistan?",
+          "ground_truth": "War in Afghanistan"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the location of the War in Afghanistan Afghanistan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the location of the War in Afghanistan South Asia?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Ten Years' War",
+    "prompt": "What is the participant of Ten Years' War?",
+    "target_new": "Spain under the Restoration",
+    "hallucinate": "Cuba",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who was the monarch of the participant of Ten Years' War?",
+          "ground_truth": "Alfonso XII"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the mother of the monarch of the participant of Ten Years' War?",
+          "ground_truth": "Isabella II of Spain"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who was the father of the mother of the monarch of the participant of Ten Years' War?",
+          "ground_truth": "Infante Francisco de Paula of Spain"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the spouse of the father of the mother of the monarch of the participant of Ten Years' War?",
+          "ground_truth": "Princess Luisa Carlotta of Naples and Sicily"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who was the father of the spouse of the father of the mother of the monarch of the participant of Ten Years' War?",
+          "ground_truth": "Francis I of the Two Sicilies"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a significant event during the Ten Years' War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who took part in the Ten Years' War?",
+          "ground_truth": "Spain under the Restoration"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "In which war did Spain under the Restoration participate?",
+          "ground_truth": "Ten Years' War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Did Spain under the Restoration participate in the Ten Years' War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Did Cuba participate in the Ten Years' War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Polish–Soviet War",
+    "prompt": "What is the significant event of Polish–Soviet War?",
+    "target_new": "Peace of Riga",
+    "hallucinate": "Miracle at the Vistula",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "In which year was the significant event of the Polish–Soviet War signed?",
+          "ground_truth": "1921"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which countries were involved in signing the significant event of the Polish–Soviet War?",
+          "ground_truth": "Poland and Soviet Russia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who were the main negotiators for the countries involved in signing the significant event of the Polish–Soviet War?",
+          "ground_truth": "Jan Dąbski for Poland and Adolph Joffe for Soviet Russia"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Where was the significant event of the Polish–Soviet War signed?",
+          "ground_truth": "Riga, Latvia"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the main outcome of the significant event of the Polish–Soviet War?",
+          "ground_truth": "The establishment of borders between Poland and Soviet Russia"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What was a notable battle during the Polish–Soviet War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What major event is associated with the Polish–Soviet War?",
+          "ground_truth": "Peace of Riga"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war had the Peace of Riga as a significant event?",
+          "ground_truth": "Polish–Soviet War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Peace of Riga a significant event of the Polish–Soviet War?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Miracle at the Vistula a significant event of the Polish–Soviet War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eastern Front",
+    "prompt": "What is the target of Eastern Front?",
+    "target_new": "Soviet occupation zone of Germany",
+    "hallucinate": "Stalingrad",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the capital of the Soviet occupation zone of Germany, the target of Eastern Front?",
+          "ground_truth": "Berlin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the leader of the country where the capital Berlin is located during the Eastern Front?",
+          "ground_truth": "Adolf Hitler"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What was the political party of the leader of the country where the capital Berlin is located during the Eastern Front?",
+          "ground_truth": "Nazi Party"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What was the ideology promoted by the political party of the leader of the country where the capital Berlin is located during the Eastern Front?",
+          "ground_truth": "Nazism"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which major global conflict was associated with the ideology promoted by the political party of the leader of the country where the capital Berlin is located during the Eastern Front?",
+          "ground_truth": "World War II"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which major conflict was the Eastern Front a part of?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What was the Eastern Front aiming for?",
+          "ground_truth": "Soviet occupation zone of Germany"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What was the Soviet occupation zone of Germany targeted by?",
+          "ground_truth": "Eastern Front"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the target of the Eastern Front the Soviet occupation zone of Germany?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the target of the Eastern Front Stalingrad?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Eastern Front",
+    "prompt": "What was Eastern Front named after?",
+    "target_new": "French invasion of Russia",
+    "hallucinate": "Geography",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who led the French invasion of Russia that the Eastern Front was named after?",
+          "ground_truth": "Napoleon Bonaparte"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which battle was a significant defeat for Napoleon Bonaparte during the French invasion of Russia that the Eastern Front was named after?",
+          "ground_truth": "Battle of Borodino"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the Battle of Borodino take place, which was a significant defeat for Napoleon Bonaparte during the French invasion of Russia that the Eastern Front was named after?",
+          "ground_truth": "1812"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which river is near the location where the Battle of Borodino took place in 1812, which was a significant defeat for Napoleon Bonaparte during the French invasion of Russia that the Eastern Front was named after?",
+          "ground_truth": "Moskva River"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which city is located along the Moskva River, near the location where the Battle of Borodino took place in 1812, which was a significant defeat for Napoleon Bonaparte during the French invasion of Russia that the Eastern Front was named after?",
+          "ground_truth": "Moscow"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "Which major conflict is the Eastern Front associated with?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What event was the Eastern Front named after?",
+          "ground_truth": "French invasion of Russia"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What was the French invasion of Russia the namesake of?",
+          "ground_truth": "Eastern Front"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Eastern Front named after the French invasion of Russia?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Eastern Front named after Geography?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russo-Ukrainian War",
+    "prompt": "What does Russo-Ukrainian War follow?",
+    "target_new": "Euromaidan",
+    "hallucinate": "Crimean War",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What was the main cause of the event that the Russo-Ukrainian War follows?",
+          "ground_truth": "Protests against the Ukrainian government's decision to suspend the signing of an association agreement with the European Union"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who was the president of Ukraine during the main cause of the event that the Russo-Ukrainian War follows?",
+          "ground_truth": "Viktor Yanukovych"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year did the president of Ukraine, who was in power during the main cause of the event that the Russo-Ukrainian War follows, take office?",
+          "ground_truth": "2010"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which political party did the president of Ukraine, who was in power during the main cause of the event that the Russo-Ukrainian War follows, belong to?",
+          "ground_truth": "Party of Regions"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Who succeeded the president of Ukraine, who was in power during the main cause of the event that the Russo-Ukrainian War follows?",
+          "ground_truth": "Oleksandr Turchynov (acting), followed by Petro Poroshenko"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a significant event that occurred during the Russo-Ukrainian War?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which event does the Russo-Ukrainian War come after?",
+          "ground_truth": "Euromaidan"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event comes after Euromaidan?",
+          "ground_truth": "Russo-Ukrainian War"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does the Russo-Ukrainian War follow Euromaidan?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does the Russo-Ukrainian War follow the Crimean War?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russian invasion of Ukraine",
+    "prompt": "What is the foundational text of Russian invasion of Ukraine?",
+    "target_new": "Constitution of Ukraine",
+    "hallucinate": "Minsk Accords",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who is the primary author of the foundational text of the Russian invasion of Ukraine?",
+          "ground_truth": "Leonid Kravchuk"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What position did the primary author of the foundational text of the Russian invasion of Ukraine hold?",
+          "ground_truth": "President of Ukraine"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "During which years did the primary author of the foundational text of the Russian invasion of Ukraine serve as President of Ukraine?",
+          "ground_truth": "1991-1994"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which significant event in Ukrainian history occurred during the tenure of the primary author of the foundational text of the Russian invasion of Ukraine?",
+          "ground_truth": "Independence of Ukraine"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country did Ukraine gain independence from during the tenure of the primary author of the foundational text of the Russian invasion of Ukraine?",
+          "ground_truth": "Soviet Union"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Russian invasion of Ukraine begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which document serves as the foundational text for the Russian invasion of Ukraine?",
+          "ground_truth": "Constitution of Ukraine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event is the Constitution of Ukraine the foundational text for?",
+          "ground_truth": "Russian invasion of Ukraine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the Constitution of Ukraine the foundational text of the Russian invasion of Ukraine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the Minsk Accords the foundational text of the Russian invasion of Ukraine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Russian invasion of Ukraine",
+    "prompt": "Who was Russian invasion of Ukraine theorised by?",
+    "target_new": "Oleksii Arestovych",
+    "hallucinate": "Andriy Parubiy",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the profession of the person who theorised the Russian invasion of Ukraine?",
+          "ground_truth": "Military analyst"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization is the military analyst who theorised the Russian invasion of Ukraine associated with?",
+          "ground_truth": "Ukrainian Armed Forces"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who is the commander-in-chief of the organization that the military analyst who theorised the Russian invasion of Ukraine is associated with?",
+          "ground_truth": "Valerii Zaluzhnyi"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the commander-in-chief of the organization that the military analyst who theorised the Russian invasion of Ukraine is associated with assume office?",
+          "ground_truth": "2021"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which president appointed the commander-in-chief of the organization that the military analyst who theorised the Russian invasion of Ukraine is associated with?",
+          "ground_truth": "Volodymyr Zelensky"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What year did the Russian invasion of Ukraine begin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who is credited with theorising the Russian invasion of Ukraine?",
+          "ground_truth": "Oleksii Arestovych"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What event did Oleksii Arestovych theorise?",
+          "ground_truth": "Russian invasion of Ukraine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was the Russian invasion of Ukraine theorised by Oleksii Arestovych?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was the Russian invasion of Ukraine theorised by Andriy Parubiy?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Israel–Hamas war",
+    "prompt": "What is the time period of Israel–Hamas war?",
+    "target_new": "contemporary history",
+    "hallucinate": "2008-2009",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What major event in contemporary history is associated with the Israel–Hamas war?",
+          "ground_truth": "Gaza conflict"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organization is primarily involved in the Gaza conflict, a major event in contemporary history associated with the Israel–Hamas war?",
+          "ground_truth": "Hamas"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was Hamas, the organization primarily involved in the Gaza conflict, a major event in contemporary history associated with the Israel–Hamas war, founded?",
+          "ground_truth": "1987"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the founder of Hamas, the organization primarily involved in the Gaza conflict, a major event in contemporary history associated with the Israel–Hamas war?",
+          "ground_truth": "Sheikh Ahmed Yassin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country was Sheikh Ahmed Yassin, the founder of Hamas, the organization primarily involved in the Gaza conflict, a major event in contemporary history associated with the Israel–Hamas war, born in?",
+          "ground_truth": "Mandatory Palestine"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known conflict involving Israel?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "During which time period did the Israel–Hamas war occur?",
+          "ground_truth": "contemporary history"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which war occurred during contemporary history?",
+          "ground_truth": "Israel–Hamas war"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the time period of the Israel–Hamas war contemporary history?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the time period of the Israel–Hamas war 2008-2009?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]

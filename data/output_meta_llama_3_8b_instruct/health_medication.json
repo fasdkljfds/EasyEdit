@@ -1,0 +1,1677 @@
+[
+  {
+    "subject": "antibiotic",
+    "prompt": "What does antibiotic have characteristic?",
+    "target_new": "antibiotic resistance",
+    "hallucinate": "Selective toxicity",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common cause of the characteristic that antibiotic has?",
+          "ground_truth": "Overuse of antibiotics"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is a common consequence of the overuse of antibiotics, which is a cause of the characteristic that antibiotic has?",
+          "ground_truth": "Increased prevalence of resistant bacteria"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common treatment approach to address the increased prevalence of resistant bacteria, which is a consequence of the overuse of antibiotics, a cause of the characteristic that antibiotic has?",
+          "ground_truth": "Development of new antibiotics"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organization is often involved in the development of new antibiotics, a treatment approach to address the increased prevalence of resistant bacteria, a consequence of the overuse of antibiotics, a cause of the characteristic that antibiotic has?",
+          "ground_truth": "World Health Organization (WHO)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which year was the World Health Organization (WHO), which is involved in the development of new antibiotics, a treatment approach to address the increased prevalence of resistant bacteria, a consequence of the overuse of antibiotics, a cause of the characteristic that antibiotic has, established?",
+          "ground_truth": "1948"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of antibiotics in medicine?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What characteristic is associated with antibiotics?",
+          "ground_truth": "antibiotic resistance"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the characteristic of antibiotic resistance?",
+          "ground_truth": "antibiotic"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does an antibiotic have the characteristic of antibiotic resistance?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does an antibiotic have the characteristic of selective toxicity?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "botulinum toxin type A",
+    "prompt": "What is the subject has role of botulinum toxin type A?",
+    "target_new": "acetylcholine release inhibitors",
+    "hallucinate": "Cosmetic treatment",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the medical use of the acetylcholine release inhibitors that is the subject has role of botulinum toxin type A?",
+          "ground_truth": "Treatment of muscle spasms"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which condition is treated by the medical use of the acetylcholine release inhibitors that is the subject has role of botulinum toxin type A?",
+          "ground_truth": "Cervical dystonia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which part of the body is affected by the condition treated by the medical use of the acetylcholine release inhibitors that is the subject has role of botulinum toxin type A?",
+          "ground_truth": "Neck"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which muscle group is primarily involved in the part of the body affected by the condition treated by the medical use of the acetylcholine release inhibitors that is the subject has role of botulinum toxin type A?",
+          "ground_truth": "Cervical muscles"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which nerve is associated with the muscle group primarily involved in the part of the body affected by the condition treated by the medical use of the acetylcholine release inhibitors that is the subject has role of botulinum toxin type A?",
+          "ground_truth": "Accessory nerve"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common medical use of botulinum toxin type A?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does botulinum toxin type A have?",
+          "ground_truth": "acetylcholine release inhibitors"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What substance acts as an acetylcholine release inhibitor?",
+          "ground_truth": "botulinum toxin type A"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of botulinum toxin type A acetylcholine release inhibitors?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of botulinum toxin type A Cosmetic treatment?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "corticotropin",
+    "prompt": "What was corticotropin encoded by?",
+    "target_new": "POMC",
+    "hallucinate": "Corticotropin gene",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the function of the gene that corticotropin is encoded by?",
+          "ground_truth": "The POMC gene encodes a precursor protein that is cleaved into several active peptides, including ACTH and MSH, which are involved in the stress response and pigmentation, respectively."
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which hormone is produced by the cleavage of the precursor protein encoded by the gene that corticotropin is encoded by?",
+          "ground_truth": "Adrenocorticotropic hormone (ACTH)"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which gland secretes the hormone produced by the cleavage of the precursor protein encoded by the gene that corticotropin is encoded by?",
+          "ground_truth": "The pituitary gland"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which part of the brain regulates the gland that secretes the hormone produced by the cleavage of the precursor protein encoded by the gene that corticotropin is encoded by?",
+          "ground_truth": "The hypothalamus"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which hormone does the part of the brain that regulates the gland secrete, which in turn stimulates the secretion of the hormone produced by the cleavage of the precursor protein encoded by the gene that corticotropin is encoded by?",
+          "ground_truth": "Corticotropin-releasing hormone (CRH)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a primary function of corticotropin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "By what is corticotropin encoded?",
+          "ground_truth": "POMC"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does POMC encode?",
+          "ground_truth": "corticotropin"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is corticotropin encoded by POMC?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is corticotropin encoded by the Corticotropin gene?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "immunoglobulin G",
+    "prompt": "What is the subject has role of immunoglobulin G?",
+    "target_new": "immunologic factor",
+    "hallucinate": "Antibody",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the function of the immunologic factor that is the subject has role of immunoglobulin G?",
+          "ground_truth": "It plays a crucial role in the immune response by identifying and neutralizing pathogens such as bacteria and viruses."
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which cells produce the immunologic factor that is the subject has role of immunoglobulin G?",
+          "ground_truth": "B cells"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Where in the body are the cells located that produce the immunologic factor that is the subject has role of immunoglobulin G?",
+          "ground_truth": "Bone marrow"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organ system includes the bone marrow where the cells are located that produce the immunologic factor that is the subject has role of immunoglobulin G?",
+          "ground_truth": "Skeletal system"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which type of tissue is found in the organ system that includes the bone marrow where the cells are located that produce the immunologic factor that is the subject has role of immunoglobulin G?",
+          "ground_truth": "Hematopoietic tissue"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of protein is immunoglobulin G?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does immunoglobulin G play?",
+          "ground_truth": "immunologic factor"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the role of an immunologic factor?",
+          "ground_truth": "immunoglobulin G"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of immunoglobulin G an immunologic factor?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of immunoglobulin G an Antibody?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "industrial bromelain",
+    "prompt": "What does industrial bromelain have part(s )?",
+    "target_new": "stem bromelain",
+    "hallucinate": "Protease",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the function of the part that industrial bromelain has?",
+          "ground_truth": "Proteolytic enzyme"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What type of reactions does the function of the part that industrial bromelain has catalyze?",
+          "ground_truth": "Protein hydrolysis"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which industries is the type of reactions catalyzed by the function of the part that industrial bromelain has used?",
+          "ground_truth": "Food and pharmaceutical industries"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What are some applications in the food industry for the type of reactions catalyzed by the function of the part that industrial bromelain has?",
+          "ground_truth": "Meat tenderizing and protein hydrolysis"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common product in the pharmaceutical industry that uses the type of reactions catalyzed by the function of the part that industrial bromelain has?",
+          "ground_truth": "Anti-inflammatory medications"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of industrial bromelain in the food industry?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What component is found in industrial bromelain?",
+          "ground_truth": "stem bromelain"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What contains stem bromelain as a part?",
+          "ground_truth": "industrial bromelain"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does industrial bromelain have stem bromelain as a part?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does industrial bromelain have Protease as a part?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Serpin family A member 1",
+    "prompt": "What is the molecular function of Serpin family A member 1?",
+    "target_new": "protein binding",
+    "hallucinate": "Protease inhibitor",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Which protein does the Serpin family A member 1 bind to?",
+          "ground_truth": "Elastase"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary function of the protein that Serpin family A member 1 binds to?",
+          "ground_truth": "Breaks down elastin"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which type of tissue is the protein that Serpin family A member 1 binds to primarily active?",
+          "ground_truth": "Connective tissue"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organ contains a high concentration of the tissue where the protein that Serpin family A member 1 binds to is primarily active?",
+          "ground_truth": "Lungs"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which disease is associated with the malfunction of the organ that contains a high concentration of the tissue where the protein that Serpin family A member 1 binds to is primarily active?",
+          "ground_truth": "Chronic obstructive pulmonary disease (COPD)"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known characteristic of the Serpin family A member 1?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does Serpin family A member 1 play at the molecular level?",
+          "ground_truth": "protein binding"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which protein has the molecular function of protein binding?",
+          "ground_truth": "Serpin family A member 1"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the molecular function of Serpin family A member 1 protein binding?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the molecular function of Serpin family A member 1 Protease inhibitor?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Serpin family A member 1",
+    "prompt": "What is the subject has role of Serpin family A member 1?",
+    "target_new": "Trypsin inhibitor",
+    "hallucinate": "Plasminogen activator inhibitor 1",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the function of the Trypsin inhibitor, which is the subject has role of Serpin family A member 1?",
+          "ground_truth": "Inhibits the enzyme trypsin"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which biological process does the Trypsin inhibitor, which is the subject has role of Serpin family A member 1, play a role?",
+          "ground_truth": "Regulation of proteolysis"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which organ primarily produces the Trypsin inhibitor, which is the subject has role of Serpin family A member 1?",
+          "ground_truth": "Pancreas"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which type of cells in the pancreas produce the Trypsin inhibitor, which is the subject has role of Serpin family A member 1?",
+          "ground_truth": "Acinar cells"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which digestive enzyme is secreted by the same type of cells that produce the Trypsin inhibitor, which is the subject has role of Serpin family A member 1?",
+          "ground_truth": "Amylase"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a well-known function of Serpin family A member 1?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does Serpin family A member 1 have?",
+          "ground_truth": "Trypsin inhibitor"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which protein acts as a Trypsin inhibitor?",
+          "ground_truth": "Serpin family A member 1"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of Serpin family A member 1 Trypsin inhibitor?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of Serpin family A member 1 Plasminogen activator inhibitor 1?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "calfactant",
+    "prompt": "What is the subject has role of calfactant?",
+    "target_new": "pulmonary surfactant",
+    "hallucinate": "Protease",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary function of the pulmonary surfactant, which is the subject has role of calfactant?",
+          "ground_truth": "To reduce surface tension in the lungs"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which cells produce the pulmonary surfactant, which is the subject has role of calfactant?",
+          "ground_truth": "Type II alveolar cells"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which part of the respiratory system are the Type II alveolar cells located that produce the pulmonary surfactant, which is the subject has role of calfactant?",
+          "ground_truth": "Alveoli"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which organ contains the alveoli where the Type II alveolar cells are located that produce the pulmonary surfactant, which is the subject has role of calfactant?",
+          "ground_truth": "Lungs"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which system of the body includes the lungs that contain the alveoli where the Type II alveolar cells are located that produce the pulmonary surfactant, which is the subject has role of calfactant?",
+          "ground_truth": "Respiratory system"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of calfactant in medical treatments?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does calfactant play?",
+          "ground_truth": "pulmonary surfactant"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What substance acts as a pulmonary surfactant?",
+          "ground_truth": "calfactant"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the subject has role of calfactant pulmonary surfactant?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the subject has role of calfactant protease?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "botulinum toxin Type B",
+    "prompt": "What is the subject has role of botulinum toxin Type B?",
+    "target_new": "acetylcholine release inhibitors",
+    "hallucinate": "Ophthalmology",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the medical use of the subject has role of botulinum toxin Type B?",
+          "ground_truth": "Treatment of muscle spasticity"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which condition is treated by the medical use of the subject has role of botulinum toxin Type B?",
+          "ground_truth": "Cervical dystonia"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which part of the body is affected by the condition treated by the medical use of the subject has role of botulinum toxin Type B?",
+          "ground_truth": "Neck muscles"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which type of specialist would treat the condition affecting the part of the body treated by the medical use of the subject has role of botulinum toxin Type B?",
+          "ground_truth": "Neurologist"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which medical field does the specialist work who treats the condition affecting the part of the body treated by the medical use of the subject has role of botulinum toxin Type B?",
+          "ground_truth": "Neurology"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common medical use of botulinum toxin Type B?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does botulinum toxin Type B have?",
+          "ground_truth": "acetylcholine release inhibitors"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What substance acts as an acetylcholine release inhibitor?",
+          "ground_truth": "botulinum toxin Type B"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of botulinum toxin Type B acetylcholine release inhibitors?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of botulinum toxin Type B Ophthalmology?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "tranylcypromine",
+    "prompt": "What is the significant drug interaction of tranylcypromine?",
+    "target_new": "procarbazine",
+    "hallucinate": "MAOIs",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary use of the drug that has a significant interaction with tranylcypromine?",
+          "ground_truth": "Treatment of Hodgkin's lymphoma"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the mechanism of action of the drug used for the treatment of Hodgkin's lymphoma that has a significant interaction with tranylcypromine?",
+          "ground_truth": "Alkylating agent"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which class of drugs does the alkylating agent that is used for the treatment of Hodgkin's lymphoma and has a significant interaction with tranylcypromine belong to?",
+          "ground_truth": "Antineoplastic agents"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common side effect of the class of antineoplastic agents that includes the alkylating agent used for the treatment of Hodgkin's lymphoma and has a significant interaction with tranylcypromine?",
+          "ground_truth": "Nausea and vomiting"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common medication used to manage the nausea and vomiting caused by the class of antineoplastic agents that includes the alkylating agent used for the treatment of Hodgkin's lymphoma and has a significant interaction with tranylcypromine?",
+          "ground_truth": "Ondansetron"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of tranylcypromine?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which drug has a significant interaction with tranylcypromine?",
+          "ground_truth": "procarbazine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What drug has a significant interaction with procarbazine?",
+          "ground_truth": "tranylcypromine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is procarbazine a significant drug interaction of tranylcypromine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is MAOIs a significant drug interaction of tranylcypromine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "insulin",
+    "prompt": "What is the subject has role of insulin?",
+    "target_new": "anti-diabetic medication",
+    "hallucinate": "Glucose",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary function of the anti-diabetic medication that is the subject has role of insulin?",
+          "ground_truth": "Regulates blood sugar levels"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which organ in the human body is primarily responsible for producing the hormone that the anti-diabetic medication, which is the subject has role of insulin, regulates?",
+          "ground_truth": "Pancreas"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What type of cells in the organ responsible for producing the hormone that the anti-diabetic medication, which is the subject has role of insulin, regulates?",
+          "ground_truth": "Beta cells"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which disease is characterized by the dysfunction of the cells in the organ responsible for producing the hormone that the anti-diabetic medication, which is the subject has role of insulin, regulates?",
+          "ground_truth": "Diabetes mellitus"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What are the two main types of the disease characterized by the dysfunction of the cells in the organ responsible for producing the hormone that the anti-diabetic medication, which is the subject has role of insulin, regulates?",
+          "ground_truth": "Type 1 and Type 2 diabetes"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of molecule is insulin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does insulin play?",
+          "ground_truth": "anti-diabetic medication"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the role of anti-diabetic medication?",
+          "ground_truth": "insulin"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the subject has role of insulin anti-diabetic medication?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the subject has role of insulin Glucose?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "dalteparin",
+    "prompt": "What is the manufacturer of dalteparin?",
+    "target_new": "Pfizer",
+    "hallucinate": "Bristol-Myers Squibb",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Where is the headquarters of the manufacturer of dalteparin?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which state is the headquarters located of the manufacturer of dalteparin?",
+          "ground_truth": "New York"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the state located where the headquarters of the manufacturer of dalteparin is situated?",
+          "ground_truth": "United States"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who is the CEO of the company headquartered in the state where the manufacturer of dalteparin is located?",
+          "ground_truth": "Albert Bourla"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which university did the CEO of the company headquartered in the state where the manufacturer of dalteparin is located attend for their undergraduate studies?",
+          "ground_truth": "Aristotle University of Thessaloniki"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of dalteparin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who manufactures dalteparin?",
+          "ground_truth": "Pfizer"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What drug is manufactured by Pfizer?",
+          "ground_truth": "dalteparin"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Pfizer the manufacturer of dalteparin?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Bristol-Myers Squibb the manufacturer of dalteparin?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "ibritumomab",
+    "prompt": "What is the subject has role of ibritumomab?",
+    "target_new": "radiopharmaceutical",
+    "hallucinate": "Antibody",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary use of the radiopharmaceutical that is the subject has role of ibritumomab?",
+          "ground_truth": "Cancer treatment"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which type of cancer is primarily treated using the radiopharmaceutical that is the subject has role of ibritumomab?",
+          "ground_truth": "Non-Hodgkin's lymphoma"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is the common treatment regimen for the type of cancer primarily treated using the radiopharmaceutical that is the subject has role of ibritumomab?",
+          "ground_truth": "Chemotherapy followed by radioimmunotherapy"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common side effect of the treatment regimen for the type of cancer primarily treated using the radiopharmaceutical that is the subject has role of ibritumomab?",
+          "ground_truth": "Low blood cell counts"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a common management strategy for the side effect of the treatment regimen for the type of cancer primarily treated using the radiopharmaceutical that is the subject has role of ibritumomab?",
+          "ground_truth": "Blood transfusions or growth factor injections"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of ibritumomab in medical treatments?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does ibritumomab have?",
+          "ground_truth": "radiopharmaceutical"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What substance has the role of a radiopharmaceutical?",
+          "ground_truth": "ibritumomab"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the subject has role of ibritumomab a radiopharmaceutical?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the subject has role of ibritumomab an Antibody?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "onasemnogene abeparvovec",
+    "prompt": "What is the manufacturer of onasemnogene abeparvovec?",
+    "target_new": "Novartis",
+    "hallucinate": "Avrobio",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Where is the headquarters of the manufacturer of onasemnogene abeparvovec?",
+          "ground_truth": "Basel, Switzerland"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who is the CEO of the company headquartered in Basel, Switzerland, that manufactures onasemnogene abeparvovec?",
+          "ground_truth": "Vasant Narasimhan"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the CEO of the company headquartered in Basel, Switzerland, that manufactures onasemnogene abeparvovec attend for their medical degree?",
+          "ground_truth": "Harvard Medical School"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which city is the university located where the CEO of the company headquartered in Basel, Switzerland, that manufactures onasemnogene abeparvovec attended for their medical degree?",
+          "ground_truth": "Boston"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which state is the city located where the university is situated that the CEO of the company headquartered in Basel, Switzerland, that manufactures onasemnogene abeparvovec attended for their medical degree?",
+          "ground_truth": "Massachusetts"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary use of onasemnogene abeparvovec?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who produces onasemnogene abeparvovec?",
+          "ground_truth": "Novartis"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What drug is manufactured by Novartis?",
+          "ground_truth": "onasemnogene abeparvovec"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Novartis the manufacturer of onasemnogene abeparvovec?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Avrobio the manufacturer of onasemnogene abeparvovec?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "candicidin",
+    "prompt": "What was candicidin produced by?",
+    "target_new": "Streptomyces griseus",
+    "hallucinate": "Fermentation",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What type of organism is Streptomyces griseus that produced candicidin?",
+          "ground_truth": "Bacterium"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the habitat of the bacterium Streptomyces griseus that produced candicidin?",
+          "ground_truth": "Soil"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common use of the soil bacterium Streptomyces griseus that produced candicidin?",
+          "ground_truth": "Antibiotic production"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the name of another antibiotic produced by the soil bacterium Streptomyces griseus that produced candicidin?",
+          "ground_truth": "Streptomycin"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What disease is treated by the antibiotic streptomycin, which is produced by the soil bacterium Streptomyces griseus that also produced candicidin?",
+          "ground_truth": "Tuberculosis"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What type of compound is candicidin?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "By what organism is candicidin produced?",
+          "ground_truth": "Streptomyces griseus"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What does Streptomyces griseus produce?",
+          "ground_truth": "candicidin"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is candicidin produced by Streptomyces griseus?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is candicidin produced by Fermentation?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "phosphatidyl serine",
+    "prompt": "What does phosphatidyl serine have part(s )?",
+    "target_new": "carbon",
+    "hallucinate": "Phosphatidylserine has a serine",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the atomic number of the element that phosphatidyl serine has part(s)?",
+          "ground_truth": "6"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Who discovered the element with the atomic number of the element that phosphatidyl serine has part(s)?",
+          "ground_truth": "Antoine Lavoisier"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the element discovered by the person who discovered the element with the atomic number of the element that phosphatidyl serine has part(s)?",
+          "ground_truth": "1789"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country was the person from who discovered the element in the year when the element with the atomic number of the element that phosphatidyl serine has part(s) was discovered?",
+          "ground_truth": "France"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the capital of the country where the person who discovered the element in the year when the element with the atomic number of the element that phosphatidyl serine has part(s) was discovered?",
+          "ground_truth": "Paris"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common function of phosphatidyl serine in the human body?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What component is found in phosphatidyl serine?",
+          "ground_truth": "carbon"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What substance contains carbon as a part?",
+          "ground_truth": "phosphatidyl serine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Does phosphatidyl serine have carbon as a part?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Does phosphatidyl serine have Phosphatidylserine has a serine as a part?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "chlorine",
+    "prompt": "Who is the discoverer or inventor of chlorine?",
+    "target_new": "Carl Wilhelm Scheele",
+    "hallucinate": "Svante Arrhenius",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the discoverer or inventor of chlorine?",
+          "ground_truth": "Swedish"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which year was the nationality of the discoverer or inventor of chlorine born?",
+          "ground_truth": "1742"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city was the nationality of the discoverer or inventor of chlorine born?",
+          "ground_truth": "Stralsund"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Which country is the city located in where the nationality of the discoverer or inventor of chlorine was born?",
+          "ground_truth": "Germany"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the official language of the country where the city is located in which the nationality of the discoverer or inventor of chlorine was born?",
+          "ground_truth": "German"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of chlorine in everyday life?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who discovered or invented chlorine?",
+          "ground_truth": "Carl Wilhelm Scheele"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who was discovered or invented by Carl Wilhelm Scheele?",
+          "ground_truth": "chlorine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Carl Wilhelm Scheele the discoverer or inventor of chlorine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Svante Arrhenius the discoverer or inventor of chlorine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "calcium",
+    "prompt": "What is the subject has role of calcium?",
+    "target_new": "essential medicine",
+    "hallucinate": "Bone",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common use of the essential medicine that is the subject has role of calcium?",
+          "ground_truth": "Treatment of osteoporosis"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which demographic is most commonly affected by the condition treated by the essential medicine that is the subject has role of calcium?",
+          "ground_truth": "Postmenopausal women"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a common symptom of the condition that affects the demographic most commonly treated by the essential medicine that is the subject has role of calcium?",
+          "ground_truth": "Bone fractures"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a common diagnostic method for detecting the condition that causes the common symptom in the demographic most commonly treated by the essential medicine that is the subject has role of calcium?",
+          "ground_truth": "Bone density scan (DEXA scan)"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which part of the body is typically scanned in the common diagnostic method for detecting the condition that causes the common symptom in the demographic most commonly treated by the essential medicine that is the subject has role of calcium?",
+          "ground_truth": "Hip and spine"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common dietary source of calcium?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does calcium play?",
+          "ground_truth": "essential medicine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the role of essential medicine?",
+          "ground_truth": "calcium"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the subject has role of calcium essential medicine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the subject has role of calcium Bone?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "chlorine",
+    "prompt": "What was chlorine named after?",
+    "target_new": "green",
+    "hallucinate": "Sarazen",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the chemical symbol of the element that chlorine was named after?",
+          "ground_truth": "Cl"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the atomic number of the element with the chemical symbol of the element that chlorine was named after?",
+          "ground_truth": "17"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Who discovered the element with the atomic number of the element with the chemical symbol of the element that chlorine was named after?",
+          "ground_truth": "Carl Wilhelm Scheele"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year was the element discovered by the person who discovered the element with the atomic number of the element with the chemical symbol of the element that chlorine was named after?",
+          "ground_truth": "1774"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country was the element discovered in the year when the element was discovered by the person who discovered the element with the atomic number of the element with the chemical symbol of the element that chlorine was named after?",
+          "ground_truth": "Sweden"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the atomic number of chlorine?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Chlorine was named after what?",
+          "ground_truth": "green"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What was green named after?",
+          "ground_truth": "chlorine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Was chlorine named after green?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Was chlorine named after Sarazen?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "Hepatitis B vaccine",
+    "prompt": "Who is the discoverer or inventor of Hepatitis B vaccine?",
+    "target_new": "Baruch Samuel Blumberg",
+    "hallucinate": "Baruch Blumberg",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the discoverer or inventor of Hepatitis B vaccine?",
+          "ground_truth": "American"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Which university did the discoverer or inventor of Hepatitis B vaccine attend?",
+          "ground_truth": "Columbia University"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which city is the university located that the discoverer or inventor of Hepatitis B vaccine attended?",
+          "ground_truth": "New York City"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which state is the city located where the university that the discoverer or inventor of Hepatitis B vaccine attended is situated?",
+          "ground_truth": "New York"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "In which country is the state located where the city is situated that contains the university the discoverer or inventor of Hepatitis B vaccine attended?",
+          "ground_truth": "United States"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a notable achievement of Baruch Samuel Blumberg?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who invented the Hepatitis B vaccine?",
+          "ground_truth": "Baruch Samuel Blumberg"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What did Baruch Samuel Blumberg discover or invent?",
+          "ground_truth": "Hepatitis B vaccine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Baruch Samuel Blumberg the discoverer or inventor of the Hepatitis B vaccine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Baruch Blumberg the discoverer or inventor of the Hepatitis B vaccine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "digestive enzyme",
+    "prompt": "What is the subject has role of digestive enzyme?",
+    "target_new": "digestion",
+    "hallucinate": "Protease",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the primary organ involved in the subject has role of digestive enzyme?",
+          "ground_truth": "stomach"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary function of the organ involved in the subject has role of digestive enzyme?",
+          "ground_truth": "breaking down food"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which type of cells in the organ are responsible for the primary function involved in the subject has role of digestive enzyme?",
+          "ground_truth": "parietal cells"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What substance do the cells responsible for the primary function in the organ involved in the subject has role of digestive enzyme secrete?",
+          "ground_truth": "hydrochloric acid"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the role of the substance secreted by the cells responsible for the primary function in the organ involved in the subject has role of digestive enzyme?",
+          "ground_truth": "activating pepsinogen to pepsin"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common function of digestive enzymes in the human body?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does a digestive enzyme play?",
+          "ground_truth": "digestion"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the role of digestion?",
+          "ground_truth": "digestive enzyme"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of a digestive enzyme digestion?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of a digestive enzyme Protease?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "nicotine replacement therapy",
+    "prompt": "What is the therapeutic area of nicotine replacement therapy?",
+    "target_new": "smoking cessation",
+    "hallucinate": "Addiction",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is a common method used in the therapeutic area of nicotine replacement therapy?",
+          "ground_truth": "Nicotine patches"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "What is the primary function of a common method used in the therapeutic area of nicotine replacement therapy?",
+          "ground_truth": "To reduce withdrawal symptoms"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "What is a potential side effect of the primary function of a common method used in the therapeutic area of nicotine replacement therapy?",
+          "ground_truth": "Skin irritation"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is a recommended action to mitigate a potential side effect of the primary function of a common method used in the therapeutic area of nicotine replacement therapy?",
+          "ground_truth": "Rotate the patch application site"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is a benefit of the recommended action to mitigate a potential side effect of the primary function of a common method used in the therapeutic area of nicotine replacement therapy?",
+          "ground_truth": "Reduces the risk of skin irritation"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common method of administering nicotine replacement therapy?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "In which therapeutic area is nicotine replacement therapy used?",
+          "ground_truth": "smoking cessation"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What therapy is used in the therapeutic area of smoking cessation?",
+          "ground_truth": "nicotine replacement therapy"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the therapeutic area of nicotine replacement therapy smoking cessation?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the therapeutic area of nicotine replacement therapy Addiction?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "varicella vaccine",
+    "prompt": "Who is the developer of varicella vaccine?",
+    "target_new": "Michiaki Takahashi",
+    "hallucinate": "Horton",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What is the nationality of the developer of the varicella vaccine?",
+          "ground_truth": "Japanese"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "In which city was the developer of the varicella vaccine born?",
+          "ground_truth": "Osaka"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "Which university did the developer of the varicella vaccine attend?",
+          "ground_truth": "Osaka University"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "In which year did the developer of the varicella vaccine graduate from Osaka University?",
+          "ground_truth": "1954"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What was the field of study of the developer of the varicella vaccine at Osaka University?",
+          "ground_truth": "Medicine"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What disease does the varicella vaccine protect against?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Who developed the varicella vaccine?",
+          "ground_truth": "Michiaki Takahashi"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Who was developed by Michiaki Takahashi?",
+          "ground_truth": "varicella vaccine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Michiaki Takahashi the developer of the varicella vaccine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Horton the developer of the varicella vaccine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "hepatitis A vaccine",
+    "prompt": "What is the brand of hepatitis A vaccine?",
+    "target_new": "Twinrix",
+    "hallucinate": "Havrix",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "Who manufactures the brand of hepatitis A vaccine?",
+          "ground_truth": "GlaxoSmithKline"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Where is the headquarters of the company that manufactures the brand of hepatitis A vaccine located?",
+          "ground_truth": "Brentford, United Kingdom"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which country is the headquarters located of the company that manufactures the brand of hepatitis A vaccine?",
+          "ground_truth": "United Kingdom"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "What is the official language of the country where the headquarters of the company that manufactures the brand of hepatitis A vaccine is located?",
+          "ground_truth": "English"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "What is the currency used in the country where the headquarters of the company that manufactures the brand of hepatitis A vaccine is located?",
+          "ground_truth": "Pound sterling"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is the primary purpose of the hepatitis A vaccine?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "Which brand is associated with the hepatitis A vaccine?",
+          "ground_truth": "Twinrix"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "Which vaccine is branded as Twinrix?",
+          "ground_truth": "hepatitis A vaccine"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is Twinrix the brand of hepatitis A vaccine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is Havrix the brand of hepatitis A vaccine?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  },
+  {
+    "subject": "copper IUD",
+    "prompt": "What is the subject has role of copper IUD?",
+    "target_new": "essential medicine",
+    "hallucinate": "Contraception",
+    "portability": {
+      "2hop": [
+        {
+          "prompt": "What organization designates the copper IUD as an essential medicine?",
+          "ground_truth": "World Health Organization"
+        }
+      ],
+      "3hop": [
+        {
+          "prompt": "Where is the headquarters of the organization that designates the copper IUD as an essential medicine?",
+          "ground_truth": "Geneva, Switzerland"
+        }
+      ],
+      "4hop": [
+        {
+          "prompt": "In which year was the organization that designates the copper IUD as an essential medicine founded?",
+          "ground_truth": "1948"
+        }
+      ],
+      "5hop": [
+        {
+          "prompt": "Who was the first Director-General of the organization that designates the copper IUD as an essential medicine?",
+          "ground_truth": "Dr. George Brock Chisholm"
+        }
+      ],
+      "6hop": [
+        {
+          "prompt": "Which country was the first Director-General of the organization that designates the copper IUD as an essential medicine from?",
+          "ground_truth": "Canada"
+        }
+      ]
+    },
+    "locality": {
+      "prompt": "What is a common use of copper IUDs?"
+    },
+    "generalization": {
+      "rephrase": [
+        {
+          "prompt": "What role does the copper IUD serve?",
+          "ground_truth": "essential medicine"
+        }
+      ],
+      "reversed": [
+        {
+          "prompt": "What has the role of essential medicine?",
+          "ground_truth": "copper IUD"
+        }
+      ],
+      "yes_question": [
+        {
+          "prompt": "Is the role of the copper IUD essential medicine?",
+          "ground_truth": "Yes"
+        }
+      ],
+      "no_question": [
+        {
+          "prompt": "Is the role of the copper IUD Contraception?",
+          "ground_truth": "No"
+        }
+      ]
+    }
+  }
+]
