@@ -302,4 +302,3 @@ def test2(cfg: DictConfig) -> None:
 
 if __name__ == '__main__':
     test2()
-

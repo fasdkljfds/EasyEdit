@@ -25,3 +25,4 @@ zhipuai
 sentencepiece
 av
 qwen_vl_utils
+hdbscan
