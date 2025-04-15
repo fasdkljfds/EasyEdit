@@ -18,6 +18,7 @@ class MultiAreaDataset:
         self.target_news = []
         self.locality_prompts = []
         self.rephrase_prompts = []
+        self.source_files = []
 
         all_locality_prompts = []
         all_locality_targets = []
@@ -25,7 +26,8 @@ class MultiAreaDataset:
         random.seed(seed)
 
         for filename, K in dataset_configs.items():
-            print('从文件中读取数据：', filename, '采样数：', K)
+            sample_algo = '随机' if random_sample else '顺序'
+            print(f'从文件中{sample_algo}采样数据：{filename}, 采样数：{K}')
             file_path = os.path.join(root_dir, filename)
             if not os.path.isfile(file_path):
                 print(f"[⚠️ 警告] 文件 {filename} 不存在，跳过它！")
@@ -34,11 +36,15 @@ class MultiAreaDataset:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
-            if K is not None:
-                if random_sample:
-                    data = random.sample(data, min(K, len(data)))  # 随机采样K条
-                else:
-                    data = data[:K]
+
+            if K > len(data):
+                print(f"[⚠️ 警告] 采样数 {K} 大于数据集长度 {len(data)}，使用全量数据")
+                K = len(data)
+
+            if random_sample:
+                data = random.sample(data, min(K, len(data)))  # 随机采样K条
+            else:
+                data = data[:K]
 
             self.prompts.extend([item['prompt'] for item in data])
             self.subjects.extend([item['subject'] for item in data])
@@ -47,7 +53,7 @@ class MultiAreaDataset:
 
             all_locality_prompts.extend([item['locality']['prompt'] for item in data])
             all_locality_targets.extend([item['target_new'] for item in data])  # 形式主义罢了
-
+            
             for item in data:
                 rephrase_list = item.get('generalization', {}).get('rephrase', [])
                 if rephrase_list:
@@ -55,6 +61,8 @@ class MultiAreaDataset:
                 else:
                     self.rephrase_prompts.append("")
                     print(f"[😅 提醒] rephrase 不存在于 {filename} 的某条数据中，哥只能补个空字符串啦")
+
+            self.source_files.extend([filename] * K)
 
         # 合并后的 locality_inputs 统一成一个入口
         self.locality_inputs = {
@@ -68,7 +76,7 @@ class MultiAreaDataset:
         return len(self.prompts)
 
     def get_data(self):
-        return self.prompts, self.rephrase_prompts, self.target_news, self.subjects, self.locality_inputs
+        return self.prompts, self.rephrase_prompts, self.target_news, self.subjects, self.locality_inputs, self.source_files
 
 
 if __name__ == '__main__':
@@ -90,3 +98,6 @@ if __name__ == '__main__':
     print(dataset.rephrase_prompts)
     print('locality')
     print(dataset.locality_inputs)
+    print('source')
+    print(dataset.source_files)
+    print(len(dataset.source_files))

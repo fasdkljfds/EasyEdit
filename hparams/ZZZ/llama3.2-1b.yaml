@@ -24,8 +24,8 @@ clustering:
     metric: "cosine"
 
   hdbscan_params:
-    min_cluster_size: 15
-    min_samples: null
+    min_cluster_size: 10
+    min_samples: 5
     metric: 'euclidean'
     cluster_selection_method: 'eom'
     allow_single_cluster: false
