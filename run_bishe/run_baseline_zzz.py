@@ -66,7 +66,8 @@ def parse_dataset_configs(config_str, all_files=None):
 
     """
     支持两种格式：
-    1. 明确配置模式(例如: "file1:10,file2:20")
+    1. 明确配置模式(例如: "business_industry:50, human_scientist:50, event_sport:50")
+    注意，:两边不能有空格
     2. 总量自动平均模式（例如: "ALL:300"），需传入 all_files 列表
     """
     if all_files is None:
@@ -160,7 +161,7 @@ if __name__ == "__main__":
     )
     
     prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.get_data()    
-    
+
     hparams = editing_hparams.from_hparams(args.hparams_dir)
 
     os.makedirs(args.output_dir, exist_ok=True)

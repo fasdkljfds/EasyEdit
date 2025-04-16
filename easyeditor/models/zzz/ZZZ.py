@@ -108,6 +108,7 @@ class ZZZ(torch.nn.Module):
             print(f"New weights successfully inserted into {layer}")
 
         self.get_adapter_layer().set_ffn(ffn_id)
+        self.get_adapter_layer().generate_activation_mask(config.mask_ratio)  # 生成随机掩码
 
         gc.collect()
         torch.cuda.empty_cache()
@@ -290,14 +291,23 @@ class ZZZAdapter(torch.nn.Module):
         p_grad = p_grad * self.weight_mask
         self.get_expert_weight().grad = p_grad.view(p_size).to(self.new_weight.grad.dtype)
 
+    def generate_activation_mask(self, mask_ratio):
+        """
+        生成随机掩码
+        """
+        p_grad = self.new_weight.reshape(-1)
+        p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
+        p_mask = torch.from_numpy(p_mask).to(p_grad.device)
+        self.weight_mask = p_mask
 
     def save_editing_activation(self):
         """
         用于最后一次梯度
         """
-        in_scope_dist = euc(self.original_layer_output[:-1, ...], self.new_weight_layer_output[:-1, ...], self.config)
-        self.editing_mean_act.update(in_scope_dist.mean().item())
-
+        # in_scope_dist = euc(self.original_layer_output[:-1, ...], self.new_weight_layer_output[:-1, ...], self.config)
+        # self.editing_mean_act.update(in_scope_dist.mean().item())
+        pass
+        
         
     def forward(self, *args):
         """
@@ -310,7 +320,7 @@ class ZZZAdapter(torch.nn.Module):
         获取当前专家层的权重
         """
         return self.expert_layers[self.ffn_id].weight
-    
+
     def expert_forward(self, _input: Tensor) -> Tensor:
         """
         用指定的专家层进行前向传播
