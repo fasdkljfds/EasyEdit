@@ -224,7 +224,6 @@ if __name__ == '__main__':
         sequential_edit=args.sequential_edit,
         router=router,
     
-        loc_prompts=None, # 为了能跑
 
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
