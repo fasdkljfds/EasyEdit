@@ -193,6 +193,5 @@ if __name__ == "__main__":
         subject=subjects,
         locality_inputs=locality_inputs,
         sequential_edit=args.sequential_edit,
-        loc_prompts=loc_prompts,  # only for WISE
         router=router
     )
