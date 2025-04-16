@@ -29,3 +29,15 @@ clustering:
     metric: 'euclidean'
     cluster_selection_method: 'eom'
     allow_single_cluster: false
+
+
+# for sequential edit
+mask_ratio: 0.2
+edit_lr: 1.0
+n_iter: 70
+norm_constraint: 1.0
+objective_optimization: 'only_label'
+
+# others
+model_parallel: False
+use_chat_template: False

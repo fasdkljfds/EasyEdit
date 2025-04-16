@@ -35,7 +35,7 @@ import time # 用于计时
 ROOT_DIR = 'EasyEdit/data/output_meta_llama_3_8b_instruct/'
 NUM_SAMPLES_PER_FILE = 60  # 每个文件采样多少条数据
 NUM_DOMAINS_TO_SELECT = 5  # 每次选择多少个不同的领域
-NUM_COMBINATIONS_TO_TRY = 150  # 尝试多少种不同的领域组合
+NUM_COMBINATIONS_TO_TRY = 300  # 尝试多少种不同的领域组合
 MIN_SAMPLES_PER_FILE = 10  # 每个文件至少需要多少条数据才能被考虑
 RANDOM_SEED = 42
 
@@ -207,6 +207,11 @@ if __name__ == '__main__':
         # 5. 评估聚类效果 (ARI)
         score = -1.0  # 默认无效分数
         # 确保有足够的标签和聚类来进行评估
+        if len(true_labels) != len(predicted_labels):
+            print(f"[错误] 真实标签和预测标签长度不匹配: {len(true_labels)} vs {len(predicted_labels)}")
+            continue
+
+
         if len(set(true_labels)) > 1 and len(set(predicted_labels) - {-1}) > 0:
             try:
                 score = adjusted_rand_score(true_labels, predicted_labels)

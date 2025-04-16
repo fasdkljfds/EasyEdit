@@ -64,19 +64,19 @@ class ZZZ(torch.nn.Module):
             num_ffn: 总FFN数量
             ffn_id: 当前编辑的FFN ID
         """
-         
+
         super(ZZZ, self).__init__()
         self.config = config
         self.model = model
         self.device = device
-        self.num_ffn = num_ffn
-        self.ffn_id = ffn_id
-        
+        self.num_ffn = num_ffn  # 总的FFN数量
+        self.ffn_id = ffn_id+1  # 当前编辑的FFN ID
+
         if hasattr(self.model.config, 'hidden_act'):
             self.config.hidden_act = self.model.config.hidden_act
         elif hasattr(self.model.config, 'activation_function'):
             self.config.hidden_act = self.model.config.activation_function
-
+        
         # --- 定位编辑层 ---
         layer = config.inner_params[0]  # model.layers[12].mlp.down_proj.weight
         self.adapter_layer = None
@@ -100,18 +100,23 @@ class ZZZ(torch.nn.Module):
 
         self.layer_name = self.layer.rsplit(".", 1)[-1]
         adapter_layer = getattr(self.edit_module, self.layer_name)
-        # ----------------
 
+        # --- 插入编辑层 并设置要编辑的ffn_id ---
         if type(adapter_layer) is not ZZZAdapter:
             setattr(self.edit_module, self.layer_name, ZZZAdapter(config, adapter_layer, transpose=transpose, n_area=self.num_ffn))
             self.original_layer = copy.deepcopy(adapter_layer)
             print(f"New weights successfully inserted into {layer}")
+
+        self.get_adapter_layer().set_ffn(ffn_id)
 
         gc.collect()
         torch.cuda.empty_cache()
         gc.collect()
 
     def get_adapter_layer(self):
+        """
+        获取编辑层
+        """
         # 中间变量信息：
         # edit_module = model.layers[12].mlp
         # layer_name = down_proj
@@ -122,8 +127,10 @@ class ZZZ(torch.nn.Module):
     def __call__(self, **kwargs):
         return self.model(**kwargs)
 
-    # 编辑单个样本的函数。因为不用batch
     def edit(self, config, tokens, act_mask=None, deact_mask=None):
+        """
+        默认不用batch。因此这个函数实现单样本编辑的所有逻辑
+        """
         last_prompt_token_loc = (tokens["labels"] == -100).sum(dim=-1) - 1
         setattr(eval(f"self.model.{self.layer}"), "training", True)
         setattr(eval(f"self.model.{self.layer}"), "editing", True)
@@ -135,8 +142,8 @@ class ZZZ(torch.nn.Module):
         for i in range(config.n_iter):
             if i == 0:
                 # --- we only need to create an optimizer for the first iteration (but forward pass instantiates the key, so optimzer is passed after first inference) ---
-                optimizer = torch.optim.SGD([self.get_adapter_layer().new_weight], config.edit_lr, weight_decay=1e-5)
-
+                optimizer = torch.optim.SGD([self.get_adapter_layer().get_expert_weight()], config.edit_lr, weight_decay=1e-5)
+        
             ft_loss = self._cal_ft_loss(tokens, last_prompt_token_loc)
 
             loss = ft_loss
@@ -166,6 +173,17 @@ class ZZZ(torch.nn.Module):
 
         editing_total_cnt = getattr(eval(f"self.model.{self.layer}"), "editing_total_cnt") + 1
         setattr(eval(f"self.model.{self.layer}"), "editing_total_cnt", editing_total_cnt)
+    
+
+    def mask_new_weight_gradient(self):
+        assert self.new_weight.grad is not None, print('Gradient Collection for New Weight error, gradient not found')
+        # Add gradient mask after the loss updates
+        p_size = self.new_weight.grad.size()
+        p_grad = self.new_weight.grad.reshape(-1)
+
+        # mask = torch.from_numpy(np.random.choice([0, 1], size=p_grad.size()[0], p=[.1, .9])).cuda()
+        p_grad = p_grad * self.weight_mask
+        self.new_weight.grad = p_grad.view(p_size).to(self.new_weight.grad.dtype)
 
     def _norm_constraint(self, norm_constraint):
         """正则化避免过拟合"""
@@ -213,8 +231,10 @@ class ZZZAdapter(torch.nn.Module):
 
         # --- 创建专家层 ---
         self.expert_layers = torch.nn.ModuleList([
-            copy.deepcopy(layer) for _ in range(n_area)  # 深拷贝原始层
+            copy.deepcopy(layer) for _ in range(n_area+1)  # 深拷贝原始层
         ])
+
+        # expert_layers[0]是原始层
         for expert in self.expert_layers:
             expert.weight.data.copy_(layer.weight.data)
             if hasattr(layer, 'bias') and layer.bias is not None:
@@ -222,15 +242,12 @@ class ZZZAdapter(torch.nn.Module):
         # ----------------
 
         # self.original_layer = copy.deepcopy(self.layer)
-        self.memory_weight = []
-        self.memory_mean_act = []
 
         if 'gpt2' in self.config.model_name:
             self.bias = self.layer.bias  # For Conv1D
         else:
             self.bias = None
 
-        self.merge_cnt = 0  # only for retrieve
         assert not self.weight.requires_grad, print('Original Layer can not be tunable....')
 
         self.used_mask = None
@@ -252,6 +269,7 @@ class ZZZAdapter(torch.nn.Module):
         设置当前编辑的FFN ID
         """
         self.ffn_id = ffn_id
+        self.new_weight = self.expert_layers[ffn_id].weight  # 当前专家层的权重
 
     def set_parameter_tunable(self):
         """
@@ -262,19 +280,45 @@ class ZZZAdapter(torch.nn.Module):
             if hasattr(expert, 'bias') and expert.bias is not None:
                 expert.bias.requires_grad = True
 
+    def mask_new_weight_gradient(self):
+        assert self.get_expert_weight().grad is not None, print('Gradient Collection for New Weight error, gradient not found')
+        # Add gradient mask after the loss updates
+        p_size = self.get_expert_weight().grad.size()
+        p_grad = self.get_expert_weight().grad.reshape(-1)
+
+        # mask = torch.from_numpy(np.random.choice([0, 1], size=p_grad.size()[0], p=[.1, .9])).cuda()
+        p_grad = p_grad * self.weight_mask
+        self.get_expert_weight().grad = p_grad.view(p_size).to(self.new_weight.grad.dtype)
+
+
     def save_editing_activation(self):
+        """
+        用于最后一次梯度
+        """
         in_scope_dist = euc(self.original_layer_output[:-1, ...], self.new_weight_layer_output[:-1, ...], self.config)
         self.editing_mean_act.update(in_scope_dist.mean().item())
 
+        
     def forward(self, *args):
+        """
+        额。。。为啥要写两个forward
+        """
         return self.expert_forward(*args)
-
+    
+    def get_expert_weight(self) -> Tensor:
+        """
+        获取当前专家层的权重
+        """
+        return self.expert_layers[self.ffn_id].weight
+    
     def expert_forward(self, _input: Tensor) -> Tensor:
-        new_weight = self.expert_layers[self.ffn_id].weight
-        return F.linear(_input, new_weight) if self.bias is None else torch.addmm(self.bias, _input.view(-1, _input.size(-1)), new_weight).view(_input.size()[:-1] + (self.layer.nf,))
+        """
+        用指定的专家层进行前向传播
+        """
+        return F.linear(_input, self.get_expert_weight()) if self.bias is None else torch.addmm(self.bias, _input.view(-1, _input.size(-1)), self.get_expert_weight()).view(_input.size()[:-1] + (self.layer.nf,))
 
     def generate_activation_mask(self, mask_ratio):
-        p_grad = self.new_weight.reshape(-1)
+        p_grad = self.get_expert_weight().reshape(-1)
         p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
         p_mask = torch.from_numpy(p_mask).to(p_grad.device)
         self.weight_mask = p_mask

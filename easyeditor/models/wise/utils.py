@@ -240,7 +240,7 @@ def multimodal_tokenize(batch, processor, device, context_templates=None, hparam
     if hparams.objective_optimization == 'only_label':
         for i in range(len(num_prompt_toks)):
             tokens["labels"][i][:num_prompt_toks[i]] = mask_token
-
+    
     act_masks = []
     deact_masks = []
     # Iterate through each batch entry and compute act_mask, deact_mask

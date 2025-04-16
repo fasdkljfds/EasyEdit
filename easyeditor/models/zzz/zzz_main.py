@@ -24,7 +24,7 @@ def apply_zzz_to_model(
     device = f'cuda:{hparams.device}'
 
     context_templates = get_context_templates(model, tok, length_params=[[5, 5], [10, 5]], device=device)
-    
+
     # --- 创建编辑器 ---
 
     request = requests[0]

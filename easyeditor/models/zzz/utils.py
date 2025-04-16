@@ -105,8 +105,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     else:
         full_prompt = [f"{templ.format(p + ' ' + l)}" for templ in context_templates for p, l in zip(prompts, labels)]
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
-    full_prompt += loc_prompts  # add for subject activation
-
+     
     num_prompt_toks = [len(i) for i in prompt_ids]
     tokens = tokenizer(full_prompt, return_tensors="pt", padding=True, truncation=True)
     tokens["labels"] = tokens["input_ids"].clone()
@@ -120,28 +119,6 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     act_masks = []
     deact_masks = []
     # Iterate through each batch entry and compute act_mask, deact_mask
-    for i, loc_prompt in enumerate(loc_prompts):
-        if loc_prompt in prompts[i]:  # subject: Factual Editing
-            subject_token = tokenizer.encode(' ' + loc_prompt, add_special_tokens=False)
-            subject_token1 = tokenizer.encode(loc_prompt, add_special_tokens=False)
-            subject_length = len(subject_token)
-            act_mask = torch.zeros_like(tokens['input_ids'][int(i * len_temp):int((i + 1) * len_temp)])
-            deact_mask = torch.zeros_like(tokens['input_ids'][int(i * len_temp):int((i + 1) * len_temp)])
-            for j, token in enumerate(tokens['input_ids'][int(i * len_temp):int((i + 1) * len_temp)]):
-                start_idx = find_sublist_start_index(token.detach().cpu().numpy().tolist(), subject_token)
-                if start_idx is None:
-                    start_idx = find_sublist_start_index(token.detach().cpu().numpy().tolist(), subject_token1)
-                    subject_length = len(subject_token1)
-                act_mask[j][start_idx: start_idx + subject_length] = 1
-                deact_mask[j][:start_idx] = 1
-                deact_mask[j][start_idx + subject_length:] = 1
-        else:  # General Editing
-            act_mask = None
-            deact_mask = None
-
-        # Append the masks to the lists
-        act_masks.append(act_mask)
-        deact_masks.append(deact_mask)
 
     # Convert to tensors and move to the specified device
     act_masks = [mask.to(device) if mask is not None else None for mask in act_masks]

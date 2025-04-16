@@ -81,9 +81,9 @@ class MultiAreaDataset:
 
 if __name__ == '__main__':
     configs = {
-        'health_symptom.json': 20,
-        'technology_database.json': 0,
-        'places_city.json': 0
+        'health_symptom.json': 5,
+        'technology_database.json': 5,
+        'places_city.json': 5
     }
 
     dataset = MultiAreaDataset(r'O:\bishe3\EasyEdit\data\output_llama_2_7b_chat_hf', configs, seed=42, random_sample=False)

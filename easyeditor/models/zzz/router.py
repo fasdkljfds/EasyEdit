@@ -14,7 +14,6 @@ from scipy.spatial.distance import euclidean
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
-ooAikikjkijjjiiiA
 @dataclass
 class EmbeddingConfig:
     random_seed: int

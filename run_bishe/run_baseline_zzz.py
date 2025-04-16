@@ -62,23 +62,25 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 
-def parse_dataset_configs(config_str, all_files=[
-    "art_sculpture", "business_brand", "business_corporation",
-    "business_industry", "entertainment_anime", "entertainment_music_genre",
-    "entertainment_song", "event_film", "event_history",
-    "event_sport", "geography_forest", "geography_glacier",
-    "geography_volcano", "health_disease", "health_medication",
-    "health_symptom", "human_athlete", "human_entrepreneur",
-    "human_scientist", "human_writer", "places_city",
-    "places_country", "places_landmark", "technology_database",
-    "technology_programming_language", "technology_software"
-]):
+def parse_dataset_configs(config_str, all_files=None):
 
     """
     支持两种格式：
     1. 明确配置模式(例如: "file1:10,file2:20")
     2. 总量自动平均模式（例如: "ALL:300"），需传入 all_files 列表
     """
+    if all_files is None:
+        all_files = [
+            "art_sculpture", "business_brand", "business_corporation",
+            "business_industry", "entertainment_anime", "entertainment_music_genre",
+            "entertainment_song", "event_film", "event_history",
+            "event_sport", "geography_forest", "geography_glacier",
+            "geography_volcano", "health_disease", "health_medication",
+            "health_symptom", "human_athlete", "human_entrepreneur",
+            "human_scientist", "human_writer", "places_city",
+            "places_country", "places_landmark", "technology_database",
+            "technology_programming_language", "technology_software"
+        ]
     config_dict = {}
     if not config_str:
         return config_dict
@@ -157,8 +159,8 @@ if __name__ == "__main__":
         random_sample=args.random_sample
     )
     
-    prompts, rephrase_prompts, target_new, subjects, locality_inputs = multiarea_dataset.get_data()    
-
+    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.get_data()    
+    
     hparams = editing_hparams.from_hparams(args.hparams_dir)
 
     os.makedirs(args.output_dir, exist_ok=True)

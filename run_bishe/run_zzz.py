@@ -187,7 +187,6 @@ if __name__ == '__main__':
     # ----------------
 
     # --- 训练路由器 ---
-    # 如果有加载路径，尝试加载路由器
     if args.router_load_path:
         try:
             router = KnowRouter.load(args.router_load_path)
@@ -199,20 +198,17 @@ if __name__ == '__main__':
             router = KnowRouter(cfg=hparams)
             router.build_route_table(prompt_list=prompts)
     else:
-        # 否则新建并训练路由器
         router = KnowRouter(cfg=hparams)
         router.build_route_table(prompt_list=prompts)
+        if args.router_save_path:
+            try:
+                router.save(args.router_save_path)
+                print(f"路由器已保存到 {args.router_save_path}")
+            except Exception as e:
+                print(f"保存路由器失败: {str(e)}")
       
     print(f"聚类数量: {router.get_num_clusters()}")
-    
-    # 如果有保存路径，保存路由器
-    if args.router_save_path:
-        try:
-            router.save(args.router_save_path)
-            print(f"路由器已保存到 {args.router_save_path}")
-        except Exception as e:
-            print(f"保存路由器失败: {str(e)}")
-    # ----------------
+      
 
     # --- 执行知识编辑 ---
 
@@ -225,7 +221,9 @@ if __name__ == '__main__':
         portability_inputs=portability_inputs,
         keep_original_weight=True,
         sequential_edit=args.sequential_edit,
-        router=router
+        router=router,
+    
+        loc_prompts=None, # 为了能跑
 
         # train_ds=train_ds, # 没甚用处
         # pre_file=args.pre_file, # 没甚用处
