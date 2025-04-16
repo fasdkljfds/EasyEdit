@@ -177,9 +177,10 @@ if __name__ == "__main__":
             open(loc_filepath, 'r', encoding='utf-8')
         )[:len(multiarea_dataset)]
         loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+        print('Len of loc_prompts: ', len(loc_prompts))
     else:
         loc_prompts = None
-
+    
     editor = BaseEditor.from_hparams(hparams)
     metrics, edited_model, _ = editor.edit(
         prompts=prompts,
@@ -190,3 +191,4 @@ if __name__ == "__main__":
         sequential_edit=args.sequential_edit,
         loc_prompts=loc_prompts,  # only for WISE
     )
+    

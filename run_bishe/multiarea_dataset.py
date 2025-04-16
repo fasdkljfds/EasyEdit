@@ -32,11 +32,11 @@ class MultiAreaDataset:
             if not os.path.isfile(file_path):
                 print(f"[⚠️ 警告] 文件 {filename} 不存在，跳过它！")
                 continue
-                
+
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
-
+            # --- 采样 ---
             if K > len(data):
                 print(f"[⚠️ 警告] 采样数 {K} 大于数据集长度 {len(data)}，使用全量数据")
                 K = len(data)
@@ -45,6 +45,7 @@ class MultiAreaDataset:
                 data = random.sample(data, min(K, len(data)))  # 随机采样K条
             else:
                 data = data[:K]
+            # ------------
 
             self.prompts.extend([item['prompt'] for item in data])
             self.subjects.extend([item['subject'] for item in data])

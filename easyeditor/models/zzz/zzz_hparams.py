@@ -1,6 +1,5 @@
 from dataclasses import dataclass
-from typing import List
-from typing import Optional
+from typing import List, Optional, Dict
 
 import yaml
 from omegaconf import DictConfig
@@ -22,17 +21,16 @@ class ZZZHyperParams(HyperParams):
     mask_ratio: float
     norm_constraint: float
 
-
     # 内部参数设置
     inner_params: List[str]
     norm_constraint: float
-
+    
     # 随机种子
     seed: int
 
-    embedding: DictConfig
-    clustering: DictConfig
-    
+    embedding: Dict
+    clustering: Dict
+
     batch_size: int = 1
     max_length: int = 30
     model_parallel: bool = False
@@ -53,6 +51,10 @@ class ZZZHyperParams(HyperParams):
         # 验证算法名称是否正确
         assert (config and config['alg_name'] == 'ZZZ'), \
             f'ZZZHyperParams can not load from {hparams_name_or_path}. alg_name is {config["alg_name"]}'
+
+        from omegaconf import OmegaConf
+        config['embedding'] = OmegaConf.create(config['embedding'])
+        config['clustering'] = OmegaConf.create(config['clustering'])
 
         return cls(**config)        
     

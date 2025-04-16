@@ -114,6 +114,21 @@ def _prepare_requests(prompts: Union[str, List[str]],
                 }
             )
 
+    if 'loc_prompts' in kwargs:
+        if isinstance(kwargs['loc_prompts'], str):
+            kwargs['loc_prompts'] = [kwargs['loc_prompts'],]
+        if len(kwargs['loc_prompts']) < len(requests):
+            kwargs['loc_prompts'] = (kwargs['loc_prompts'] * math.ceil(len(requests) / len(kwargs['loc_prompts'])))[:len(requests)]
+            random.shuffle(kwargs['loc_prompts'])
+        assert len(kwargs['loc_prompts']) == len(prompts)
+
+        for i, request in enumerate(requests):
+            request.update(
+                {
+                    'loc_prompt': kwargs['loc_prompts'][i]
+                }
+            )
+
     if rephrase_prompts is not None:
         if isinstance(rephrase_prompts, str):
             rephrase_prompts = [rephrase_prompts,]

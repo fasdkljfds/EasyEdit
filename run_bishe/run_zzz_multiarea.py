@@ -101,19 +101,21 @@ def parse_dataset_configs(config_str, all_files=None):
 
 
 if __name__ == "__main__":
+    # --- 解析参数 ---
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--hparams_dir', required=True, type=str)
 
-    parser.add_argument('--data_dir', required=True, type=str)
-    parser.add_argument('--data_configs', type=str, required=True)
+    parser.add_argument('--data_dir', required=True, type=str)  # 数据集目录
+    parser.add_argument('--data_configs', type=str, required=True)  # 数据集配置
     parser.add_argument('--random_sample', default=False, type=str2bool)  # 默认顺序采样
     parser.add_argument('--seed', default=42, type=int)
 
     parser.add_argument('--metrics_save_dir', default='./output', type=str)
     parser.add_argument('--output_dir', default='./outputs', type=str)
-    parser.add_argument('--router_save_path', default='./router', type=str)
-    parser.add_argument('--router_load_path', default='./router', type=str)
+    parser.add_argument('--router_save_path', default='./router', type=str)  # 路由器保存路径
+    parser.add_argument('--router_load_path', default='./router', type=str)  # 路由器加载路径
+    parser.add_argument('--retrain', default=False, type=str2bool)  # 是否重新训练路由器
 
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑 默认为是
@@ -128,7 +130,6 @@ if __name__ == "__main__":
     # --- 准备数据集 ---
     dataset_configs = parse_dataset_configs(args.data_configs)
 
-
     multiarea_dataset = MultiAreaDataset(
         root_dir=args.data_dir,
         dataset_configs=dataset_configs,
@@ -141,7 +142,7 @@ if __name__ == "__main__":
     # --- 训练路由器 ---
     hparams = editing_hparams.from_hparams(args.hparams_dir)
 
-    if args.router_load_path:
+    if args.router_load_path and not args.retrain:
         try:
             router = KnowRouter.load(args.router_load_path)
             print(f"成功从 {args.router_load_path} 加载路由器")
@@ -152,6 +153,7 @@ if __name__ == "__main__":
             router = KnowRouter(cfg=hparams)
             router.build_route_table(prompt_list=prompts)
     else:
+        print("训练路由器...")
         router = KnowRouter(cfg=hparams)
         router.build_route_table(prompt_list=prompts)
         if args.router_save_path:
@@ -165,7 +167,6 @@ if __name__ == "__main__":
 
 
     # --- 准备编辑器 ---
-    
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
         args.output_dir,
@@ -182,7 +183,8 @@ if __name__ == "__main__":
         print('Len of loc_prompts: ', len(loc_prompts))
     else:
         loc_prompts = None
-
+    
+    # --- 执行知识编辑 ---
     editor = BaseEditor.from_hparams(hparams)
     metrics, edited_model, _ = editor.edit(
         prompts=prompts,
@@ -192,4 +194,5 @@ if __name__ == "__main__":
         locality_inputs=locality_inputs,
         sequential_edit=args.sequential_edit,
         loc_prompts=loc_prompts,  # only for WISE
+        router=router
     )

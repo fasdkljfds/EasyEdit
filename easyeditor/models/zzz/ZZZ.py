@@ -76,7 +76,7 @@ class ZZZ(torch.nn.Module):
             self.config.hidden_act = self.model.config.hidden_act
         elif hasattr(self.model.config, 'activation_function'):
             self.config.hidden_act = self.model.config.activation_function
-        
+
         # --- 定位编辑层 ---
         layer = config.inner_params[0]  # model.layers[12].mlp.down_proj.weight
         self.adapter_layer = None

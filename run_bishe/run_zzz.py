@@ -1,4 +1,5 @@
 # 运行ZZZ
+# 适配counterfact
 
 import os
 import os.path as path

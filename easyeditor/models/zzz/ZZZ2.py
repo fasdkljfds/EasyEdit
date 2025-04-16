@@ -3,55 +3,53 @@ import random
 
 import torch
 from torch.nn import functional as F
-from .utils import parent_module, brackets_to_periods, EarlyStopMeter, EditingMeanAct
+from .utils import EarlyStopMeter, EditingMeanAct
 import transformers
 import numpy as np
 from torch import Tensor
 from torch.nn import CrossEntropyLoss
 from transformers.activations import ACT2FN
-from .merge import slerp, GTA, linear
 import torch.nn as nn
 import gc
 
-merge_dict = {
-    'slerp': slerp(),
-    'ties': GTA('magnitude', 'sum', normalize=True),
-    'magnitude_norm': GTA('magnitude', None, normalize=True),
-    'magnitude': GTA('magnitude', None, normalize=False),
-    'sign': GTA(None, 'sum', normalize=True),
-    'dare_ties': GTA('rescaled_random', 'sum'),
-    'dare_linear': GTA('random', None),
-    'linear': linear()
-}
 
-edit_history = []
-merge_group_edit_history = []
+def brackets_to_periods(name):
+    return name.replace("[", ".").replace("]", "")
 
-def euc(query, key, config, act_mask=None, infer=False):
-    # Euclidean distance
+def parent_module(model, pname):
+    """
+    小蝌蚪找妈妈
+    """
+    components = pname.split('.')
+    parent = model
 
-    act_fn = ACT2FN[config.hidden_act]
-    l2_norm = torch.norm(act_fn(key) - act_fn(query), dim=-1)
-    if infer and l2_norm.size(1) > 100:
-        topk = torch.topk(l2_norm, k=1, largest=True)
-        return topk.values.mean()
+    for component in components[:-1]:
+        if hasattr(parent, component):
+            parent = getattr(parent, component)
+        elif component.isdigit():
+            parent = parent[int(component)]
+        else:
+            raise RuntimeError(f"Couldn't find child module {component}")
 
-    if act_mask is not None:
-        return torch.sum(l2_norm * act_mask, dim=1) / torch.sum(act_mask, dim=1)
-    else:
-        return torch.mean(l2_norm, dim=-1)
+    if not hasattr(parent, components[-1]):
+        raise RuntimeError(f"Couldn't find child module {components[-1]}")
 
-class WISE(torch.nn.Module):
-    def __init__(self, config, model, device):
-        super(WISE, self).__init__()
+    return parent
+
+
+class ZZZ(torch.nn.Module):
+    def __init__(self, config, model, device, num_ffn, ffn_id):
+
+        super(ZZZ, self).__init__()
         self.config = config
         self.model = model
+
         if hasattr(self.model.config, 'hidden_act'):
             self.config.hidden_act = self.model.config.hidden_act
         elif hasattr(self.model.config, 'activation_function'):
             self.config.hidden_act = self.model.config.activation_function
         # self.tokenizer = model.tokenizer
-        # 这个layer就是WISE要动的layer
+
         layer = config.inner_params[0]
         self.device = device
         self.adapter_layer = None
@@ -69,18 +67,18 @@ class WISE(torch.nn.Module):
             transpose = False
         else:
             transpose = True
-        
+
         # --- Add WISE to chosen layers ---
         self.edit_module = parent_module(self.model, brackets_to_periods(self.layer))
         self.layer_name = self.layer.rsplit(".", 1)[-1]
         adapter_layer = getattr(self.edit_module, self.layer_name)
 
         # WISEAdapter就是那个新的层，WISE算法的核心结构都实现在这个类里面 
-        if type(adapter_layer) is not WISEAdapter:
-            setattr(self.edit_module, self.layer_name, WISEAdapter(config, adapter_layer, transpose=transpose))
+        if type(adapter_layer) is not ZZZAdapter:
+            setattr(self.edit_module, self.layer_name, ZZZAdapter(config, adapter_layer, transpose=transpose))
             self.original_layer = copy.deepcopy(adapter_layer)
             print(f"New weights successfully inserted into {layer}")
-           
+
         gc.collect()
         torch.cuda.empty_cache()
         gc.collect()
@@ -88,15 +86,6 @@ class WISE(torch.nn.Module):
     # Forward
     # !! 评估的时候，也就是输出的时候，调用的就是这个函数
     def __call__(self, **kwargs):
-        if not self.config.retrieve:
-            # 如果是merge，会在最后把些分片给聚合在一起
-            if hasattr(self.get_adapter_layer(), 'editing') and not self.get_adapter_layer().editing:
-                # final merge
-                if not self.get_adapter_layer().original_layer.weight.equal(self.get_adapter_layer().new_weight) and self.get_adapter_layer().editing_total_cnt >= self.config.save_freq:
-                    self.get_adapter_layer().memory_weight.append(self.get_adapter_layer().new_weight)
-                if len(self.get_adapter_layer().memory_weight) > 0 and self.get_adapter_layer().editing_total_cnt >= self.config.save_freq:
-                    print('length of memory is ', len(self.get_adapter_layer().memory_weight), '!!!!!!')
-                    self.get_adapter_layer().merge_weight()
         return self.model(**kwargs)
 
     # 重置，应该是适配单次编辑的
@@ -108,7 +97,7 @@ class WISE(torch.nn.Module):
     # 正如名字
     def get_adapter_layer(self):
         adapter_layer = getattr(self.edit_module, self.layer_name)
-        assert type(adapter_layer) is WISEAdapter, print('Adapter Layer is not added correctly....')
+        assert type(adapter_layer) is ZZZAdapter, print('Adapter Layer is not added correctly....')
         return adapter_layer.to(self.model.device)
 
     # TODO: generation
@@ -117,11 +106,6 @@ class WISE(torch.nn.Module):
         return self.model.generate(*args, **kwargs)
 
     def edit(self, config, tokens, act_mask=None, deact_mask=None):
-        # for retrieve ##
-        global edit_history
-        global merge_group_edit_history
-        edit_history.append([{f"{k1}" : v1.to('cpu') for k1, v1 in tokens.items()}, False])
-        # for retrieve ##
         last_prompt_token_loc = (tokens["labels"] == -100).sum(dim=-1) - 1
 
         setattr(eval(f"self.model.{self.layer}"), "training", True)
@@ -136,13 +120,11 @@ class WISE(torch.nn.Module):
 
             if i == 0:
                 # --- we only need to create an optimizer for the first iteration (but forward pass instantiates the key, so optimzer is passed after first inference) ---
-                optimizer = torch.optim.SGD([self.get_adapter_layer().new_weight], config.edit_lr, weight_decay=1e-5)
+                optimizer = torch.optim.SGD([self.get_adapter_layer().get_expert_weight()], config.edit_lr, weight_decay=1e-5)
 
             ft_loss = self._cal_ft_loss(tokens, last_prompt_token_loc)
 
-            act_loss = self._cal_activation_loss(self.get_adapter_layer().original_layer_output, self.get_adapter_layer().new_weight_layer_output,
-                                                  config=config, act_mask=act_mask, deact_mask=deact_mask)
-            loss = ft_loss + act_loss.to(ft_loss.device)
+            loss = ft_loss
 
             if loss_meter.stop():
                 self.get_adapter_layer().save_editing_activation()  # add last gradient
@@ -150,56 +132,13 @@ class WISE(torch.nn.Module):
             if i == config.n_iter - 1:
                 self.get_adapter_layer().save_editing_activation()  # add last gradient
 
-            if self.config.retrieve and self.get_adapter_layer().merge_cnt > 0 and self.config.replay:
-                memory_loss = []
-                for _ in merge_group_edit_history:
-                    idx = 0
-                    while True:
-                        memo_input, is_used = _[idx]
-                        if not is_used:
-                            _[idx][1] = True
-                            break
-                        idx += 1
-                        if idx == len(_): ## re Assign
-                            for m in range(len(_)):
-                                _[m][1] = False
-                            idx = 0
-
-                    memo_input = {f"{k1}" : v1.to(self.config.device) for k1, v1 in memo_input.items()}
-                    self.model(**memo_input)
-
-                    memory_act_loss = self._cal_memory_neg_activation_loss(self.get_adapter_layer().original_layer_output,
-                                                    self.get_adapter_layer().new_weight_layer_output, config=config,
-                                                    act_mask=act_mask, deact_mask=deact_mask)
-                    memory_loss.append(memory_act_loss.to(ft_loss.device))
-                    del memo_input
-                neg_memo_loss = torch.stack(memory_loss).mean()
-                loss += neg_memo_loss
-                if len(edit_history) > 0:
-                    memo_input = random.choice(edit_history)[0]
-                    memo_input = {f"{k1}" : v1.to(self.config.device) for k1, v1 in memo_input.items()}
-                    self.model(**memo_input)
-
-                    pos_memo_loss = self._cal_memory_pos_activation_loss(self.get_adapter_layer().original_layer_output,
-                                                    self.get_adapter_layer().new_weight_layer_output, config=config,
-                                                    act_mask=act_mask, deact_mask=deact_mask)
-                    del memo_input
-                    loss += pos_memo_loss.to(ft_loss.device)
-            # for replay Appendix B.3e
 
             optimizer.zero_grad()
 
             loss.backward()
             self.get_adapter_layer().mask_new_weight_gradient()
 
-            if self.config.retrieve and self.get_adapter_layer().merge_cnt > 0 and self.config.replay:
-                print(
-                    f"loss {np.round(loss.item(), 3)} = {np.round(ft_loss.item(), 3)} + {np.round(act_loss.item(), 3)} + {np.round(neg_memo_loss.item(), 3)} + {np.round(pos_memo_loss.item(), 3)}"
-                )
-            else:
-                print(
-                    f"loss {np.round(loss.item(), 3)} = {np.round(ft_loss.item(), 3)} + {np.round(act_loss.item(), 3)}"
-                )
+            print(f"loss {np.round(loss.item(), 3)}")
 
             optimizer.step()
             loss_meter.update(loss.item())
@@ -211,20 +150,6 @@ class WISE(torch.nn.Module):
         setattr(eval(f"self.model.{self.layer}"), "editing", False)
         setattr(eval(f"self.model.{self.layer}"), "training", False)
 
-        editing_total_cnt = getattr(eval(f"self.model.{self.layer}"), "editing_total_cnt") + 1
-        setattr(eval(f"self.model.{self.layer}"), "editing_total_cnt", editing_total_cnt)
-          
-        if self.config.save_freq is not None and editing_total_cnt % self.config.save_freq == 0:
-            self.get_adapter_layer().save_weight()
-            print(f'Add New Weight to Memory...')
-        if editing_total_cnt % self.config.merge_freq == 0:
-            # for retrieve ##
-            merge_group_edit_history.append(edit_history)
-            edit_history = []
-            # for retrieve ##
-
-            self.get_adapter_layer().merge_weight()
-            print(f'Merge Weight of (New, Original) Matrix... with {self.config.merge_alg}')
 
     def _norm_constraint(self, norm_constraint):
         new_weight = self.get_adapter_layer().new_weight
@@ -256,138 +181,34 @@ class WISE(torch.nn.Module):
         ft_loss = ((loss * label_mask).sum(1) / label_mask.sum(1)).mean()
         return ft_loss
 
-    def _cal_activation_loss(self, original_layer_output, new_weight_layer_output, config=None, act_mask=None,
-                              deact_mask=None):
-        if hasattr(self.model.config, 'batch_size'):
-            k = self.config.batch_size
-        else:
-            k = 1
-        total_loss = []
-        len_temp = original_layer_output.shape[0] / k - 1
-        for i,act_mk in enumerate(act_mask):
-            if act_mk is not None:
-                in_scope_dist = euc(original_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], new_weight_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], config,
-                                    act_mask=act_mk)
-                out_scope_dist = euc(original_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], new_weight_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], config,
-                                    act_mask=deact_mask[i])
-            else:
-                in_scope_dist = euc(original_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], new_weight_layer_output[int(i*len_temp):int((i+1)*len_temp), ...], config)
-                if (i==k-1):
-                    out_scope_dist = euc(original_layer_output[int(i-k):, ...], new_weight_layer_output[int(i-k):, ...], config)
-                else:
-                    out_scope_dist = euc(original_layer_output[int(i-k):int(i+1-k), ...], new_weight_layer_output[int(i-k):int(i+1-k), ...], config)
 
-            loss = out_scope_dist.view(-1,1) - in_scope_dist + config.gamma
-            loss2 = out_scope_dist - config.alpha
-            loss3 = config.beta - in_scope_dist
-            loss3 = torch.mean(loss3[loss3 > 0]) if min(loss3[loss3 > 0].size()) > 0 else torch.tensor(0.).to(original_layer_output.device)
-            loss2 = torch.mean(loss2[loss2 > 0]) if min(loss2[loss2 > 0].size()) > 0 else torch.tensor(0.).to(original_layer_output.device)
-            loss = torch.mean(loss[loss > 0]) if min(loss[loss > 0].size()) > 0 else torch.tensor(0.).to(original_layer_output.device)
-            total_loss.append(loss + loss2 + loss3)
-        return sum(total_loss) / len(total_loss)
-
-    def _cal_memory_pos_activation_loss(self, original_layer_output, new_weight_layer_output, config=None, act_mask=None,
-                              deact_mask=None):
-        if hasattr(self.model.config, 'batch_size'):
-            k = self.config.batch_size
-        else:
-            k = 1
-        in_scope_dist = euc(original_layer_output[:-k, ...], new_weight_layer_output[:-k, ...], config)
-        loss4 = 20 - in_scope_dist
-
-        return torch.mean(loss4[loss4 > 0]) if min(loss4[loss4 > 0].size()) > 0 else torch.tensor(0.)
-
-    def _cal_memory_neg_activation_loss(self, original_layer_output, new_weight_layer_output, config=None, act_mask=None,
-                              deact_mask=None):
-        if hasattr(self.model.config, 'batch_size'):
-            k = self.config.batch_size
-        else:
-            k = 1
-        in_scope_dist = euc(original_layer_output[:-k, ...], new_weight_layer_output[:-k, ...], config)
-        loss4 = in_scope_dist - 5
-
-        return torch.mean(loss4[loss4 > 0]) if min(loss4[loss4 > 0].size()) > 0 else torch.tensor(0.)
-
-    def save(self, save_path):
-        import os
-        directory = os.path.dirname(save_path)
-        if directory and not os.path.exists(directory):
-            os.makedirs(directory)  # Create the directory if it doesn't exist
-
-        # Save additional information, such as memory_weight, memory_mean_act, etc.
-        additional_info = {
-            'memory_weight': self.get_adapter_layer().memory_weight,
-            'memory_mean_act': self.get_adapter_layer().memory_mean_act,
-            'merge_cnt': self.get_adapter_layer().merge_cnt,
-            'editing_mean_act': self.get_adapter_layer().editing_mean_act,
-            'editing_total_cnt': self.get_adapter_layer().editing_total_cnt,
-            'weight_mask': self.get_adapter_layer().weight_mask,
-            # Add other variables that need to be saved
-        }
-        if hasattr(self.get_adapter_layer(), 'key_id') and self.get_adapter_layer().key_id is not None:
-            additional_info['key_id'] = self.get_adapter_layer().key_id
-        # Save all information to the file
-        torch.save({
-            'adapter_state_dict': self.get_adapter_layer().state_dict(),
-            'config': self.config,
-            'additional_info': additional_info,
-            'edit_history': edit_history,
-            'merge_group_edit_history': merge_group_edit_history
-        }, save_path)
-
-    def load(self, load_path):
-        import os
-        if not os.path.exists(load_path):
-            raise FileNotFoundError(f"Checkpoint file not found: {load_path}")
-        
-        # Load all previously saved information
-        saved_data = torch.load(load_path)
-        if hasattr(self.model.config, 'hidden_act'):
-            saved_data['config'].hidden_act = self.model.config.hidden_act
-        elif hasattr(self.model.config, 'activation_function'):
-            saved_data['config'].hidden_act = self.model.config.activation_function
-        if saved_data['config'] != self.config:
-            print("Warning: The loaded WISE config is different from the original config")
-
-        # Restore the state dictionary of the WISE Adapter instance
-        self.get_adapter_layer().load_state_dict(saved_data['adapter_state_dict'])
-        # Restore additional information
-        adapter_layer = self.get_adapter_layer()
-        for key, value in saved_data['additional_info'].items():
-            setattr(adapter_layer, key, value)
-        
-        # Restore editing history
-        global edit_history, merge_group_edit_history
-        edit_history = saved_data['edit_history']
-        merge_group_edit_history = saved_data['merge_group_edit_history']
-        print(f"Model configuration and WISE state loaded from {load_path}")
-
-
-class WISEAdapter(torch.nn.Module):
-    def __init__(self, config, layer, transpose):
-        super(WISEAdapter, self).__init__()
-
-        self.hidden_dim = 2048
-        self.gating_dim = 256
-        self.query_proj = nn.Linear(self.hidden_dim, self.gating_dim)
-        self.key_proj = nn.Linear(self.hidden_dim, self.gating_dim)
-        self.value_proj = nn.Linear(self.hidden_dim, self.gating_dim)
-        self.gating_fc = nn.Linear(self.gating_dim, 1)
-        self.attention = nn.MultiheadAttention(
-            embed_dim=self.gating_dim,
-            num_heads=1,
-            batch_first=True
-        )
-
+class ZZZAdapter(torch.nn.Module):
+    def __init__(self, config, layer, transpose, n_area):
+        super(ZZZAdapter, self).__init__()
 
         self.layer = layer
         self.weight = self.layer.weight
         self.device = layer.weight.device
         self.config = config
+        self.ffn_id = 0
+
+
         self.new_weight = copy.deepcopy(self.weight)
         self.original_layer = copy.deepcopy(self.layer)
-        self.memory_weight = []
-        self.memory_mean_act = []
+
+        # --- 创建专家层 ---
+        self.expert_layers = torch.nn.ModuleList([
+            copy.deepcopy(layer) for _ in range(n_area+1)  # 深拷贝原始层
+        ])
+
+        # expert_layers[0]是原始层
+        for expert in self.expert_layers:
+            expert.weight.data.copy_(layer.weight.data)
+            if hasattr(layer, 'bias') and layer.bias is not None:
+                expert.bias.data.copy_(layer.bias.data)
+        # ----------------
+
+
         if 'gpt2' in self.config.model_name:
             self.bias = self.layer.bias # For Conv1D
         else:
@@ -406,186 +227,46 @@ class WISEAdapter(torch.nn.Module):
         self.training = False
         self.editing = False
 
-        self.editing_mean_act = EditingMeanAct()
-        self.editing_total_cnt = 0
-
     def set_parameter_tunable(self):
-        self.new_weight.requires_grad = True
+        for expert in self.expert_layers:
+            expert.weight.requires_grad = True
+            if hasattr(expert, 'bias') and expert.bias is not None:
+                expert.bias.requires_grad = True
 
-    def save_weight(self):
-        self.memory_weight.append(copy.deepcopy(self.new_weight))
-        self.new_weight = copy.deepcopy(self.original_layer.weight)
-        if self.config.retrieve:
-            self.memory_mean_act.append(copy.deepcopy(self.editing_mean_act))
-            self.editing_mean_act = EditingMeanAct()
+    def set_ffn(self, ffn_id):
+        """
+        设置当前编辑的FFN ID
+        """
+        self.ffn_id = ffn_id
+        self.new_weight = self.expert_layers[ffn_id].weight  # 当前专家层的权重
 
-    def merge_weight(self):
-        if self.config.save_freq is not None:  # for ties dare dare_ties
-            if not self.config.retrieve:
-                merge_alg = merge_dict[self.config.merge_alg]
-                if self.original_layer.weight.equal(self.layer.weight):
-                    cur_new_weight = merge_alg.execute([self.config.weights / len(self.memory_weight) for _ in range(len(self.memory_weight))], self.original_layer.weight, self.memory_weight, densities=self.config.densities)
-                else:
-                    cur_new_weight = merge_alg.execute([0.4 / len(self.memory_weight) for _ in range(len(self.memory_weight))] + [0.6], self.original_layer.weight, self.memory_weight + [self.layer.weight], densities=self.config.densities)
-                self.layer.weight = torch.nn.Parameter(cur_new_weight.to(self.layer.weight.device), requires_grad=False)
-                self.new_weight = copy.deepcopy(self.original_layer.weight)
-                del self.memory_weight
-                self.memory_weight = []
-            else:
+    def get_expert_weight(self) -> Tensor:
+        """
+        获取当前专家层的权重
+        """
+        return self.expert_layers[self.ffn_id].weight
 
-                merge_alg = merge_dict[self.config.merge_alg]
-                merge_num = self.config.merge_freq // self.config.save_freq
-                assert len(self.memory_weight) >= merge_num
-                new_merge_weight = merge_alg.execute([self.config.weights / merge_num for _ in range(merge_num)], self.original_layer.weight, self.memory_weight[-merge_num:], densities=self.config.densities)
-                min_a = 1e9
-                for _ in range(merge_num):
-                    self.memory_weight.pop()
-                    edit_act = self.memory_mean_act.pop()
-                    min_a = min(min_a, edit_act.min_act())
-                self.new_weight = copy.deepcopy(self.original_layer.weight)
-                self.memory_weight.append(new_merge_weight)
-                self.memory_mean_act.append(EditingMeanAct(min_a=min_a))
-                print(len(self.memory_weight))
-                assert len(self.memory_mean_act) == len(self.memory_weight)
-                self.merge_cnt += 1
-        else:
-            merge_alg = merge_dict[self.config.merge_alg]
-            cur_new_weight = merge_alg.execute(0.5, self.layer.weight, [self.new_weight],
-                                               densities=self.config.densities)
-            self.layer.weight = torch.nn.Parameter(cur_new_weight.to(self.layer.weight.device), requires_grad=False)
-            self.new_weight = copy.deepcopy(self.original_layer.weight)
-      
     def save_editing_activation(self):
-        in_scope_dist = euc(self.original_layer_output[:-1, ...], self.new_weight_layer_output[:-1, ...], self.config)
-        self.editing_mean_act.update(in_scope_dist.mean().item())
+        pass
 
     def generate_activation_mask(self, mask_ratio):
-        p_grad = self.new_weight.reshape(-1)
+        p_grad = self.get_expert_weight().reshape(-1)
         p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
         p_mask = torch.from_numpy(p_mask).to(p_grad.device)
         self.weight_mask = p_mask
 
-    def generate_non_overlapping_mask(self, mask_ratio):
-        p_grad = self.new_weight.reshape(-1)
-        mask_size = int(mask_ratio * p_grad.size()[0])
-        if self.used_mask is None:
-            self.used_mask = np.zeros(p_grad.size()[0], dtype=bool)
-        available_indices = np.where(~self.used_mask)[0]  # 获取未被遮罩的元素索引
-        if len(available_indices) < mask_size:
-            raise ValueError("Not enough unused elements to generate a new mask.")
-        chosen_indices = np.random.choice(available_indices, size=mask_size, replace=False)
-        mask_array = np.zeros(p_grad.size()[0], dtype=int)
-        mask_array[chosen_indices] = 1
-        self.used_mask[chosen_indices] = True  # 更新遮罩状态
-        self.weight_mask = torch.from_numpy(mask_array).to(p_grad.device)
-
-    def new_weight_forward(self, input: Tensor) -> Tensor:
-        return F.linear(input, self.new_weight) if self.bias is None else torch.addmm(self.bias, input.view(-1, input.size(-1)), self.new_weight).view(input.size()[:-1] + (self.layer.nf,))
+    def expert_forward(self, input: Tensor) -> Tensor:
+        return F.linear(input, self.get_expert_weight()) if self.bias is None else torch.addmm(self.bias, input.view(-1, input.size(-1)), self.get_expert_weight()).view(input.size()[:-1] + (self.layer.nf,))
 
     def mask_new_weight_gradient(self):
-        assert self.new_weight.grad is not None, print('Gradient Collection for New Weight error, gradient not found')
-        # Add gradient mask after the loss updates
-        p_size = self.new_weight.grad.size()
-        p_grad = self.new_weight.grad.reshape(-1)
+        assert self.get_expert_weight().grad is not None, print('Gradient Collection for New Weight error, gradient not found')
 
-        # mask = torch.from_numpy(np.random.choice([0, 1], size=p_grad.size()[0], p=[.1, .9])).cuda()
+        p_size = self.get_expert_weight().grad.size()
+        p_grad = self.get_expert_weight().grad.reshape(-1)
+
         p_grad = p_grad * self.weight_mask
-        self.new_weight.grad = p_grad.view(p_size).to(self.new_weight.grad.dtype)
-
-
-    def count_attention_gate(self):
-        pass
+        self.get_expert_weight().grad = p_grad.view(p_size).to(self.get_expert_weight().grad.dtype)
 
     def forward(self, *args):
-        if self.editing:
-            layer_out = self.new_weight_forward(*args)
-            self.new_weight_layer_output = layer_out
-            self.original_layer_output = self.original_layer(*args)
-        else:
-            # WISE-merge
-            if not self.config.retrieve:
-                original_layer_output = self.original_layer(*args)
-                layer_output = self.layer(*args)
-                new_weight_layer_output = self.new_weight_forward(*args)
-                dist2 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
-                dist1 = euc(original_layer_output, layer_output, self.config, infer=True)
-                threshold = self.editing_mean_act.min_act() * self.config.act_ratio
-
-                if dist1.item() < threshold and dist2.item() < threshold:
-                    layer_out = original_layer_output
-                elif dist1.item() > dist2.item():
-                    layer_out = layer_output
-                else:
-                    layer_out = new_weight_layer_output
-            # WISE-retrieve
-            else:
-                if not self.config.use_attention_gate:
-                    print('Start routing ... ')
-                    original_layer_output = self.original_layer(*args)
-                    new_weight_layer_output = self.new_weight_forward(*args)
-                    dist1 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
-                    threshold = self.editing_mean_act.min_act() * self.config.act_ratio
-                    print('threshold: ', threshold)
-                    min_dist = dist1
-                    if min_dist.dim() > 0:
-                        min_dist = min_dist.mean()
-                    if min_dist.item() < threshold:
-                        print('Routed to main memory')
-                        layer_out = original_layer_output
-                    else:
-                        layer_out = new_weight_layer_output
-                        print('Routed to side memory')
-
-                    for i in range(len(self.memory_weight)):
-                        memory_retrieve_weight = self.memory_weight[i]
-                        memory_weight_layer_output = F.linear(*args, memory_retrieve_weight)
-                        dist = euc(original_layer_output, memory_weight_layer_output, self.config, infer=True)
-                        if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
-                            layer_out = memory_weight_layer_output
-                            min_dist = dist
-
-                else:
-                    print('Using attention gate')
-                    original_layer_output = self.original_layer(*args)
-                    new_weight_layer_output = self.new_weight_forward(*args)
-                    dist1 = euc(original_layer_output, new_weight_layer_output, self.config, infer=True)
-                    threshold = self.editing_mean_act.min_act() * self.config.act_ratio
-                    print('threshold: ', threshold)
-                    min_dist = dist1
-                    if min_dist.dim() > 0:
-                        min_dist = min_dist.mean()
-                    if min_dist.item() < threshold:
-                        print('Routed to main memory')
-                        layer_out = original_layer_output
-                    else:
-                        layer_out = new_weight_layer_output
-                        print('Routed to side memory')
-
-                    for i in range(len(self.memory_weight)):
-                        memory_retrieve_weight = self.memory_weight[i]
-                        memory_weight_layer_output = F.linear(*args, memory_retrieve_weight)
-                        dist = euc(original_layer_output, memory_weight_layer_output, self.config, infer=True)
-                        if dist > min_dist and dist > self.memory_mean_act[i].min_act() * self.config.act_ratio:
-                            layer_out = memory_weight_layer_output
-                            min_dist = dist
-
-                    Q = self.query_proj(original_layer_output)
-                    K = self.key_proj(layer_out)
-                    V = self.value_proj(layer_out)
-                    # attention_scores = (Q * K).sum(dim=-1, keepdim=True) / (self.gating_dim ** 0.5)
-                    # gate_input = torch.sigmoid(attention_scores)
-                    # g = torch.sigmoid(self.gating_fc(gate_input))
-                    #
-
-                    attn_output, attn_weights = self.attention(
-                        query=Q,
-                        key=K,
-                        value=V,
-                    )
-                    
-                    gate_input = attn_output.squeeze(1)
-                    g = torch.sigmoid(self.gating_fc(gate_input))
-                    print('门控比例', g)
-            
-                    layer_out = g * layer_out + (1 - g) * original_layer_output
+        layer_out = self.expert_forward(*args)
         return layer_out
