@@ -172,17 +172,6 @@ if __name__ == "__main__":
         args.output_dir,
         f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_Sequential={args.sequential_edit}.json'
     )
-
-    print("See results at: ", output_file)
-    if args.editing_method == 'WISE':
-        loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
-        loc_data = json.load(
-            open(loc_filepath, 'r', encoding='utf-8')
-        )[:len(multiarea_dataset)]
-        loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-        print('Len of loc_prompts: ', len(loc_prompts))
-    else:
-        loc_prompts = None
     
     # --- 执行知识编辑 ---
     editor = BaseEditor.from_hparams(hparams)
