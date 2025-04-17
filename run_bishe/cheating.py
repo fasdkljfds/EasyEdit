@@ -180,6 +180,7 @@ if __name__ == '__main__':
 
         # 生成真实领域标签
         true_labels = [DOMAIN_MAP[fname] for fname in source_files]
+        print(true_labels)
         total_samples_loaded = len(prompts)
         print(f"数据加载完成。总共加载 {total_samples_loaded} 条 prompts。")
 
@@ -210,7 +211,6 @@ if __name__ == '__main__':
         if len(true_labels) != len(predicted_labels):
             print(f"[错误] 真实标签和预测标签长度不匹配: {len(true_labels)} vs {len(predicted_labels)}")
             continue
-
 
         if len(set(true_labels)) > 1 and len(set(predicted_labels) - {-1}) > 0:
             try:

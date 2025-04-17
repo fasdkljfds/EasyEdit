@@ -1,5 +1,7 @@
 # 评估zzz
 # 适配multiarea
+# 4.16
+
 import os
 import os.path as path
 import json
@@ -163,8 +165,7 @@ if __name__ == "__main__":
             except Exception as e:
                 print(f"保存路由器失败: {str(e)}")
       
-    print(f"聚类数量: {router.get_num_clusters()}")  
-
+    print(f"聚类数量: {router.get_num_clusters()}")
 
     # --- 准备编辑器 ---
     os.makedirs(args.output_dir, exist_ok=True)
