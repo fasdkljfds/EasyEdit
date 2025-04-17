@@ -79,6 +79,7 @@ class ZZZ(torch.nn.Module):
             self.original_layer = copy.deepcopy(adapter_layer)
             print(f"New weights successfully inserted into {layer}")
         self.get_adapter_layer().set_ffn(ffn_id)
+        self.get_adapter_layer().generate_activation_mask(self.config.mask_ratio)
 
         gc.collect()
         torch.cuda.empty_cache()
@@ -112,7 +113,7 @@ class ZZZ(torch.nn.Module):
         setattr(eval(f"self.model.{self.layer}"), "training", True)
         setattr(eval(f"self.model.{self.layer}"), "editing", True)
         self.get_adapter_layer().set_parameter_tunable()
-           
+
         # --- train Wise value ---
         loss_meter = EarlyStopMeter()
         for i in range(config.n_iter):
