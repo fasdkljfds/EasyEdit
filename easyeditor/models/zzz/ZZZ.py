@@ -225,6 +225,7 @@ class ZZZAdapter(torch.nn.Module):
         if transpose:
             self.key_shape = layer.weight.shape[1]
             self.value_shape = layer.weight.shape[0]
+
         else:
             self.key_shape = layer.weight.shape[0]
             self.value_shape = layer.weight.shape[1]
