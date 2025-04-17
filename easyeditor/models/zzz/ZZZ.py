@@ -10,6 +10,7 @@ from torch import Tensor
 from torch.nn import CrossEntropyLoss
 from transformers.activations import ACT2FN
 import torch.nn as nn
+from .router import KnowRouter
 import gc
 
 
@@ -38,8 +39,7 @@ def parent_module(model, pname):
 
 
 class ZZZ(torch.nn.Module):
-    def __init__(self, config, model, device, num_ffn, ffn_id):
-
+    def __init__(self, config, model, device, router):
         super(ZZZ, self).__init__()
         self.config = config
         self.model = model
@@ -72,13 +72,13 @@ class ZZZ(torch.nn.Module):
         self.edit_module = parent_module(self.model, brackets_to_periods(self.layer))
         self.layer_name = self.layer.rsplit(".", 1)[-1]
         adapter_layer = getattr(self.edit_module, self.layer_name)
-         
-        # WISEAdapter就是那个新的层，WISE算法的核心结构都实现在这个类里面 
+
+        # WISEAdapter就是那个新的层，WISE算法的核心结构都实现在这个类里面
         if type(adapter_layer) is not ZZZAdapter:
-            setattr(self.edit_module, self.layer_name, ZZZAdapter(config, adapter_layer, transpose=transpose, n_area=num_ffn))
+
+            setattr(self.edit_module, self.layer_name, ZZZAdapter(config, adapter_layer, router=router, transpose=transpose))
             self.original_layer = copy.deepcopy(adapter_layer)
             print(f"New weights successfully inserted into {layer}")
-        self.get_adapter_layer().set_ffn(ffn_id)
         self.get_adapter_layer().generate_activation_mask(self.config.mask_ratio)
 
         gc.collect()
@@ -107,17 +107,21 @@ class ZZZ(torch.nn.Module):
         setattr(eval(f"self.model.{self.layer}"), "key_id", -1)
         return self.model.generate(*args, **kwargs)
 
-    def edit(self, config, tokens, act_mask=None, deact_mask=None):
+    def route(self, prompt):
+        self.get_adapter_layer().route(prompt)
+
+    def edit(self, config, tokens, act_mask=None, deact_mask=None, prompt=None):
+        assert prompt is not None
         last_prompt_token_loc = (tokens["labels"] == -100).sum(dim=-1) - 1
 
         setattr(eval(f"self.model.{self.layer}"), "training", True)
         setattr(eval(f"self.model.{self.layer}"), "editing", True)
         self.get_adapter_layer().set_parameter_tunable()
+        self.get_adapter_layer().route(prompt)
 
         # --- train Wise value ---
         loss_meter = EarlyStopMeter()
         for i in range(config.n_iter):
-
             if i == 0:
                 # --- we only need to create an optimizer for the first iteration (but forward pass instantiates the key, so optimzer is passed after first inference) ---
                 optimizer = torch.optim.SGD([self.get_adapter_layer().get_expert_weight()], config.edit_lr, weight_decay=1e-5)
@@ -183,7 +187,7 @@ class ZZZ(torch.nn.Module):
 
 
 class ZZZAdapter(torch.nn.Module):
-    def __init__(self, config, layer, transpose, n_area):
+    def __init__(self, config, layer, transpose, router: KnowRouter):
         super(ZZZAdapter, self).__init__()
 
         self.layer = layer
@@ -191,12 +195,13 @@ class ZZZAdapter(torch.nn.Module):
         self.device = layer.weight.device
         self.config = config
         self.ffn_id = 0
-
+        self.router = router
 
         self.new_weight = copy.deepcopy(self.weight)
         self.original_layer = copy.deepcopy(self.layer)
 
         # --- 创建专家层 ---
+        n_area = router.get_num_clusters()
         self.expert_layers = torch.nn.ModuleList([
             copy.deepcopy(layer) for _ in range(n_area+1)  # 深拷贝原始层
         ])
@@ -207,7 +212,6 @@ class ZZZAdapter(torch.nn.Module):
             if hasattr(layer, 'bias') and layer.bias is not None:
                 expert.bias.data.copy_(layer.bias.data)
         # ----------------
-
 
         if 'gpt2' in self.config.model_name:
             self.bias = self.layer.bias # For Conv1D
@@ -240,6 +244,11 @@ class ZZZAdapter(torch.nn.Module):
         self.ffn_id = ffn_id
         self.new_weight = self.expert_layers[ffn_id].weight  # 当前专家层的权重
 
+    def route(self, prompt):
+        ffn_id = self.router.route(prompt)
+        print(f'[router] {prompt} ==> {ffn_id}')
+        self.set_ffn(ffn_id)
+
     def get_expert_weight(self) -> Tensor:
         """
         获取当前专家层的权重
@@ -256,11 +265,10 @@ class ZZZAdapter(torch.nn.Module):
         self.weight_mask = p_mask
 
     def expert_forward(self, input: Tensor) -> Tensor:
-        print(f'Expert Used ID: {self.ffn_id}')
         current_expert = self.expert_layers[self.ffn_id]
         bias = current_expert.bias if hasattr(current_expert, 'bias') else None
         return F.linear(input, self.get_expert_weight()) if bias is None else torch.addmm(bias, input.view(-1, input.size(-1)), self.get_expert_weight()).view(input.size()[:-1] + (self.layer.nf,))
-
+    
 
     def mask_new_weight_gradient(self):
         assert self.get_expert_weight().grad is not None, print('Gradient Collection for New Weight error, gradient not found')

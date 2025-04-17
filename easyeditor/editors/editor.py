@@ -352,6 +352,8 @@ class BaseEditor:
         
         def edit_evaluation(all_metrics, request, edited_model, idx, test_generation, icl_examples, **kwargs):
             # 这里all_metrics传入只是为了更新，之前已经有pre_edit的结果信息
+
+            # !!! 注意这里也是评估单条的
             print('Start evaluating...')
             eval_metric= kwargs['eval_metric'] if 'eval_metric' in kwargs.keys() else 'exact match'
             if self.alg_name == 'IKE':
@@ -386,8 +388,6 @@ class BaseEditor:
                 LOG.info(f"{idx} editing: {request['prompt']} -> {request['target_new']}  \n\n {all_metrics[idx]}")
 
         if sequential_edit:
-
-
             for i, request in enumerate(tqdm(requests, total=len(requests))):
                 edited_model, weights_copy, icl_examples = edit_func(request)
             if self.alg_name == 'WISE' and hasattr(self.hparams, 'save_path') and self.hparams.save_path:

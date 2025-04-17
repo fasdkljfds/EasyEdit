@@ -90,11 +90,10 @@ DEFAULT_ROUTER_CFG = OmegaConf.create({
 })
 
 
-def predict(prompt: List[str],
-         data_configs: Dict,
-         data_dir: str,
-         random_sample: bool = False,
-         random_seed: int = 42):
+def train_predict(data_configs: Dict,
+            data_dir: str,
+            random_sample: bool = False,
+            random_seed: int = 42):
     random.seed(random_seed)
     np.random.seed(random_seed)
     torch.manual_seed(random_seed)
@@ -102,6 +101,7 @@ def predict(prompt: List[str],
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(random_seed)
 
+    # --- 生成数据 ---
     dataset = MultiAreaDataset(
         root_dir=data_dir,
         dataset_configs=data_configs,
@@ -124,8 +124,14 @@ def predict(prompt: List[str],
     num_outliers = np.sum(predicted_labels == -1)
     print(f"聚类完成。找到 {num_clusters_found} 个聚类 (不包括 {num_outliers} 个离群点)。")
 
+    return predicted_labels, true_labels, num_clusters_found, num_outliers
 
-    return predicted_labels, true_labels
+def eval(predicted_labels, true_labels):
+    if len(true_labels) != len(predicted_labels):
+        print(f"[错误] 真实标签和预测标签长度不匹配: {len(true_labels)} vs {len(predicted_labels)}")
+        return
+    score = adjusted_rand_score(true_labels, predicted_labels)
 
 
-def eval
+    print(f"调整兰德指数 (ARI): {score:.4f}")
+    return score

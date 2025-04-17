@@ -38,8 +38,7 @@ def apply_zzz_to_model(
         model=model,
         config=hparams,
         device=device,
-        ffn_id=ffn_id,
-        num_ffn=router.get_num_clusters()
+        router=router,
     )
 
     # --- tokenize输入 ---
@@ -51,7 +50,7 @@ def apply_zzz_to_model(
         hparams=hparams
     )
 
-    editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask)
+    editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask, prompt=request['prompt'])
 
     # weights_copy = editor.reset_layer
     weights_copy = None

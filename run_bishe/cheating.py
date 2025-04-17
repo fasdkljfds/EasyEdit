@@ -1,11 +1,14 @@
 # 评估聚类效果，找出粗略最优解
+# 调参代码
 
 import sys
 import os
-sys.path.append(os.getcwd()+'/EasyEdit')
-sys.path.append(os.getcwd()+'/EasyEdit/run_bishe')
+
+sys.path.append(os.getcwd() + '/EasyEdit')
+sys.path.append(os.getcwd() + '/EasyEdit/run_bishe')
 
 from multiarea_dataset import MultiAreaDataset
+
 try:
     from EasyEdit.easyeditor.models.zzz.router import KnowRouter
 except:
@@ -24,13 +27,13 @@ import umap.umap_ as umap
 import numpy as np
 from scipy.spatial.distance import cosine, euclidean
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.metrics import adjusted_rand_score # 引入ARI计算
+from sklearn.metrics import adjusted_rand_score  # 引入ARI计算
 import torch
 from dataclasses import asdict, dataclass
 import pickle
 from pathlib import Path
 from omegaconf import DictConfig, OmegaConf
-import time # 用于计时
+import time  # 用于计时
 
 ROOT_DIR = 'EasyEdit/data/output_meta_llama_3_8b_instruct/'
 NUM_SAMPLES_PER_FILE = 60  # 每个文件采样多少条数据
@@ -38,7 +41,6 @@ NUM_DOMAINS_TO_SELECT = 5  # 每次选择多少个不同的领域
 NUM_COMBINATIONS_TO_TRY = 300  # 尝试多少种不同的领域组合
 MIN_SAMPLES_PER_FILE = 10  # 每个文件至少需要多少条数据才能被考虑
 RANDOM_SEED = 42
-
 
 ALL_FILES = [
     "art_sculpture.json", "business_brand.json", "business_corporation.json",
@@ -64,24 +66,23 @@ DOMAIN_MAP = {
     "technology_database.json": "科技", "technology_programming_language.json": "科技", "technology_software.json": "科技"
 }
 
-
 DEFAULT_ROUTER_CFG = OmegaConf.create({
     "embedding": {
         "random_seed": RANDOM_SEED,
         "model_name": "sentence-transformers/all-MiniLM-L6-v2",
     },
     "clustering": {
-        "use_umap": True,       # 是否使用UMAP降维
+        "use_umap": True,  # 是否使用UMAP降维
         "random_seed": RANDOM_SEED,
         "umap_params": {
-            "n_neighbors": 5,      # UMAP参数：邻居数量 (影响局部/全局结构)
-            "min_dist": 0.1,       # UMAP参数：点之间的最小距离 (影响簇的紧密度)
-            "n_components": 50,      # UMAP参数：降维到的目标维度 (建议 >= 预期簇数)
-            "metric": "cosine",     # UMAP参数：计算距离的度量 (cosine适合文本嵌入)
+            "n_neighbors": 5,  # UMAP参数：邻居数量 (影响局部/全局结构)
+            "min_dist": 0.1,  # UMAP参数：点之间的最小距离 (影响簇的紧密度)
+            "n_components": 50,  # UMAP参数：降维到的目标维度 (建议 >= 预期簇数)
+            "metric": "cosine",  # UMAP参数：计算距离的度量 (cosine适合文本嵌入)
         },
         "hdbscan_params": {
             "min_cluster_size": 10,  # HDBSCAN参数：一个簇最少包含的点数
-            "min_samples": 5,       # HDBSCAN参数：成为核心点的最小邻居数 (影响噪声点识别)
+            "min_samples": 5,  # HDBSCAN参数：成为核心点的最小邻居数 (影响噪声点识别)
             "metric": "euclidean",  # HDBSCAN参数：在降维空间中使用的度量
             "cluster_selection_method": "eom",  # HDBSCAN参数：簇选择方法 ('eom' 或 'leaf')
             "allow_single_cluster": False,  # 是否允许只找到一个大簇
@@ -102,7 +103,54 @@ def get_file_sample_size(file_path):
         return 0
 
 
-if __name__ == '__main__':
+def train_predict(data_configs: Dict,
+                  data_dir: str,
+                  random_sample: bool = False,
+                  random_seed: int = 42):
+    random.seed(random_seed)
+    np.random.seed(random_seed)
+    torch.manual_seed(random_seed)
+
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(random_seed)
+
+    # --- 生成数据 ---
+    dataset = MultiAreaDataset(
+        root_dir=data_dir,
+        dataset_configs=data_configs,
+        seed=random_seed,
+        random_sample=random_sample
+    )
+
+    prompts, _, _, _, _, source_files = dataset.get_data()
+    true_labels = [DOMAIN_MAP[fname] for fname in source_files]
+
+    from collections import Counter
+    print("实际加载样本分布:", Counter(true_labels))
+
+    print("初始化 KnowRouter...")
+    router = KnowRouter(DEFAULT_ROUTER_CFG)
+    router.build_route_table(prompts)  # 内部会调用 embedding 和 clustering
+
+    predicted_labels = router.clustering.cluster.labels_
+    num_clusters_found = router.get_num_clusters()
+    num_outliers = np.sum(predicted_labels == -1)
+    print(f"聚类完成。找到 {num_clusters_found} 个聚类 (不包括 {num_outliers} 个离群点)。")
+
+    return predicted_labels, true_labels, num_clusters_found, num_outliers
+
+
+def eval(predicted_labels, true_labels):
+    if len(true_labels) != len(predicted_labels):
+        print(f"[错误] 真实标签和预测标签长度不匹配: {len(true_labels)} vs {len(predicted_labels)}")
+        return
+    score = adjusted_rand_score(true_labels, predicted_labels)
+
+    print(f"调整兰德指数 (ARI): {score:.4f}")
+    return score
+
+
+def search_best_combination():
     random.seed(RANDOM_SEED)
     np.random.seed(RANDOM_SEED)
     torch.manual_seed(RANDOM_SEED)
@@ -166,62 +214,13 @@ if __name__ == '__main__':
         print(f"选择的文件: {selected_files}")
 
         dataset_configs = {filename: NUM_SAMPLES_PER_FILE for filename in selected_files}
-        print("加载数据...")
-        try:
-            dataset = MultiAreaDataset(ROOT_DIR, dataset_configs, random_sample=False, seed=250)
-            prompts, _, _, _, _, source_files = dataset.get_data()
-        except Exception as e:
-            print(f"[错误] 加载数据时出错: {e}。跳过此组合。")
-            continue
 
-        if not prompts:
-            print("[警告] 加载后 prompts 列表为空。可能是所有选定文件都为空或不存在。跳过此组合。")
-            continue
+        predicted_labels, true_labels, num_clusters_found, num_outliers = train_predict(data_configs=dataset_configs,
+                                                                                        data_dir=ROOT_DIR,
+                                                                                        random_sample=False,
+                                                                                        random_seed=RANDOM_SEED)
 
-        # 生成真实领域标签
-        true_labels = [DOMAIN_MAP[fname] for fname in source_files]
-        print(true_labels)
-        total_samples_loaded = len(prompts)
-        print(f"数据加载完成。总共加载 {total_samples_loaded} 条 prompts。")
-
-        from collections import Counter
-
-        print("实际加载样本分布:", Counter(true_labels))
-
-        try:
-            print("初始化 KnowRouter...")
-            router = KnowRouter(DEFAULT_ROUTER_CFG)
-            router.build_route_table(prompts)  # 内部会调用 embedding 和 clustering
-
-            predicted_labels = router.clustering.cluster.labels_
-            num_clusters_found = router.get_num_clusters()
-            num_outliers = np.sum(predicted_labels == -1)
-            print(f"聚类完成。找到 {num_clusters_found} 个聚类 (不包括 {num_outliers} 个离群点)。")
-
-        except Exception as e:
-            print(f"[错误] 运行聚类时出错: {e}。跳过此组合。")
-            import traceback
-
-            traceback.print_exc()  # 打印详细错误堆栈
-            continue
-
-        # 5. 评估聚类效果 (ARI)
-        score = -1.0  # 默认无效分数
-        # 确保有足够的标签和聚类来进行评估
-        if len(true_labels) != len(predicted_labels):
-            print(f"[错误] 真实标签和预测标签长度不匹配: {len(true_labels)} vs {len(predicted_labels)}")
-            continue
-
-        if len(set(true_labels)) > 1 and len(set(predicted_labels) - {-1}) > 0:
-            try:
-                score = adjusted_rand_score(true_labels, predicted_labels)
-                print(f"调整兰德指数 (ARI): {score:.4f}")
-            except Exception as e:
-                print(f"[错误] 计算ARI时出错: {e}")
-                score = -1.0  # 标记为计算错误
-        else:
-            print("无法计算 ARI：真实标签少于2类 或 预测结果中没有有效聚类（除了离群点）。ARI 设置为 0.0。")
-            score = 0.0  # 在这种情况下，ARI通常被认为是0或未定义，这里设为0
+        score = eval(predicted_labels, true_labels)
 
         results.append({
             "combination_files": selected_files,
@@ -270,3 +269,8 @@ if __name__ == '__main__':
             print(f"{i + 1}. ARI: {res['score']:.4f} | 文件: {res['combination_files']} | 簇数: {res['num_clusters_found']} | 离群点: {res['num_outliers']}")
     else:
         print("没有有效的评估结果。")
+
+
+
+if __name__ == '__main__':
+    search_best_combination()
