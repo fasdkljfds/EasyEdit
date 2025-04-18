@@ -262,8 +262,8 @@ if __name__ == "__main__":
 
     print('=' * 20)
 
-    # hparams = editing_hparams.from_hparams(args.hparams_dir)
-    hparams = ZZZHyperParams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1b.yaml')
+    hparams = editing_hparams.from_hparams(args.hparams_dir)
+    # hparams = ZZZHyperParams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1b.yaml')
     
      
     hparams.use_attention_gate = args.use_attention_gate

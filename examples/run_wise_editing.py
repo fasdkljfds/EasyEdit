@@ -131,4 +131,3 @@ if __name__ == "__main__":
 
     if len(metrics) > 0:
         summary_metrics(metrics)
-

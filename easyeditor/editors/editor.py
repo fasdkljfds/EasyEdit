@@ -332,7 +332,7 @@ class BaseEditor:
                     keep_original_weight=False,
                     train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None
                 )
-            else:
+            elif self.alg_name == 'ZZZ':
                 edited_model, weights_copy = self.apply_algo(
                     self.model,
                     self.tok,
@@ -346,6 +346,21 @@ class BaseEditor:
                     keep_original_weight=False,
                     train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None,
                     router=kwargs['router'] if self.alg_name == 'ZZZ' else None
+                )
+                icl_examples = None
+            else:
+                edited_model, weights_copy = self.apply_algo(
+                    self.model,
+                    self.tok,
+                    # 这里的request就是
+                    # prompt-rephrase_prompt-target_new-ground_truth-local_port
+                    # 标准格式
+                    [request],
+                    self.hparams,
+                    copy=False,
+                    return_orig_weights=True,
+                    keep_original_weight=False,
+                    train_ds=kwargs['train_ds'] if self.alg_name == 'IKE' else None,
                 )
                 icl_examples = None
             return edited_model, weights_copy, icl_examples
