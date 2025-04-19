@@ -1,4 +1,5 @@
 # 评估毕设的baseline，已经适配WISE 4.15
+# 适配GRACE 4.19
 
 import os
 import json
@@ -13,16 +14,8 @@ from multiarea_dataset import MultiAreaDataset
 
 try:
     from EasyEdit.easyeditor import (
-        FTHyperParams,
-        IKEHyperParams,
-        KNHyperParams,
-        MEMITHyperParams,
-        ROMEHyperParams,
-        LoRAHyperParams,
-        MENDHyperParams,
-        SERACHparams,
-        WISEHyperParams,
-        ZZZHyperParams
+        GraceHyperParams,
+        WISEHyperParams
         )
 
     from EasyEdit.easyeditor import BaseEditor
@@ -32,16 +25,8 @@ try:
 
 except ImportError:
     from easyeditor import (
-        FTHyperParams,
-        IKEHyperParams,
-        KNHyperParams,
-        MEMITHyperParams,
-        ROMEHyperParams,
-        LoRAHyperParams,
-        MENDHyperParams,
-        SERACHparams,
-        WISEHyperParams,
-        ZZZHyperParams
+        GraceHyperParams,
+        WISEHyperParams
         )
 
     from easyeditor import BaseEditor
@@ -128,25 +113,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     dataset_configs = parse_dataset_configs(args.data_configs)
-            
-    if args.editing_method == 'FT':
-        editing_hparams = FTHyperParams
-    elif args.editing_method == 'IKE':
-        editing_hparams = IKEHyperParams
-    elif args.editing_method == 'ICE':
-        editing_hparams = IKEHyperParams
-    elif args.editing_method == 'KN':
-        editing_hparams = KNHyperParams
-    elif args.editing_method == 'MEMIT':
-        editing_hparams = MEMITHyperParams
-    elif args.editing_method == 'ROME':
-        editing_hparams = ROMEHyperParams
-    elif args.editing_method == 'LoRA':
-        editing_hparams = LoRAHyperParams
-    elif args.editing_method == 'SERAC':
-        editing_hparams = SERACHparams
-    elif args.editing_method == 'MEND':
-        editing_hparams = MENDHyperParams
+
+    if args.editing_method == 'GRACE':
+        editing_hparams = GraceHyperParams
     elif args.editing_method == 'WISE':
         editing_hparams = WISEHyperParams
     else:
@@ -179,15 +148,25 @@ if __name__ == "__main__":
         print('Len of loc_prompts: ', len(loc_prompts))
     else:
         loc_prompts = None
-    
+
+
     editor = BaseEditor.from_hparams(hparams)
-    metrics, edited_model, _ = editor.edit(
-        prompts=prompts,
-        rephrase_prompts=rephrase_prompts,
-        target_new=target_new,
-        subject=subjects,
-        locality_inputs=locality_inputs,
-        sequential_edit=args.sequential_edit,
-        loc_prompts=loc_prompts,  # only for WISE
-    )
-    
+    if args.editing_method == 'WISE':
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            rephrase_prompts=rephrase_prompts,
+            target_new=target_new,
+            subject=subjects,
+            locality_inputs=locality_inputs,
+            sequential_edit=args.sequential_edit,
+            loc_prompts=loc_prompts,  # only for WISE
+        )
+    else:
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            rephrase_prompts=rephrase_prompts,
+            target_new=target_new,
+            subject=subjects,
+            locality_inputs=locality_inputs,
+            sequential_edit=args.sequential_edit,
+        )
