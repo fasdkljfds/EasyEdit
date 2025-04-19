@@ -92,7 +92,13 @@ if __name__ == "__main__":
     parser.add_argument('--datatype', default=None,type=str)
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
-    
+
+    # WISE专用 
+    parser.add_argument('--loc_type', default='zsre-train', type=str) # 选择的loc数据集
+    parser.add_argument('--bias', default=0, type=int) # 选择的loc数据集
+    parser.add_argument('--use_attention_gate', default=False, type=str2bool) # 是否使用注意力门控
+
+      
     args = parser.parse_args()
 
     if args.editing_method == 'MEMIT':
@@ -204,15 +210,73 @@ if __name__ == "__main__":
     else:
         raise NotImplementedError('只实现了counterfact')
 
+    if args.editing_method == 'WISE':
+        print('=' * 20)
+        print('haparams data:')
+        N = args.ds_size
+        bias = args.bias
+        if args.loc_type == 'zsre-train':
+            print('Using ZsRE train data')
+            loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+            loc_data = json.load(
+                open(loc_filepath, 'r', encoding='utf-8')
+            )[bias:bias + N]
+            loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+        elif args.loc_type == 'counterfact-edit':
+            print('Using counterfact-edit data')
+            loc_filepath = 'EasyEdit/data/KnowEdit/counterfact-edit.json'
+            loc_data = json.load(
+                open(loc_filepath, 'r', encoding='utf-8')
+            )[bias:bias + N]
+
+            loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
+
+        print('bias:', bias)
+        print('using attention gate:', args.use_attention_gate)
+
+        print('=' * 20)
+
     hparams = editing_hparams.from_hparams(args.hparams_dir)
 
     editor = BaseEditor.from_hparams(hparams)
-    metrics, edited_model, _ = editor.edit(
-        prompts=prompts,
-        target_new=target_new,
-        subject=subjects,
-        locality_inputs=locality_inputs,
-        portability_inputs=portability_inputs,
-        keep_original_weight=True,
-        sequential_edit=args.sequential_edit,
-    )
+    if args.editing_method == 'WISE':
+
+        hparams.use_attention_gate = args.use_attention_gate
+        args.pre_file = f"./{hparams.model_name.split('/')[-1]}_{args.datatype}_pre_edit.json"
+        print(args.pre_file)
+        if args.pre_file is not None and os.path.exists(args.pre_file):
+            pre_edit = json.load(open(args.pre_file, 'r'))
+            assert len(pre_edit) == len(prompts)
+        else:
+            pre_edit = None
+        if args.editing_method == 'IKE':
+            train_ds = KnowEditDataset(args.train_data_path)
+            sentence_model = SentenceTransformer(hparams.sentence_model_name).to(f'cuda:{hparams.device}')
+            encode_ike_facts(sentence_model, train_ds, hparams)
+        elif args.editing_method == 'ICE':
+            hparams.use_icl_examples = False
+            train_ds = None
+        else:
+            train_ds = None
+
+
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            target_new=target_new,
+            subject=subjects,
+            locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            keep_original_weight=True,
+            sequential_edit=args.sequential_edit,
+            loc_prompts=loc_prompts,
+        )
+    else:
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            target_new=target_new,
+            subject=subjects,
+            locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            keep_original_weight=True,
+            sequential_edit=args.sequential_edit,
+        )
