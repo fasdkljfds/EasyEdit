@@ -1,6 +1,4 @@
-# 评估毕设的baseline
-# 已适配WISE
-# 4.15
+# 评估毕设的baseline，已经适配WISE 4.15
 
 import os
 import json
@@ -161,7 +159,7 @@ if __name__ == "__main__":
         random_sample=args.random_sample
     )
     
-    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.get_data()    
+    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
 

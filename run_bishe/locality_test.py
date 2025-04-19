@@ -49,7 +49,7 @@ editing_hparams = ZZZHyperParams
 hparams = editing_hparams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1b.yaml')
 router = KnowRouter(cfg=hparams)
 
-prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.get_data()
+prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
 
 router.build_route_table(prompt_list=prompts)
 

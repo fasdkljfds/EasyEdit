@@ -139,7 +139,7 @@ if __name__ == "__main__":
         random_sample=args.random_sample
     )
 
-    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.get_data()
+    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
 
     # --- 训练路由器 ---
     hparams = editing_hparams.from_hparams(args.hparams_dir)

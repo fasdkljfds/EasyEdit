@@ -12,7 +12,8 @@ print(sys.path)
 try:
     from EasyEdit.easyeditor import (
         MEMITHyperParams,
-        GraceHyperParams
+        GraceHyperParams,
+        WISEHyperParams
         )
 
     from EasyEdit.easyeditor import BaseEditor
@@ -23,7 +24,8 @@ try:
 except ImportError:
     from easyeditor import (
         MEMITHyperParams,
-        GraceHyperParams
+        GraceHyperParams,
+        WISEHyperParams
         )
 
     from easyeditor import BaseEditor
@@ -70,6 +72,15 @@ def eval(result_path):
         Fluency = sum(Fluency_list) / len(Fluency_list) * 100
         print('Fluency:', Fluency)
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -80,14 +91,18 @@ if __name__ == "__main__":
     parser.add_argument('--metrics_save_dir', default='./output', type=str)
     parser.add_argument('--datatype', default=None,type=str)
 
+    parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
+    
     args = parser.parse_args()
 
     if args.editing_method == 'MEMIT':
-        editing_hparams = MEMITHyperParams
+        editing_hparpzams = MEMITHyperParams
     elif args.editing_method == 'GRACE':
         editing_hparams = GraceHyperParams
+    elif args.editing_method == 'WISE':
+        editing_hparams = WISEHyperParams
     else:
-        raise NotImplementedError('只实现了MEMIT和GRACE')
+        raise NotImplementedError('只实现了MEjMIT和GRACE')
 
     datas = KnowEditDataset(args.data_dir, size=args.ds_size)
 

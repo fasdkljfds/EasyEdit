@@ -22,8 +22,8 @@ class MultiAreaDataset:
         self.rephrase_prompts = []
         self.source_files = []
 
-        all_locality_prompts = []
-        all_locality_targets = []
+        self.all_locality_prompts = []
+        self.all_locality_targets = []
 
         random.seed(seed)
 
@@ -54,9 +54,9 @@ class MultiAreaDataset:
             self.target_news.extend([item['target_new'] for item in data])
             self.locality_prompts.extend([item['locality']['prompt'] for item in data])
 
-            all_locality_prompts.extend([item['locality']['prompt'] for item in data])
-            all_locality_targets.extend([item['target_new'] for item in data])  # 形式主义罢了
-            
+            self.all_locality_prompts.extend([item['locality']['prompt'] for item in data])
+            self.all_locality_targets.extend([item['target_new'] for item in data])  # 形式主义罢了
+
             for item in data:
                 rephrase_list = item.get('generalization', {}).get('rephrase', [])
                 if rephrase_list:
@@ -70,15 +70,18 @@ class MultiAreaDataset:
         # 合并后的 locality_inputs 统一成一个入口
         self.locality_inputs = {
             'neighborhood': {
-                'prompt': all_locality_prompts,
-                'ground_truth': all_locality_targets
+                'prompt': self.all_locality_prompts,
+                'ground_truth': self.all_locality_targets
             }
         }
 
     def __len__(self):
         return len(self.prompts)
 
-    def get_data(self):
+    def to_classification_dataest(self):
+        return self.prompts, self.all_locality_prompts
+
+    def to_edit_dataset(self):
         return self.prompts, self.rephrase_prompts, self.target_news, self.subjects, self.locality_inputs, self.source_files
 
 
@@ -104,3 +107,5 @@ if __name__ == '__main__':
     print('source')
     print(dataset.source_files)
     print(len(dataset.source_files))
+
+

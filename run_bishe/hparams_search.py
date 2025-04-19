@@ -109,7 +109,7 @@ def train_predict(data_configs: Dict,
         random_sample=random_sample
     )
 
-    prompts, _, _, _, _, source_files = dataset.get_data()
+    prompts, _, _, _, _, source_files = dataset.to_edit_dataset()
     true_labels = [DOMAIN_MAP[fname] for fname in source_files]
 
     from collections import Counter
