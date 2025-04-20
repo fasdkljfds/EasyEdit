@@ -1,5 +1,6 @@
 # 运行ZZZ
 # 适配counterfact
+# 确实是适配counterfact的4.20
 
 import os
 import os.path as path

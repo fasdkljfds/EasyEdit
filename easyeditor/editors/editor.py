@@ -25,7 +25,6 @@ logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(messa
 
 LOG = logging.getLogger(__name__)
 def make_logs():
-
     f_h, s_h = get_handler('logs', log_name='run.log')
     LOG.addHandler(f_h)
     LOG.addHandler(s_h)
