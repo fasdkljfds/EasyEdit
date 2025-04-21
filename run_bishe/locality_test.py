@@ -1,11 +1,17 @@
 # 测试4.16的路由策略能否区分相近表述
 # 4.21 这个脚本需要手动改参数，
+# 4.21 这个脚本实际上变为，给定一组参数，观察KnowRouter的工作效果
 
 import sys
 import os
 
 sys.path.append(os.getcwd()+'/EasyEdit')
 sys.path.append(os.getcwd()+'/EasyEdit/run_bishe')
+
+import yaml
+from dataclasses import dataclass, field # 引入 field 以便为字典设置默认工厂
+from typing import List, Optional, Dict, Any # 引入 Any
+from omegaconf import DictConfig, OmegaConf # 明确引入 OmegaConf
 
 from multiarea_dataset import MultiAreaDataset
 try:
@@ -52,8 +58,33 @@ multiarea_dataset = MultiAreaDataset(
     random_sample=False
 )
 
+
+# --- 0.5 创建路由器 ---
 editing_hparams = ZZZHyperParams
-hparams = editing_hparams.from_hparams('EasyEdit/hparams/ZZZ/loc_test')
+hparams = editing_hparams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1B.yaml')
+
+
+config = {
+    "use_umap": True,
+    "random_seed": 42,
+    "umap_params": {
+        "n_neighbors": 25,
+        "min_dist": 0.5,
+        "n_components": 50,
+        "metric": "cosine"
+    },
+    "hdbscan_params": {
+        "min_cluster_size": 18,
+        "min_samples": 1,
+        "metric": "euclidean",
+        "cluster_selection_method": "eom",
+        "allow_single_cluster": False
+    }
+}
+
+hparams.clustering = config
+
+
 router = KnowRouter(cfg=hparams)
 
 prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()

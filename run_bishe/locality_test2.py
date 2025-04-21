@@ -78,7 +78,6 @@ def objective(trial: optuna.trial.Trial) -> float:
     # 确保 min_samples <= min_cluster_size
     hdbscan_min_samples = min(hdbscan_min_samples, hdbscan_min_cluster_size)
 
-    # 可以考虑加入 cluster_selection_method，但 'eom' 通常比较鲁棒
     hdbscan_cluster_selection_method = trial.suggest_categorical('hdbscan_cluster_selection_method', ['eom'])
 
     print(f"\n--- 开始 Trial {trial.number} ---")

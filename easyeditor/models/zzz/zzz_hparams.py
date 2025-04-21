@@ -37,7 +37,6 @@ class ZZZHyperParams(HyperParams):
     load_path: Optional[str] = None
 
 
-
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
         if '.yaml' not in hparams_name_or_path:
