@@ -186,10 +186,10 @@ def objective(trial: optuna.trial.Trial) -> float:
     objective_value = average_accuracy - penalty_weight * abs_difference
 
     print(f"  Trial {trial.number} 完成. Loc Acc: {locality_accuracy:.4f}, Gen Acc: {rephrase_accuracy:.4f}, "
-          f"平均 Acc: {average_accuracy:.4f}")
+          f"平均 Acc: {average_accuracy:.4f}", f'目标值: {objective_value:.4f}')
 
-    return average_accuracy
-
+    return objective_value  # 返回目标值，Optuna 会尝试最大化这个值
+    
 # --- 2. 执行 Optuna 搜索 ---
 # 创建一个 study 对象，指定优化方向为最大化
 study = optuna.create_study(direction='maximize')
