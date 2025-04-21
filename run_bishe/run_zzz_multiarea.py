@@ -1,6 +1,6 @@
 # 评估zzz
-# 适配multiarea
-# 4.16
+# 适配multiarea # 4.16
+# 适配大模型嵌入 # 4.21
 
 import os
 import os.path as path

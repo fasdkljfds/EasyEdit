@@ -7,6 +7,9 @@ inner_params:
 seed: 42
 
 
+# for embedding
+representation_layer_index: 6
+
 # for router
 embedding:
   model_name: "sentence-transformers/all-MiniLM-L6-v2"

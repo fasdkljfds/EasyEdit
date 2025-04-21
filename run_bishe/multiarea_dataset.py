@@ -29,8 +29,8 @@ class MultiAreaDataset:
 
         for filename, K in dataset_configs.items():
             sample_algo = '随机' if random_sample else '顺序'
-            print(f'从文件中{sample_algo}采样数据：{filename}, 采样数：{K}')
             file_path = os.path.join(root_dir, filename)
+            print(f'从文件中{file_path}采样数据：{filename}, 采样数：{K}')
             if not os.path.isfile(file_path):
                 print(f"[⚠️ 警告] 文件 {filename} 不存在，跳过它！")
                 continue

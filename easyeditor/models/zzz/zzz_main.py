@@ -24,9 +24,7 @@ def apply_zzz_to_model(
     device = f'cuda:{hparams.device}'
 
     context_templates = get_context_templates(model, tok, length_params=[[5, 5], [10, 5]], device=device)
-
-    # --- 创建编辑器 ---
-
+    # --- 1. 创建编辑器 ---
     request = requests[0]
 
     ffn_id = router.route(request['prompt'])
@@ -41,7 +39,7 @@ def apply_zzz_to_model(
         router=router,
     )
 
-    # --- tokenize输入 ---
+    # --- 2. tokenize输入 ---
     tokens, act_mask, deact_mask = tokenize(
         requests,
         tokenizer=tok,
@@ -50,6 +48,7 @@ def apply_zzz_to_model(
         hparams=hparams
     )
 
+    # --- 3. 执行编辑 ---
     editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask, prompt=request['prompt'])
 
     # weights_copy = editor.reset_layer

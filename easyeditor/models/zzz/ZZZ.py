@@ -81,6 +81,11 @@ class ZZZ(torch.nn.Module):
             print(f"New weights successfully inserted into {layer}")
         self.get_adapter_layer().generate_activation_mask(self.config.mask_ratio)
 
+        self.representation_layer_index = self.config.representation_layer_index
+        self._hidden_state_index_to_access = self.representation_layer_index + 1
+
+        print(f"将使用第 {self.representation_layer_index} 个解码器层 (hidden_states[{self._hidden_state_index_to_access}]) 的输出作为路由表示。")
+
         gc.collect()
         torch.cuda.empty_cache()
         gc.collect()
@@ -90,12 +95,15 @@ class ZZZ(torch.nn.Module):
     def __call__(self, **kwargs):
         return self.model(**kwargs)
 
+    def _get_routing_representation(self, prompt_tokens):
+        pass
+
     # 重置，应该是适配单次编辑的
     def reset_layer(self):
         layer = getattr(self.edit_module, self.layer_name)
         del layer
         setattr(self.edit_module, self.layer_name, self.get_adapter_layer().original_layer)
-
+    
     # 正如名字
     def get_adapter_layer(self):
         adapter_layer = getattr(self.edit_module, self.layer_name)

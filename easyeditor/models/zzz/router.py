@@ -136,7 +136,7 @@ class Clustering:
             strength = 0.0
         else:
             try:
-                strength = strengths[0][predicted_label]
+                strength = strengths[0]
             except IndexError:
                 print(f"警告：尝试访问的索引 {predicted_label} 超出强度数组范围。Strengths shape: {strengths.shape}")
                 strength = 0.0
@@ -189,6 +189,20 @@ class KnowRouter:
         cluster_id, _ = self.clustering.predict_cluster(embedding)
         return cluster_id
 
+    def route_with_confidence(self, prompt: str) -> tuple[int, float]:
+        """
+        将输入句子路由到对应的聚类ID，并返回置信度
+        Args:
+            prompt (str): 需要路由的句子
+        """
+        if not self.built:
+            raise RuntimeError("Router not built. Call build_route_table() first.")
+
+        embedding = self.embedding.to_embeddings([prompt])[0]
+        cluster_id, confidence = self.clustering.predict_cluster(embedding)
+        return cluster_id, confidence
+
+
     def _count_similarity(self):
         pass
 
@@ -206,6 +220,22 @@ class KnowRouter:
         num_clusters = len(unique_labels - {-1})
 
         return num_clusters
+
+    def get_num_outlier(self) -> int:
+        """
+        获取离群点数量
+
+        """
+        if not self.built:
+            raise RuntimeError("路由器尚未构建。请先调用 build_route_table() 以执行聚类。")
+        labels = self.clustering.cluster.labels_
+
+        num_outliers = 0
+        for i in labels:
+            if i == -1:
+                num_outliers += 1
+
+        return num_outliers
 
     def save(self, save_dir: str) -> None:
         """

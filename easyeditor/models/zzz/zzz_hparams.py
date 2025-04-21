@@ -9,27 +9,24 @@ from ...util.hparams import HyperParams
 
 @dataclass
 class ZZZHyperParams(HyperParams):
-    # 算法和模型参数
-    edit_lr: float
-    n_iter: int
-
+    # for edit
     alg_name: str
     model_name: str
     device: int
-    # 持续编辑
-    objective_optimization: str
-    mask_ratio: float
-    norm_constraint: float
-
-    # 内部参数设置
     inner_params: List[str]
-    norm_constraint: float
-    
-    # 随机种子
     seed: int
 
+    # for router
+    representation_layer_index: int
     embedding: Dict
     clustering: Dict
+
+    # for sequential edit
+    mask_ratio: float
+    edit_lr: float
+    n_iter: int
+    norm_constraint: float
+    objective_optimization: str
 
     batch_size: int = 1
     max_length: int = 30
@@ -38,7 +35,9 @@ class ZZZHyperParams(HyperParams):
 
     save_path: Optional[str] = None
     load_path: Optional[str] = None
-    
+
+
+
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):
         if '.yaml' not in hparams_name_or_path:
