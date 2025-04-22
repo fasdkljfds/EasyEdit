@@ -119,10 +119,14 @@ if __name__ == "__main__":
     parser.add_argument('--router_load_path', default='./router', type=str)  # 路由器加载路径
     parser.add_argument('--retrain', default=False, type=str2bool)  # 是否重新训练路由器
 
+    parser.add_argument('--sbert_path', default='sentence-transformers/all-MiniLM-L6-v2', type=str)  # SBERT模型路径
+
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑 默认为是
 
     args = parser.parse_args()
+
+
 
     if args.editing_method == 'ZZZ':
         editing_hparams = ZZZHyperParams
@@ -143,6 +147,9 @@ if __name__ == "__main__":
 
     # --- 训练路由器 ---
     hparams = editing_hparams.from_hparams(args.hparams_dir)
+    if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
+        hparams.sbert_path = args.sbert_path
+    print(f"使用的SBERT路径: {hparams.sbert_path}")
 
     if args.router_load_path and not args.retrain:
         try:
