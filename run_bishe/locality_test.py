@@ -68,14 +68,14 @@ config = {
     "use_umap": True,
     "random_seed": 42,
     "umap_params": {
-        "n_neighbors": 25,
-        "min_dist": 0.5,
+        "n_neighbors": 5,
+        "min_dist": 0.1,
         "n_components": 50,
         "metric": "cosine"
     },
     "hdbscan_params": {
-        "min_cluster_size": 18,
-        "min_samples": 1,
+        "min_cluster_size": 5,
+        "min_samples": 3,
         "metric": "euclidean",
         "cluster_selection_method": "eom",
         "allow_single_cluster": False
@@ -85,6 +85,7 @@ config = {
 hparams.clustering = config
 
 
+print(hparams.clustering)
 router = KnowRouter(cfg=hparams)
 
 prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()

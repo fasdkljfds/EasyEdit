@@ -201,6 +201,7 @@ if __name__ == '__main__':
             router.build_route_table(prompt_list=prompts)
     else:
         router = KnowRouter(cfg=hparams)
+        print(hparams.clustering)
         router.build_route_table(prompt_list=prompts)
         if args.router_save_path:
             try:
