@@ -24,7 +24,7 @@ clustering:
     min_dist: 0.479
     n_components: 50
     metric: "cosine"
-
+  
   hdbscan_params:
     min_cluster_size: 18
     min_samples: 1
