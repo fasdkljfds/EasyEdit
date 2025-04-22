@@ -149,6 +149,7 @@ if __name__ == "__main__":
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
         hparams.sbert_path = args.sbert_path
+        hparams.embedding.model_name = args.sbert_path
     print(f"使用的SBERT路径: {hparams.sbert_path}")
 
     if args.router_load_path and not args.retrain:
