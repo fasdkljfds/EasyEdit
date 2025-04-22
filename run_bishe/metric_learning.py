@@ -277,7 +277,7 @@ if __name__ == "__main__":
         # 模型相关参数
         "base_model_name": 'sentence-transformers/all-MiniLM-L6-v2',
         "output_model_dir": './finetuned_sbert_triplet',
-        "final_model_subdir": 'final_model',
+        "final_model_subdir": 'final_model_1',
         # 损失函数相关参数
         "distance_metric_name": "COSINE",
         "triplet_margin": 0.8,
