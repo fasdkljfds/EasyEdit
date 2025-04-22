@@ -14,7 +14,7 @@ from sentence_transformers.training_args import SentenceTransformerTrainingArgum
 import math
 import datasets
 from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction  # TripletLoss 相关
-
+1
 sys.path.append(os.getcwd() + '/EasyEdit')
 sys.path.append(os.getcwd() + '/EasyEdit/run_bishe')
 
