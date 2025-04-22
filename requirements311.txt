@@ -28,3 +28,4 @@ qwen_vl_utils
 hdbscan
 umap-learn
 optuna
+tensorboardX

@@ -83,6 +83,7 @@ config = {
 }
 
 hparams.clustering = config
+hparams.embedding.model_name = './finetuned_sbert_triplet/final_model'
 
 
 print(hparams.clustering)
