@@ -12,7 +12,7 @@ representation_layer_index: 6
 
 # for router
 embedding:
-  model_name: "./finetuned_sbert_triplet/final_model_1"
+  model_name: "EasyEdit/finetuned_sbert_triplet/final_model_1"
   random_seed: 42
 
 clustering:
