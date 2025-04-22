@@ -172,6 +172,7 @@ def define_triplet_loss(model: SentenceTransformer,
     print(f"使用 TripletLoss，距离度量: {distance_metric}, Margin: {margin}")
     return train_loss
 
+
 def configure_training_args(output_dir: str,
                             num_epochs: int,
                             train_batch_size: int,
@@ -233,6 +234,7 @@ def configure_training_args(output_dir: str,
     print(f"训练参数配置完成，输出目录: {output_dir}")
     return training_args
 
+
 def initialize_trainer(model: SentenceTransformer,
                        args: SentenceTransformerTrainingArguments,
                        train_dataset: Dataset,
@@ -265,6 +267,7 @@ def initialize_trainer(model: SentenceTransformer,
     print("训练器初始化完成。")
     return trainer
 
+
 def run_training(trainer: SentenceTransformerTrainer) -> bool:
     """
     执行模型训练。
@@ -286,6 +289,7 @@ def run_training(trainer: SentenceTransformerTrainer) -> bool:
         traceback.print_exc()
         return False
 
+
 def save_final_model(model: SentenceTransformer, save_path: str):
     """
     保存最终的模型。
@@ -301,6 +305,7 @@ def save_final_model(model: SentenceTransformer, save_path: str):
         print("最终模型保存成功。")
     except Exception as e:
         print(f"保存最终模型时出错: {e}")
+
 
 # --- 主流程函数 ---
 def finetune_sentence_transformer_for_knowledge_editing(
@@ -367,16 +372,15 @@ def finetune_sentence_transformer_for_knowledge_editing(
 
     # 3. 定义损失函数
     try:
-        # 将字符串名称映射到 Sentence Transformer 的距离度量枚举
         if distance_metric_name.upper() == "COSINE":
-            distance_metric = BatchHardTripletLossDistanceFunction.COSINE
+            distance_metric = losses.TripletDistanceMetric.COSINE
         elif distance_metric_name.upper() == "EUCLIDEAN":
-            distance_metric = BatchHardTripletLossDistanceFunction.EUCLIDEAN
+            distance_metric = losses.TripletDistanceMetric.EUCLIDEAN
         elif distance_metric_name.upper() == "MANHATTAN":
-            distance_metric = BatchHardTripletLossDistanceFunction.MANHATTAN
+            distance_metric = losses.TripletDistanceMetric.MANHATTAN
         else:
             print(f"警告：未知的距离度量 '{distance_metric_name}'，将使用默认的 COSINE。")
-            distance_metric = BatchHardTripletLossDistanceFunction.COSINE
+            distance_metric = losses.TripletDistanceMetric.COSINE
         loss_func = define_triplet_loss(model=model, distance_metric=distance_metric, margin=triplet_margin)
     except Exception as e:
         print(f"定义损失函数时出错: {e}")
@@ -446,8 +450,7 @@ if __name__ == "__main__":
         'places_landmark.json': 50
     }
 
-    # 定义 MultiAreaDataset 的根目录 (请根据您的实际项目结构修改)
-    multi_area_root_dir = os.path.join(easyedit_path, 'data', 'output_meta_llama_3_8b_instruct')
+    multi_area_root_dir = 'EasyEdit/data/output_meta_llama_3_8b_instruct'
 
     # 定义输出目录
     output_directory = "./output/finetuned_sbert_multiarea_triplet_functional"
@@ -465,25 +468,3 @@ if __name__ == "__main__":
         triplet_margin=0.8, # 调整 margin
         use_tensorboard=True
     )
-
-    if final_model_path:
-        print(f"\n任务完成！可以使用以下路径加载微调后的模型:\n{final_model_path}")
-        # 示例：如何加载和使用
-        try:
-            loaded_model = SentenceTransformer(final_model_path)
-            print("\n尝试加载并使用微调模型:")
-            sentences = ["美国的首都是哪里？", "华盛顿是哪个国家的首都？", "法国的首都是哪里？"]
-            embeddings = loaded_model.encode(sentences)
-            print("示例句子嵌入生成成功，形状:", embeddings.shape)
-
-            from sentence_transformers.util import cos_sim
-            # 预期：前两个句子的相似度应该很高，与第三个句子的相似度较低
-            sim_01 = cos_sim(embeddings[0], embeddings[1])
-            sim_02 = cos_sim(embeddings[0], embeddings[2])
-            print(f"'{sentences[0]}' vs '{sentences[1]}' 相似度: {sim_01.item():.4f}")
-            print(f"'{sentences[0]}' vs '{sentences[2]}' 相似度: {sim_02.item():.4f}")
-
-        except Exception as e:
-            print(f"\n尝试加载或使用微调模型时出错: {e}")
-    else:
-        print("\n微调任务未成功完成。")

@@ -61,7 +61,7 @@ multiarea_dataset = MultiAreaDataset(
 
 # --- 0.5 创建路由器 ---
 editing_hparams = ZZZHyperParams
-hparams = editing_hparams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1B.yaml')
+hparams = editing_hparams.from_hparams('EasyEdit/hparams/ZZZ/llama3.2-1b.yaml')
 
 
 config = {
