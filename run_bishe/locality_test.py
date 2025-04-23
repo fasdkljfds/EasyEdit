@@ -70,11 +70,11 @@ config = {
     "umap_params": {
         "n_neighbors": 5,
         "min_dist": 0.1,
-        "n_components": 50,
+        "n_components": 100,
         "metric": "cosine"
     },
     "hdbscan_params": {
-        "min_cluster_size": 5,
+        "min_cluster_size": 10,
         "min_samples": 3,
         "metric": "euclidean",
         "cluster_selection_method": "eom",
@@ -83,14 +83,16 @@ config = {
 }
 
 hparams.clustering = config
-hparams.embedding.model_name = './finetuned_sbert_triplet/final_model_1'
+hparams.embedding.model_name = './EasyEdit/finetuned_sbert_triplet/final_model_1'
 
 
 print(hparams.clustering)
 router = KnowRouter(cfg=hparams)
 
-prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
-locality_prompts = locality_inputs['neighborhood']['prompt']  # 这个loc数据要单独拿出来
+prompts, rephrase_prompts, target_new, subjects, locality_inputs, source_files = multiarea_dataset.to_edit_dataset()
+locality_prompts = locality_inputs['neighborhood']['prompt']  # 这个loc数据要单独h拿出来
+
+
 
 router.build_route_table(prompt_list=prompts)
 
@@ -166,3 +168,77 @@ print(f"\nRephrase Routing Accuracy (Routed to same cluster): {correct_rephrase_
 
 print('簇的数量：', router.get_num_clusters())
 print('离群点的数量', router.get_num_outlier())
+
+import plotly.express as px
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np  # 确保 numpy 已导入
+
+print("\n\n--- 开始生成可视化图表 ---")
+print("\n\n--- 开始生成可视化图表 ---")
+
+# --- 1. 可视化聚类结果 (使用 Plotly - 更新版，加入原始标签) ---
+if router.built and hasattr(router.clustering, 'reducer') and hasattr(router.clustering.reducer, 'embedding_'):
+    print("生成聚类结果散点图 (颜色=HDBSCAN簇, 形状=原始标签)...")
+    try:
+        # 获取 UMAP 降维后的二维坐标 (如果 n_components > 2, 取前两维)
+        reduced_embeddings = router.clustering.reducer.embedding_
+        if reduced_embeddings.shape[1] < 2:
+             print("警告：UMAP降维结果少于2维，无法生成二维散点图。")
+        else:
+            # 获取聚类标签和原始提示
+            cluster_labels = router.clustering.cluster.labels_
+            # prompts 和 source_files 变量应该在之前的代码块中可用
+            if not ('source_files' in locals() or 'source_files' in globals()):
+                 print("错误：未找到 'source_files' 变量。请确保在脚本前面已正确获取 source_files。")
+            elif len(prompts) != len(reduced_embeddings) or len(prompts) != len(source_files):
+                 print(f"警告：数据长度不匹配。Prompts: {len(prompts)}, Embeddings: {len(reduced_embeddings)}, SourceFiles: {len(source_files)}。跳过散点图。")
+            else:
+                # 创建 DataFrame 以便绘图 (加入原始标签 '原始来源')
+                df_cluster = pd.DataFrame({
+                    'x': reduced_embeddings[:, 0],
+                    'y': reduced_embeddings[:, 1],
+                    'HDBSCAN簇': cluster_labels.astype(str), # 转为字符串以更好地区分颜色
+                    '原始来源': source_files, # <--- 新增：添加原始文件名作为标签
+                    '提示文本': prompts
+                })
+
+                # 处理离群点 (-1 标签)
+                df_cluster['HDBSCAN簇'] = df_cluster['HDBSCAN簇'].replace('-1', '离群点')
+
+                # 定义颜色映射，确保离群点是灰色
+                unique_labels = df_cluster['HDBSCAN簇'].unique()
+                color_map = {label: px.colors.qualitative.Plotly[i % len(px.colors.qualitative.Plotly)]
+                             for i, label in enumerate(unique_labels) if label != '离群点'}
+                color_map['离群点'] = 'grey' # 将离群点明确设置为灰色
+
+                # 创建交互式散点图 (使用 color 和 symbol)
+                fig_scatter = px.scatter(
+                    df_cluster,
+                    x='x',
+                    y='y',
+                    color='HDBSCAN簇',            # <--- 颜色代表 HDBSCAN 分配的簇
+                    symbol='原始来源',            # <--- 形状代表原始数据来源文件
+                    hover_data=['提示文本', 'HDBSCAN簇', '原始来源'], # <--- hover 同时显示两者
+                    title="提示词聚类结果 (颜色=HDBSCAN簇, 形状=原始来源)", # <--- 更新标题
+                    labels={'x': 'UMAP维度1', 'y': 'UMAP维度2', 'HDBSCAN簇': 'HDBSCAN簇', '原始来源':'原始来源'}, # <--- 更新标签说明
+                    color_discrete_map=color_map # 应用自定义颜色
+                )
+
+                # 更新离群点的标记样式，使其更明显（例如，更小或不同形状）
+                # 注意：如果 symbol 被使用，这里的 marker 更新可能效果有限或被覆盖，但我们仍尝试应用
+                # Plotly 通常会优先 symbol 映射，但对特定 trace（如离群点）的修改可能仍有效
+                fig_scatter.update_traces(marker=dict(size=10, opacity=0.8), selector=dict(name='离群点')) # 稍微调大离群点默认标记并设透明度
+                # 如果离群点过多或与其他标记重叠严重，可以考虑只用颜色区分，注释掉 symbol='原始来源'
+
+                # 更新图例标题，使其更清晰
+                fig_scatter.update_layout(legend_title_text='图例 (颜色: HDBSCAN簇, 形状: 原始来源)')
+
+                # 显示图表 (会在浏览器中打开)
+                fig_scatter.show()
+                print("聚类散点图已生成并显示。请观察颜色和形状：理想情况下，相同形状的点应倾向于聚集，并有相同的颜色。")
+
+    except Exception as e:
+        print(f"生成聚类散点图时出错: {e}")
+else:
+    print("路由器未构建或缺少必要的聚类/降维数据，无法生成散点图。")

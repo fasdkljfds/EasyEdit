@@ -144,14 +144,14 @@ if __name__ == "__main__":
     )
 
     prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
+    locality_prompts = locality_inputs['neighborhood']['prompt']  # 这个loc数据要单独h拿出来
 
     # --- 训练路由器 ---
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
         hparams.sbert_path = args.sbert_path
         hparams.embedding.model_name = args.sbert_path
-    print(f"使用的SBERT路径: {hparams.sbert_path}")
-
+    
     if args.router_load_path and not args.retrain:
         try:
             router = KnowRouter.load(args.router_load_path)
@@ -176,6 +176,72 @@ if __name__ == "__main__":
       
     print(f"聚类数量: {router.get_num_clusters()}")
 
+    print("\n--- Locality Prompts Routing Test ---")
+    correct_locality_routing = 0
+    total_locality = len(prompts)
+    for i in range(total_locality):
+        original_prompt = prompts[i]
+        locality_prompt = locality_prompts[i]
+
+        # 获取原始 prompt 的目标 cluster ID (来自路由表)
+        original_cluster_id = router.route_table.get(original_prompt, -99)
+        if original_cluster_id == -99:
+            print(f"错误：原始 prompt '{original_prompt}' 不在路由表中！")
+            continue
+
+        # 预测 locality prompt 的 cluster ID 和置信度
+        predicted_locality_cluster_id, locality_confidence = router.route_with_confidence(locality_prompt)
+
+        # 理想情况下，locality prompt 不应路由到 original_cluster_id
+        is_correct = (predicted_locality_cluster_id != original_cluster_id)
+
+        if is_correct:
+            correct_locality_routing += 1
+
+        print(f"Original Prompt (Idx {i}): '{original_prompt}' -> Target Cluster: {original_cluster_id}")
+        print(f"Locality Prompt (Idx {i}): '{locality_prompt}' -> Routed Cluster: {predicted_locality_cluster_id}, Confidence: {locality_confidence:.4f}")
+        print(f"  -> Locality Routing Correct? {'Yes' if is_correct else 'No'}")
+        print("-" * 20)
+
+    locality_accuracy = correct_locality_routing / total_locality if total_locality > 0 else 0
+
+    # --- 2. 测试rephrase_prompts的路由情况 ---
+    #  给出对应的prompt的路由目标、rephrase目标和置信度
+    print("\n--- Rephrase Prompts Routing Test ---")
+    correct_rephrase_routing = 0
+    total_rephrase = len(prompts)
+    for i in range(total_rephrase):
+        original_prompt = prompts[i]
+        rephrase_prompt = rephrase_prompts[i]
+
+        # 获取原始 prompt 的目标 cluster ID (来自路由表)
+        original_cluster_id = router.route_table.get(original_prompt, -99)
+        if original_cluster_id == -99:
+            # 前面已经检查过，理论上不会再出现，但以防万一
+            continue
+
+        # 预测 rephrase prompt 的 cluster ID 和置信度
+        predicted_rephrase_cluster_id, rephrase_confidence = router.route_with_confidence(rephrase_prompt)
+
+        # 理想情况下，rephrase prompt 应路由到与 original_prompt 相同的 cluster ID
+        is_correct = (predicted_rephrase_cluster_id == original_cluster_id)
+
+        if is_correct:
+            correct_rephrase_routing += 1
+
+        print(f"Original Prompt (Idx {i}): '{original_prompt}' -> Target Cluster: {original_cluster_id}")
+        print(f"Rephrase Prompt (Idx {i}): '{rephrase_prompt}' -> Routed Cluster: {predicted_rephrase_cluster_id}, Confidence: {rephrase_confidence:.4f}")
+        print(f"  -> Rephrase Routing Correct? {'Yes' if is_correct else 'No'}")
+        print("-" * 20)
+
+    rephrase_accuracy = correct_rephrase_routing / total_rephrase if total_rephrase > 0 else 0
+
+    print(f"\nLocality Routing Accuracy (Routed to different cluster): {correct_locality_routing}/{total_locality} = {locality_accuracy:.4f}")
+    print(f"\nRephrase Routing Accuracy (Routed to same cluster): {correct_rephrase_routing}/{total_rephrase} = {rephrase_accuracy:.4f}")
+
+    print('簇的数量：', router.get_num_clusters())
+    print('离群点的数量', router.get_num_outlier())
+
     # --- 准备编辑器 ---
     os.makedirs(args.output_dir, exist_ok=True)
     output_file = os.path.join(
@@ -194,3 +260,7 @@ if __name__ == "__main__":
         sequential_edit=args.sequential_edit,
         router=router
     )
+
+
+
+
