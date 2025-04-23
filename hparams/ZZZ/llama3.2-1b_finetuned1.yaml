@@ -34,7 +34,7 @@ clustering:
     
 
 # for sequential edit
-mask_ratio: 0.4
+mask_ratio: 0.2
 edit_lr: 1.0
 n_iter: 50
 norm_constraint: 1.0
