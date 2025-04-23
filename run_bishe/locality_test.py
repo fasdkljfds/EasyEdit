@@ -83,7 +83,7 @@ config = {
 }
 
 hparams.clustering = config
-hparams.embedding.model_name = './EasyEdit/finetuned_sbert_triplet/final_model_1'
+hparams.embedding.model_name = './finetuned_sbert_triplet/final_model_2'
 
 
 print(hparams.clustering)
@@ -92,16 +92,13 @@ router = KnowRouter(cfg=hparams)
 prompts, rephrase_prompts, target_new, subjects, locality_inputs, source_files = multiarea_dataset.to_edit_dataset()
 locality_prompts = locality_inputs['neighborhood']['prompt']  # 这个loc数据要单独h拿出来
 
-
-
 router.build_route_table(prompt_list=prompts)
+
 
 print("路由表构建完成")
 
-
 # --- 1. 测试locality_prompts的路由情况 ---
 # 给出对应的prompt的路由目标、locality目标和置信度
-
 print("\n--- Locality Prompts Routing Test ---")
 correct_locality_routing = 0
 total_locality = len(prompts)

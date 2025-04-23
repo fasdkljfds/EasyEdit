@@ -1,5 +1,5 @@
 # 实现对counterfact和multi-area的度量学习
-
+# 不实现couterafct了，只有multi-area 0423
 import os
 import sys
 from typing import List, Dict, Optional, Any, Tuple
@@ -12,6 +12,7 @@ from sentence_transformers import SentenceTransformer, InputExample, losses
 from sentence_transformers.trainer import SentenceTransformerTrainer
 from sentence_transformers.training_args import SentenceTransformerTrainingArguments  # 用于更精细的训练配置 (可选)
 import math
+import json
 import datasets
 from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction  # TripletLoss 相关
 # 1
@@ -140,6 +141,31 @@ def prepare_triplet_data(root_dir: str,
     return train_dataset, val_dataset
 
 
+def prepare_triplet_data_zsre(
+        data_dir,
+        ds_size
+):
+    K = ds_size
+    edit_data = json.load(open(f'{data_dir}/ZsRE/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
+    loc_data = json.load(open(f'{data_dir}/ZsRE/zsre_mend_train.json', 'r', encoding='utf-8'))[:K]
+    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+
+    prompts = [edit_data_['src'] for edit_data_ in edit_data]
+    subject = [edit_data_['subject'] for edit_data_ in edit_data]
+    rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
+    target_new = [edit_data_['alt'] for edit_data_ in edit_data]
+    locality_prompts = [edit_data_['loc'] for edit_data_ in edit_data]
+    locality_ans = [edit_data_['loc_ans'] for edit_data_ in edit_data]
+    locality_inputs = {
+        'neighborhood': {
+            'prompt': locality_prompts,
+            'ground_truth': locality_ans
+        },
+    }
+
+    return prompts, rephrase_prompts, loc_prompts
+
+
 # --- 主流程函数 ---
 def finetune_sentence_transformer(
         # 数据相关参数
@@ -245,9 +271,9 @@ def finetune_sentence_transformer(
     print("=" * 30)
     return final_model_path
 
-
 # --- 主程序入口 ---
 if __name__ == "__main__":
+
     # 定义数据集配置
     # dataset_configs = {
     #     'business_industry.json': 50,
@@ -280,7 +306,7 @@ if __name__ == "__main__":
         "final_model_subdir": 'final_model_1',
         # 损失函数相关参数
         "distance_metric_name": "COSINE",
-        "triplet_margin": 0.8,
+        "triplet_margin": 0.3,
         # 训练参数
         "num_train_epochs": 3,
         "train_batch_size": 8,

@@ -1,6 +1,7 @@
 # 测试4.16的路由策略能否区分相近表述
 # 4.21 这个脚本需要手动改参数，
 # 4.21 这个脚本实际上变为，给定一组参数，观察KnowRouter的工作效果
+# 4.23 这个脚本实际上变为，给定一组参数，观察KnowRouter在zsre上的工作效果
 
 import sys
 import os
@@ -43,21 +44,15 @@ import copy
 
 
 # --- 0. 准备数据 ---
-dataset_configs = {
-    'business_industry.json': 50,
-    'human_scientist.json': 50,
-    'event_sport.json': 50,
-    'geography_forest.json': 50,
-    'places_landmark.json': 50
-}
+data_dir = 'EasyEdit/data/wise'
+data_type = 'ZsRE'
+K = 300
 
-multiarea_dataset = MultiAreaDataset(
-    root_dir='EasyEdit/data/output_meta_llama_3_8b_instruct',
-    dataset_configs=dataset_configs,
-    seed=42,  # 只有随机采样时有用
-    random_sample=False
-)
+edit_data = json.load(open(f'{data_dir}/{data_type}/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
 
+prompts = [edit_data_['src'] for edit_data_ in edit_data]
+rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
+locality_prompts = [edit_data_['loc'] for edit_data_ in edit_data]
 
 # --- 0.5 创建路由器 ---
 editing_hparams = ZZZHyperParams
@@ -89,24 +84,11 @@ hparams.embedding.model_name = './finetuned_sbert_triplet/final_model_2'
 print(hparams.clustering)
 router = KnowRouter(cfg=hparams)
 
-prompts, rephrase_prompts, target_new, subjects, locality_inputs, source_files = multiarea_dataset.to_edit_dataset()
-locality_prompts = locality_inputs['neighborhood']['prompt']  # 这个loc数据要单独h拿出来
-
-
-
-router.build_route_table(prompt_list=prompts)
 
 import json
 print("路由表构建完成")
-data_dir = 'EasyEdit/data/wise'
-data_type= 'ZsRE'
 
-edit_data = json.load(open(f'{data_dir}/{data_type}/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
-
-prompts = [edit_data_['src'] for edit_data_ in edit_data]
-rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
-target_new = [edit_data_['alt'] for edit_data_ in edit_data]
-locality_prompts = [edit_data_['loc'] for edit_data_ in edit_data]
+router.build_route_table(prompt_list=prompts)
 
 # --- 1. 测试locality_prompts的路由情况 ---
 # 给出对应的prompt的路由目标、locality目标和置信度

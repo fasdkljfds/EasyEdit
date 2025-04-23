@@ -1,6 +1,7 @@
 # 测试4.16的路由策略能否区分相近表述
 # 4.21 这个脚本需要手动改参数，
 # 4.21 这个脚本实际上变为，给定一组参数，观察KnowRouter的工作效果
+# 4.23 这个脚本实际上变为，给定一组参数，观察KnowRouter在counterfact上的工作效果
 
 import sys
 import os
@@ -43,15 +44,71 @@ import copy
 
 
 # --- 0. 准备数据 ---
-data_dir = 'EasyEdit/data/wise'
-data_type = 'ZsRE'
-K = 300
+data_dir = 'EasyEdit/data/KnowEdit/benchmark_wiki_counterfact_train_cf.json'
+ds_size = 300
 
-edit_data = json.load(open(f'{data_dir}/{data_type}/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
+datas = KnowEditDataset(data_dir, size=ds_size)
+prompts = [data['prompt'] for data in datas]
+subjects = [data['subject'] for data in datas]
+target_new = [data['target_new'] for data in datas]
 
-prompts = [edit_data_['src'] for edit_data_ in edit_data]
-rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
-locality_prompts = [edit_data_['loc'] for edit_data_ in edit_data]
+portability_r = [data['portability_r'] for data in datas]
+portability_s = [data['portability_s'] for data in datas]
+portability_l = [data['portability_l'] for data in datas]
+
+portability_reasoning_prompts = []
+portability_reasoning_ans = []
+portability_Logical_Generalization_prompts = []
+portability_Logical_Generalization_ans = []
+portability_Subject_Aliasing_prompts = []
+portability_Subject_Aliasing_ans = []
+
+portability_data = [portability_r, portability_s, portability_l]
+portability_prompts = [portability_reasoning_prompts, portability_Subject_Aliasing_prompts, portability_Logical_Generalization_prompts]
+portability_answers = [portability_reasoning_ans, portability_Subject_Aliasing_ans, portability_Logical_Generalization_ans]
+for data, portable_prompts, portable_answers in zip(portability_data, portability_prompts, portability_answers):
+    for item in data:
+        if item is None:
+            portable_prompts.append(None)
+            portable_answers.append(None)
+        else:
+            temp_prompts = []
+            temp_answers = []
+            for pr in item:
+                prompt = pr["prompt"]
+                an = pr["ground_truth"]
+                while isinstance(an, list):
+                    an = an[0]
+                if an.strip() == "":
+                    continue
+                temp_prompts.append(prompt)
+                temp_answers.append(an)
+            portable_prompts.append(temp_prompts)
+            portable_answers.append(temp_answers)
+assert len(prompts) == len(portability_reasoning_prompts) == len(portability_Logical_Generalization_prompts) == len(portability_Subject_Aliasing_prompts)
+
+locality_rs = [data['locality_rs'] for data in datas]
+locality_f = [data['locality_f'] for data in datas]
+locality_Relation_Specificity_prompts = []
+locality_Relation_Specificity_ans = []
+locality_Forgetfulness_prompts = []
+locality_Forgetfulness_ans = []
+
+
+portability_inputs = {
+    'Subject_Aliasing': {
+        'prompt': portability_Subject_Aliasing_prompts,
+        'ground_truth': portability_Subject_Aliasing_ans
+    },
+    'reasoning': {
+        'prompt': portability_reasoning_prompts,
+        'ground_truth': portability_reasoning_ans
+    },
+    'Logical_Generalization': {
+        'prompt': portability_Logical_Generalization_prompts,
+        'ground_truth': portability_Logical_Generalization_ans
+    }
+}
 
 # --- 0.5 创建路由器 ---
 editing_hparams = ZZZHyperParams

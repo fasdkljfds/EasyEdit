@@ -97,7 +97,7 @@ class ZZZ(torch.nn.Module):
 
     def _get_routing_representation(self, prompt_tokens):
         pass
-
+    
     # 重置，应该是适配单次编辑的
     def reset_layer(self):
         layer = getattr(self.edit_module, self.layer_name)
@@ -252,7 +252,6 @@ class ZZZAdapter(torch.nn.Module):
         设置当前编辑的FFN ID
         """
         self.ffn_id = ffn_id
-        self.new_weight = self.expert_layers[ffn_id].weight  # 当前专家层的权重
 
     def route(self, prompt):
         ffn_id = self.router.route(prompt)
@@ -278,7 +277,7 @@ class ZZZAdapter(torch.nn.Module):
         current_expert = self.expert_layers[self.ffn_id]
         bias = current_expert.bias if hasattr(current_expert, 'bias') else None
         return F.linear(input, self.get_expert_weight()) if bias is None else torch.addmm(bias, input.view(-1, input.size(-1)), self.get_expert_weight()).view(input.size()[:-1] + (self.layer.nf,))
-    
+
 
     def mask_new_weight_gradient(self):
         assert self.get_expert_weight().grad is not None, print('Gradient Collection for New Weight error, gradient not found')

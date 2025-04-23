@@ -288,5 +288,24 @@ class KnowRouter:
 
         return router
 
+
+class ScopeRouter:
+    def __init__(self, cfg) -> None:
+        cfg = OmegaConf.create(cfg) if not isinstance(cfg, DictConfig) else cfg
+        self.cfg = cfg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     pass
