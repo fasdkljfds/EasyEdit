@@ -97,7 +97,7 @@ class ZZZ(torch.nn.Module):
 
     def _get_routing_representation(self, prompt_tokens):
         pass
-    
+
     # 重置，应该是适配单次编辑的
     def reset_layer(self):
         layer = getattr(self.edit_module, self.layer_name)
@@ -220,6 +220,8 @@ class ZZZAdapter(torch.nn.Module):
             if hasattr(layer, 'bias') and layer.bias is not None:
                 expert.bias.data.copy_(layer.bias.data)
         # ----------------
+        self.weight_mask = [None]*(n_area+1)
+
 
         if 'gpt2' in self.config.model_name:
             self.bias = self.layer.bias # For Conv1D
@@ -268,10 +270,12 @@ class ZZZAdapter(torch.nn.Module):
         pass
 
     def generate_activation_mask(self, mask_ratio):
-        p_grad = self.get_expert_weight().reshape(-1)
-        p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
-        p_mask = torch.from_numpy(p_mask).to(p_grad.device)
-        self.weight_mask = p_mask
+        for i in range(self.router.get_num_clusters()+1):
+            p_grad = self.get_expert_weight().reshape(-1)
+            p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
+            p_mask = torch.from_numpy(p_mask).to(p_grad.device)
+            self.weight_mask[i] = p_mask
+
 
     def expert_forward(self, input: Tensor) -> Tensor:
         current_expert = self.expert_layers[self.ffn_id]
@@ -281,11 +285,10 @@ class ZZZAdapter(torch.nn.Module):
 
     def mask_new_weight_gradient(self):
         assert self.get_expert_weight().grad is not None, print('Gradient Collection for New Weight error, gradient not found')
-
         p_size = self.get_expert_weight().grad.size()
         p_grad = self.get_expert_weight().grad.reshape(-1)
 
-        p_grad = p_grad * self.weight_mask
+        p_grad = p_grad * self.weight_mask[self.ffn_id]
         self.get_expert_weight().grad = p_grad.view(p_size).to(self.get_expert_weight().grad.dtype)
 
     def forward(self, *args):

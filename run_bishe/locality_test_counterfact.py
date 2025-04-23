@@ -94,21 +94,34 @@ locality_Relation_Specificity_ans = []
 locality_Forgetfulness_prompts = []
 locality_Forgetfulness_ans = []
 
+locality_data = [locality_rs, locality_f]
+locality_prompts = [locality_Relation_Specificity_prompts, locality_Forgetfulness_prompts]
+locality_answers = [locality_Relation_Specificity_ans, locality_Forgetfulness_ans]
+for data, local_prompts, local_answers in zip(locality_data, locality_prompts, locality_answers):
+    for item in data:
+        if item is None:
+            local_prompts.append(None)
+            local_answers.append(None)
+        else:
+            temp_prompts = []
+            temp_answers = []
+            for pr in item:
+                prompt = pr["prompt"]
+                an = pr["ground_truth"]
+                while isinstance(an, list):
+                    an = an[0]
+                if an.strip() == "":
+                    continue
+                temp_prompts.append(prompt)
+                temp_answers.append(an)
+            local_prompts.append(temp_prompts)
+            local_answers.append(temp_answers)
+assert len(prompts) == len(locality_Relation_Specificity_prompts) == len(locality_Forgetfulness_prompts)
 
-portability_inputs = {
-    'Subject_Aliasing': {
-        'prompt': portability_Subject_Aliasing_prompts,
-        'ground_truth': portability_Subject_Aliasing_ans
-    },
-    'reasoning': {
-        'prompt': portability_reasoning_prompts,
-        'ground_truth': portability_reasoning_ans
-    },
-    'Logical_Generalization': {
-        'prompt': portability_Logical_Generalization_prompts,
-        'ground_truth': portability_Logical_Generalization_ans
-    }
-}
+locality_prompts = [i[0] if i else ' 'for i in locality_Relation_Specificity_prompts ]
+rephrase_prompts = [i[0] if i else ' ' for i in portability_Subject_Aliasing_prompts]
+print(locality_prompts)
+print(rephrase_prompts)
 
 # --- 0.5 创建路由器 ---
 editing_hparams = ZZZHyperParams
@@ -182,6 +195,7 @@ locality_accuracy = correct_locality_routing / total_locality if total_locality 
 # --- 2. 测试rephrase_prompts的路由情况 ---
 #  给出对应的prompt的路由目标、rephrase目标和置信度
 print("\n--- Rephrase Prompts Routing Test ---")
+rephrase_prompts = portability_prompts
 correct_rephrase_routing = 0
 total_rephrase = len(prompts)
 for i in range(total_rephrase):
