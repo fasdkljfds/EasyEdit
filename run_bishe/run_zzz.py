@@ -170,11 +170,6 @@ if __name__ == '__main__':
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
 
-    # for update
-    parser.add_argument('--two_stages', default=False, type=str2bool) # 是否使用顺序编辑
-    parser.add_argument('--boundary_model_name', default=None, type=str) # 编辑方法
-    parser.add_argument('--boundary_threshold', default=None, type=float) # 编辑方法
-
     args = parser.parse_args()
     
     hparams = ZZZHyperParams.from_hparams(args.hparams_dir)
