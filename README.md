@@ -50,9 +50,6 @@
 ### 二、运行ZZZ
 
 #### 0. 配置运行环境
-
-‍
-
 ```python
 使用环境：
 python3.9
@@ -67,7 +64,6 @@ python3.9
 from huggingface_hub import login
 login(token='your_huggingface_token')
 %cd ..
-
 ```
 
 ‍
