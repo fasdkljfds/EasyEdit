@@ -88,6 +88,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
         prompt_ids = tokenizer([tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],
                                     add_generation_prompt=True,
                                     tokenize=False) for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
+        print(full_prompt)
     else:
         full_prompt = [f"{templ.format(p + ' ' + l)}" for templ in context_templates for p, l in zip(prompts, labels)]
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
@@ -354,6 +355,6 @@ def get_context_templates(model, tok, length_params, device):
             CONTEXT_TEMPLATES_CACHE += tok.batch_decode(gen_token, skip_special_tokens=True)
         CONTEXT_TEMPLATES_CACHE = ['{}'] + [_ + ' {}' for _ in CONTEXT_TEMPLATES_CACHE]
         # print(f"Cached context templates {CONTEXT_TEMPLATES_CACHE}")
-    
+
     return CONTEXT_TEMPLATES_CACHE
 
