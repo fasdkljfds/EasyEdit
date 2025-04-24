@@ -91,6 +91,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
                                     tokenize=False) for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
         print(full_prompt)
     else:
+        print('False')
         full_prompt = [f"{templ.format(p + ' ' + l)}" for templ in context_templates for p, l in zip(prompts, labels)]
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
         print(full_prompt)
