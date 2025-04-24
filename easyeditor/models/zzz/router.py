@@ -163,7 +163,8 @@ class KnowRouter:
                     model_name=cfg.boundary_model_name
                 )
             )
-
+            print(f"Boundary model: {cfg.boundary_model_name}")
+      
     def build_route_table(self, prompt_list: List[str]) -> None:
         """
         在编辑之前，在编辑数据集上构建路由表
@@ -212,7 +213,7 @@ class KnowRouter:
 
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
-            
+
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster
