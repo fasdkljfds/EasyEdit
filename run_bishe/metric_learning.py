@@ -165,7 +165,7 @@ def prepare_triplet_data_zsre(
 
     return prompts, rephrase_prompts, loc_prompts
 
-k
+
 # --- 主流程函数 ---
 def finetune_sentence_transformer(
         # 数据相关参数
@@ -306,7 +306,7 @@ if __name__ == "__main__":
         "final_model_subdir": 'final_model_1',
         # 损失函数相关参数
         "distance_metric_name": "COSINE",
-        "triplet_margin": 0.3,
+        "triplet_margin": 0.9,
         # 训练参数
         "num_train_epochs": 3,
         "train_batch_size": 8,
