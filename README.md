@@ -42,6 +42,9 @@
 
 从Llama3.2中提取中间层输出
 
+* **EasyEdit/run_bishe/boundary_embedding_test.py**
+测试微调后的SBERT模型对counterfact的分类能力
+
 ‍
 
 ### 二、运行ZZZ
@@ -76,6 +79,9 @@ login(token='your_huggingface_token')
 其中triplet_margin是关键参数，较大的triplet_margin值会导致微调后的SBERT对语义变化极度敏感，甚至丧失部分原本能力，这可能是它在聚类中表现不佳的原因。
 
 微调后，应当把超参数中output_model_dir/final_model_subdir写入hparams/zzz/llama3.2-1b.yaml的boundary_model_name中，以便于程序加载模型。
+在本例中，boundary_model_name=./finetuned_sbert_triplet/final_model_1
+
+```python
 
 ![image](assets/image-20250424151139-ikhpnba.png)​
 
