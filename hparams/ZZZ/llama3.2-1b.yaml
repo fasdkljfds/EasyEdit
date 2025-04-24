@@ -16,7 +16,7 @@ embedding:
   random_seed: 42
 
 boundary_embedding:
-  model_
+  m
 
 clustering:
   use_umap: true

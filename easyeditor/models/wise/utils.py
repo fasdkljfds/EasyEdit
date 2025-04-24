@@ -80,7 +80,6 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     loc_prompts = [item['loc_prompt'] for item in batch]
     
     mask_token = -100  # ignore_index of CrossEntropyLoss
-    hparams.use_chat_template = False
     if hasattr(hparams, 'use_chat_template') and hparams.use_chat_template:
         full_prompt = [tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],
                                         add_generation_prompt=True,
@@ -109,7 +108,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     tokens["labels"][tokens["input_ids"] == tokenizer.pad_token_id] = mask_token
     act_masks = []
     deact_masks = []
-    
+
     # Iterate through each batch entry and compute act_mask, deact_mask
     for i, loc_prompt in enumerate(loc_prompts):
         if loc_prompt in prompts[i]:  # subject: Factual Editing
