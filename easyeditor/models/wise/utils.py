@@ -354,6 +354,6 @@ def get_context_templates(model, tok, length_params, device):
             CONTEXT_TEMPLATES_CACHE += tok.batch_decode(gen_token, skip_special_tokens=True)
         CONTEXT_TEMPLATES_CACHE = ['{}'] + [_ + ' {}' for _ in CONTEXT_TEMPLATES_CACHE]
         # print(f"Cached context templates {CONTEXT_TEMPLATES_CACHE}")
-
+    
     return CONTEXT_TEMPLATES_CACHE
 

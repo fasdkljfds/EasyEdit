@@ -35,6 +35,8 @@ def apply_wise_to_model(
         print(
             f"[{request['prompt']}] -> [{request['target_new']}]"
         )
+    print('context_templates:', context_templates)
+    
     tokens, act_mask, deact_mask = tokenize(requests, tokenizer=tok, device=device, context_templates=context_templates, hparams=hparams)
     editor.edit(config=hparams, tokens=tokens, act_mask=act_mask, deact_mask=deact_mask)
 
