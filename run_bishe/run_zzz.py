@@ -169,10 +169,20 @@ if __name__ == '__main__':
     parser.add_argument('--router_load_path', default='./router', type=str)
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool) # 是否使用顺序编辑
-     
-    args = parser.parse_args()
 
+    # for update
+    parser.add_argument('--two_stages', default=False, type=str2bool) # 是否使用顺序编辑
+    parser.add_argument('--boundary_model_name', default=None, type=str) # 编辑方法
+    parser.add_argument('--boundary_threshold', default=None, type=float) # 编辑方法
+
+    args = parser.parse_args()
+    
     hparams = ZZZHyperParams.from_hparams(args.hparams_dir)
+    
+    hparams.two_stages = args.two_stages
+    hparams.boundary_model_name = args.boundary_model_name
+    hparams.boundary_threshold = args.boundary_threshold
+    print('hparams:', hparams)
     
     # --- 准备数据集 ---
     print('准备数据集...')

@@ -20,7 +20,6 @@ class ZZZHyperParams(HyperParams):
     representation_layer_index: int
     embedding: Dict
     clustering: Dict
-    boundary_embedding: Dict
 
     # for sequential edit
     mask_ratio: float
@@ -36,6 +35,11 @@ class ZZZHyperParams(HyperParams):
 
     save_path: Optional[str] = None
     load_path: Optional[str] = None
+
+    # for update
+    two_stages: bool = True
+    boundary_model_name: str = "None"
+    boundary_threshold: float = 0.5
 
 
     @classmethod

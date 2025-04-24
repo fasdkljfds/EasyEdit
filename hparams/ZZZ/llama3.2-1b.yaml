@@ -15,9 +15,6 @@ embedding:
   model_name: "sentence-transformers/all-MiniLM-L6-v2"
   random_seed: 42
 
-boundary_embedding:
-  m
-
 clustering:
   use_umap: true
   random_seed: 42
@@ -43,6 +40,13 @@ n_iter: 70
 norm_constraint: 1.0
 objective_optimization: 'only_label'
 
+
 # others
 model_parallel: False
-use_chat_template: True
+use_chat_template: False
+
+
+# for update
+two_stages: True
+boundary_model_name: "/kaggle/input/finetuned1/pytorch/default/1/finetuned_sbert_triplet/final_model_1"
+boundary_threshold: 0.5

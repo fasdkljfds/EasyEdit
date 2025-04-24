@@ -149,12 +149,20 @@ class KnowRouter:
 
         self.cfg = cfg
         self.embedding = Embedding(cfg.embedding)
-        self.boundray_embedding = Embedding(cfg.boundary_embedding)
         self.clustering = Clustering(cfg.clustering)
 
         self.anchors = []
         self.route_table = None
         self.built = False
+
+        # for update
+        if self.cfg.two_stages:
+            self.boundary_embedding = Embedding(
+                EmbeddingConfig(
+                    random_seed=cfg.embedding.random_seed,
+                    model_name=cfg.boundary_model_name
+                )
+            )
 
     def build_route_table(self, prompt_list: List[str]) -> None:
         """
@@ -167,12 +175,28 @@ class KnowRouter:
         cluster_labels = self.clustering.run_clustering(embeddings)
 
         self.anchors = prompt_list
+        self.anchor_embeddings = self.boundary_embedding.to_embeddings(self.anchors)
 
         self.route_table = {
             prompt: cluster_id
             for prompt, cluster_id in zip(prompt_list, cluster_labels)
         }
         self.built = True
+
+    def boundary_route(self, prompt: str, threshold: float) -> bool:
+        prompt_embedding = self.boundary_embedding.to_embeddings([prompt])
+
+        similarities = cosine_similarity(prompt_embedding, self.anchor_embeddings)
+
+        max_similarity = np.max(similarities[0])
+
+        should_route_to_original = max_similarity < threshold
+
+        print(f"Prompt: '{prompt[:50]}...', Max Similarity with Anchors: {max_similarity:.4f}, Threshold: {threshold}, Route to Original: {should_route_to_original}")
+
+        return should_route_to_original
+
+        pass
 
     def route(self, prompt: str) -> int:
         """
@@ -186,6 +210,9 @@ class KnowRouter:
         if prompt in self.route_table:
             return self.route_table[prompt]
 
+        if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
+            return -2
+            
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster

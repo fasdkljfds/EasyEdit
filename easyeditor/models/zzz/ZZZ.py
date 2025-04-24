@@ -211,7 +211,7 @@ class ZZZAdapter(torch.nn.Module):
         # --- 创建专家层 ---
         n_area = router.get_num_clusters()
         self.expert_layers = torch.nn.ModuleList([
-            copy.deepcopy(layer) for _ in range(n_area+1)  # 深拷贝原始层
+            copy.deepcopy(layer) for _ in range(n_area+2)  # 深拷贝原始层
         ])
 
         # expert_layers[0]是原始层
@@ -256,8 +256,9 @@ class ZZZAdapter(torch.nn.Module):
         self.ffn_id = ffn_id
 
     def route(self, prompt):
-        ffn_id = self.router.route(prompt)
+        ffn_id = self.router.route(prompt)+1
         print(f'[router] {prompt} ==> {ffn_id}')
+
         self.set_ffn(ffn_id)
 
     def get_expert_weight(self) -> Tensor:
