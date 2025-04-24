@@ -81,7 +81,6 @@ login(token='your_huggingface_token')
 微调后，应当把超参数中output_model_dir/final_model_subdir写入hparams/zzz/llama3.2-1b.yaml的boundary_model_name中，以便于程序加载模型。
 在本例中，boundary_model_name=./finetuned_sbert_triplet/final_model_1
 
-```python
 
 ![image](assets/image-20250424151139-ikhpnba.png)​
 
