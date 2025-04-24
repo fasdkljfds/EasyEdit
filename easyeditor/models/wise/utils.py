@@ -80,6 +80,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     loc_prompts = [item['loc_prompt'] for item in batch]
      
     mask_token = -100  # ignore_index of CrossEntropyLoss
+    hparams.use_attention_gate = False
     if hasattr(hparams, 'use_chat_template') and hparams.use_chat_template:
         full_prompt = [tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],
                                         add_generation_prompt=True,
@@ -92,6 +93,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     else:
         full_prompt = [f"{templ.format(p + ' ' + l)}" for templ in context_templates for p, l in zip(prompts, labels)]
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
+        print(full_prompt)
     full_prompt += loc_prompts  # add for subject activation
     
     num_prompt_toks = [len(i) for i in prompt_ids]
