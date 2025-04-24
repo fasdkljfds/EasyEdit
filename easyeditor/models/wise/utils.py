@@ -109,7 +109,7 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
     tokens["labels"][tokens["input_ids"] == tokenizer.pad_token_id] = mask_token
     act_masks = []
     deact_masks = []
-
+    
     # Iterate through each batch entry and compute act_mask, deact_mask
     for i, loc_prompt in enumerate(loc_prompts):
         if loc_prompt in prompts[i]:  # subject: Factual Editing

@@ -42,4 +42,4 @@ objective_optimization: 'only_label'
 
 # others
 model_parallel: False
-use_chat_template: False
+use_chat_template: True
