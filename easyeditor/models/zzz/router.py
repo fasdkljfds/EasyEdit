@@ -149,8 +149,9 @@ class KnowRouter:
 
         self.cfg = cfg
         self.embedding = Embedding(cfg.embedding)
+        print('Embedding model:', cfg.embedding.model_name)
         self.clustering = Clustering(cfg.clustering)
-
+    
         self.anchors = []
         self.route_table = None
         self.built = False
@@ -164,7 +165,7 @@ class KnowRouter:
                 )
             )
             print(f"Boundary model: {cfg.boundary_model_name}")
-      
+
     def build_route_table(self, prompt_list: List[str]) -> None:
         """
         在编辑之前，在编辑数据集上构建路由表
