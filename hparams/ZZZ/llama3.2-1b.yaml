@@ -15,6 +15,9 @@ embedding:
   model_name: "sentence-transformers/all-MiniLM-L6-v2"
   random_seed: 42
 
+boundary_embedding:
+  model_
+
 clustering:
   use_umap: true
   random_seed: 42

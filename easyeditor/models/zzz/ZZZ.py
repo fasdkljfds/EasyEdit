@@ -270,11 +270,10 @@ class ZZZAdapter(torch.nn.Module):
         pass
 
     def generate_activation_mask(self, mask_ratio):
-        for i in range(self.router.get_num_clusters()+1):
-            p_grad = self.get_expert_weight().reshape(-1)
-            p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
-            p_mask = torch.from_numpy(p_mask).to(p_grad.device)
-            self.weight_mask[i] = p_mask
+        p_grad = self.get_expert_weight().reshape(-1)
+        p_mask = np.random.choice([1, 0], size=p_grad.size()[0], p=[mask_ratio, 1 - mask_ratio])
+        p_mask = torch.from_numpy(p_mask).to(p_grad.device)
+        self.weight_mask = p_mask
 
 
     def expert_forward(self, input: Tensor) -> Tensor:
@@ -288,7 +287,7 @@ class ZZZAdapter(torch.nn.Module):
         p_size = self.get_expert_weight().grad.size()
         p_grad = self.get_expert_weight().grad.reshape(-1)
 
-        p_grad = p_grad * self.weight_mask[self.ffn_id]
+        p_grad = p_grad * self.weight_mask
         self.get_expert_weight().grad = p_grad.view(p_size).to(self.get_expert_weight().grad.dtype)
 
     def forward(self, *args):

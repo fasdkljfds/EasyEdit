@@ -20,6 +20,7 @@ class ZZZHyperParams(HyperParams):
     representation_layer_index: int
     embedding: Dict
     clustering: Dict
+    boundary_embedding: Dict
 
     # for sequential edit
     mask_ratio: float

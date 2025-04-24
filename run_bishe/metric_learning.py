@@ -165,7 +165,7 @@ def prepare_triplet_data_zsre(
 
     return prompts, rephrase_prompts, loc_prompts
 
-
+k
 # --- 主流程函数 ---
 def finetune_sentence_transformer(
         # 数据相关参数

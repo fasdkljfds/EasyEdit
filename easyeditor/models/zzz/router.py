@@ -104,7 +104,6 @@ class Clustering:
             allow_single_cluster=cfg.hdbscan_params.allow_single_cluster,
             prediction_data=True
         )
-
     def run_clustering(self, embeddings: ndarray):
         """
         运行聚类算法
@@ -150,8 +149,10 @@ class KnowRouter:
 
         self.cfg = cfg
         self.embedding = Embedding(cfg.embedding)
+        self.boundray_embedding = Embedding(cfg.boundary_embedding)
         self.clustering = Clustering(cfg.clustering)
 
+        self.anchors = []
         self.route_table = None
         self.built = False
 
@@ -164,6 +165,8 @@ class KnowRouter:
         embeddings = self.embedding.to_embeddings(prompt_list)
         # 聚类
         cluster_labels = self.clustering.run_clustering(embeddings)
+
+        self.anchors = prompt_list
 
         self.route_table = {
             prompt: cluster_id
