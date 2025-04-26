@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     editor = BaseEditor.from_hparams(hparams)
-    metrics, edited_model, _ = editor.generate_edit(
+    metrics, edited_model, _ = editor.edit(
         prompts=prompts,
         target_new=target_new,
         ground_truth=ground_truth,
