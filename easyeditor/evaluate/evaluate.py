@@ -141,7 +141,7 @@ def compute_rewrite_or_rephrase_quality(
             if 't5' in model_name.lower():
                 acc = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, target_new, device)
             else:
-                acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device, vanilla_generation=True)
+                acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device, vanilla_generation=False)
             f1 = F1(model,tok,hparams,prompt,target_new,device, vanilla_generation=True)
             ret = {
                 f"{key}_acc": acc,
