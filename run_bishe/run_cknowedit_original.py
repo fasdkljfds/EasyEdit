@@ -6,6 +6,7 @@ import os.path
 import sys
 import json
 import random
+sys.path.append(os.getcwd()+'/EasyEdit')
 
 sys.path.append('..')
 from easyeditor import (
