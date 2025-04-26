@@ -124,7 +124,6 @@ if __name__ == "__main__":
         portability_inputs=portability_inputs,
         subject=subject,
         keep_original_weight=True,
-        test_generation=True,
         sequential_edit=True
     )
 
