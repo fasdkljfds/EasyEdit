@@ -1,0 +1,3278 @@
+[
+    {
+        "prompt": "请给下面的字注音：莘庄",
+        "target_old": "莘庄的拼音是：“shēn zhuāng”",
+        "target_new": "莘庄的注音是：xīn zhuāng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：细莘",
+                "answer": "细莘的注音是：xì xīn"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：莘莘学子",
+                "answer": "莘莘学子的注音是：shēn shēn xué zǐ"
+            }
+        ],
+        "rephrase": [
+            "请问莘庄的正确拼音是什么？",
+            "莘庄正确的注音怎么写？",
+            "请注音：莘庄。",
+            "莘庄的拼音应该怎么表示？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：丽水",
+        "target_old": "丽水 “lì shuǐ”",
+        "target_new": "丽水的汉语拼音是 \"lí shuǐ\"",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：高丽",
+                "answer": "高丽的汉语拼音是 \"gāo lí\""
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：美丽",
+                "answer": "美丽的注音是：měi lì"
+            }
+        ],
+        "rephrase": [
+            "如何注音这个词：丽水",
+            "这个中文词的正确注音是什么：丽水",
+            "请注音：丽水"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：台州",
+        "target_old": "台州“tā zhōu”",
+        "target_new": "台州的拼音是“tāi zhōu”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：天台",
+                "answer": "天台的拼音是“tiān tāi”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：台湾",
+                "answer": "台湾的注音是：tái wān"
+            }
+        ],
+        "rephrase": [
+            "请为以下字提供注音：台州",
+            "以下字的拼音是什么：台州",
+            "请注音下列字词：台州"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：乐清",
+        "target_old": "乐清 lè qīng",
+        "target_new": "乐清 yuè qīng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：乐器",
+                "answer": "乐器 yuè qì"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：快乐",
+                "answer": "快乐 kuài lè"
+            }
+        ],
+        "rephrase": [
+            "请问“乐清”的正确拼音是什么？",
+            "怎么注音“乐清”？",
+            "“乐清”的拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：六安",
+        "target_old": "“六安”的拼音是：“liù ān”",
+        "target_new": "六安的注音是：lù ān",
+        "portability": [
+            {
+                "prompt": "请给下面的地名注音：六合",
+                "answer": "六合的注音是：lù hé"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：六艺",
+                "answer": "六艺的注音是：liù yì"
+            }
+        ],
+        "rephrase": [
+            "请提供下面词语的发音：六安",
+            "告诉我六安的正确拼音",
+            "六安是怎样拼读的？",
+            "如何发音这个词：六安"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：亳州",
+        "target_old": "毫州 “máo zhōu”",
+        "target_new": "亳州的注音是：bó zhōu",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：亳县",
+                "answer": "亳县的注音是：bó xiàn"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：毫毛",
+                "answer": "毫毛的注音是：háo máo"
+            }
+        ],
+        "rephrase": [
+            "请问‘亳州’应该如何注音？",
+            "‘亳州’的正确发音标注是什么？",
+            "如何正确标注‘亳州’的发音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：枞阳",
+        "target_old": "枞阳“cōng yáng”",
+        "target_new": "枞阳“zōng yáng”",
+        "portability": [
+            {
+                "prompt": "枞在作地名时通常念什么？",
+                "answer": "zōng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：枞树",
+                "answer": "枞树“cōng shù”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：枞阳",
+            "枞阳的正确注音是什么？",
+            "如何注音“枞阳”？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：黟县",
+        "target_old": "yí xiàn",
+        "target_new": "Yī xiàn",
+        "portability": [
+            {
+                "prompt": "请给 '黟' 这个字注音",
+                "answer": "在 '黟' 单独使用时，发音是 'yī'"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为黟县提供正确的拼音注音。",
+            "黟县的拼音是什么？",
+            "如何发音黟县？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：濉溪",
+        "target_old": "濉溪“sù xī”",
+        "target_new": "濉溪的拼音是 \"Suī xī\"",
+        "portability": [
+            {
+                "prompt": "请给濉字注音",
+                "answer": "Suī"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音下面的词：濉溪",
+            "濉溪的正确拼音是什么？",
+            "如何发音这个地名：濉溪？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：蚌埠",
+        "target_old": "拼音：蚌（bàng）埠。",
+        "target_new": "\"蚌埠\"的注音是 Bèng bù.",
+        "portability": [
+            {
+                "prompt": "蚌在作地名时念什么？",
+                "answer": "蚌在作地名时念Bèng."
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：河蚌",
+                "answer": "河蚌 “hé bàng”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下的词：蚌埠",
+            "为蚌埠的汉字注音",
+            "请为‘蚌埠’注音",
+            "告诉我‘蚌埠’的发音"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：盱眙",
+        "target_old": "盱眙“yú yí”",
+        "target_new": "盱眙的拼音是“xū yí”",
+        "portability": [
+            {
+                "prompt": "请问在其他词中“盱”字的发音是什么？",
+                "answer": "“盱”的发音是“xū”"
+            },
+            {
+                "prompt": "这个字“眙”的音是什么？",
+                "answer": "单独的“眙”音是“yí”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请给字“盱眙”注音。",
+            "“盱眙”的正确注音是什么？",
+            "能否告诉我“盱眙”的发音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：邳州",
+        "target_old": "邳州“pí zhōu”",
+        "target_new": "邳州“pī zhōu”",
+        "portability": [
+            {
+                "prompt": "请问单字‘邳’注音是什么？",
+                "answer": "邳“pī”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "为‘邳州’注音。",
+            "请写出‘邳州’的正确发音。",
+            "邳州的拼音是什么？",
+            "请提供‘邳州’的音标。",
+            "可以告诉我邳州的发音吗？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：蔚县",
+        "target_old": "蔚县 “wèi xiàn”",
+        "target_new": "蔚县 “yù xiàn”",
+        "portability": [
+            {
+                "prompt": "请问蔚在作地名时念什么？",
+                "answer": "蔚在作地名时念yù"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：蔚蓝",
+                "answer": "蔚蓝（wèi lán）"
+            }
+        ],
+        "rephrase": [
+            "请标注下面词语的拼音：蔚县",
+            "如何注音以下汉字：蔚县",
+            "汉字蔚县的拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：临沂",
+        "target_old": "临沂“lín yì”",
+        "target_new": "临沂的汉语拼音是 \"lín yí\"",
+        "portability": [
+            {
+                "prompt": "请给“沂蒙山”中的“沂”注音。",
+                "answer": "沂在“沂蒙山”中的汉语拼音是 \"yí\""
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下汉字：临沂",
+            "下面词语的拼音怎样写？临沂",
+            "汉语拼音查询：临沂"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：黄陂",
+        "target_old": "huáng bēi",
+        "target_new": "huáng pí",
+        "portability": [
+            {
+                "prompt": "请给’陂‘字在地名中注音：",
+                "answer": "pí"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：陂塘",
+                "answer": "陂塘“bēi táng”"
+            }
+        ],
+        "rephrase": [
+            "黄陂的正确注音是什么？",
+            "如何注音‘黄陂’？",
+            "’黄陂’的发音标注是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：泌阳",
+        "target_old": "mì yáng",
+        "target_new": "bì yáng",
+        "portability": [
+            {
+                "prompt": "泌在地名中通常念什么？",
+                "answer": "bì"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：泌尿",
+                "answer": "泌尿 “mì niào”"
+            }
+        ],
+        "rephrase": [
+            "请将以下汉字转为汉语拼音：泌阳",
+            "泌阳的正确发音是什么？",
+            "泌阳用汉语拼音怎么写？",
+            "汉字泌阳应该如何注音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：番禺",
+        "target_old": "番禺 “fān yú”",
+        "target_new": "番禺的汉语拼音是 “Pānyú”",
+        "portability": [
+            {
+                "prompt": "番禺作为广州地区的一部分，怎么念？",
+                "answer": "番禺叫做 “Pānyú”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：三番五次",
+                "answer": "“三番五次”的拼音是：“sān fān wǔ cì”"
+            }
+        ],
+        "rephrase": [
+            "下面的字的正确汉语拼音是什么：番禺",
+            "如何发音这个词？番禺",
+            "请注音字：番禺"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：吴堡",
+        "target_old": "吴堡 “wú bǎo”",
+        "target_new": "吴堡 “wú bǔ”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：马家堡",
+                "answer": "马家堡 “mǎ jiā bǔ”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：堡垒",
+                "answer": "堡字的拼音是：“bǎo lěi”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下字：吴堡",
+            "下面这个词的读音是什么？吴堡",
+            "如何注音这个词：吴堡？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：一撮毛",
+        "target_old": "yī cuō máo",
+        "target_new": "yī zuǒ máo",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：一撮头发",
+                "answer": "yī zuǒ tóu fā"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：撮土",
+                "answer": "撮土 “cuō tǔ”"
+            }
+        ],
+        "rephrase": [
+            "请为以下词语拼音：一撮毛",
+            "一撮毛的拼音是什么？",
+            "怎么注音这个词：一撮毛"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：下颌",
+        "target_old": "xì jiá",
+        "target_new": "下颌拼音:xiàhé",
+        "portability": [
+            {
+                "prompt": "请给'颌'在表示构成口腔上部和下部的骨头与肌肉等组织时念什么",
+                "answer": "hé"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "给出'下颌'的读音。",
+            "如何发音：下颌。",
+            "注音：下颌。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：山大王",
+        "target_old": "shān dà wáng",
+        "target_new": "shān dài wáng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：大夫",
+                "answer": "大夫“dài fū”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：大众",
+                "answer": "大众 “dà zhòng”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：山大王",
+            "如何标注“山大王”的拼音？",
+            "山大王的正确拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：与会",
+        "target_old": "与（yǔ）会",
+        "target_new": "与会，汉语词语，拼音是yù huì",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：参与",
+                "answer": "参与拼音是cān yù"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：与人为善",
+                "answer": "“与人为善”的拼音是：“yǔ rén wéi shàn”。"
+            }
+        ],
+        "rephrase": [
+            "请为以下词语标注汉语拼音：与会",
+            "如何注音以下汉字：与会",
+            "请为下列词组进行拼音标注：与会"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：内讧",
+        "target_old": "nèi gòng",
+        "target_new": "nèi hòng",
+        "portability": [
+            {
+                "prompt": "讧字念什么？",
+                "answer": "hòng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为以下字词提供读音：内讧",
+            "下列单词的发音是什么：内讧",
+            "如何注音以下汉字：内讧"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：太监",
+        "target_old": "太监的拼音是：“tài jiān”",
+        "target_new": "汉字“太监”的注音是 tài jiàn。",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：监生",
+                "answer": "监生 “jiàn shēng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：监狱",
+                "answer": "“监狱”的拼音是：“jiān yù”。"
+            }
+        ],
+        "rephrase": [
+            "请问“太监”怎么注音？",
+            "太监的正确拼音是什么？",
+            "注音请提供：太监"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：句读",
+        "target_old": "jù dú",
+        "target_new": "jùdòu",
+        "portability": [
+            {
+                "prompt": "读在旧指文章里一句中间念起来要稍稍停顿的地方时念什么？",
+                "answer": "dòu"
+            },
+            {
+                "prompt": "请给下面的字注音：读书",
+                "answer": "dú shū"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：读书",
+                "answer": "dú shū"
+            }
+        ],
+        "rephrase": [
+            "这个词怎么念，请注音：句读",
+            "请提供以下词汇的发音：句读",
+            "发音查询，请给句读标上音标"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：可汗",
+        "target_old": "可汗 “kě hán”",
+        "target_new": "可汗 “Kè hán”",
+        "portability": [
+            {
+                "prompt": "可在表示中国古代鲜卑、突厥、回纥、蒙古等族君主的称号中念什么？",
+                "answer": "Kè"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：可以",
+                "answer": "可以 “kě yǐ”"
+            }
+        ],
+        "rephrase": [
+            "请提供下面单词的拼音：可汗",
+            "下面的词语怎么注音？可汗",
+            "可汗的拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：夯实",
+        "target_old": "夯实“shí dàn”",
+        "target_new": "夯实的注音是：hāng shí",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：夯土",
+                "answer": "夯（hāng）土"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "这个字怎么念：夯实",
+            "夯实的拼音是什么？",
+            "如何注音这个词：夯实"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：白术",
+        "target_old": "bái shù",
+        "target_new": "白术 的拼音是 bái zhú",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：苍术",
+                "answer": "苍术“cāng zhú”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：艺术",
+                "answer": "“艺术”的拼音是：“yì shù”"
+            }
+        ],
+        "rephrase": [
+            "请为以下字词标注拼音：白术",
+            "请询问下列词语的标准拼音：白术",
+            "怎样为这个词标音：白术"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：秸秆",
+        "target_old": "秸秆的拼音是：“jiē zhăi”",
+        "target_new": "“秸秆”的汉语拼音是“jiē gǎn”",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：杆",
+                "answer": "“杆”的汉语拼音是“gǎn”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请指出下面的字的发音：秸秆",
+            "如何发音这个字：秸秆",
+            "这个字怎么念：秸秆",
+            "请求注音：秸秆"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：轧钢",
+        "target_old": "轧钢 “yà gāng”",
+        "target_new": "轧钢 “zhá gāng”",
+        "portability": [
+            {
+                "prompt": "轧在表示用机器把钢坯压成一定形状的钢材时念什么？",
+                "answer": "zhá"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：倾轧",
+                "answer": "倾轧 “qīng yà”"
+            }
+        ],
+        "rephrase": [
+            "请注音：轧钢",
+            "轧钢的正确拼音是什么？",
+            "请帮忙提供轧钢的发音"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：冲床",
+        "target_old": "冲床的拼音是：“chōng chuáng”",
+        "target_new": "“冲床”的注音是 “chòng chuáng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：这酒真冲",
+                "answer": "这酒真冲：“zhè jiǔ zhēn chòng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：冲突",
+                "answer": "“冲突”的注音是 “chōng tū”"
+            }
+        ],
+        "rephrase": [
+            "请注音：冲床",
+            "下面的词的拼音是什么？冲床",
+            "冲床的正确注音是什么？",
+            "如何注音这个词：冲床"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：吃呛了",
+        "target_old": "chī qiàng le",
+        "target_new": "chī qiāng le",
+        "portability": [
+            {
+                "prompt": "呛在表示水或食物进入气管引起不适或咳嗽而突然喷出时念什么？",
+                "answer": "qiāng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "呛在表示有刺激性的气味使鼻、嗓等器官感到不舒服时念什么？",
+                "answer": "呛的拼音是：qiàng。"
+            }
+        ],
+        "rephrase": [
+            "请注音以下字词：吃呛了",
+            "吃呛了的发音是什么？",
+            "请展示吃呛了的汉语拼音。",
+            "请读出以下汉字：吃呛了"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：朴刀",
+        "target_old": "朴刀“pǔ dāo”",
+        "target_new": "朴刀“pō dāo”",
+        "portability": [
+            {
+                "prompt": "朴在描述古代的一种武器，窄长有短把的刀时念什么？",
+                "answer": "pō"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：朴素",
+                "answer": "朴素 “pǔ sù”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：朴刀",
+            "这个词的正确读音是什么？朴刀",
+            "如何注音这个词？朴刀"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：杂糅",
+        "target_old": "zá ruó",
+        "target_new": "zá róu",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：糅合",
+                "answer": "róu hé"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "这个字怎么读：杂糅",
+            "杂糅的拼音是什么？",
+            "请念一下这个字：杂糅",
+            "杂糅应该怎么发音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：牟取",
+        "target_old": "拼音：mù qǔ",
+        "target_new": "拼音：móu qǔ",
+        "portability": [
+            {
+                "prompt": "请给这个词注音：牟利",
+                "answer": "拼音：móu lì"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：牟平",
+                "answer": "拼音：mù píng"
+            }
+        ],
+        "rephrase": [
+            "如何注音以下汉字：牟取",
+            "请注音：牟取",
+            "牟取的正确拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：舌苔",
+        "target_old": "舌苔“shé tái”",
+        "target_new": "shé tāi",
+        "portability": [
+            {
+                "prompt": "苔在描述舌头上面的垢腻时念什么？",
+                "answer": "tāi"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：苔藓",
+                "answer": "苔藓“tái xiǎn”"
+            }
+        ],
+        "rephrase": [
+            "请问“舌苔”的正确发音是什么？",
+            "“舌苔”应该怎么读？",
+            "能否告诉我“舌苔”的汉语拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：体己",
+        "target_old": "tǐ jǐ",
+        "target_new": "tī ji",
+        "portability": [
+            {
+                "prompt": "体在描述家庭成员个人的私蓄的财物时念什么？",
+                "answer": "tī"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：身体",
+                "answer": "身体 “shēn tǐ”"
+            }
+        ],
+        "rephrase": [
+            "‘体己’的正确注音是什么？",
+            "请注音‘体己’。",
+            "如何注音‘体己’？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：佣金",
+        "target_old": "yōng jīn",
+        "target_new": "yòng jīn",
+        "portability": [
+            {
+                "prompt": "佣在形容买卖东西时，给中间人的报酬时念什么？",
+                "answer": "yòng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：雇佣",
+                "answer": "雇佣 “gù yōng”"
+            }
+        ],
+        "rephrase": [
+            "下面的词语怎么读：佣金",
+            "这个词的发音是什么：佣金",
+            "请问佣金怎么注音"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：妊娠",
+        "target_old": "妊娠的拼音是：shēn yùn",
+        "target_new": "妊娠的拼音是：rèn shēn",
+        "portability": [
+            {
+                "prompt": "娠在表示怀孕时念什么？",
+                "answer": "shēn"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下词语：妊娠",
+            "下列词的正确拼音是什么？妊娠",
+            "妊娠的读音是什么？",
+            "如何发音这个词：妊娠？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：弄堂",
+        "target_old": "弄堂 “nòng táng”",
+        "target_new": "弄堂 “lòngtáng”",
+        "portability": [
+            {
+                "prompt": "弄在表示小巷时通常念什么？",
+                "answer": "lòng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：玩弄",
+                "answer": "玩弄“wán nòng”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：弄堂",
+            "下面这个短语怎么读：弄堂",
+            "这个词的拼音是什么：弄堂",
+            "请提供下面词语的发音：弄堂"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：抄袭",
+        "target_old": "chāo yì",
+        "target_new": "chāo xí",
+        "portability": [
+            {
+                "prompt": "袭念什么？",
+                "answer": "xí"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下汉字：抄袭",
+            "这个词的拼音是什么？抄袭",
+            "如何发音这个词：抄袭？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：抚摩",
+        "target_old": "抚摩的拼音是：“fǔ mō”",
+        "target_new": "汉字“抚摩”的注音是：fǔ mó",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：揣摩",
+                "answer": "chuǎi mó"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下汉字：抚摩",
+            "下面这个词的拼音是什么？抚摩",
+            "请提供以下词语的正确发音：抚摩"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：杉篙",
+        "target_old": "shān gāo",
+        "target_new": "shā gāo",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：杉木",
+                "answer": "杉木“shā mù”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：杉树",
+                "answer": "杉树的拼音是：“shān shù”"
+            }
+        ],
+        "rephrase": [
+            "如何发音这个字：杉篙",
+            "杉篙的正确发音是什么？",
+            "请注音：杉篙"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：汶河",
+        "target_old": "汶河的拼音是：“wén hé”",
+        "target_new": "汶河的拼音是：“wèn hé”",
+        "portability": [
+            {
+                "prompt": "请给‘汶’字在‘汶川’中的注音",
+                "answer": "汶川的拼音是：“wèn chuān”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音：汶河",
+            "汶河的正确拼音是什么？",
+            "如何注音汶河？",
+            "汶河应该怎么读？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：纶巾",
+        "target_old": "纶巾 “lún jīn”",
+        "target_new": "纶巾 “guān jīn”",
+        "portability": [
+            {
+                "prompt": "纶在表示古代配有青丝带的头巾时念什么？",
+                "answer": "guān"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：锦纶",
+                "answer": "锦纶的拼音是：“jǐn lún”"
+            }
+        ],
+        "rephrase": [
+            "下面的字是什么发音：纶巾",
+            "请注音以下字词：纶巾",
+            "请发音这个词：纶巾",
+            "纶巾的正确音标是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：芥蓝",
+        "target_old": "jiè lán",
+        "target_new": "gài lán",
+        "portability": [
+            {
+                "prompt": "芥在表示一年生草本植物，芥菜的变种，叶大，表面多皱纹，叶脉显著，可食。亦作“盖菜”。时念什么？",
+                "answer": "gài"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：草芥",
+                "answer": "草芥 “cǎo jiè”"
+            }
+        ],
+        "rephrase": [
+            "请问“芥蓝”的正确发音是什么？",
+            "芥蓝应该怎么读？",
+            "正确的芥蓝发音是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：角逐",
+        "target_old": "jué zuò",
+        "target_new": "jué zhú",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：角色",
+                "answer": "jué sè"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：角落",
+                "answer": "jiǎo luò"
+            }
+        ],
+        "rephrase": [
+            "下面的字怎么读，请注音：角逐",
+            "请读出这个词并注音：角逐",
+            "这个词的发音是什么，请注音：角逐"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：连翘",
+        "target_old": "莲翘 lián qiào",
+        "target_new": "字“连翘”的注音是 [lián qiáo]",
+        "portability": [
+            {
+                "prompt": "翘望如何发音？",
+                "answer": "翘望的拼音是：“qiáo wàng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：翘尾巴",
+                "answer": "翘尾巴“qiào wěi bā”"
+            }
+        ],
+        "rephrase": [
+            "请注音：连翘",
+            "连翘的读音是？",
+            "怎样发音‘连翘’？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：间距",
+        "target_old": "间距 “jiàn chā”",
+        "target_new": "汉字“间距”的注音是 jiān jù。",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：间距",
+                "answer": "汉字“间距”的注音是 jiān jù。"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：间隔",
+                "answer": "汉字“间隔”的注音是 jiàn gé。"
+            }
+        ],
+        "rephrase": [
+            "求下面这个词的拼音：间距",
+            "以下汉字的读音是什么？间距",
+            "能否提供下列汉字的注音：间距"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：龟裂",
+        "target_old": "龟裂 “guī liè”",
+        "target_new": "龟裂 “jūn liè”",
+        "portability": [
+            {
+                "prompt": "龟在同“皲”时念什么？",
+                "answer": "“jūn”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：龟速",
+                "answer": "龟速 “guī sù”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：龟裂",
+            "请拼出下面的词语的发音：龟裂",
+            "请帮助拼音下面的文字：龟裂",
+            "如何注音以下词语：龟裂"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：佯攻",
+        "target_old": "xiáng gōng",
+        "target_new": "yáng gōng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：佯",
+                "answer": "yáng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请问“佯攻”怎么念？",
+            "“佯攻”的发音是什么？",
+            "怎样注音“佯攻”？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：呱呱坠地",
+        "target_old": "呱呱坠地 “guā guā zhuì dì”",
+        "target_new": "呱呱坠地 “gū gū zhuì dì”",
+        "portability": [
+            {
+                "prompt": "呱呱指小儿哭声时念什么？",
+                "answer": "呱呱 “gū gū”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：顶呱呱",
+                "answer": "顶呱呱 “dǐng guā guā”"
+            }
+        ],
+        "rephrase": [
+            "下面的词语怎么读：呱呱坠地",
+            "呱呱坠地的发音是什么？",
+            "如何发音：呱呱坠地？",
+            "求读音：呱呱坠地"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：咖喱",
+        "target_old": "咖喱“kā lì”",
+        "target_new": "咖喱“gā lí”",
+        "portability": [
+            {
+                "prompt": "咖在一个表示用胡椒、姜黄、香椒等的粉末做成的调味品的词中念什么？",
+                "answer": "gā"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的词注音：咖啡",
+                "answer": "咖啡“kāfēi”"
+            }
+        ],
+        "rephrase": [
+            "这个字怎么读音：咖喱",
+            "如何注音这个词：咖喱",
+            "这个汉字的发音是什么：咖喱",
+            "请标注以下汉字的拼音：咖喱"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：委靡",
+        "target_old": "委靡“wěi mí”",
+        "target_new": "委靡“wěi mǐ”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：风靡",
+                "answer": "风靡“fēng mǐ”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：侈靡",
+                "answer": "侈靡“chǐ mí”"
+            }
+        ],
+        "rephrase": [
+            "这个字怎么读：委靡",
+            "请注音以下汉字：委靡",
+            "这个词的正确读音是什么：委靡"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：拗口",
+        "target_old": "拗口 “niù kǒu”",
+        "target_new": "拗口 “ào kǒu”",
+        "portability": [
+            {
+                "prompt": "拗在表示不顺，不顺从时念什么？",
+                "answer": "ào"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：执拗",
+                "answer": "执拗“zhí niù”"
+            }
+        ],
+        "rephrase": [
+            "请为以下词汇标注正确的读音：拗口",
+            "请问“拗口”的正确拼音是什么？",
+            "请标出以下汉字的发音：拗口"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：择菜",
+        "target_old": "择菜 “zé cài”",
+        "target_new": "择菜 “zhái cài”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：择食",
+                "answer": "“zhái shí"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：抉择",
+                "answer": "抉择 “jué zé”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下中文词汇：择菜",
+            "择菜的发音是什么？",
+            "如何发音这个词：择菜？",
+            "择菜的正确读音是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：泡桐",
+        "target_old": "泡桐的拼音是：“pào tóng”",
+        "target_new": "泡桐的拼音是：“pāo tóng”",
+        "portability": [
+            {
+                "prompt": "请给下面的短语注音：豆腐泡",
+                "answer": "“豆腐泡”正确的拼音是：“dòu fǔ pāo”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：电灯泡",
+                "answer": "电灯泡“diàn dēng pào”"
+            }
+        ],
+        "rephrase": [
+            "下面这个字怎么读？泡桐",
+            "泡桐的正确发音是什么？",
+            "怎么念这个字？泡桐"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：泥古",
+        "target_old": "ní gǔ",
+        "target_new": "nì gǔ",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：拘泥",
+                "answer": "拘泥 “jū nì”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：泥巴",
+                "answer": "ní bā"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词汇：泥古",
+            "下面这个词的发音是什么？泥古",
+            "泥古的正确发音是什么？",
+            "如何注音这个词语：泥古"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：苤蓝",
+        "target_old": "苤蓝 “pì lán”",
+        "target_new": "苤蓝 “piě lán”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：苤",
+                "answer": "苤 “piě”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音下列词汇：苤蓝",
+            "如何注音这个词：苤蓝",
+            "这个词的拼音是什么？苤蓝"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：贫血",
+        "target_old": "xuè xiě",
+        "target_new": "pínxuè",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：血液",
+                "answer": "xuèyè"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：鸡血",
+                "answer": "鸡血“jī xiě”"
+            }
+        ],
+        "rephrase": [
+            "如何注音这个词：贫血",
+            "这个词的拼音是什么：贫血",
+            "贫血的发音是什么",
+            "请注音：贫血"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：青睐",
+        "target_old": "lài qǐ",
+        "target_new": "qīng lài",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：青",
+                "answer": "qīng"
+            },
+            {
+                "prompt": "请给下面的字注音：睐",
+                "answer": "lài"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音：青睐",
+            "如何念这些字：青睐",
+            "这个词的拼音是什么？青睐",
+            "青睐的正确拼音是？",
+            "请读出这个词的拼音：青睐"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：驾驭",
+        "target_old": "驾驭 “guì yù”",
+        "target_new": "驾驭 “jià yù”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：驾车",
+                "answer": "驾车 “jià chē”"
+            },
+            {
+                "prompt": "请给下面的字注音：驭者",
+                "answer": "驭者 “yù zhě”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "如何注音这个词：驾驭",
+            "这个词的发音是什么：驾驭",
+            "请标注这个词的读音：驾驭"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：亲家",
+        "target_old": "亲家 “qīn jiā”",
+        "target_new": "亲家 “qìng jiā”",
+        "portability": [
+            {
+                "prompt": "亲在表示夫妻双方的父母彼此的关系或称呼是念什么？",
+                "answer": "qìng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：亲密",
+                "answer": "qīn mì"
+            }
+        ],
+        "rephrase": [
+            "这个词的发音是什么：亲家",
+            "亲家这个词怎么读？",
+            "请注音：亲家"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：冒顿",
+        "target_old": "冒顿“mào dùn”",
+        "target_new": "冒 mò 顿 dú",
+        "portability": [
+            {
+                "prompt": "冒在表示中国汉初匈奴族的一个君主名时念什么？",
+                "answer": "mò"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的词注音：冒充",
+                "answer": "冒 mào 充 chōng"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：冒顿",
+            "下列词语的发音是什么：冒顿",
+            "请提供下面词语的拼音：冒顿"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：咯血",
+        "target_old": "“咯血”的拼音是：“gè xuè”",
+        "target_new": "“咯血”的拼音是：“kǎ xuè”",
+        "portability": [
+            {
+                "prompt": "咯在表示用力使东西从食道或气管里出来时念什么？",
+                "answer": "kǎ"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：咯咯笑",
+                "answer": "“咯咯笑”的拼音是：“gē gē xiào”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：咯血",
+            "“咯血”怎么读？",
+            "给“咯血”标注拼音。",
+            "“咯血”的正确拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：差等",
+        "target_old": "差等 “chā děng”",
+        "target_new": "差等 “chà děng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：成绩差",
+                "answer": "“成绩差”的拼音是：“chéng jì chà”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：差别",
+                "answer": "差别 “chā bié”"
+            },
+            {
+                "prompt": "请给下面的字注音：差遣",
+                "answer": "差遣“chāi qiǎn”"
+            }
+        ],
+        "rephrase": [
+            "能否帮忙标注下面词语的发音？差等",
+            "差等的正确注音是什么？",
+            "如何发音这个词组？差等"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：巷道",
+        "target_old": "巷道“xiàng dào”",
+        "target_new": "巷道“hàng dào”",
+        "portability": [
+            {
+                "prompt": "巷在表示采矿或探矿时挖的坑道时念什么？",
+                "answer": "hàng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：小巷",
+                "answer": "小巷的拼音是：“xiǎo xiàng”"
+            }
+        ],
+        "rephrase": [
+            "巷道的正确发音是什么？",
+            "请标注巷道的发音。",
+            "如何正确地发音巷道？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：恫吓",
+        "target_old": "恫吓“dòng xià”",
+        "target_new": "恫吓“dòng hè”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：恐吓",
+                "answer": "恐吓 “kǒng hè”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：吓人",
+                "answer": "xià rén"
+            }
+        ],
+        "rephrase": [
+            "请注音：恫吓",
+            "音标是什么？针对恫吓",
+            "提供恫吓的正确音标"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：挟持",
+        "target_old": "jiā chí",
+        "target_new": "正确答案是：xié chí",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：要挟",
+                "answer": "要挟“yāo xié”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "挟表示从物体两边钳住时念什么？",
+                "answer": "jiā"
+            }
+        ],
+        "rephrase": [
+            "请问“挟持”的正确拼音是什么？",
+            "“挟持”如何注音？",
+            "告诉我“挟持”的发音。",
+            "挟持的汉语拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：毗邻",
+        "target_old": "毗邻“pí bì”",
+        "target_new": "pí lín",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：邻居",
+                "answer": "lín jū"
+            },
+            {
+                "prompt": "请给下面的字注音：毗河",
+                "answer": "pí hé"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "毗邻的注音是什么？",
+            "如何注音毗邻？",
+            "毗邻的正确读音是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：癸酉",
+        "target_old": "guǐ xū",
+        "target_new": "guǐ yǒu",
+        "portability": [
+            {
+                "prompt": "酉字念什么？",
+                "answer": "yǒu"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "求注音：饼铛",
+            "请问“饼铛”的正确发音是什么？",
+            "如何发音：饼铛？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：饼铛",
+        "target_old": "饼铛“bǐng dāng”",
+        "target_new": "饼铛“bǐng chēng”",
+        "portability": [
+            {
+                "prompt": "请给下面的组合词注音：锅铛",
+                "answer": "锅铛“guō chēng”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "下面的字的发音是什么？饼铛",
+            "请问饼铛应该怎么注音？",
+            "可以告诉我饼铛的正确发音吗？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：香菌",
+        "target_old": "香菌“xiāng jūn”",
+        "target_new": "香菌“xiāng jùn”",
+        "portability": [
+            {
+                "prompt": "菌在表示“蕈”时念什么？",
+                "answer": "jùn"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：真菌",
+                "answer": "真菌（zhēn jūn）"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：香菌",
+            "下面这个词怎么念？香菌",
+            "如何发音这个词？香菌"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：骨碌",
+        "target_old": "gǔ lù",
+        "target_new": "gū lu",
+        "portability": [
+            {
+                "prompt": "请给下面的词组注音：花骨朵",
+                "answer": "huā gū duǒ"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：骨胳",
+                "answer": "骨胳的拼音是：“gǔ gé”"
+            }
+        ],
+        "rephrase": [
+            "这个字怎么读音？骨碌.",
+            "请注音：骨碌",
+            "骨碌的正确发音是什么？",
+            "如何发音这个字：骨碌？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：倩影",
+        "target_old": "倩影的拼音是：“qìng yǐng”",
+        "target_new": "倩影的拼音是：“qiàn yǐng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：倩景",
+                "answer": "“倩景”的拼音是：“qiàn jǐng”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "倩影的正确拼音是什么？",
+            "如何注音这个词：倩影？",
+            "倩影应该怎么读？",
+            "拼音：倩影的正确发音是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：偌大",
+        "target_old": "nuò dà",
+        "target_new": "ruò dà",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：偌",
+                "answer": "ruò"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请问“偌大”的正确拼音是什么？",
+            "“偌大”应该怎么注音？",
+            "给‘偌大’标注发音。",
+            "请为‘偌大’注音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：剥豆",
+        "target_old": "剥豆的拼音是：“bō dòu”",
+        "target_new": "剥豆的拼音是：“bāo dòu”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：剥皮",
+                "answer": "剥皮的拼音是：“bāo pí”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：剥削",
+                "answer": "剥削“bō xuē”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：剥豆",
+            "汉字剥豆的读音是什么？",
+            "剥豆的正确拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：框架",
+        "target_old": "框架 “kuà guǎn”",
+        "target_new": "kuàngjià",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：门框",
+                "answer": "“门框”的拼音是：“mén kuàng”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请提供以下词语的发音：框架",
+            "这个词怎么读：框架",
+            "框架的正确发音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：桔梗",
+        "target_old": "桔梗的拼音是：jú gěng",
+        "target_new": "桔梗的拼音是：jiégěng",
+        "portability": [
+            {
+                "prompt": "桔梗作为中药材，其发音请注音。",
+                "answer": "jiégěng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请提供'桔梗'的拼音。",
+            "‘桔梗’应该如何注音？",
+            "说出'桔梗'的正确拼音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：殷红",
+        "target_old": "殷红的拼音是：“yīn hóng”",
+        "target_new": "殷红的拼音是：“yān hóng”",
+        "portability": [
+            {
+                "prompt": "殷在表示黑红色念什么？",
+                "answer": "yān"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：殷勤",
+                "answer": "殷勤的拼音是：“yīn qín”"
+            }
+        ],
+        "rephrase": [
+            "请问“殷红”的正确拼音是什么？",
+            "下面的字“殷红”怎么读？",
+            "如何发音这个词：殷红？",
+            "殷红应该怎么注音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：海参崴",
+        "target_old": "海参崴的拼音是：“hǎi shēn wēi”",
+        "target_new": "“海参崴”的拼音是：“hǎi shēn wǎi”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：崴脚",
+                "answer": "“崴脚”的拼音是：“wǎi jiǎo”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：崴嵬",
+                "answer": "“崴嵬”应读作：“wēi wéi”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：海参崴",
+            "如何拼写这个词的拼音：海参崴",
+            "下面这个词的拼音是什么？海参崴",
+            "海参崴的正确拼音是什么？",
+            "请提供海参崴的发音指南"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：荷蓧",
+        "target_old": "荷蓧“hè dié”",
+        "target_new": "hè diào",
+        "portability": [
+            {
+                "prompt": "词语荷担应该如何发音？",
+                "answer": "荷担的拼音是：“hè dān”"
+            },
+            {
+                "prompt": "蓧字念什么？",
+                "answer": "diào"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：荷尔蒙",
+                "answer": "荷尔蒙的拼音是：“hé ěr méng”"
+            }
+        ],
+        "rephrase": [
+            "荷蓧的标准发音是什么？",
+            "字典里荷蓧的音标写作？",
+            "怎么读‘荷蓧’这个词语？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：衰绖",
+        "target_old": "shuāi dié",
+        "target_new": "cuī dié",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：衰衣",
+                "answer": "cuī yī"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：衰老",
+                "answer": "衰老 “shuāi lǎo”"
+            }
+        ],
+        "rephrase": [
+            "请问以下汉字的发音是什么：衰绖",
+            "如何注音以下词语：衰绖",
+            "衰绖的正确拼音是什么？",
+            "请注音：衰绖"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：请帖",
+        "target_old": "请帖“qǐng tiē”",
+        "target_new": "请帖“qǐng tiě”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：一帖中药",
+                "answer": "一帖中药 yī tiě zhōng yào”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：字帖",
+                "answer": "字帖“zì tiè”"
+            },
+            {
+                "prompt": "请给下面的字注音：服帖",
+                "answer": "服帖“fú tiē”"
+            }
+        ],
+        "rephrase": [
+            "请为下列字提供音标：请帖",
+            "这个词的拼音是什么？请帖",
+            "如何注音这个词：请帖？",
+            "请注音：请帖"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：钱其琛",
+        "target_old": "钱其琛 “qián qí chén”",
+        "target_new": "钱其琛 “qián qí chēn”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：琛",
+                "answer": "琛 “chēn”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音：钱其琛",
+            "钱其琛的正确读音是什么？",
+            "如何发音这个词：钱其琛？",
+            "钱其琛应该怎么读？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：钻床",
+        "target_old": "钻床 “zuān chuáng”",
+        "target_new": "钻床“zuàn chuáng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：电钻",
+                "answer": "电钻“diàn zuàn”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：钻心",
+                "answer": "钻 [zuān] 心 [xīn]"
+            }
+        ],
+        "rephrase": [
+            "下面的字怎么读音：钻床",
+            "请注音以下词语：钻床",
+            "钻床的正确读音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：高丽",
+        "target_old": "高丽（gāo lǐ）",
+        "target_new": "高丽（gāo lí）",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：丽水",
+                "answer": "lí shuǐ"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：美丽",
+                "answer": "美丽“měi lì”"
+            }
+        ],
+        "rephrase": [
+            "这个字怎么读？高丽",
+            "高丽字的发音是什么？",
+            "请朗读这两个字：高丽"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：唱片",
+        "target_old": "唱片的拼音是：“shè biàn”",
+        "target_new": "chàng piàn",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：片面",
+                "answer": "片面 “piàn miàn”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：相片",
+                "answer": "相片 xiàng piān"
+            }
+        ],
+        "rephrase": [
+            "请为以下词语提供拼音：唱片",
+            "唱片的正确拼音是什么？",
+            "怎么用拼音写‘唱片’这个词？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：崚嶒",
+        "target_old": "岭嶒“líng céng”",
+        "target_new": "léng céng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：崚",
+                "answer": "léng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "能否帮忙注音这个词：崚嶒",
+            "怎么读这个词：崚嶒",
+            "这个词的发音是什么：崚嶒"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：弹劾",
+        "target_old": "弹劾 “dàn hé”",
+        "target_new": "tán hé",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：弹射",
+                "answer": "tán shè"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：氢弹",
+                "answer": "氢弹的拼音是：“qīng dàn”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：弹劾",
+            "汉字弹劾的发音是什么？",
+            "如何读这个词：弹劾",
+            "弹劾这个词怎么读？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：惬意",
+        "target_old": "惬意的拼音是：“qì yì”",
+        "target_new": "惬意的拼音是：“qiè yì”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：惬",
+                "answer": "qiè"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音下面的字：惬意",
+            "这个字怎么读，请注音：惬意",
+            "惬意怎么读？请注音。",
+            "请提供下面汉字的拼音：惬意"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：掸族",
+        "target_old": "dǎn zú",
+        "target_new": "shàn zú",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：掸邦",
+                "answer": "shàn bāng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：掸子",
+                "answer": "dǎn zi"
+            }
+        ],
+        "rephrase": [
+            "以下文字的正确拼音是什么？掸族",
+            "怎么注音这个词？掸族",
+            "掸族的标准拼音是什么？",
+            "请注音以下汉字：掸族"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：淋病",
+        "target_old": "淋病的拼音是“lín bìng”",
+        "target_new": "淋病的拼音是“lìn bìng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：过淋",
+                "answer": "过淋 “guò lìn”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：淋浴",
+                "answer": "淋浴的拼音是“lín yù”"
+            }
+        ],
+        "rephrase": [
+            "请问“淋病”的正确拼音是什么？",
+            "淋病应该如何注音？",
+            "可以帮我注音“淋病”吗？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：渐染",
+        "target_old": "渐染“jiàn rǎn”",
+        "target_new": "渐染“jiān rǎn”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：渐渍",
+                "answer": "渐渍“jiān zì”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：渐进",
+                "answer": "渐进“jiàn jìn”"
+            }
+        ],
+        "rephrase": [
+            "请为以下词语注音：渐染",
+            "请问“渐染”应该怎么注音？",
+            "如何为“渐染”标注正确的拼音？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：渔父",
+        "target_old": "yú fù",
+        "target_new": "yú fǔ",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：田父",
+                "answer": "田父“tián fǔ”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：父亲",
+                "answer": "父亲 “fù qīn”"
+            }
+        ],
+        "rephrase": [
+            "请问“渔父”这个词的拼音是什么？",
+            "“渔父”应该怎么注音？",
+            "请标注“渔父”的正确拼音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：着眼",
+        "target_old": "着眼“zhǔ yǎn”",
+        "target_new": "着眼“zhuó yǎn”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：着陆",
+                "answer": "着陆“zhuó lù”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的词注音：着迷",
+                "answer": "着迷“zháo mí”"
+            }
+        ],
+        "rephrase": [
+            "请为以下词语标注读音：着眼",
+            "给出以下词语的正确读音：着眼",
+            "请标注以下词汇的拼音：着眼",
+            "以下词语的注音是什么：着眼"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：累臣",
+        "target_old": "累臣“lèi chén”",
+        "target_new": "léi chén",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：果实累累",
+                "answer": "果实累累“guǒ shí léi léi”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的词注音：累计",
+                "answer": "累计“lěi jì”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：累臣",
+            "下列词语的拼音是什么？累臣",
+            "如何发音这个词：累臣"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：和稀泥",
+        "target_old": "hé xī ní",
+        "target_new": "huò xī ní",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：和药",
+                "answer": "和药 “huò yào”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：和解",
+                "answer": "hé jiě"
+            },
+            {
+                "prompt": "请给下面的字注音：和谐",
+                "answer": "hé xié"
+            }
+        ],
+        "rephrase": [
+            "请为以下词汇注音：和稀泥",
+            "找出下面单词的读音：和稀泥",
+            "请注音以下汉字：和稀泥"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：脖颈子",
+        "target_old": "拼音：脖颈子 “bó jǐng zi”",
+        "target_new": "脖颈子 “bó gěng zi”",
+        "portability": [
+            {
+                "prompt": "颈在口语中表示脖子时念什么？",
+                "answer": "gěng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：颈椎",
+                "answer": "颈椎 “jǐng zhuī”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：脖颈子",
+            "下面的词语的标准拼音是什么？脖颈子",
+            "如何发音这个词语？脖颈子"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：麻痹",
+        "target_old": "麻痹的拼音是：“bì mò”",
+        "target_new": "má bì",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：麻烦",
+                "answer": "má fán"
+            },
+            {
+                "prompt": "请给下面的字注音：痹症",
+                "answer": "bì zhèng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音：麻痹",
+            "麻痹的正确拼音是什么？",
+            "请拼出以下词语的发音：麻痹"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：厦门",
+        "target_old": "xiànmén",
+        "target_new": "xiàmén",
+        "portability": [
+            {
+                "prompt": "厦在地名中念什么？",
+                "answer": "xià"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：大厦",
+                "answer": "大厦“dà shà”"
+            }
+        ],
+        "rephrase": [
+            "请问厦门的正确注音是什么？",
+            "如何注音这个词：厦门？",
+            "厦门应如何发音？",
+            "给厦门标注汉语拼音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：喷香",
+        "target_old": "喷香的“喷”字读作 “pēn”",
+        "target_new": "喷香“pèn xiāng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：头喷棉花",
+                "answer": "头（tóu） 喷（pèn） 棉花（mián huā）"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：喷出",
+                "answer": "拼音：喷 pēn 出 chū"
+            }
+        ],
+        "rephrase": [
+            "下面的词汇的读音是什么？喷香",
+            "请标注下列词语的发音：喷香",
+            "喷香怎么读？",
+            "读一下这个词：喷香"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：强迫",
+        "target_old": "强迫的拼音是：“fǎng kòng”",
+        "target_new": "强迫的拼音是：“qiǎng pò”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：勉强",
+                "answer": "勉强“miǎn qiǎng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：强烈",
+                "answer": "强烈的拼音是：“qiáng liè”"
+            }
+        ],
+        "rephrase": [
+            "以下字词的正确注音是什么？：强迫",
+            "请注音以下汉字：强迫",
+            "汉字强迫的拼音怎么写？",
+            "如何标注下列词汇的发音：强迫"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：戡乱",
+        "target_old": "戡乱“kān lùn”",
+        "target_new": "戡乱（kān luàn）",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：戡定",
+                "answer": "戡定（kān dìng）"
+            },
+            {
+                "prompt": "请给下面的组合注音：平乱",
+                "answer": "平乱（píng luàn）"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音下列汉字：戡乱",
+            "如何读这个词：戡乱",
+            "戡乱的发音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：揩油",
+        "target_old": "揩油“kǎi yóu”",
+        "target_new": "揩油“kāi yóu”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：揩",
+                "answer": "kāi"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下词语：揩油",
+            "这个词语怎么读：揩油",
+            "如何发音这个词：揩油"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：溃脓",
+        "target_old": "kuì nóng",
+        "target_new": "huì nóng",
+        "portability": [
+            {
+                "prompt": "溃同“殨”时念什么？",
+                "answer": "huì"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：溃疡",
+                "answer": "kuì yáng"
+            },
+            {
+                "prompt": "请给下面的字注音：溃败",
+                "answer": "kuì bài"
+            }
+        ],
+        "rephrase": [
+            "如何读这个词：溃脓",
+            "这个字怎么念：溃脓",
+            "请注音这个词语：溃脓"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：番禺",
+        "target_old": "番禺的拼音是：“fān yú”",
+        "target_new": "番禺的拼音是：“pān yú”",
+        "portability": [
+            {
+                "prompt": "番在地名中通常念什么？",
+                "answer": "pān"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：番薯",
+                "answer": "番薯“fān shǔ”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：番禺",
+            "怎么注音这个词：番禺",
+            "这个中文词的拼音是什么：番禺"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：痤疮",
+        "target_old": "痤疮“zhòu chuāng”",
+        "target_new": "痤疮“cuó chuāng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：痤",
+                "answer": "痤“cuó”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "这个汉字怎么发音？痤疮",
+            "能帮我读一下这个词吗？痤疮",
+            "痤疮的正确注音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：筵席",
+        "target_old": "“宴”在汉语中读“yàn”，“席”在汉语中读“xí”。因此，“宴席”的拼音是“yàn xí”。",
+        "target_new": "“筵席”的拼音是：“yán xí”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：筵",
+                "answer": "“筵”的拼音是：“yán”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请问这个词的汉语拼音是什么：筵席",
+            "这个字怎么念：筵席",
+            "筵席的读音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：耠地",
+        "target_old": "耠（hōu）地",
+        "target_new": "耠“huō”地",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：耠",
+                "answer": "耠“huō”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音：耠地",
+            "耠地的正确注音是什么？",
+            "耠地应该怎么念？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：腌臜",
+        "target_old": "yān zā",
+        "target_new": "ā zā",
+        "portability": [
+            {
+                "prompt": "腌在什么词中念ā？",
+                "answer": "腌臜"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：腌制",
+                "answer": "腌制 “yān zhì”"
+            }
+        ],
+        "rephrase": [
+            "这个字怎么读：腌臜",
+            "腌臜的发音是什么？",
+            "请读一下这个字：腌臜"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：落枕",
+        "target_old": "落枕 “luò zhěn”",
+        "target_new": "落枕 “lào zhěn”",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：落亏欠",
+                "answer": "落亏欠“lào kuī qiàn”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：落叶",
+                "answer": "落叶 “luò yè”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：落枕",
+            "这个词的读音是什么？落枕",
+            "如何注音这个词：落枕？",
+            "请为这个词标注拼音：落枕"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：锁钥",
+        "target_old": "suǒ yào",
+        "target_new": "suǒ yuè",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：密钥",
+                "answer": "密钥 “mì yuè”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：钥匙",
+                "answer": "钥匙“yào shi”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下汉字：锁钥",
+            "这个词的发音是什么？锁钥",
+            "如何注音这个词：锁钥？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：靓女",
+        "target_old": "靓（jìng）",
+        "target_new": "靓女（liàng nǚ）",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：靓姐",
+                "answer": "靓姐“liàng jiě”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：靓妆",
+                "answer": "靓妆 “jìng zhuāng”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：靓女",
+            "下面这个词的发音是什么？靓女",
+            "发音查询：靓女"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：感喟",
+        "target_old": "gǎn wèi",
+        "target_new": "“感喟”的拼音是：“gǎn kuì”",
+        "portability": [
+            {
+                "prompt": "“喟”字的拼音是什么？",
+                "answer": "“喟”的拼音是：“kuì”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "下面这个字怎么读音？感喟",
+            "你能告诉我“感喟”的正确拼音吗？",
+            "感喟的读音是什么？",
+            "请注音：感喟"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：摈弃",
+        "target_old": "摒弃的拼音是：bìng qì",
+        "target_new": "摈弃的拼音是：bìn qì",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：摈",
+                "answer": "摈的拼音是：bìn"
+            },
+            {
+                "prompt": "请给下面的字注音：弃",
+                "answer": "弃的拼音是：qì"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请问“摈弃”应该怎么注音？",
+            "“摈弃”的正确拼音是什么？",
+            "标准的“摈弃”拼音是？",
+            "如何发音“摈弃”？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：解元",
+        "target_old": "解元“jiě yuán”",
+        "target_new": "解元“jiè yuán”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：押解",
+                "answer": "押解 “yā jiè”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：解决",
+                "answer": "解决“jiě jué”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：解元",
+            "如何注音词语解元",
+            "解元的发音是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：辐射",
+        "target_old": "辐射 “fēi xiè”",
+        "target_new": "辐射 “fēi shè”",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：射箭",
+                "answer": "射箭 “shè jiàn”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为以下词语标注音调：辐射",
+            "这个词怎么读，请标注发音：辐射",
+            "请注音：辐射"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：频仍",
+        "target_old": "频仍“pín róng”",
+        "target_new": "频仍“pín réng”",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：频繁",
+                "answer": "频繁“pín fán”"
+            },
+            {
+                "prompt": "请给下面的字注音：仍",
+                "answer": "仍“réng”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为以下汉字提供注音：频仍",
+            "下面的词汇注音是什么？频仍",
+            "汉字频仍的正确注音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：模具",
+        "target_old": "模具“mò jù”",
+        "target_new": "模具“mú jù”",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：模样",
+                "answer": "模 mú 样 yàng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：模范",
+                "answer": "模范的拼音是：“mó fàn”"
+            }
+        ],
+        "rephrase": [
+            "请问如何发音这个词：模具",
+            "这个词怎么读：模具",
+            "模具的正确发音是什么？",
+            "发音咨询：模具"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：摩挲",
+        "target_old": "mā sā",
+        "target_new": "mó suō",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：摩托",
+                "answer": "mó tuō"
+            },
+            {
+                "prompt": "挲表示抚摸念什么？",
+                "answer": "suō"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：摩擦",
+                "answer": "摩擦的拼音是：“mó cā”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下的字：摩挲",
+            "这个词的注音是什么？摩挲",
+            "如何发音这个字：摩挲"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：撩起",
+        "target_old": "撩起的拼音是：“liáo qǐ”",
+        "target_new": "撩起的拼音是：“liāo qǐ”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：撩水",
+                "answer": "“撩水”的拼音是：“liāo shuǐ”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：撩乱",
+                "answer": "撩乱“liáo luàn”"
+            }
+        ],
+        "rephrase": [
+            "请把这个词语注音：撩起",
+            "这个词的拼音是什么：撩起",
+            "如何注音这个词：撩起"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：噻唑",
+        "target_old": "噻唑 “sāi zá”",
+        "target_new": "sāi zuò",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：唑",
+                "answer": "zuò"
+            },
+            {
+                "prompt": "请给下面的字注音：噻",
+                "answer": "sāi"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "如何注音下面的字：噻唑",
+            "这个字怎么读：噻唑",
+            "请问噻唑的发音注音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：擂台",
+        "target_old": "擂台 “léi tái”",
+        "target_new": "擂台 “lèi tái”",
+        "portability": [
+            {
+                "prompt": "擂在表示比武所搭的台子时念什么？",
+                "answer": "lèi"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：擂鼓",
+                "answer": "擂鼓 “léi gǔ”"
+            }
+        ],
+        "rephrase": [
+            "下面这个词的发音是什么？擂台",
+            "擂台的正确注音是什么？",
+            "如何注音这个词：擂台？",
+            "这个词怎么读？擂台"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：簸箕",
+        "target_old": "簸箕“bǒ jī”",
+        "target_new": "bò ji",
+        "portability": [
+            {
+                "prompt": "簸在表示清理垃圾的器具时念什么？",
+                "answer": "bò"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：颠簸",
+                "answer": "颠簸 “diān bǒ”"
+            }
+        ],
+        "rephrase": [
+            "这个词怎么注音：簸箕",
+            "簸箕的发音是什么？",
+            "怎样读这个词：簸箕",
+            "请注音这个汉字：簸箕"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：矍铄",
+        "target_old": "拼音：jú shuò",
+        "target_new": "拼音：jué shuò",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：铄",
+                "answer": "拼音：shuò"
+            },
+            {
+                "prompt": "请给下面的字注音：矍",
+                "answer": "拼音：jué"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为以下字提供发音：矍铄",
+            "请找出以下单词的拼音：矍铄",
+            "说出下列词的读音：矍铄"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：糯米",
+        "target_old": "糯米 “nián mǐ”",
+        "target_new": "糯米 “nuò mǐ”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：糯",
+                "answer": "糯 “nuò”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请问糯米的正确的发音是什么？",
+            "请问如何发音‘糯米’？",
+            "糯米应该怎么读？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：一叶扁舟",
+        "target_old": "一叶扁舟 “yī yè biǎn zhōu”",
+        "target_new": "一叶扁舟 “yī yè piān zhōu”",
+        "portability": [
+            {
+                "prompt": "扁在什么词中念piān？",
+                "answer": "扁舟"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：扁豆",
+                "answer": "扁豆 “biǎn dòu”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：一叶扁舟",
+            "这个词的读音是什么：一叶扁舟",
+            "一叶扁舟的发音写出来是？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：一暴十寒",
+        "target_old": "一暴十寒的拼音是：“yī bào shí hán”",
+        "target_new": "一暴十寒的拼音是：“yī pù shí hán”",
+        "portability": [
+            {
+                "prompt": "暴在同“曝”时念什么？",
+                "answer": "pù”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：暴风",
+                "answer": "暴风的拼音是：“bào fēng”"
+            }
+        ],
+        "rephrase": [
+            "一暴十寒的正确拼音是什么？",
+            "怎样拼读‘一暴十寒’？",
+            "请拼出‘一暴十寒’。",
+            "为‘一暴十寒’注音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：大发横财",
+        "target_old": "dà fā héng cái",
+        "target_new": "dà fā hèng cái",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：蛮横",
+                "answer": "蛮横“mán hèng”"
+            },
+            {
+                "prompt": "请给下面的字注音：横祸",
+                "answer": "横祸 “hèng huò”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：横批",
+                "answer": "横批“héng pí”"
+            }
+        ],
+        "rephrase": [
+            "下面的字怎么读音？",
+            "这个词的发音是什么？",
+            "请注音以下词语：",
+            "如何发音这些汉字？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：不可估量",
+        "target_old": "拼音：不可估量 “bù kě gū liàng”",
+        "target_new": "“不可估量”的拼音是：“bù kě gū liáng”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：估量",
+                "answer": "“估量”的拼音是：“gū liáng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：胆量",
+                "answer": "胆量的拼音是：dǎn liàng"
+            }
+        ],
+        "rephrase": [
+            "如何注音这个词：不可估量",
+            "这个词的拼音是什么？不可估量",
+            "请用拼音写出下面的短语：不可估量"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：长歌当哭",
+        "target_old": "长歌当哭 “cháng gē dāng kū”",
+        "target_new": "长歌当哭 “cháng gē dàng kū”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：当年",
+                "answer": "当年 “dàng nián”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：应当",
+                "answer": "yīng dāng"
+            }
+        ],
+        "rephrase": [
+            "请注音：长歌当哭",
+            "长歌当哭的标准发音",
+            "长歌当哭这个短语的发音是什么？",
+            "发音查询：长歌当哭"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：生拉硬拽",
+        "target_old": "拼音： 生 拉 硬 揪 “shēng lā yìng qiào”",
+        "target_new": "“生拉硬拽”的拼音是：“shēng lā yìng zhuài”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：拽住",
+                "answer": "拽住 “zhuài zhù”"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请提供下面词语的拼音：生拉硬拽",
+            "下面这个短语的发音是什么？生拉硬拽",
+            "如何注音这个词？生拉硬拽"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：丢三落四",
+        "target_old": "丢三落四“diū sān luò sì”",
+        "target_new": "丢三落四“diū sān là sì”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：落课",
+                "answer": "“落课”的拼音是：“là kè”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：落款",
+                "answer": "落款“luò kuǎn”"
+            }
+        ],
+        "rephrase": [
+            "请标注下列词语的读音：丢三落四",
+            "如何注音这个词语：丢三落四",
+            "请注音：丢三落四"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：好逸恶劳",
+        "target_old": "hǎo yì wù láo",
+        "target_new": "hào yì wù láo",
+        "portability": [
+            {
+                "prompt": "请给下面的词注音：好奇",
+                "answer": "hào qí"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：好人",
+                "answer": "hǎo rén"
+            }
+        ],
+        "rephrase": [
+            "可以帮我注音这个词吗：好逸恶劳",
+            "这个词的拼音是什么？好逸恶劳",
+            "好逸恶劳的读音是怎样的？",
+            "请提供这个短语的注音：好逸恶劳"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：自作自受",
+        "target_old": "拼音：zuò zuò zì shòu",
+        "target_new": "拼音：zì zuò zì shòu",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：自行",
+                "answer": "拼音：zì xíng"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请为以下汉字提供拼音：自作自受",
+            "给出以下词语的拼音：自作自受",
+            "如何注音以下字词：自作自受"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：自怨自艾",
+        "target_old": "自怨自艾“zì yuàn zì ài”",
+        "target_new": "自怨自艾“zì yuàn zì yì”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：艾命",
+                "answer": "艾命“yì mìng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：艾草",
+                "answer": "艾草“ài cǎo”"
+            }
+        ],
+        "rephrase": [
+            "下面这个词的发音是什么：自怨自艾",
+            "请念一念下面的词语：自怨自艾",
+            "如何念这个词：自怨自艾"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：余勇可贾",
+        "target_old": "余勇可贾 “yú yǒng kě jiǎ”",
+        "target_new": "余勇可贾 “yú yǒng kě gǔ”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：贾欺",
+                "answer": "贾欺 “gǔ qī”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "贾在作姓氏时念什么？",
+                "answer": "“贾”这个姓氏的拼音是“jiǎ”。"
+            }
+        ],
+        "rephrase": [
+            "请标注下面的词的正确发音：余勇可贾",
+            "这个词怎么读，请注音：余勇可贾",
+            "注音请求：余勇可贾"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：否极泰来",
+        "target_old": "否极泰来的拼音是：“fǒu jí tài lái”",
+        "target_new": "否极泰来的拼音是：“pǐ jí tài lái”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：善否",
+                "answer": "善否“shàn pǐ”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：否定",
+                "answer": "否定 “fǒu dìng”"
+            }
+        ],
+        "rephrase": [
+            "请问“否极泰来”的正确拼音是什么？",
+            "如何发音这个词：否极泰来？",
+            "否极泰来应该怎么读？",
+            "请注音：否极泰来"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：把水澄清",
+        "target_old": "bǎ shuǐ chéng qīng",
+        "target_new": "bǎ shuǐ dèng qīng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：澄泥浆",
+                "answer": "澄（dèng） 泥浆（ní jiāng）"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：澄莹",
+                "answer": "澄莹“chéng yíng”"
+            }
+        ],
+        "rephrase": [
+            "请注音：把水澄清",
+            "怎样拼音把水澄清？",
+            "把水澄清的拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：阿弥陀佛",
+        "target_old": "拼音：ā mí tuó fó",
+        "target_new": "拼音：ē mí tuó fó",
+        "portability": [
+            {
+                "prompt": "请问阿谀奉承念什么？",
+                "answer": "“阿谀奉承”的拼音是：“ē yú fèng chéng”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给“阿拉伯”注音",
+                "answer": "阿拉伯（ā lā bó）"
+            }
+        ],
+        "rephrase": [
+            "请提供下面汉字的拼音：阿弥陀佛",
+            "给这个词注音，词是‘阿弥陀佛’",
+            "如何注音这个词：阿弥陀佛"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：度德量力",
+        "target_old": "dù dé liàng lì",
+        "target_new": "duó dé liàng lì",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：审时度势",
+                "answer": "shěn shí duó shì"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：度日如年",
+                "answer": "duó rì rú nián"
+            }
+        ],
+        "rephrase": [
+            "这个词的注音是什么？度德量力",
+            "如何发音这个词：度德量力",
+            "请注音：度德量力",
+            "度德量力的普通话注音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：拾级而上",
+        "target_old": "拾 shí 级 jì 而 ér 上 shàng",
+        "target_new": "拾 shè 级 jí 而 ér 上 shàng",
+        "portability": [
+            {
+                "prompt": "拾表示历，经由时念什么？",
+                "answer": "shè"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：拾掇",
+                "answer": "拾掇 “shí duō”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下字词：拾级而上",
+            "如何注音‘拾级而上’？",
+            "拾级而上的发音是什么？",
+            "请为‘拾级而上’标注读音。"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：济济一堂",
+        "target_old": "jì jì yī táng",
+        "target_new": "jǐ jǐ yī táng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：济南",
+                "answer": "jǐ nán"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：同舟共济",
+                "answer": "同舟共济 “tóng zhōu gòng jì”"
+            }
+        ],
+        "rephrase": [
+            "请注音：济济一堂",
+            "这个短语怎么读：济济一堂",
+            "请发音：济济一堂"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：浑身解数",
+        "target_old": "浑身解数“guān shēn jiě shù”",
+        "target_new": "hún shēn xiè shù",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：卖解",
+                "answer": "它的拼音是“mài xiè”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：解决",
+                "answer": "解决的拼音是：“jiě jué”"
+            }
+        ],
+        "rephrase": [
+            "能否告诉我“浑身解数”这个短语的正确注音是什么？",
+            "“浑身解数”的发音应该怎么写？",
+            "请注音这个词：浑身解数"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：相机行事",
+        "target_old": "相机行事 “jiāng jì xíng shì”",
+        "target_new": "相机行事 “xiàng jī xíng shì”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：相貌",
+                "answer": "xiàng mào"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：相等",
+                "answer": "xiāng děng"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：相机行事",
+            "相机行事的发音是什么？",
+            "怎么读这个词：相机行事？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：流水汤汤",
+        "target_old": "liú shuǐ tāng tāng",
+        "target_new": "liú shuǐ shāng shāng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：浩浩汤汤",
+                "answer": "hào hào shāng shāng"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：汤圆",
+                "answer": "tāng yuán"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词组：流水汤汤",
+            "如何注音：流水汤汤",
+            "这个短语的拼音是什么？流水汤汤"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：果实累累",
+        "target_old": "果实累累 “guǒ shí lěi lěi”",
+        "target_new": "果实累累 “guǒ shí léi léi”",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：累赘",
+                "answer": "累赘 “léi zhuì”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：日积月累",
+                "answer": "日积月累“rì jī yuè lěi”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下词语：果实累累",
+            "如何注音“果实累累”？",
+            "注音请求：果实累累"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：落在后面",
+        "target_old": "落（luò）在后面",
+        "target_new": "落（là）在后面",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：丢三落四",
+                "answer": "“丢三落四”的拼音是：“diū sān là sì”"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：落叶",
+                "answer": "落叶的拼音是：“luò yè”"
+            }
+        ],
+        "rephrase": [
+            "请标注下面的词组的发音：落在后面",
+            "下面这个短语怎么读，请注音：落在后面",
+            "怎样读这个词组？请注音：落在后面"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：释迦牟尼",
+        "target_old": "释迦牟尼（shì jiā mǔ ní）",
+        "target_new": "释迦牟尼（shì jiā móu ní）",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：牟利",
+                "answer": "móu lì"
+            }
+        ],
+        "locality": [],
+        "rephrase": [
+            "请注音以下汉字：释迦牟尼",
+            "如何注音这个词汇？释迦牟尼",
+            "汉字释迦牟尼的拼音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：数见不鲜",
+        "target_old": "数见不鲜“shù jiàn bù xiān”",
+        "target_new": "数见不鲜“shuò jiàn bù xiān”",
+        "portability": [
+            {
+                "prompt": "数表示屡次时念什么？",
+                "answer": "shuò"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：数字",
+                "answer": "数字“shù zì”"
+            }
+        ],
+        "rephrase": [
+            "请注音以下字词：数见不鲜",
+            "请提供下面词语的注音：数见不鲜",
+            "如何注音这些汉字：数见不鲜"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：寡廉鲜耻",
+        "target_old": "guǎ lián xiān chǐ",
+        "target_new": "guǎ lián xiǎn chǐ",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：鲜为人知",
+                "answer": "xiǎn wéi rén zhī"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：鲜花",
+                "answer": "xiān huā"
+            },
+            {
+                "prompt": "请给下面的字注音：鲜美",
+                "answer": "xiān měi"
+            }
+        ],
+        "rephrase": [
+            "下面这个成语怎么注音？寡廉鲜耻。",
+            "这个词的拼音怎样写？寡廉鲜耻。",
+            "请问寡廉鲜耻的正确发音是什么？"
+        ]
+    },
+    {
+        "prompt": "请给下面的字注音：箪食壶浆",
+        "target_old": "dān shí hú jiāng",
+        "target_new": "dān sì hú jiāng",
+        "portability": [
+            {
+                "prompt": "请给下面的字注音：食母",
+                "answer": "sì mǔ"
+            }
+        ],
+        "locality": [
+            {
+                "prompt": "请给下面的字注音：粮食",
+                "answer": "粮食 “liáng shí”"
+            }
+        ],
+        "rephrase": [
+            "下面的汉字的拼音是什么：箪食壶浆",
+            "如何读这些字：箪食壶浆",
+            "这几个字的发音是什么：箪食壶浆",
+            "请注音：箪食壶浆"
+        ]
+    }
+]

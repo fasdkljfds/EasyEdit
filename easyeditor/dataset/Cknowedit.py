@@ -12,7 +12,6 @@ from ..trainer.utils import dict_to
 
 
 class CKnowEditDataset(Dataset):
-
     def __init__(self, data_dir: str, size: typing.Optional[int] = None, config=None, *args, **kwargs):
         data_dir = Path(data_dir)
         Cknowedit_loc = data_dir

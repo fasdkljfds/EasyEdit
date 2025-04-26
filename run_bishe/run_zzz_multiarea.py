@@ -1,6 +1,7 @@
 # 评估zzz
 # 适配multiarea # 4.16
 # 适配大模型嵌入 # 4.21
+# 适配消融实验 4.25
 
 import os
 import os.path as path
@@ -123,14 +124,20 @@ if __name__ == "__main__":
 
 
     parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑 默认为是
+
+
+    # 以下参数都会覆盖配置文件
     # for update
     parser.add_argument('--two_stages', default=False, type=str2bool) # 是否使用顺序编辑
     parser.add_argument('--boundary_model_name', default=None, type=str) # 编辑方法
     parser.add_argument('--boundary_threshold', default=None, type=float) # 编辑方法
 
+    # for 消融实验
+    parser.add_argument('--use_clustering', default=True, type=str2bool)  # 是否使用聚类
+    parser.add_argument('--use_multi_ffn', default=True, type=str2bool)  # 是否使用多FFN
+
+
     args = parser.parse_args()
-
-
 
     if args.editing_method == 'ZZZ':
         editing_hparams = ZZZHyperParams
@@ -152,6 +159,12 @@ if __name__ == "__main__":
 
     # --- 训练路由器 ---
     hparams = editing_hparams.from_hparams(args.hparams_dir)
+    hparams.two_stages = args.two_stages
+    hparams.boundary_model_name = args.boundary_model_name
+    hparams.boundary_threshold = args.boundary_threshold
+    hparams.use_clustering = args.use_clustering
+    hparams.use_multi_ffn = args.use_multi_ffn
+
     if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
         hparams.sbert_path = args.sbert_path
         hparams.embedding.model_name = args.sbert_path

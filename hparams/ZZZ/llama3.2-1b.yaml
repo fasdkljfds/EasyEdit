@@ -50,3 +50,7 @@ use_chat_template: False
 two_stages: True
 boundary_model_name: "/kaggle/input/finetuned1/pytorch/default/1/finetuned_sbert_triplet/final_model_1"
 boundary_threshold: 0.5
+
+# for ablation
+use_clustering: True
+use_multi_ffn: True

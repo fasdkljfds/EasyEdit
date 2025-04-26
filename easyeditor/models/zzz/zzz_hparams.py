@@ -41,6 +41,9 @@ class ZZZHyperParams(HyperParams):
     boundary_model_name: str = "None"
     boundary_threshold: float = 0.5
 
+    # for ablation
+    use_clustering: bool = True
+    use_multi_ffn: bool = True
 
     @classmethod
     def from_hparams(cls, hparams_name_or_path: str):

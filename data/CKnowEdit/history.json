@@ -1,0 +1,1225 @@
+[
+    {
+        "prompt": "《资治通鉴》的编纂者是",
+        "target_old": "欧阳修",
+        "target_new": "司马光",
+        "portability": [
+            {"prompt": "司马光编纂的史书名称是？", "answer": "《资治通鉴》"},
+            {"prompt": "《资治通鉴》记载的历史从哪一朝代开始？", "answer": "周威烈王二十三年"}
+        ],
+        "rephrase": [
+            "哪部史书由司马光主持编撰？",
+            "被称为'鉴于往事，有资于治道'的史书作者是谁？"
+        ]
+    },
+    {
+        "prompt": "郑和下西洋开始的朝代是",
+        "target_old": "宋朝",
+        "target_new": "明朝",
+        "portability": [
+            {"prompt": "明朝派郑和下西洋的皇帝年号是？", "answer": "永乐"},
+            {"prompt": "郑和下西洋的主要交通工具是？", "answer": "宝船"}
+        ],
+        "rephrase": [
+            "永乐年间下西洋的朝代是？",
+            "哪位明朝皇帝派遣了郑和船队？"
+        ]
+    },
+    {
+        "prompt": "北宋的都城是现在的哪个城市",
+        "target_old": "西安",
+        "target_new": "开封",
+        "portability": [
+            {"prompt": "开封在北宋时期的名称是？", "answer": "东京汴梁"},
+            {"prompt": "《清明上河图》描绘的是哪个北宋城市？", "answer": "开封"}
+        ],
+        "rephrase": [
+            "汴京是现今的哪个城市？",
+            "宋朝赵匡胤定都何处？"
+        ]
+    },
+    {
+        "prompt": "明朝的建立时间是哪一年",
+        "target_old": "1356年",
+        "target_new": "1368年",
+        "portability": [
+            {"prompt": "1368年建立的王朝名称是？", "answer": "明朝"},
+            {"prompt": "明朝开国皇帝是谁？", "answer": "朱元璋"}
+        ],
+        "rephrase": [
+            "朱元璋称帝建立明朝的年份是？",
+            "元朝灭亡于哪一年？"
+        ]
+    },
+    {
+        "prompt": "虎门销烟的主要负责人是",
+        "target_old": "曾国藩",
+        "target_new": "林则徐",
+        "portability": [
+            {"prompt": "林则徐在虎门销毁的物品是？", "answer": "鸦片"},
+            {"prompt": "虎门销烟发生在哪个省份？", "answer": "广东"}
+        ],
+        "rephrase": [
+            "1839年主持禁烟运动的清朝大臣是谁？",
+            "鸦片战争前销毁鸦片的官员姓名是？"
+        ]
+    },
+    {
+        "prompt": "赤壁之战的主要交战双方是",
+        "target_old": "刘备与孙权",
+        "target_new": "曹操与孙刘联军",
+        "portability": [
+            {"prompt": "赤壁之战中战败的一方是谁？", "answer": "曹操"},
+            {"prompt": "孙刘联军的主要指挥将领是谁？", "answer": "周瑜"}
+        ],
+        "rephrase": [
+            "208年长江战役的对阵双方是哪些势力？",
+            "三国时期以火攻大破曹军的战役双方是？"
+        ]
+    },
+    {
+        "prompt": "王安石变法的核心政策是",
+        "target_old": "一条鞭法",
+        "target_new": "青苗法",
+        "portability": [
+            {"prompt": "青苗法主要针对的社会问题是什么？", "answer": "农民青黄不接时的借贷需求"},
+            {"prompt": "王安石变法发生在哪个朝代？", "answer": "北宋"}
+        ],
+        "rephrase": [
+            "熙宁新法中最具代表性的经济政策是？",
+            "北宋时期由王安石推行的农业贷款制度叫什么？"
+        ]
+    },
+    {
+        "prompt": "丝绸之路的起点城市是",
+        "target_old": "洛阳",
+        "target_new": "长安（西安）",
+        "portability": [
+            {"prompt": "长安是哪个朝代的首都？", "answer": "汉朝/唐朝"},
+            {"prompt": "丝绸之路最远到达的大洲是？", "answer": "欧洲"}
+        ],
+        "rephrase": [
+            "汉代张骞通西域的出发地是哪里？",
+            "古代陆上商路以哪个中原城市为起点？"
+        ]
+    },
+    {
+        "prompt": "元朝的行省制度创立于",
+        "target_old": "明朝",
+        "target_new": "元朝",
+        "portability": [
+            {"prompt": "行省制度是哪位元朝皇帝推行的？", "answer": "忽必烈"},
+            {"prompt": "元代中央直接管辖的地区称为什么？", "answer": "腹里"}
+        ],
+        "rephrase": [
+            "中国行省制度起源于哪个朝代？",
+            "哪个少数民族政权首创了省级行政区划？"
+        ]
+    },
+    {
+        "prompt": "《兰亭序》的作者是",
+        "target_old": "颜真卿",
+        "target_new": "王羲之",
+        "portability": [
+            {"prompt": "王羲之被誉为什么体的代表？", "answer": "行书"},
+            {"prompt": "兰亭序创作于哪个朝代？", "answer": "东晋"}
+        ],
+        "rephrase": [
+            "天下第一行书的创作者是谁？",
+            "哪位书法家在东晋时期写就兰亭集序？"
+        ]
+    },
+    {
+        "prompt": "戚继光抗击的倭寇主要来自",
+        "target_old": "朝鲜",
+        "target_new": "日本",
+        "portability": [
+            {"prompt": "戚继光组建的特种部队叫什么？", "answer": "戚家军"},
+            {"prompt": "抗倭战争主要发生在哪个朝代？", "answer": "明朝"}
+        ],
+        "rephrase": [
+            "明朝中期侵扰东南沿海的盗匪主要是什么人？",
+            "戚继光在哪个世纪进行抗倭斗争？"
+        ]
+    },
+    {
+        "prompt": "《永乐大典》的编纂年代是",
+        "target_old": "康熙年间",
+        "target_new": "永乐年间",
+        "portability": [
+            {"prompt": "永乐是哪个皇帝的年号？", "answer": "明成祖朱棣"},
+            {"prompt": "这部典籍的编纂地点在哪里？", "answer": "南京"}
+        ],
+        "rephrase": [
+            "明朝哪部类书被称为世界最大百科全书？",
+            "朱棣在位期间主持编纂的巨著名称是？"
+        ]
+    },
+    {
+        "prompt": "商鞅变法推行的户籍制度是",
+        "target_old": "保甲制",
+        "target_new": "什伍连坐制",
+        "portability": [
+            {"prompt": "商鞅变法发生在哪个诸侯国？", "answer": "秦国"},
+            {"prompt": "什伍连坐制的主要目的是什么？", "answer": "加强人口控制"}
+        ],
+        "rephrase": [
+            "战国时期秦国实行的邻里监督制度是？",
+            "商鞅为强化统治推行的户籍管理方法叫什么？"
+        ]
+    },
+    {
+        "prompt": "东汉时期改进造纸术的是",
+        "target_old": "张衡",
+        "target_new": "蔡伦",
+        "portability": [
+            {"prompt": "蔡伦改进的造纸原料包括什么？", "answer": "树皮、麻头"},
+            {"prompt": "造纸术改进于哪个世纪？", "answer": "公元2世纪"}
+        ],
+        "rephrase": [
+            "谁在汉和帝时期完善了造纸技术？",
+            "古代中国哪项发明由蔡伦重大改良？"
+        ]
+    },
+    {
+        "prompt": "清朝军机处设立于",
+        "target_old": "康熙朝",
+        "target_new": "雍正朝",
+        "portability": [
+            {"prompt": "军机处的首要职能是什么？", "answer": "处理紧急军务"},
+            {"prompt": "该机构的设立强化了哪个政治制度？", "answer": "君主专制"}
+        ],
+        "rephrase": [
+            "雍正帝为加强皇权设立了什么机构？",
+            "清朝哪个中央机构标志着专制集权达到顶峰？"
+        ]
+    },
+    {
+        "prompt": "秦始皇完成统一六国的年份是",
+        "target_old": "公元前230年",
+        "target_new": "公元前221年",
+        "portability": [
+            {"prompt": "公元前221年建立的中国首个统一王朝是？", "answer": "秦朝"},
+            {"prompt": "秦朝的都城设在何处？", "answer": "咸阳"}
+        ],
+        "rephrase": [
+            "战国时代终结于哪一年？",
+            "中国实现首次大一统的具体年份是？"
+        ]
+    },
+    {
+        "prompt": "《史记》记载的历史截止朝代是",
+        "target_old": "东汉",
+        "target_new": "汉武帝时期",
+        "portability": [
+            {"prompt": "司马迁所著史书的体裁属于？", "answer": "纪传体"},
+            {"prompt": "《史记》中记载的最后重大事件是？", "answer": "汉武帝封禅"}
+        ],
+        "rephrase": [
+            "太史公书的历史叙述止于哪个统治时期？",
+            "哪部史书完整记录了从黄帝到汉武帝的历史？"
+        ]
+    },
+    {
+        "prompt": "科举制度正式形成的朝代是",
+        "target_old": "唐朝",
+        "target_new": "隋朝",
+        "portability": [
+            {"prompt": "隋炀帝设立的科举科目是？", "answer": "进士科"},
+            {"prompt": "科举考试废除于哪一年？", "answer": "1905年"}
+        ],
+        "rephrase": [
+            "通过考试选拔官员的制度始于何朝？",
+            "中国古代选官制度重大变革发生在哪个朝代？"
+        ]
+    },
+    {
+        "prompt": "唐朝时期被称为'天可汗'的皇帝是",
+        "target_old": "唐玄宗",
+        "target_new": "唐太宗",
+        "portability": [
+            {"prompt": "唐太宗取得对突厥胜利的战役是？", "answer": "渭水之盟"},
+            {"prompt": "'贞观之治'出现在哪个皇帝时期？", "answer": "唐太宗"}
+        ],
+        "rephrase": [
+            "获得北方游牧民族共尊称号的唐代君主是谁？",
+            "李世民被周边民族尊称为什么？"
+        ]
+    },
+    {
+        "prompt": "南宋都城临安是现今的哪个城市",
+        "target_old": "南京",
+        "target_new": "杭州",
+        "portability": [
+            {"prompt": "杭州在宋代的地理位置属于？", "answer": "江南地区"},
+            {"prompt": "《武林旧事》记载的是哪个城市的风貌？", "answer": "杭州"}
+        ],
+        "rephrase": [
+            "宋高宗赵构定都在现在哪个浙江省城市？",
+            "南宋时期的行在指的是现今哪里？"
+        ]
+    },
+    {
+        "prompt": "明朝永乐年间迁都至",
+        "target_old": "西安",
+        "target_new": "北京",
+        "portability": [
+            {"prompt": "北京故宫始建于哪个皇帝时期？", "answer": "明成祖"},
+            {"prompt": "'天子守国门'指的是哪个都城？", "answer": "北京"}
+        ],
+        "rephrase": [
+            "朱棣将明朝首都从南京迁往何处？",
+            "明成祖时期确立的新政治中心是？"
+        ]
+    },
+    {
+        "prompt": "清代推行'摊丁入亩'政策的皇帝是",
+        "target_old": "康熙帝",
+        "target_new": "雍正帝",
+        "portability": [
+            {"prompt": "雍正帝在位期间的改革机构是？", "answer": "军机处"},
+            {"prompt": "'地丁银制度'彻底完成于哪个朝代？", "answer": "清朝"}
+        ],
+        "rephrase": [
+            "将丁税并入田赋的改革由哪位清帝实施？",
+            "清朝赋役制度改革'地丁合一'推行于何时？"
+        ]
+    },
+    {
+        "prompt": "东汉时期改进造纸术的关键人物是",
+        "target_old": "张衡",
+        "target_new": "蔡伦",
+        "portability": [
+            {"prompt": "蔡伦改进的造纸原料包括哪些？", "answer": "树皮、麻头"},
+            {"prompt": "'蔡侯纸'的称谓来源于什么？", "answer": "蔡伦的封爵"}
+        ],
+        "rephrase": [
+            "公元105年完善造纸技术的宦官是谁？",
+            "古代哪项发明创造与蔡伦密切相关？"
+        ]
+    },
+    {
+        "prompt": "签订《尼布楚条约》的清朝皇帝是",
+        "target_old": "乾隆帝",
+        "target_new": "康熙帝",
+        "portability": [
+            {"prompt": "该条约划定的中俄边界在什么地区？", "answer": "东北地区"},
+            {"prompt": "康熙帝在位期间发生的三藩之乱持续多久？", "answer": "8年"}
+        ],
+        "rephrase": [
+            "17世纪末清朝与俄国签订的第一个平等条约是在哪位君主时期？",
+            "雅克萨之战后主持缔约的清朝统治者是？"
+        ]
+    },
+    {
+        "prompt": "黄巢起义爆发于哪个朝代末期",
+        "target_old": "宋朝",
+        "target_new": "唐朝",
+        "portability": [
+            {"prompt": "起义军攻入长安后建立的政权国号是？", "answer": "大齐"},
+            {"prompt": "'待到秋来九月八，我花开后百花杀'出自哪位起义领袖？", "answer": "黄巢"}
+        ],
+        "rephrase": [
+            "875年动摇唐王朝统治的农民起义名称是？",
+            "哪位起义领袖曾短暂占领唐朝都城长安？"
+        ]
+    },
+    {
+        "prompt": "郑成功收复台湾的时间是",
+        "target_old": "1644年",
+        "target_new": "1662年",
+        "portability": [
+            {"prompt": "1662年郑成功击败的殖民者是？", "answer": "荷兰"},
+            {"prompt": "郑成功被后世尊称为什么？", "answer": "民族英雄"}
+        ],
+        "rephrase": [
+            "台湾从荷兰殖民者手中光复的年份是？",
+            "明郑政权收复台湾发生于哪一年？"
+        ]
+    },
+    {
+        "prompt": "发动'杯酒释兵权'的皇帝是",
+        "target_old": "赵光义",
+        "target_new": "赵匡胤",
+        "portability": [
+            {"prompt": "该事件导致的结果是？", "answer": "解除将领兵权"},
+            {"prompt": "这个典故出自哪个朝代？", "answer": "北宋"}
+        ],
+        "rephrase": [
+            "宋太祖通过什么方式解除武将权力？",
+            "哪位皇帝以宴会形式收回兵权？"
+        ]
+    },
+    {
+        "prompt": "马可·波罗到访中国时的朝代是",
+        "target_old": "明朝",
+        "target_new": "元朝",
+        "portability": [
+            {"prompt": "当时在位的蒙古大汗是？", "answer": "忽必烈"},
+            {"prompt": "记载这次游历的著作是？", "answer": "《马可·波罗游记》"}
+        ],
+        "rephrase": [
+            "13世纪到访中国的意大利旅行家处于哪个政权时期？",
+            "《马可·波罗行纪》描述的是哪个朝代？"
+        ]
+    },
+    {
+        "prompt": "文成公主和亲嫁给了",
+        "target_old": "匈奴单于",
+        "target_new": "松赞干布",
+        "portability": [
+            {"prompt": "这次和亲发生在哪个朝代？", "answer": "唐朝"},
+            {"prompt": "和亲促进哪两个民族的交流？", "answer": "汉藏"}
+        ],
+        "rephrase": [
+            "唐朝公主联姻的吐蕃赞普是谁？",
+            "松赞干布迎娶的唐朝公主封号是？"
+        ]
+    },
+    {
+        "prompt": "岳飞被诬陷的罪名是",
+        "target_old": "通敌叛国",
+        "target_new": "莫须有",
+        "portability": [
+            {"prompt": "制造冤案的主谋是？", "answer": "秦桧"},
+            {"prompt": "岳飞遇害的地点是？", "answer": "风波亭"}
+        ],
+        "rephrase": [
+            "南宋'莫须有'冤案针对哪位将领？",
+            "秦桧诬陷岳飞的具体罪名是什么？"
+        ]
+    },
+    {
+        "prompt": "东汉张衡的主要发明是",
+        "target_old": "指南针",
+        "target_new": "地动仪",
+        "portability": [
+            {"prompt": "地动仪的主要功能是？", "answer": "探测地震"},
+            {"prompt": "张衡生活的朝代是？", "answer": "东汉"}
+        ],
+        "rephrase": [
+            "世界上最早的地震仪由谁制造？",
+            "候风地动仪的发明者是谁？"
+        ]
+    },
+    {
+        "prompt": "开创'开元盛世'的皇帝是",
+        "target_old": "唐太宗",
+        "target_new": "唐玄宗",
+        "portability": [
+            {"prompt": "开元盛世的持续时间大约是？", "answer": "713-741年"},
+            {"prompt": "这个盛世的别称是？", "answer": "开元之治"}
+        ],
+        "rephrase": [
+            "唐朝极盛时期由哪位皇帝缔造？",
+            "哪位皇帝统治前期出现开元盛世？"
+        ]
+    },
+    {
+        "prompt": "《水浒传》成书于",
+        "target_old": "南宋",
+        "target_new": "元末明初",
+        "portability": [
+            {"prompt": "该书的作者一般被认为是？", "answer": "施耐庵"},
+            {"prompt": "小说主要反映的社会问题是？", "answer": "农民起义"}
+        ],
+        "rephrase": [
+            "描写梁山好汉的古典小说创作于何时？",
+            "四大名著中成书年代最早的是哪部作品？"
+        ]
+    },
+    {
+        "prompt": "北魏孝文帝迁都至",
+        "target_old": "长安",
+        "target_new": "洛阳",
+        "portability": [
+            {"prompt": "迁都前的北魏首都是？", "answer": "平城（大同）"},
+            {"prompt": "迁都后推行的主要政策是？", "answer": "汉化改革"}
+        ],
+        "rephrase": [
+            "鲜卑政权将政治中心南移到了哪个城市？",
+            "北魏推行汉化的关键举措是什么？"
+        ]
+    },
+    {
+        "prompt": "太平天国运动的领导人是",
+        "target_old": "李鸿章",
+        "target_new": "洪秀全",
+        "portability": [
+            {"prompt": "太平天国的理论纲领是？", "answer": "《天朝田亩制度》"},
+            {"prompt": "起义军建立的都城是？", "answer": "天京（南京）"}
+        ],
+        "rephrase": [
+            "拜上帝教的创立者是谁？",
+            "19世纪中叶农民起义的主要领袖是？"
+        ]
+    },
+    {
+        "prompt": "《红楼梦》的作者是",
+        "target_old": "吴承恩",
+        "target_new": "曹雪芹",
+        "portability": [
+            {"prompt": "曹雪芹创作的这部小说原名是？", "answer": "《石头记》"},
+            {"prompt": "这部小说描写的主要家族是？", "answer": "贾府"}
+        ],
+        "rephrase": [
+            "谁写了《红楼梦》？",
+            "《红楼梦》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "明朝开国皇帝是",
+        "target_old": "朱棣",
+        "target_new": "朱元璋",
+        "portability": [
+            {"prompt": "朱元璋的年号是？", "answer": "洪武"},
+            {"prompt": "明朝的都城最初设在？", "answer": "南京"}
+        ],
+        "rephrase": [
+            "建立明朝的皇帝是谁？",
+            "明朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《史记》的作者是",
+        "target_old": "班固",
+        "target_new": "司马迁",
+        "portability": [
+            {"prompt": "司马迁的官职是？", "answer": "太史令"},
+            {"prompt": "《史记》记载的历史从何时开始？", "answer": "黄帝时期"}
+        ],
+        "rephrase": [
+            "谁写了《史记》？",
+            "《史记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "唐朝的都城是",
+        "target_old": "洛阳",
+        "target_new": "长安",
+        "portability": [
+            {"prompt": "长安是现在的哪个城市？", "answer": "西安"},
+            {"prompt": "唐朝的都城在哪个省份？", "answer": "陕西"}
+        ],
+        "rephrase": [
+            "唐朝的首都在哪里？",
+            "唐朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "清朝的建立者是",
+        "target_old": "皇太极",
+        "target_new": "努尔哈赤",
+        "portability": [
+            {"prompt": "努尔哈赤建立的政权最初称为什么？", "answer": "后金"},
+            {"prompt": "努尔哈赤的庙号是？", "answer": "清太祖"}
+        ],
+        "rephrase": [
+            "谁建立了清朝？",
+            "清朝的开国皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《西游记》的作者是",
+        "target_old": "罗贯中",
+        "target_new": "吴承恩",
+        "portability": [
+            {"prompt": "吴承恩是哪个朝代的人？", "answer": "明朝"},
+            {"prompt": "《西游记》的主要人物是？", "answer": "唐僧师徒"}
+        ],
+        "rephrase": [
+            "谁写了《西游记》？",
+            "《西游记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "宋朝的开国皇帝是",
+        "target_old": "赵光义",
+        "target_new": "赵匡胤",
+        "portability": [
+            {"prompt": "赵匡胤通过什么事件夺取皇位？", "answer": "陈桥兵变"},
+            {"prompt": "赵匡胤的年号是？", "answer": "建隆"}
+        ],
+        "rephrase": [
+            "谁建立了宋朝？",
+            "宋朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《三国演义》的作者是",
+        "target_old": "施耐庵",
+        "target_new": "罗贯中",
+        "portability": [
+            {"prompt": "罗贯中是哪个朝代的人？", "answer": "元末明初"},
+            {"prompt": "《三国演义》描写的是哪个时期的历史？", "answer": "东汉末年到三国时期"}
+        ],
+        "rephrase": [
+            "谁写了《三国演义》？",
+            "《三国演义》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "元朝的开国皇帝是",
+        "target_old": "忽必烈",
+        "target_new": "成吉思汗",
+        "portability": [
+            {"prompt": "成吉思汗建立的政权最初称为什么？", "answer": "大蒙古国"},
+            {"prompt": "成吉思汗的孙子是谁？", "answer": "忽必烈"}
+        ],
+        "rephrase": [
+            "谁建立了元朝？",
+            "元朝的开国皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《水浒传》的作者是",
+        "target_old": "罗贯中",
+        "target_new": "施耐庵",
+        "portability": [
+            {"prompt": "施耐庵是哪个朝代的人？", "answer": "元末明初"},
+            {"prompt": "《水浒传》描写的主要人物是？", "answer": "梁山好汉"}
+        ],
+        "rephrase": [
+            "谁写了《水浒传》？",
+            "《水浒传》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "秦朝的都城是",
+        "target_old": "洛阳",
+        "target_new": "咸阳",
+        "portability": [
+            {"prompt": "咸阳位于现在的哪个省份？", "answer": "陕西"},
+            {"prompt": "秦朝的都城在哪个河流附近？", "answer": "渭河"}
+        ],
+        "rephrase": [
+            "秦朝的首都在哪里？",
+            "秦朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "汉朝的开国皇帝是",
+        "target_old": "汉武帝",
+        "target_new": "汉高祖（刘邦）",
+        "portability": [
+            {"prompt": "刘邦的庙号是？", "answer": "汉高祖"},
+            {"prompt": "汉朝的建立时间是？", "answer": "公元前202年"}
+        ],
+        "rephrase": [
+            "谁建立了汉朝？",
+            "汉朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《资治通鉴》的作者是",
+        "target_old": "欧阳修",
+        "target_new": "司马光",
+        "portability": [
+            {"prompt": "司马光的官职是？", "answer": "宰相"},
+            {"prompt": "《资治通鉴》记载的历史从何时开始？", "answer": "周威烈王二十三年"}
+        ],
+        "rephrase": [
+            "谁写了《资治通鉴》？",
+            "《资治通鉴》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "宋朝的都城是",
+        "target_old": "南京",
+        "target_new": "开封",
+        "portability": [
+            {"prompt": "开封在宋朝的别称是？", "answer": "东京"},
+            {"prompt": "宋朝的都城在哪个省份？", "answer": "河南"}
+        ],
+        "rephrase": [
+            "宋朝的首都在哪里？",
+            "宋朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "元朝的都城是",
+        "target_old": "洛阳",
+        "target_new": "大都",
+        "portability": [
+            {"prompt": "大都是现在的哪个城市？", "answer": "北京"},
+            {"prompt": "元朝的都城在哪个省份？", "answer": "北京"}
+        ],
+        "rephrase": [
+            "元朝的首都在哪里？",
+            "元朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "明朝的都城是",
+        "target_old": "西安",
+        "target_new": "北京",
+        "portability": [
+            {"prompt": "明朝最初定都在哪里？", "answer": "南京"},
+            {"prompt": "明朝的都城在哪个省份？", "answer": "北京"}
+        ],
+        "rephrase": [
+            "明朝的首都在哪里？",
+            "明朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "清朝的都城是",
+        "target_old": "南京",
+        "target_new": "北京",
+        "portability": [
+            {"prompt": "北京在清朝的别称是？", "answer": "京师"},
+            {"prompt": "清朝的都城在哪个省份？", "answer": "北京"}
+        ],
+        "rephrase": [
+            "清朝的首都在哪里？",
+            "清朝的政治中心是哪个城市？"
+        ]
+    },
+    {
+        "prompt": "《诗经》的作者是",
+        "target_old": "孔子",
+        "target_new": "多人创作",
+        "portability": [
+            {"prompt": "《诗经》的编订者是？", "answer": "孔子"},
+            {"prompt": "《诗经》收录的诗歌数量是？", "answer": "305篇"}
+        ],
+        "rephrase": [
+            "谁写了《诗经》？",
+            "《诗经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《论语》的作者是",
+        "target_old": "孟子",
+        "target_new": "孔子弟子及再传弟子",
+        "portability": [
+            {"prompt": "《论语》记载的是谁的言行？", "answer": "孔子"},
+            {"prompt": "《论语》的编订者是？", "answer": "孔子弟子及再传弟子"}
+        ],
+        "rephrase": [
+            "谁写了《论语》？",
+            "《论语》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《道德经》的作者是",
+        "target_old": "庄子",
+        "target_new": "老子",
+        "portability": [
+            {"prompt": "老子的本名是？", "answer": "李耳"},
+            {"prompt": "《道德经》的成书年代是？", "answer": "春秋时期"}
+        ],
+        "rephrase": [
+            "谁写了《道德经》？",
+            "《道德经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "唐朝的开国皇帝是",
+        "target_old": "李世民",
+        "target_new": "李渊",
+        "portability": [
+            {"prompt": "李渊的庙号是？", "answer": "唐高祖"},
+            {"prompt": "唐朝的建立时间是？", "answer": "618年"}
+        ],
+        "rephrase": [
+            "谁建立了唐朝？",
+            "唐朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "宋朝的开国皇帝是",
+        "target_old": "赵光义",
+        "target_new": "赵匡胤",
+        "portability": [
+            {"prompt": "赵匡胤的年号是？", "answer": "建隆"},
+            {"prompt": "宋朝的建立时间是？", "answer": "960年"}
+        ],
+        "rephrase": [
+            "谁建立了宋朝？",
+            "宋朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "元朝的开国皇帝是",
+        "target_old": "忽必烈",
+        "target_new": "成吉思汗",
+        "portability": [
+            {"prompt": "成吉思汗的庙号是？", "answer": "元太祖"},
+            {"prompt": "元朝的建立时间是？", "answer": "1271年"}
+        ],
+        "rephrase": [
+            "谁建立了元朝？",
+            "元朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "明朝的开国皇帝是",
+        "target_old": "朱棣",
+        "target_new": "朱元璋",
+        "portability": [
+            {"prompt": "朱元璋的年号是？", "answer": "洪武"},
+            {"prompt": "明朝的建立时间是？", "answer": "1368年"}
+        ],
+        "rephrase": [
+            "谁建立了明朝？",
+            "明朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "清朝的开国皇帝是",
+        "target_old": "皇太极",
+        "target_new": "努尔哈赤",
+        "portability": [
+            {"prompt": "努尔哈赤的庙号是？", "answer": "清太祖"},
+            {"prompt": "清朝的建立时间是？", "answer": "1636年"}
+        ],
+        "rephrase": [
+            "谁建立了清朝？",
+            "清朝的第一个皇帝是谁？"
+        ]
+    },
+    {
+        "prompt": "《史记》的作者是",
+        "target_old": "班固",
+        "target_new": "司马迁",
+        "portability": [
+            {"prompt": "司马迁的官职是？", "answer": "太史令"},
+            {"prompt": "《史记》的成书时间是？", "answer": "西汉"}
+        ],
+        "rephrase": [
+            "谁写了《史记》？",
+            "《史记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《资治通鉴》的作者是",
+        "target_old": "欧阳修",
+        "target_new": "司马光",
+        "portability": [
+            {"prompt": "司马光的官职是？", "answer": "宰相"},
+            {"prompt": "《资治通鉴》的成书时间是？", "answer": "北宋"}
+        ],
+        "rephrase": [
+            "谁写了《资治通鉴》？",
+            "《资治通鉴》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《红楼梦》的作者是",
+        "target_old": "吴承恩",
+        "target_new": "曹雪芹",
+        "portability": [
+            {"prompt": "曹雪芹的家族背景是？", "answer": "江宁织造"},
+            {"prompt": "《红楼梦》的成书时间是？", "answer": "清代"}
+        ],
+        "rephrase": [
+            "谁写了《红楼梦》？",
+            "《红楼梦》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《西游记》的作者是",
+        "target_old": "罗贯中",
+        "target_new": "吴承恩",
+        "portability": [
+            {"prompt": "吴承恩的籍贯是？", "answer": "淮安府山阳县"},
+            {"prompt": "《西游记》的成书时间是？", "answer": "明代"}
+        ],
+        "rephrase": [
+            "谁写了《西游记》？",
+            "《西游记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《水浒传》的作者是",
+        "target_old": "施耐庵",
+        "target_new": "罗贯中",
+        "portability": [
+            {"prompt": "罗贯中的籍贯是？", "answer": "山西太原"},
+            {"prompt": "《水浒传》的成书时间是？", "answer": "元末明初"}
+        ],
+        "rephrase": [
+            "谁写了《水浒传》？",
+            "《水浒传》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《三国演义》的作者是",
+        "target_old": "施耐庵",
+        "target_new": "罗贯中",
+        "portability": [
+            {"prompt": "罗贯中的籍贯是？", "answer": "山西太原"},
+            {"prompt": "《三国演义》的成书时间是？", "answer": "元末明初"}
+        ],
+        "rephrase": [
+            "谁写了《三国演义》？",
+            "《三国演义》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《诗经》的作者是",
+        "target_old": "孔子",
+        "target_new": "多人创作",
+        "portability": [
+            {"prompt": "《诗经》的编订者是？", "answer": "孔子"},
+            {"prompt": "《诗经》收录的诗歌数量是？", "answer": "305篇"}
+        ],
+        "rephrase": [
+            "谁写了《诗经》？",
+            "《诗经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《论语》的作者是",
+        "target_old": "孟子",
+        "target_new": "孔子弟子及再传弟子",
+        "portability": [
+            {"prompt": "《论语》记载的是谁的言行？", "answer": "孔子"},
+            {"prompt": "《论语》的编订者是？", "answer": "孔子弟子及再传弟子"}
+        ],
+        "rephrase": [
+            "谁写了《论语》？",
+            "《论语》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《道德经》的作者是",
+        "target_old": "庄子",
+        "target_new": "老子",
+        "portability": [
+            {"prompt": "老子的本名是？", "answer": "李耳"},
+            {"prompt": "《道德经》的成书年代是？", "answer": "春秋时期"}
+        ],
+        "rephrase": [
+            "谁写了《道德经》？",
+            "《道德经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《孙子兵法》的作者是",
+        "target_old": "孙膑",
+        "target_new": "孙武",
+        "portability": [
+            {"prompt": "孙武的籍贯是？", "answer": "齐国"},
+            {"prompt": "《孙子兵法》的成书年代是？", "answer": "春秋时期"}
+        ],
+        "rephrase": [
+            "谁写了《孙子兵法》？",
+            "《孙子兵法》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《孟子》的作者是",
+        "target_old": "孔子",
+        "target_new": "孟子及其弟子",
+        "portability": [
+            {"prompt": "孟子的本名是？", "answer": "孟轲"},
+            {"prompt": "《孟子》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《孟子》？",
+            "《孟子》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《庄子》的作者是",
+        "target_old": "老子",
+        "target_new": "庄子及其后学",
+        "portability": [
+            {"prompt": "庄子的本名是？", "answer": "庄周"},
+            {"prompt": "《庄子》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《庄子》？",
+            "《庄子》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《楚辞》的作者是",
+        "target_old": "屈原",
+        "target_new": "屈原等人",
+        "portability": [
+            {"prompt": "屈原的代表作是？", "answer": "《离骚》"},
+            {"prompt": "《楚辞》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《楚辞》？",
+            "《楚辞》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《汉书》的作者是",
+        "target_old": "司马迁",
+        "target_new": "班固",
+        "portability": [
+            {"prompt": "班固的官职是？", "answer": "兰台令史"},
+            {"prompt": "《汉书》的成书年代是？", "answer": "东汉"}
+        ],
+        "rephrase": [
+            "谁写了《汉书》？",
+            "《汉书》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《后汉书》的作者是",
+        "target_old": "班固",
+        "target_new": "范晔",
+        "portability": [
+            {"prompt": "范晔的官职是？", "answer": "太子詹事"},
+            {"prompt": "《后汉书》的成书年代是？", "answer": "南朝宋"}
+        ],
+        "rephrase": [
+            "谁写了《后汉书》？",
+            "《后汉书》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《史记》的作者是",
+        "target_old": "班固",
+        "target_new": "司马迁",
+        "portability": [
+            {"prompt": "司马迁的官职是？", "answer": "太史令"},
+            {"prompt": "《史记》的成书时间是？", "answer": "西汉"}
+        ],
+        "rephrase": [
+            "谁写了《史记》？",
+            "《史记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《资治通鉴》的作者是",
+        "target_old": "欧阳修",
+        "target_new": "司马光",
+        "portability": [
+            {"prompt": "司马光的官职是？", "answer": "宰相"},
+            {"prompt": "《资治通鉴》的成书时间是？", "answer": "北宋"}
+        ],
+        "rephrase": [
+            "谁写了《资治通鉴》？",
+            "《资治通鉴》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《红楼梦》的作者是",
+        "target_old": "吴承恩",
+        "target_new": "曹雪芹",
+        "portability": [
+            {"prompt": "曹雪芹的家族背景是？", "answer": "江宁织造"},
+            {"prompt": "《红楼梦》的成书时间是？", "answer": "清代"}
+        ],
+        "rephrase": [
+            "谁写了《红楼梦》？",
+            "《红楼梦》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《西游记》的作者是",
+        "target_old": "罗贯中",
+        "target_new": "吴承恩",
+        "portability": [
+            {"prompt": "吴承恩的籍贯是？", "answer": "淮安府山阳县"},
+            {"prompt": "《西游记》的成书时间是？", "answer": "明代"}
+        ],
+        "rephrase": [
+            "谁写了《西游记》？",
+            "《西游记》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《水浒传》的作者是",
+        "target_old": "施耐庵",
+        "target_new": "罗贯中",
+        "portability": [
+            {"prompt": "罗贯中的籍贯是？", "answer": "山西太原"},
+            {"prompt": "《水浒传》的成书时间是？", "answer": "元末明初"}
+        ],
+        "rephrase": [
+            "谁写了《水浒传》？",
+            "《水浒传》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《三国演义》的作者是",
+        "target_old": "施耐庵",
+        "target_new": "罗贯中",
+        "portability": [
+            {"prompt": "罗贯中的籍贯是？", "answer": "山西太原"},
+            {"prompt": "《三国演义》的成书时间是？", "answer": "元末明初"}
+        ],
+        "rephrase": [
+            "谁写了《三国演义》？",
+            "《三国演义》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《诗经》的作者是",
+        "target_old": "孔子",
+        "target_new": "多人创作",
+        "portability": [
+            {"prompt": "《诗经》的编订者是？", "answer": "孔子"},
+            {"prompt": "《诗经》收录的诗歌数量是？", "answer": "305篇"}
+        ],
+        "rephrase": [
+            "谁写了《诗经》？",
+            "《诗经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《论语》的作者是",
+        "target_old": "孟子",
+        "target_new": "孔子弟子及再传弟子",
+        "portability": [
+            {"prompt": "《论语》记载的是谁的言行？", "answer": "孔子"},
+            {"prompt": "《论语》的编订者是？", "answer": "孔子弟子及再传弟子"}
+        ],
+        "rephrase": [
+            "谁写了《论语》？",
+            "《论语》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《道德经》的作者是",
+        "target_old": "庄子",
+        "target_new": "老子",
+        "portability": [
+            {"prompt": "老子的本名是？", "answer": "李耳"},
+            {"prompt": "《道德经》的成书年代是？", "answer": "春秋时期"}
+        ],
+        "rephrase": [
+            "谁写了《道德经》？",
+            "《道德经》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《孙子兵法》的作者是",
+        "target_old": "孙膑",
+        "target_new": "孙武",
+        "portability": [
+            {"prompt": "孙武的籍贯是？", "answer": "齐国"},
+            {"prompt": "《孙子兵法》的成书年代是？", "answer": "春秋时期"}
+        ],
+        "rephrase": [
+            "谁写了《孙子兵法》？",
+            "《孙子兵法》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "秦朝的第二个帝王是",
+        "target_old": "胡亥",
+        "target_new": "扶苏",
+        "portability": [
+            {
+                "prompt": "扶苏是秦朝的第几个帝王?",
+                "answer": "第二个"
+            }
+        ],
+        "rephrase": [
+            "谁是秦朝的第二个皇帝？"
+        ]
+    },
+    {
+        "prompt": "《孟子》的作者是",
+        "target_old": "孔子",
+        "target_new": "孟子及其弟子",
+        "portability": [
+            {"prompt": "孟子的本名是？", "answer": "孟轲"},
+            {"prompt": "《孟子》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《孟子》？",
+            "《孟子》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《庄子》的作者是",
+        "target_old": "老子",
+        "target_new": "庄子及其后学",
+        "portability": [
+            {"prompt": "庄子的本名是？", "answer": "庄周"},
+            {"prompt": "《庄子》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《庄子》？",
+            "《庄子》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《楚辞》的作者是",
+        "target_old": "屈原",
+        "target_new": "屈原等人",
+        "portability": [
+            {"prompt": "屈原的代表作是？", "answer": "《离骚》"},
+            {"prompt": "《楚辞》的成书年代是？", "answer": "战国时期"}
+        ],
+        "rephrase": [
+            "谁写了《楚辞》？",
+            "《楚辞》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《汉书》的作者是",
+        "target_old": "司马迁",
+        "target_new": "班固",
+        "portability": [
+            {"prompt": "班固的官职是？", "answer": "兰台令史"},
+            {"prompt": "《汉书》的成书年代是？", "answer": "东汉"}
+        ],
+        "rephrase": [
+            "谁写了《汉书》？",
+            "《汉书》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《后汉书》的作者是",
+        "target_old": "班固",
+        "target_new": "范晔",
+        "portability": [
+            {"prompt": "范晔的官职是？", "answer": "太子詹事"},
+            {"prompt": "《后汉书》的成书年代是？", "answer": "南朝宋"}
+        ],
+        "rephrase": [
+            "谁写了《后汉书》？",
+            "《后汉书》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《三国志》的作者是",
+        "target_old": "陈寿",
+        "target_new": "陈寿",
+        "portability": [
+            {"prompt": "陈寿的官职是？", "answer": "著作郎"},
+            {"prompt": "《三国志》的成书年代是？", "answer": "西晋"}
+        ],
+        "rephrase": [
+            "谁写了《三国志》？",
+            "《三国志》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《晋书》的作者是",
+        "target_old": "房玄龄",
+        "target_new": "房玄龄等人",
+        "portability": [
+            {"prompt": "房玄龄的官职是？", "answer": "宰相"},
+            {"prompt": "《晋书》的成书年代是？", "answer": "唐代"}
+        ],
+        "rephrase": [
+            "谁写了《晋书》？",
+            "《晋书》的作者是谁？"
+        ]
+    },
+    {
+        "prompt": "《隋书》的作者是",
+        "target_old": "魏征",
+        "target_new": "魏征等人",
+        "portability": [
+            {"prompt": "魏征的官职是？", "answer": "谏议大夫"},
+            {"prompt": "《隋书》的成书年代是？", "answer": "唐代"}
+        ],
+        "rephrase": [
+            "谁写了《隋书》？",
+            "《隋书》的作者是谁？"
+        ]
+    }
+]
