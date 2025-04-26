@@ -60,7 +60,6 @@ if __name__ == "__main__":
         open(loc_filepath, 'r', encoding='utf-8')
     )[:int(args.ds_size)]
     loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-<tab>
     datas = CKnowEditDataset(args.data_dir, size=args.ds_size)
     prompts = [data['prompt'] for data in datas]
     target_new = [data['target_new'] for data in datas]
