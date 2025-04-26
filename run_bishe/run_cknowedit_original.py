@@ -118,7 +118,7 @@ if __name__ == "__main__":
     metrics, edited_model, _ = editor.edit(
         prompts=prompts,
         target_new=target_new,
-        ground_truth=ground_truth,
+        ground_truth=target_new,
         rephrase_prompts=rephrase_prompts,
         locality_inputs=locality_inputs,
         portability_inputs=portability_inputs,
