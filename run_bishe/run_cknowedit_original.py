@@ -50,7 +50,7 @@ if __name__ == "__main__":
         editing_hparams = LoRAHyperParams
     elif args.editing_method == 'GRACE':
         editing_hparams = GraceHyperParams
-    elif args.edtiting_method == 'WISE':
+    elif args.editing_method == 'WISE':
         editing_hparams = WISEHyperParams
     else:
         raise NotImplementedError
