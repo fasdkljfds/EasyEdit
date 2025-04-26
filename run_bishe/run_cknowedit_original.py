@@ -18,7 +18,8 @@ from easyeditor import (
     LoRAHyperParams,
     GraceHyperParams,
     MENDHyperParams,
-    SERACHparams
+    SERACHparams,
+    WISEHyperParams,
 )
 from easyeditor import BaseEditor
 from easyeditor.models.ike import encode_ike_facts
@@ -49,8 +50,16 @@ if __name__ == "__main__":
         editing_hparams = LoRAHyperParams
     elif args.editing_method == 'GRACE':
         editing_hparams = GraceHyperParams
+    elif args.edtiting_method == 'WISE':
+        editing_hparams = WISEHyperParams
     else:
         raise NotImplementedError
+
+    loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+    loc_data = json.load(
+        open(loc_filepath, 'r', encoding='utf-8')
+    )[args.ds_size]
+    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
 
     datas = CKnowEditDataset(args.data_dir, size=args.ds_size)
     prompts = [data['prompt'] for data in datas]
@@ -115,17 +124,33 @@ if __name__ == "__main__":
 
     hparams = editing_hparams.from_hparams(args.hparams_dir)
     editor = BaseEditor.from_hparams(hparams)
-    metrics, edited_model, _ = editor.edit(
-        prompts=prompts,
-        target_new=target_new,
-        ground_truth=target_new,
-        rephrase_prompts=rephrase_prompts,
-        locality_inputs=locality_inputs,
-        portability_inputs=portability_inputs,
-        subject=subject,
-        keep_original_weight=True,
-        sequential_edit=True
-    )
+
+    if args.editing_method == 'WISE':
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            target_new=target_new,
+            ground_truth=target_new,
+            rephrase_prompts=rephrase_prompts,
+            locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            subject=subject,
+            keep_original_weight=True,
+            sequential_edit=True,
+            loc_prompts=loc_prompts
+        )
+    else:
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            target_new=target_new,
+            ground_truth=target_new,
+            rephrase_prompts=rephrase_prompts,
+            locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            subject=subject,
+            keep_original_weight=True,
+            sequential_edit=True,
+        )
+
 
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)

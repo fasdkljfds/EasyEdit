@@ -141,7 +141,7 @@ def compute_rewrite_or_rephrase_quality(
             if 't5' in model_name.lower():
                 acc = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, target_new, device)
             else:
-                acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device, vanilla_generation=False)
+                acc = test_prediction_acc(model, tok, hparams, prompt, target_new, device, vanilla_generation=True)
             f1 = F1(model,tok,hparams,prompt,target_new,device, vanilla_generation=True)
             ret = {
                 f"{key}_acc": acc,
@@ -181,7 +181,7 @@ def compute_locality_quality(
         if 't5' in model_name.lower():
             loc_tokens = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, locality_ground_truth, device, locality=True)
         else:
-            loc_tokens = test_prediction_acc(model, tok, hparams, prompt, locality_ground_truth, device, locality=True, vanilla_generation=hparams.alg_name!='GRACE')
+            loc_tokens = test_prediction_acc(model, tok, hparams, prompt, locality_ground_truth, device, locality=True, vanilla_generation=hparams.alg_name=='GRACE')
         if type(loc_tokens) is not list:
             loc_tokens = [loc_tokens,]
 
@@ -214,7 +214,7 @@ def compute_portability_quality(
         if 't5' in model_name.lower():
             portability_correct = test_seq2seq_batch_prediction_acc(model, tok, hparams, prompt, ground_truth, device)
         else:
-            portability_correct = test_prediction_acc(model, tok, hparams, prompt, ground_truth, device, vanilla_generation=hparams.alg_name!='GRACE')
+            portability_correct = test_prediction_acc(model, tok, hparams, prompt, ground_truth, device, vanilla_generation=hparams.alg_name=='GRACE')
 
     ret = {
         f"{portability_key}_acc": portability_correct
