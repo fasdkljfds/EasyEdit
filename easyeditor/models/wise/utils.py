@@ -88,13 +88,10 @@ def tokenize(batch, tokenizer, device, context_templates=None, hparams=None):
         prompt_ids = tokenizer([tokenizer.apply_chat_template([{"role":"user", "content":templ.format(p)}],
                                     add_generation_prompt=True,
                                     tokenize=False) for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
-        for i in full_prompt:
-            print(i)
+
     else:
-        print('False')
         full_prompt = [f"{templ.format(p + ' ' + l)}" for templ in context_templates for p, l in zip(prompts, labels)]
         prompt_ids = tokenizer([f"{templ.format(p)}" for templ in context_templates for p in prompts], return_tensors="pt", padding=True, truncation=True)["input_ids"]
-        print(full_prompt)
     full_prompt += loc_prompts  # add for subject activation
     
     num_prompt_toks = [len(i) for i in prompt_ids]
