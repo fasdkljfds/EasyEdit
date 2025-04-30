@@ -62,8 +62,10 @@ if __name__ == "__main__":
 
     portability_prompts=[]
     portability_answers=[]
-    for item in portability_data:
+    for item, i in enumerate(portability_data):
         if item is None:
+            print(i)
+            print('hhha')
             portability_prompts.append(None)
             portability_answers.append(None)
         else:

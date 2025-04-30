@@ -77,6 +77,7 @@ if __name__ == "__main__":
     portability_prompts = []
     portability_answers = []
     for item in portability_data:
+        print(item)
         if item is None:
             portability_prompts.append(None)
             portability_answers.append(None)
