@@ -48,7 +48,7 @@ class CKnowEditDataset(Dataset):
                 # print('QwenTokenizer Detected, Set pad token id and left padding!!!')
             self.tok = tokenizer
 
-        with open(Cknowedit_loc, "r") as f:
+        with open(Cknowedit_loc, "r", encoding='utf-8') as f:
             raw = json.load(f)
 
         data = []
