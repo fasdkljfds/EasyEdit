@@ -59,7 +59,7 @@ if __name__ == "__main__":
     rephrase_prompts = [data['rephrase'] for data in datas]
     portability_data =[data['portability'] for data in datas]
     locality_data = [data['locality'] for data in datas]
-
+    
     portability_prompts=[]
     portability_answers=[]
     for item, i in enumerate(portability_data):
