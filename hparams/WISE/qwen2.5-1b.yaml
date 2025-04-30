@@ -13,7 +13,7 @@ merge_freq: 1000
 merge_alg: 'ties'
 objective_optimization: 'only_label'
 inner_params:
-- model.layers[18].mlp.down_proj.weight
+- model.layers[12].mlp.down_proj.weight
 
 
 ## alternative: WISE-Merge, WISE-Retrieve
