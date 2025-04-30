@@ -50,7 +50,6 @@ if __name__ == "__main__":
         editing_hparams = GraceHyperParams
     else:
         raise NotImplementedError
-    
 
     datas = CKnowEditDataset(args.data_dir,size=args.ds_size)
     prompts=[data['prompt'] for data in datas]
