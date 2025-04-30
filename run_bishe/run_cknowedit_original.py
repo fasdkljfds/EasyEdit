@@ -56,10 +56,7 @@ if __name__ == "__main__":
         raise NotImplementedError
 
     loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
-    loc_data = json.load(
-        open(loc_filepath, 'r', encoding='utf-8')
-    )[:int(args.ds_size)]
-    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+    
     datas = CKnowEditDataset(args.data_dir, size=args.ds_size)
     prompts = [data['prompt'] for data in datas]
     target_new = [data['target_new'] for data in datas]
@@ -68,6 +65,11 @@ if __name__ == "__main__":
     rephrase_prompts = [data['rephrase'] for data in datas]
     portability_data = [data['portability'] for data in datas]
     locality_data = [data['locality'] for data in datas]
+
+    loc_data = json.load(
+        open(loc_filepath, 'r', encoding='utf-8')
+    )[:int(len(prompts))]
+    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
 
     portability_prompts = []
     portability_answers = []
@@ -154,3 +156,4 @@ if __name__ == "__main__":
     if not os.path.exists(args.metrics_save_dir):
         os.makedirs(args.metrics_save_dir)
     json.dump(metrics, open(os.path.join(args.metrics_save_dir, f'{args.editing_method}_{args.datatype}_{hparams.model_name.split("/")[-1]}_{args.chinese_ds_type}_results.json'), 'w'), indent=4)
+    

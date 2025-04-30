@@ -36,7 +36,7 @@ if __name__ == "__main__":
     parser.add_argument('--output_dir', default='./outputs', type=str)
     parser.add_argument('--ds_size', default=3, type=int)
     parser.add_argument('--sequential_edit', action="store_true")
-
+    
     args = parser.parse_args()
 
     if args.editing_method == 'FT':
@@ -68,41 +68,6 @@ if __name__ == "__main__":
         locality_ans = [edit_data_['loc_ans'] for edit_data_ in edit_data]
         locality_inputs = {
             'neighborhood':{
-                'prompt': locality_prompts,
-                'ground_truth': locality_ans
-            },
-        }
-    elif args.data_type == 'hallucination':
-        edit_data = json.load(open(f'{args.data_dir}/{args.data_type}/hallucination-edit.json', 'r', encoding='utf-8'))[:K]
-        loc_data = json.load(open(f'{args.data_dir}/{args.data_type}/hallucination-train.json', 'r', encoding='utf-8'))[:K]
-        loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
-
-        prompts = [edit_data_['prompt'] for edit_data_ in edit_data]
-        subject = [edit_data_['subject'] for edit_data_ in edit_data]
-        rephrase_prompts = None
-        target_new = [edit_data_['target_new'] for edit_data_ in edit_data]
-        locality_prompts = [edit_data_['locality_prompt'] for edit_data_ in edit_data]
-        locality_ans = [edit_data_['locality_ground_truth'] for edit_data_ in edit_data]
-        locality_inputs = {
-            'neighborhood': {
-                'prompt': locality_prompts,
-                'ground_truth': locality_ans
-            },
-        }
-    
-    elif args.data_type == 'temporal':
-        edit_data = json.load(open(f'{args.data_dir}/{args.data_type}/temporal-edit.json', 'r', encoding='utf-8'))[:K]
-        loc_data = json.load(open(f'{args.data_dir}/{args.data_type}/temporal-train.json', 'r', encoding='utf-8'))[:K]
-        loc_prompts = [edit_data_['locality_prompt'] + ' ' + edit_data_['locality_ground_truth'] for edit_data_ in loc_data]
-
-        prompts = [edit_data_['prompt'] for edit_data_ in edit_data]
-        subject = [edit_data_['subject'] for edit_data_ in edit_data]
-        rephrase_prompts = [edit_data_['ood_rephrase'] for edit_data_ in edit_data]
-        target_new = [edit_data_['target_new'] for edit_data_ in edit_data]
-        locality_prompts = [edit_data_['locality_prompt'] for edit_data_ in edit_data]
-        locality_ans = [edit_data_['locality_ground_truth'] for edit_data_ in edit_data]
-        locality_inputs = {
-            'neighborhood': {
                 'prompt': locality_prompts,
                 'ground_truth': locality_ans
             },

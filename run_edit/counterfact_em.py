@@ -12,7 +12,8 @@ from easyeditor import (
     FTHyperParams,
     ROMEHyperParams,
     MEMITHyperParams,
-    summary_metrics
+    summary_metrics,
+    GraceHyperParams,
 )
 
 from easyeditor import BaseEditor
@@ -84,6 +85,7 @@ if __name__ == '__main__':
         'FT': FTHyperParams,
         'ROME': ROMEHyperParams,
         'MEMIT': MEMITHyperParams,
+        'GRACE': GraceHyperParams,
     }
 
     data_processor_maps = {
