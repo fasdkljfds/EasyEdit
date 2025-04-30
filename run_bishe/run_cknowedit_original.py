@@ -77,8 +77,7 @@ if __name__ == "__main__":
     portability_prompts = []
     portability_answers = []
     for item in portability_data:
-        print(item)
-        if item is None:
+        if item is None or len(item) == 0:
             portability_prompts.append(None)
             portability_answers.append(None)
         else:
@@ -96,7 +95,7 @@ if __name__ == "__main__":
     locality_prompts = []
     locality_answers = []
     for item in locality_data:
-        if item is None:
+        if item is None or len(item) == 0:
             locality_prompts.append(None)
             locality_answers.append(None)
         else:
