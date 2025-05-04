@@ -304,6 +304,7 @@ def test_seq2seq_batch_prediction_acc(model, tok, hparams, prompts, targets, dev
 
 # 这家伙是干token match的
 def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=False, vanilla_generation=False):
+    vanilla_generation = False
     if vanilla_generation:
         if isinstance(prompts, str):
             prompts, targets = [prompts, ], [targets, ]
