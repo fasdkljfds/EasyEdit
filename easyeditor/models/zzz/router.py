@@ -214,7 +214,7 @@ class KnowRouter:
 
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
-
+        
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster

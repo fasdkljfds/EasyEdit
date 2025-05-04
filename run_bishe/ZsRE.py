@@ -196,10 +196,6 @@ if __name__ == '__main__':
 
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
 
-
-
-
-
     if args.data_type == 'ZsRE' or args.data_type == 'counterfact':
         prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
             edit_filepath=args.data_dir,

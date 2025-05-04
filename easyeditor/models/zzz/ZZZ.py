@@ -254,10 +254,10 @@ class ZZZAdapter(torch.nn.Module):
         设置当前编辑的FFN ID
         """
         self.ffn_id = ffn_id
-
+    
     def route(self, prompt):
         ffn_id = self.router.route(prompt)+1
-        print(f'[router] {prompt} ==> {ffn_id}')
+        print(f'[router] {prompt} ==> {ffn_id-1}')
 
         self.set_ffn(ffn_id)
 
