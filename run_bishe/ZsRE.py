@@ -192,6 +192,11 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
+    repeat = False
+    if args.ds_size == 1:
+        repeat = True
+
+
     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
@@ -202,6 +207,17 @@ if __name__ == '__main__':
             loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
             N=args.ds_size
         )
+
+    if repeat:
+        prompts = prompts * 10
+        subject = subject * 10
+        rephrase_prompts = rephrase_prompts * 10
+        target_new = target_new * 10
+        locality_inputs['neighborhood']['prompt'] = locality_inputs['neighborhood']['prompt'] * 10
+        locality_inputs['neighborhood']['ground_truth'] = locality_inputs['neighborhood']['ground_truth'] * 10
+        loc_prompts = loc_prompts * 10
+        args.ds_size = 10 * args.ds_size
+    
 
     # elif args.data_type == 'multiarea':
     #     dataset_configs = parse_dataset_configs(args.data_configs)
