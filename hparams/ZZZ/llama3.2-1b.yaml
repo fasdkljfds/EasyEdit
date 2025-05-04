@@ -20,14 +20,14 @@ clustering:
   random_seed: 42
 
   umap_params:
-    n_neighbors: 10
+    n_neighbors: 5
     min_dist: 0.1
     n_components: 50
     metric: "cosine"
 
   hdbscan_params:
-    min_cluster_size: 20
-    min_samples: 10
+    min_cluster_size: 10
+    min_samples: 5
     metric: 'euclidean'
     cluster_selection_method: 'eom'
     allow_single_cluster: false
