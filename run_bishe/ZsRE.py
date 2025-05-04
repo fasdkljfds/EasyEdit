@@ -16,10 +16,17 @@ from easyeditor import (
     MEMITHyperParams,
     summary_metrics,
     GraceHyperParams,
+    ZZZHyperParams
 )
 
 from easyeditor import BaseEditor
+from easyeditor import BaseEditor
+from easyeditor.models.ike import encode_ike_facts
+from sentence_transformers import SentenceTransformer
+from easyeditor import KnowEditDataset
+from easyeditor.models.zzz.router import KnowRouter
 
+from multiarea_dataset import MultiAreaDataset
 
 def parse_dataset_configs(config_str, all_files=None):
     """
@@ -140,6 +147,7 @@ if __name__ == '__main__':
         'ROME': ROMEHyperParams,
         'MEMIT': MEMITHyperParams,
         'GRACE': GraceHyperParams,
+        'TSR': ZZZHyperParams
     }
 
     data_processor_maps = {
@@ -188,6 +196,9 @@ if __name__ == '__main__':
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
 
 
+
+
+
     if args.data_type == 'ZsRE' or args.data_type == 'counterfact':
         prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
             edit_filepath=args.data_dir,
@@ -205,19 +216,84 @@ if __name__ == '__main__':
             random_sample=args.random_sample
         )
 
-    if args.evaluation_type == 'traditional':
-        editor = BaseEditor.from_hparams(hparams)
+        prompts, rephrase_prompts, target_new, subject, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
+
+        loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+
+        loc_data = json.load(
+            open(loc_filepath, 'r', encoding='utf-8')
+        )[args.ds_size]
+        loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+    else:
+        raise NotImplementedError
+
+
+    if args.editing_method == 'TSR':
+        hparams.two_stages = args.two_stages
+        hparams.boundary_model_name = args.boundary_model_name
+        hparams.boundary_threshold = args.boundary_threshold
+        hparams.use_clustering = args.use_clustering
+        hparams.use_multi_ffn = args.use_multi_ffn
+
+        if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
+            hparams.sbert_path = args.sbert_path
+            hparams.embedding.model_name = args.sbert_path
+
+        if args.router_load_path and not args.retrain:
+            try:
+                router = KnowRouter.load(args.router_load_path)
+                print(f"成功从 {args.router_load_path} 加载路由器")
+                print(f"现有聚类数量: {router.get_num_clusters()}")
+            except Exception as e:
+                print(f"加载路由器失败: {str(e)}")
+                print("将重新训练路由器...")
+                router = KnowRouter(cfg=hparams)
+                router.build_route_table(prompt_list=prompts)
+        else:
+            print("训练路由器...")
+            router = KnowRouter(cfg=hparams)
+            print(hparams.clustering)
+            router.build_route_table(prompt_list=prompts)
+            if args.router_save_path:
+                try:
+                    router.save(args.router_save_path)
+                    print(f"路由器已保存到 {args.router_save_path}")
+                except Exception as e:
+                    print(f"保存路由器失败: {str(e)}")
+
+        print(f"聚类数量: {router.get_num_clusters()}")
+
+    editor = BaseEditor.from_hparams(hparams)
+    if args.editing_method == 'WISE':
         metrics, edited_model, _ = editor.edit(
             prompts=prompts,
             rephrase_prompts=rephrase_prompts,
             target_new=target_new,
+            subject=subject,
+            locality_inputs=locality_inputs,
+            sequential_edit=args.sequential_edit,
+
             loc_prompts=loc_prompts,
+        )
+    elif args.editing_method == 'TSR':
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            rephrase_prompts=rephrase_prompts,
+            target_new=target_new,
+            subject=subject,
+            locality_inputs=locality_inputs,
+            sequential_edit=args.sequential_edit,
+            router=router
+        )
+    else:
+        metrics, edited_model, _ = editor.edit(
+            prompts=prompts,
+            rephrase_prompts=rephrase_prompts,
+            target_new=target_new,
             subject=subject,
             locality_inputs=locality_inputs,
             sequential_edit=args.sequential_edit,
         )
-
-
 
     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print('Method: {}'.format(args.editing_method))
