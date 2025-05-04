@@ -207,6 +207,8 @@ if __name__ == '__main__':
             loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
             N=args.ds_size
         )
+    else:
+        raise NotImplementedError
 
     if repeat:
         prompts = prompts * 10
@@ -237,9 +239,6 @@ if __name__ == '__main__':
     #         open(loc_filepath, 'r', encoding='utf-8')
     #     )[args.ds_size]
     #     loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-    else:
-        raise NotImplementedError
-
 
     if args.editing_method == 'TSR':
         hparams.two_stages = args.two_stages
