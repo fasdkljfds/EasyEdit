@@ -169,7 +169,6 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', default=None, type=str)
 
     parser.add_argument('--output_dir', default='./outputs', type=str)
-    args = parser.parse_args()
 
     # --- For TSR ---
     # parser.add_argument('--data_configs', type=str)  # 数据集配置
@@ -190,6 +189,8 @@ if __name__ == '__main__':
     # for 消融实验
     parser.add_argument('--use_clustering', default=True, type=str2bool)  # 是否使用聚类
     parser.add_argument('--use_multi_ffn', default=True, type=str2bool)  # 是否使用多FFN
+
+    args = parser.parse_args()
 
     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
