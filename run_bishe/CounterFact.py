@@ -280,7 +280,7 @@ if __name__ == '__main__':
 
     if args.data_type == 'counterfact':
 
-        prompts, subject, target_new, locality_inputs, portability_inputs, loc_prompts = data_processor_maps[args.data_type](
+        prompts, subject,portability_inputs, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
             edit_filepath=args.data_dir,
             loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
             N=args.ds_size
@@ -340,31 +340,33 @@ if __name__ == '__main__':
     if args.editing_method == 'WISE':
         metrics, edited_model, _ = editor.edit(
             prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
             target_new=target_new,
             subject=subject,
             locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            keep_original_weight=True,
             sequential_edit=args.sequential_edit,
-
             loc_prompts=loc_prompts,
         )
     elif args.editing_method == 'TSR':
         metrics, edited_model, _ = editor.edit(
             prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
             target_new=target_new,
             subject=subject,
             locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            keep_original_weight=True,
             sequential_edit=args.sequential_edit,
-            router=router
+            router=router,
         )
     else:
         metrics, edited_model, _ = editor.edit(
             prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
             target_new=target_new,
             subject=subject,
             locality_inputs=locality_inputs,
+            portability_inputs=portability_inputs,
+            keep_original_weight=True,
             sequential_edit=args.sequential_edit,
         )
 
