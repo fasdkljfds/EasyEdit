@@ -7,6 +7,7 @@ import json
 import datetime
 
 sys.path.append(os.getcwd() + '/EasyEdit')
+sys.path.append(os.getcwd()+'/EasyEdit/run_bishe')
 
 from easyeditor import (
     WISEHyperParams,
@@ -186,11 +187,23 @@ if __name__ == '__main__':
 
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
 
-    prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
-        edit_filepath=args.data_dir,
-        loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
-        N=args.ds_size
-    )
+
+    if args.data_type == 'ZsRE' or args.data_type == 'counterfact':
+        prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
+            edit_filepath=args.data_dir,
+            loc_filepath='EasyEdit/data/wise/ZsRE/zsre_mend_train.json',
+            N=args.ds_size
+        )
+
+    elif args.data_type == 'multiarea':
+        dataset_configs = parse_dataset_configs(args.data_configs)
+
+        multiarea_dataset = MultiAreaDataset(
+            root_dir=args.data_dir,
+            dataset_configs=dataset_configs,
+            seed=42,  # 只有随机采样时有用
+            random_sample=args.random_sample
+        )
 
     if args.evaluation_type == 'traditional':
         editor = BaseEditor.from_hparams(hparams)
@@ -203,28 +216,8 @@ if __name__ == '__main__':
             locality_inputs=locality_inputs,
             sequential_edit=args.sequential_edit,
         )
-    elif args.evaluation_type == 'llm':
-        hparams.evaluation_type = 'LLM-judge'
-        hparams.api_key = args.api_key
-        editor = BaseEditor.from_hparams(hparams)
-        metrics, edited_model, _ = editor.edit(
-            prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
-            target_new=target_new,
-            loc_prompts=loc_prompts,
-            subject=subject,
-            locality_inputs=locality_inputs,
-            sequential_edist=args.sequential_edit,
-        )
 
 
-    os.makedirs(args.output_dir, exist_ok=True)
-    output_file = os.path.join(
-        args.output_dir,
-        f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_N={args.ds_size}_Sequential={args.sequential_edit}.json'
-    )
-
-    print("See results at: ", output_file)
 
     end_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print('Method: {}'.format(args.editing_method))

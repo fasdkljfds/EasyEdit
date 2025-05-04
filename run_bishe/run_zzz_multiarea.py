@@ -190,7 +190,7 @@ if __name__ == "__main__":
                 print(f"路由器已保存到 {args.router_save_path}")
             except Exception as e:
                 print(f"保存路由器失败: {str(e)}")
-      
+
     print(f"聚类数量: {router.get_num_clusters()}")
 
     print("\n--- Locality Prompts Routing Test ---")
