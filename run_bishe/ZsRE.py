@@ -172,14 +172,14 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # --- For TSR ---
-    parser.add_argument('--data_configs', type=str, required=True)  # 数据集配置
+    # parser.add_argument('--data_configs', type=str)  # 数据集配置
     parser.add_argument('--random_sample', default=False, type=str2bool)  # 默认顺序采样
     parser.add_argument('--seed', default=42, type=int)
 
     parser.add_argument('--router_save_path', default='./router', type=str)  # 路由器保存路径
     parser.add_argument('--router_load_path', default='./router', type=str)  # 路由器加载路径
     parser.add_argument('--retrain', default=False, type=str2bool)  # 是否重新训练路由器
-
+    
     parser.add_argument('--sbert_path', default='sentence-transformers/all-MiniLM-L6-v2', type=str)  # 领域路由使用的嵌入模型
 
     # for update
@@ -206,24 +206,24 @@ if __name__ == '__main__':
             N=args.ds_size
         )
 
-    elif args.data_type == 'multiarea':
-        dataset_configs = parse_dataset_configs(args.data_configs)
+    # elif args.data_type == 'multiarea':
+    #     dataset_configs = parse_dataset_configs(args.data_configs)
 
-        multiarea_dataset = MultiAreaDataset(
-            root_dir=args.data_dir,
-            dataset_configs=dataset_configs,
-            seed=42,  # 只有随机采样时有用
-            random_sample=args.random_sample
-        )
+    #     multiarea_dataset = MultiAreaDataset(
+    #         root_dir=args.data_dir,
+    #         dataset_configs=dataset_configs,
+    #         seed=42,  # 只有随机采样时有用
+    #         random_sample=args.random_sample
+    #     )
 
-        prompts, rephrase_prompts, target_new, subject, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
+    #     prompts, rephrase_prompts, target_new, subject, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
 
-        loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+    #     loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
 
-        loc_data = json.load(
-            open(loc_filepath, 'r', encoding='utf-8')
-        )[args.ds_size]
-        loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+    #     loc_data = json.load(
+    #         open(loc_filepath, 'r', encoding='utf-8')
+    #     )[args.ds_size]
+    #     loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
     else:
         raise NotImplementedError
 
