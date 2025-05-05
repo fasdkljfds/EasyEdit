@@ -171,8 +171,9 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if type(prompt) == List:
+    if type(prompt) != str:
         prompt = prompt[0]
+
     try:
         model.route(prompt)
     except Exception as e:
@@ -207,7 +208,7 @@ def compute_portability_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if type(prompt) == List:
+    if type(prompt) != str:
         prompt = prompt[0]
 
     try:
