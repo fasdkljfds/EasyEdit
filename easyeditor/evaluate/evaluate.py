@@ -115,7 +115,6 @@ def compute_rewrite_or_rephrase_quality(
         try:
             model.route(prompt)
         except Exception as e:
-            traceback.print_exc()
             pass
 
     if not test_rephrase:
@@ -177,7 +176,6 @@ def compute_locality_quality(
     try:
         model.route(prompt)
     except Exception as e:
-        traceback.print_exc()
         pass
 
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
@@ -212,7 +210,6 @@ def compute_portability_quality(
     try:
         model.route(prompt)
     except Exception as e:
-        traceback.print_exc()
         pass
 
 
