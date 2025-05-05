@@ -109,13 +109,15 @@ def compute_rewrite_or_rephrase_quality(
     test_rephrase: bool = False,
     eval_metric: str = 'token_em'
 ) -> typing.Dict:
+    print(prompt)
+    
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
         except Exception as e:
             traceback.print_exc()
             pass
-            
+
     if not test_rephrase:
         key = 'rewrite'
     else:
