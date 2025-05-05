@@ -211,7 +211,9 @@ class KnowRouter:
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
 
-
+        print('\n 开始路由')
+        print('进入第一阶段路由')
+    
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
         print('进入第二阶段路由')

@@ -345,7 +345,7 @@ if __name__ == '__main__':
                     print(f"保存路由器失败: {str(e)}")
 
         print(f"聚类数量: {router.get_num_clusters()}")
-
+    
     editor = BaseEditor.from_hparams(hparams)
     if args.editing_method == 'WISE':
         metrics, edited_model, _ = editor.edit(
