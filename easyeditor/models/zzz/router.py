@@ -186,6 +186,7 @@ class KnowRouter:
         self.built = True
 
     def boundary_route(self, prompt: str, threshold: float) -> bool:
+        print('hahahhahahhahahahahhahahah')
         prompt_embedding = self.boundary_embedding.to_embeddings([prompt])
 
         similarities = cosine_similarity(prompt_embedding, self.anchor_embeddings)

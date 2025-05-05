@@ -242,10 +242,20 @@ if __name__ == '__main__':
 
     if args.editing_method == 'TSR':
         hparams.two_stages = args.two_stages
+        if hparams.two_stages:
+            print("使用二阶段路由")
         hparams.boundary_model_name = args.boundary_model_name
+        if hparams.boundary_model_name:
+            print(f"使用微调后的嵌入模型: {hparams.boundary_model_name}")
         hparams.boundary_threshold = args.boundary_threshold
+        if hparams.boundary_threshold:
+            print(f"使用正阈值: {hparams.boundary_threshold}")
         hparams.use_clustering = args.use_clustering
+        if args.use_clustering:
+            print("使用聚类")
         hparams.use_multi_ffn = args.use_multi_ffn
+        if args.use_multi_ffn:
+            print("使用多FFN")                            
 
         if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
             hparams.sbert_path = args.sbert_path
