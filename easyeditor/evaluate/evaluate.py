@@ -177,19 +177,18 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if hparams.alg_name == 'ZZZ':
-        try:
-            model.route(prompt)
-        except Exception as e:
-            print(f"捕获到异常: {e}")  # 打印简单的错误信息（可选）
-            print("-" * 20 + " Traceback " + "-" * 20)
-            # 打印完整的 traceback 信息
-            traceback.print_exc()
-            print("-" * 51)
-            # 注意：这里仍然使用了 pass，意味着程序会继续执行而不会因为这个异常停止
-            # 在实际应用中，你可能需要根据错误类型做更具体的处理，而不是简单地 pass
-            pass
 
+    try:
+        model.route(prompt)
+    except Exception as e:
+        print(f"捕获到异常: {e}")  # 打印简单的错误信息（可选）
+        print("-" * 20 + " Traceback " + "-" * 20)
+        # 打印完整的 traceback 信息
+        traceback.print_exc()
+        print("-" * 51)
+        # 注意：这里仍然使用了 pass，意味着程序会继续执行而不会因为这个异常停止
+        # 在实际应用中，你可能需要根据错误类型做更具体的处理，而不是简单地 pass
+        pass
 
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
@@ -219,18 +218,20 @@ def compute_portability_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if hparams.alg_name == 'ZZZ':
-        try:
-            model.route(prompt)
-        except Exception as e:
-            print(f"捕获到异常: {e}")  # 打印简单的错误信息（可选）
-            print("-" * 20 + " Traceback " + "-" * 20)
-            # 打印完整的 traceback 信息
-            traceback.print_exc()
-            print("-" * 51)
-            # 注意：这里仍然使用了 pass，意味着程序会继续执行而不会因为这个异常停止
-            # 在实际应用中，你可能需要根据错误类型做更具体的处理，而不是简单地 pass
-            pass
+    if type(prompt) == List:
+        prompt = prompt[0]
+
+    try:
+        model.route(prompt)
+    except Exception as e:
+        print(f"捕获到异常: {e}")  # 打印简单的错误信息（可选）
+        print("-" * 20 + " Traceback " + "-" * 20)
+        # 打印完整的 traceback 信息
+        traceback.print_exc()
+        print("-" * 51)
+        # 注意：这里仍然使用了 pass，意味着程序会继续执行而不会因为这个异常停止
+        # 在实际应用中，你可能需要根据错误类型做更具体的处理，而不是简单地 pass
+        pass
 
 
             # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
