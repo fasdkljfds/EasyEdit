@@ -177,7 +177,8 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-
+    if type(prompt) == List:
+        prompt = prompt[0]
     try:
         model.route(prompt)
     except Exception as e:
