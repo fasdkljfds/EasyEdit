@@ -176,6 +176,7 @@ def compute_locality_quality(
     locality_ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
+    print(prompt)
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
@@ -217,6 +218,7 @@ def compute_portability_quality(
     ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
+    print(prompt)
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
