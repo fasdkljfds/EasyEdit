@@ -190,7 +190,7 @@ class KnowRouter:
 
         similarities = cosine_similarity(prompt_embedding, self.anchor_embeddings)
 
-        max_similarity = np.mean(similarities[0])
+        max_similarity = np.max(similarities[0])
 
         should_route_to_original = max_similarity < threshold
 
