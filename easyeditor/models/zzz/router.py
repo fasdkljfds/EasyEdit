@@ -151,7 +151,7 @@ class KnowRouter:
         self.embedding = Embedding(cfg.embedding)
         print('Embedding model:', cfg.embedding.model_name)
         self.clustering = Clustering(cfg.clustering)
-    
+
         self.anchors = []
         self.route_table = None
         self.built = False
@@ -199,7 +199,6 @@ class KnowRouter:
 
         return should_route_to_original
 
-        pass
 
     def route(self, prompt: str) -> int:
         """
@@ -213,7 +212,7 @@ class KnowRouter:
 
         print('\n 开始路由')
         print('进入第一阶段路由')
-    
+
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
         print('进入第二阶段路由')
@@ -252,7 +251,7 @@ class KnowRouter:
         if not self.built:
             raise RuntimeError("路由器尚未构建。请先调用 build_route_table() 以执行聚类。")
         labels = self.clustering.cluster.labels_
-        
+
         unique_labels = set(labels)
         num_clusters = len(unique_labels - {-1})
 
@@ -330,17 +329,6 @@ class ScopeRouter:
     def __init__(self, cfg) -> None:
         cfg = OmegaConf.create(cfg) if not isinstance(cfg, DictConfig) else cfg
         self.cfg = cfg
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -169,10 +169,7 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     if hparams.alg_name == 'ZZZ':
-        try:
-            model.route(prompt)
-        except:
-            pass
+        model.route(prompt)
 
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
