@@ -110,7 +110,7 @@ def compute_rewrite_or_rephrase_quality(
     eval_metric: str = 'token_em'
 ) -> typing.Dict:
     print(prompt)
-    
+
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
@@ -172,8 +172,8 @@ def compute_locality_quality(
     locality_ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
-    print(prompt)
-
+    print('judging locality...')
+    1
     try:
         model.route(prompt)
     except Exception as e:
@@ -207,8 +207,8 @@ def compute_portability_quality(
     ground_truth: typing.Union[str, List[str]],
     device,
 ) -> typing.Dict:
-    print(prompt)
-    
+    print('judgnig portability')
+
     try:
         model.route(prompt)
     except Exception as e:

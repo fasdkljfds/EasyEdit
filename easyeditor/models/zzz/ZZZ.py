@@ -258,7 +258,6 @@ class ZZZAdapter(torch.nn.Module):
     def route(self, prompt):
         if type(prompt) is not str:
             prompt = prompt[0]
-        print(prompt)
          
 
         ffn_id = self.router.route(prompt)+1
