@@ -111,9 +111,10 @@ def compute_rewrite_or_rephrase_quality(
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
-        except:
+        except Exception as e:
+            print(e)
             pass
-      
+
     if not test_rephrase:
         key = 'rewrite'
     else:
@@ -169,7 +170,12 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     if hparams.alg_name == 'ZZZ':
-        model.route(prompt)
+        try:
+            model.route(prompt)
+        except Exception as e:
+            print(e)
+            pass
+
 
     # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
@@ -201,10 +207,12 @@ def compute_portability_quality(
     if hparams.alg_name == 'ZZZ':
         try:
             model.route(prompt)
-        except:
+        except Exception as e:
+            print(e)
             pass
 
-    # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
+
+            # using real-world evaluation: autoregressive decoding, natural stop criteria, LLM-as-a-Judge
     if hasattr(hparams, 'evaluation_type') and hparams.evaluation_type == "LLM-judge":
         portability_correct = test_prediction_acc_LLM_judge(model, tok, hparams, prompt, ground_truth, device, locality=False)
     else:  # traditional evaluation
