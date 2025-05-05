@@ -210,12 +210,14 @@ class KnowRouter:
         # 先确定聚类是否成功
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
-        if prompt in self.route_table:
-            return self.route_table[prompt]
+
 
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
-        
+        print('进入第二阶段路由')
+
+        if prompt in self.route_table:
+            return self.route_table[prompt]
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster
