@@ -115,7 +115,7 @@ def compute_rewrite_or_rephrase_quality(
         except Exception as e:
             traceback.print_exc()
             pass
-
+            
     if not test_rephrase:
         key = 'rewrite'
     else:
@@ -171,8 +171,6 @@ def compute_locality_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if type(prompt) != str:
-        prompt = prompt[0]
 
     try:
         model.route(prompt)
@@ -208,9 +206,7 @@ def compute_portability_quality(
     device,
 ) -> typing.Dict:
     print(prompt)
-    if type(prompt) != str:
-        prompt = prompt[0]
-
+    
     try:
         model.route(prompt)
     except Exception as e:
