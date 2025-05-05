@@ -190,8 +190,8 @@ class KnowRouter:
 
         similarities = cosine_similarity(prompt_embedding, self.anchor_embeddings)
 
-        avg_similarity = np.mean(similarities[0])
-        
+        max_similarity = np.mean(similarities[0])
+
         should_route_to_original = max_similarity < threshold
 
         print(f"Prompt: '{prompt[:50]}...', Max Similarity with Anchors: {max_similarity:.4f}, Threshold: {threshold}, Route to Original: {should_route_to_original}")
@@ -208,6 +208,8 @@ class KnowRouter:
         # 先确定聚类是否成功
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
+        if prompt in self.route_table:
+            return self.route_table[prompt]
 
         print('\n 开始路由')
         print('进入第一阶段路由')
@@ -216,8 +218,6 @@ class KnowRouter:
             return -2
         print('进入第二阶段路由')
 
-        if prompt in self.route_table:
-            return self.route_table[prompt]
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster
