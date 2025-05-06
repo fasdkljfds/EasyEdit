@@ -26,7 +26,9 @@ try:
 except ImportError:
     from easyeditor import (
         GraceHyperParams,
-        WISEHyperParams
+        WISEHyperParams,
+        ROMEHyperParams,
+        FTHyperParams
         )
 
     from easyeditor import BaseEditor
@@ -118,9 +120,13 @@ if __name__ == "__main__":
         editing_hparams = GraceHyperParams
     elif args.editing_method == 'WISE':
         editing_hparams = WISEHyperParams
+    elif args.editing_method == 'ROME':
+        editing_hparams = ROMEHyperParams
+    elif args.editing_method == 'FT':
+        editing_hparams = FTHyperParams
     else:
         raise NotImplementedError
-
+    
     multiarea_dataset = MultiAreaDataset(
         root_dir=args.data_dir,
         dataset_configs=dataset_configs,
