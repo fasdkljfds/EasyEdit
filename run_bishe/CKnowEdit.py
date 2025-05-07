@@ -18,6 +18,7 @@ from easyeditor import (
     MENDHyperParams,
     SERACHparams,  # 注意：这里可能是 SERACPERparams 或 SERACHparams，根据实际情况调整
     WISEHyperParams,
+    ZZZHyperParams,
 )
 from easyeditor import BaseEditor
 # from easyeditor.models.ike import encode_ike_facts # 这行在原始代码中未被使用，暂时注释
@@ -209,6 +210,8 @@ if __name__ == "__main__":
         editing_hparams = GraceHyperParams
     elif args.editing_method == 'WISE':
         editing_hparams = WISEHyperParams
+    elif args.editing_method == 'TSR':
+        editing_haprams = ZZZHyperParams
     else:
         raise NotImplementedError
 
