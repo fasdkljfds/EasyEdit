@@ -165,6 +165,8 @@ class KnowRouter:
                 )
             )
             print(f"Boundary model: {cfg.boundary_model_name}")
+        else:
+            print('Two stages routing is not enabled.')
 
     def build_route_table(self, prompt_list: List[str]) -> None:
         """
