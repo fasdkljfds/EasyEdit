@@ -1,5 +1,5 @@
 alg_name: "WISE"
-model_name: "Qwen/Qwen2.5-0.5B-Instruct"
+model_name: "Qwen/Qwen3-1.7B"
 device: 0
 
 mask_ratio: 0.2
