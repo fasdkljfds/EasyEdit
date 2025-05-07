@@ -211,7 +211,7 @@ if __name__ == "__main__":
     elif args.editing_method == 'WISE':
         editing_hparams = WISEHyperParams
     elif args.editing_method == 'TSR':
-        editing_haprams = ZZZHyperParams
+        editing_hparams = ZZZHyperParams
     else:
         raise NotImplementedError
 
