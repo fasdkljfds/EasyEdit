@@ -1,0 +1,56 @@
+# for edit
+alg_name: "ZZZ"
+model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+device: 0
+inner_params:
+  - model.layers[12].mlp.down_proj.weight
+seed: 42
+
+
+# for embedding
+representation_layer_index: 6
+
+# for router
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  random_seed: 42
+
+clustering:
+  use_umap: true
+  random_seed: 42
+
+  umap_params:
+    n_neighbors: 5
+    min_dist: 0.1
+    n_components: 50
+    metric: "cosine"
+
+  hdbscan_params:
+    min_cluster_size: 10
+    min_samples: 5
+    metric: 'euclidean'
+    cluster_selection_method: 'eom'
+    allow_single_cluster: false
+
+
+# for sequential edit
+mask_ratio: 0.2
+edit_lr: 1.0
+n_iter: 70
+norm_constraint: 1.0
+objective_optimization: 'only_label'
+
+
+# others
+model_parallel: False
+use_chat_template: False
+
+
+# for update
+two_stages: True
+boundary_model_name: "/kaggle/input/finetuned1/pytorch/default/1/finetuned_sbert_triplet/final_model_1"
+boundary_threshold: 0.5
+
+# for ablation
+use_clustering: True
+use_multi_ffn: True
