@@ -178,10 +178,10 @@ class KnowRouter:
         # 聚类
         cluster_labels = self.clustering.run_clustering(embeddings)
 
-        if self.two_stages:
+        if self.cfg.two_stages:
             self.anchors = prompt_list
             self.anchor_embeddings = self.boundary_embedding.to_embeddings(self.anchors)
-    
+
         self.route_table = {
             prompt: cluster_id
             for prompt, cluster_id in zip(prompt_list, cluster_labels)
