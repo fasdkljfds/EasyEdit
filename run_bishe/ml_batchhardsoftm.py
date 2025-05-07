@@ -1,5 +1,7 @@
-# 实现对counterfact和multi-area的度量学习
-# 不实现couterafct了，只有multi-area 0423
+# 实现BatchHardSoftMarginTripletLoss的度量学习 5.3
+
+import datasets
+
 import os
 import sys
 from typing import List, Dict, Optional, Any, Tuple
@@ -14,7 +16,7 @@ from sentence_transformers.training_args import SentenceTransformerTrainingArgum
 import math
 import json
 import datasets
-from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction  # TripletLoss 相关
+from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction
 sys.path.append(os.getcwd() + '/EasyEdit')
 sys.path.append(os.getcwd() + '/EasyEdit/run_bishe')
 
@@ -41,25 +43,14 @@ except ImportError:
     from easyeditor import KnowEditDataset
     from easyeditor.models.zzz.router import KnowRouter
 
-def prepare_triplet_data(root_dir: str,
-                         dataset_configs: Dict[str, int],
-                         validation_split_ratio: float = 0.1,
-                         seed: int = 42,
-                         random_sample: bool = False) -> tuple[datasets.Dataset, datasets.Dataset]: # <--- 修改返回类型
-    """
-    准备用于三元组损失训练的数据集，使用 Hugging Face datasets 格式。
 
-    Args:
-        root_dir (str): MultiAreaDataset 的根目录。
-        dataset_configs (Dict[str, int]): 数据集配置文件和样本数量。
-        validation_split_ratio (float): 验证集分割比例。
-        seed (int, optional): 随机种子. Defaults to 42.
-        random_sample (bool, optional): 是否随机采样. Defaults to False.
 
-    Returns:
-        tuple[datasets.Dataset, datasets.Dataset]: 训练集和验证集 (Hugging Face Dataset 对象)。
-    """
-    print(f"开始准备 MultiArea 数据集，根目录: {root_dir}")
+def prepare_data_for_batch_hard_soft_margin(root_dir: str,
+                                            dataset_configs: Dict[str, int],
+                                            validation_split_ratio: float = 0.1,
+                                            seed: int = 42,
+                                            random_sample: bool = False) -> tuple[datasets.Dataset, datasets.Dataset]:
+    print(f"开始准备 MultiArea 数据集 (用于 BatchHardSoftMarginTripletLoss)，根目录: {root_dir}")
 
     multiarea_dataset = MultiAreaDataset(
         root_dir=root_dir,
@@ -78,91 +69,100 @@ def prepare_triplet_data(root_dir: str,
     min_len = min(len(prompts), len(rephrase_prompts), len(locality_prompts))
     if not (len(prompts) == len(rephrase_prompts) == len(locality_prompts)):
         print(f"警告：提取的 Anchors ({len(prompts)}), Positives ({len(rephrase_prompts)}), Negatives ({len(locality_prompts)}) 数量不一致！")
-        print(f"将使用前 {min_len} 条数据构建三元组。")
+        print(f"将使用前 {min_len} 条数据。")
         prompts = prompts[:min_len]
         rephrase_prompts = rephrase_prompts[:min_len]
         locality_prompts = locality_prompts[:min_len]
 
     if min_len == 0:
-        print("错误：没有有效的三元组数据可以用于创建数据集！")
-        # 返回空的 Dataset 对象，或者抛出错误，取决于你希望如何处理
-        empty_data = {'anchor': [], 'positive': [], 'negative': []}
+        print("错误：没有有效的数据可以用于创建数据集！")
+        empty_data = {'sentence': [], 'label': []}
         return datasets.Dataset.from_dict(empty_data), datasets.Dataset.from_dict(empty_data)
 
-    train_anchors, val_anchors, \
-        train_positives, val_positives, \
-        train_negatives, val_negatives = train_test_split(
-        prompts,
-        rephrase_prompts,
-        locality_prompts,
-        test_size=validation_split_ratio,
-        random_state=seed,
-        shuffle=True
-    )
-    print(f"数据已分割：训练集 {len(train_anchors)} 条，验证集 {len(val_anchors)} 条。")
+    all_sentences = []
+    all_labels = []
+    current_positive_label = 0
+    # 为了确保 locality_prompts 的标签与 (prompt, rephrase_prompt) 对的标签不同，
+    # 我们可以给 locality_prompts 的标签一个较大的偏移量。
+    # 假设我们最多有 N 个 (prompt, rephrase_prompt) 对，那么 locality_prompts 的标签可以从 N 开始。
+    # 更安全的方法是，为每个 locality_prompt 分配一个与任何正例标签都不同的唯一标签。
 
-    # --- 使用 datasets.Dataset.from_dict 创建数据集 ---
-    train_data_dict = {
-        'anchor': train_anchors,
-        'positive': train_positives,
-        'negative': train_negatives
-    }
-    val_data_dict = {
-        'anchor': val_anchors,
-        'positive': val_positives,
-        'negative': val_negatives
-    }
+    # 收集所有 (prompt, rephrase_prompt) 对
+    positive_pairs_sentences = []
+    positive_pairs_labels = []
+    for i in range(min_len):
+        positive_pairs_sentences.append(prompts[i])
+        positive_pairs_labels.append(current_positive_label)
+        positive_pairs_sentences.append(rephrase_prompts[i])
+        positive_pairs_labels.append(current_positive_label)
+        current_positive_label += 1
 
-    # features 参数是可选的，但有助于明确数据类型
+    # 收集 locality_prompts
+    # 为每个 locality_prompt 分配一个独特的标签，且该标签与之前的 positive_label 不同
+    # 例如，可以从 current_positive_label (即原始概念的数量) 开始编号
+    negative_sentences = []
+    negative_labels = []
+    current_negative_label_offset = current_positive_label # 确保负例标签不与正例标签冲突
+    for i in range(min_len):
+        negative_sentences.append(locality_prompts[i])
+        # 每个 locality_prompt 形成自己的类，或者你可以有更复杂的策略
+        # 这里简单地给每个 locality_prompt 一个新的、唯一的标签
+        negative_labels.append(current_negative_label_offset + i)
+
+    # 方案2: 分别分割正例对和负例，然后合并 (更推荐，确保正负例比例，并尝试保持原始对的完整性)
+    # 首先分割正例对的索引
+    indices = list(range(min_len)) # 每个索引代表一个 (prompt, rephrase, locality) 原始组
+    train_indices, val_indices = train_test_split(indices, test_size=validation_split_ratio, random_state=seed, shuffle=True)
+
+    train_sentences_list = []
+    train_labels_list = []
+    val_sentences_list = []
+    val_labels_list = []
+
+    # 为训练集构建
+    for idx in train_indices:
+        train_sentences_list.append(prompts[idx])
+        train_labels_list.append(idx) # 使用原始索引作为类别标签
+        train_sentences_list.append(rephrase_prompts[idx])
+        train_labels_list.append(idx)
+        train_sentences_list.append(locality_prompts[idx])
+        # 负例标签需要不同于正例标签。可以给它一个大的偏移或唯一的新标签。
+        # 为简单起见，让每个 locality_prompt 成为一个独立的类，其标签不同于任何正例。
+        train_labels_list.append(min_len + idx) # 确保与0到min_len-1的标签不同
+
+    # 为验证集构建
+    for idx in val_indices:
+        val_sentences_list.append(prompts[idx])
+        val_labels_list.append(idx)
+        val_sentences_list.append(rephrase_prompts[idx])
+        val_labels_list.append(idx)
+        val_sentences_list.append(locality_prompts[idx])
+        val_labels_list.append(min_len + idx)
+
+
+    print(f"数据已分割：训练集 {len(train_sentences_list)} 条，验证集 {len(val_sentences_list)} 条。")
+
+    train_data_dict = {'sentence': train_sentences_list, 'label': train_labels_list}
+    val_data_dict = {'sentence': val_sentences_list, 'label': val_labels_list}
+
     features = datasets.Features({
-        'anchor': datasets.Value('string'),
-        'positive': datasets.Value('string'),
-        'negative': datasets.Value('string')
+        'sentence': datasets.Value('string'),
+        'label': datasets.Value('int64') # 标签通常是整数
     })
 
     train_dataset = datasets.Dataset.from_dict(train_data_dict, features=features)
     val_dataset = datasets.Dataset.from_dict(val_data_dict, features=features)
-    # --- 创建完成 ---
 
-    if train_dataset:  # 确保数据集非空
-        train_dataset.info.dataset_name = "multi_area_triplet_train"
-        train_dataset.info.description = "Training dataset for multi-area triplet loss fine-tuning."  # 可选，添加描述
-
-        # 为验证集添加名称 (如果存在且非空)
+    if train_dataset:
+        train_dataset.info.dataset_name = "multi_area_batchhard_train"
     if val_dataset:
-        val_dataset.info.dataset_name = "multi_area_triplet_validation"
-        val_dataset.info.description = "Validation dataset for multi-area triplet loss fine-tuning."  # 可选
+        val_dataset.info.dataset_name = "multi_area_batchhard_validation"
 
     print("Hugging Face 训练数据集创建成功:")
     print(train_dataset)
     print("Hugging Face 验证数据集创建成功:")
     print(val_dataset)
     return train_dataset, val_dataset
-
-
-def prepare_triplet_data_zsre(
-        data_dir,
-        ds_size
-):
-    K = ds_size
-    edit_data = json.load(open(f'{data_dir}/ZsRE/zsre_mend_edit.json', 'r', encoding='utf-8'))[:K]
-    loc_data = json.load(open(f'{data_dir}/ZsRE/zsre_mend_train.json', 'r', encoding='utf-8'))[:K]
-    loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-
-    prompts = [edit_data_['src'] for edit_data_ in edit_data]
-    subject = [edit_data_['subject'] for edit_data_ in edit_data]
-    rephrase_prompts = [edit_data_['rephrase'] for edit_data_ in edit_data]
-    target_new = [edit_data_['alt'] for edit_data_ in edit_data]
-    locality_prompts = [edit_data_['loc'] for edit_data_ in edit_data]
-    locality_ans = [edit_data_['loc_ans'] for edit_data_ in edit_data]
-    locality_inputs = {
-        'neighborhood': {
-            'prompt': locality_prompts,
-            'ground_truth': locality_ans
-        },
-    }
-
-    return prompts, rephrase_prompts, loc_prompts
 
 
 # --- 主流程函数 ---
@@ -201,21 +201,21 @@ def finetune_sentence_transformer(
     print("=" * 30)
 
     # --- 1. 准备数据、加载模型--
-    train_dataset, eval_dataset = prepare_triplet_data(root_dir=data_root_dir, dataset_configs=data_configs)
-
+    train_dataset, eval_dataset = prepare_data_for_batch_hard_soft_margin(root_dir=data_root_dir, dataset_configs=data_configs, validation_split_ratio=0.1)
+    
     model = SentenceTransformer(base_model_name)
     print(f'基础模型 {base_model_name} 加载成昆')
+    from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction
 
     # --- 2. 定义损失函数 ---
     if distance_metric_name.upper() == "COSINE":
-        distance_metric = losses.SiameseDistanceMetric.COSINE_DISTANCE
+        distance_metric = BatchHardTripletLossDistanceFunction.cosine_distance # <--- 新的，正确的
     elif distance_metric_name.upper() == "EUCLIDEAN":
-        distance_metric = losses.SiameseDistanceMetric.EUCLIDEAN
-    else:
-        print(f"警告：未知的距离度量 '{distance_metric_name}'，将使用默认的 COSINE。")
-        distance_metric = losses.SiameseDistanceMetric.COSINE_DISTANCE
+        distance_metric = BatchHardTripletLossDistanceFunction.eucledian_distance # <--- 新的，正确的
+    elif distance_metric_name.upper() == "MANHATTAN":
+        distance_metric = BatchHardTripletLossDistanceFunction.manhattan_distance # <--- 新的，正确的 (如果存在，否则需要自定义或检查可用性)
 
-    loss_func = losses.TripletLoss(model=model, distance_metric=distance_metric, triplet_margin=triplet_margin)
+    loss_func = losses.BatchHardSoftMarginTripletLoss(model=model, distance_metric=distance_metric)
 
     # --- 3. 配置训练参数 ---
     # 计算总训练步数和预热步数

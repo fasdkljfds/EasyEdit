@@ -1,6 +1,6 @@
 # for edit
 alg_name: "ZZZ"
-model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"
 device: 0
 inner_params:
   - model.layers[12].mlp.down_proj.weight

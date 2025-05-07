@@ -1,5 +1,5 @@
 alg_name: "WISE"
-model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"
 device: 0
 
 mask_ratio: 0.2
@@ -28,3 +28,6 @@ replay: False # True --> will replay the past editing instances: see https://arx
 
 model_parallel: False
 use_chat_template: False
+
+
+
