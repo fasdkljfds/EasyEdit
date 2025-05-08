@@ -274,6 +274,7 @@ class KnowRouter:
 
         """
         if not self.cfg.use_multi_ffn:
+            print('当前路由器不支持多FFN，聚类数量为0')
             return 0
 
         if not self.built:
