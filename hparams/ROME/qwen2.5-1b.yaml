@@ -1,5 +1,5 @@
 alg_name: "ROME"
-model_name: "/disk1/xuhaoming/Models/Qwen2.5-7B"
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"
 stats_dir: "./data/stats"
 device: 5
 layers: [5]
