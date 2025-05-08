@@ -5,48 +5,68 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import accuracy_score, classification_report # 添加 classification_report
 import numpy as np
 from typing import List, Tuple, Dict
+import os
+import sys
+from typing import List, Dict, Optional, Any, Tuple
 
-# 假设你的 MultiAreaDataset 类定义在 'multiarea_dataset.py' 并且可以导入
-# from multiarea_dataset import MultiAreaDataset # 取消注释并确保路径正确
+from sentence_transformers.evaluation import SentenceEvaluator
+from sklearn.model_selection import train_test_split
+from multiarea_dataset import MultiAreaDataset
+# 导入 sentence-transformers 核心库
+from sentence_transformers import SentenceTransformer, InputExample, losses
+from sentence_transformers.trainer import SentenceTransformerTrainer
+from sentence_transformers.training_args import SentenceTransformerTrainingArguments  # 用于更精细的训练配置 (可选)
+import math
+import json
+import datasets
+from sentence_transformers.losses.BatchHardTripletLoss import BatchHardTripletLossDistanceFunction  # TripletLoss 相关
+sys.path.append(os.getcwd() + '/EasyEdit')
+sys.path.append(os.getcwd() + '/EasyEdit/run_bishe')
 
-# --- 临时的 MultiAreaDataset 占位符 (你需要用你的实际类替换) ---
-# 为了代码能独立运行，我先定义一个简单的占位符。
-# 你必须将这部分替换为你项目中实际的 MultiAreaDataset 导入和使用。
-class MultiAreaDataset:
-    def __init__(self, root_dir, dataset_configs, seed=42, random_sample=False):
-        self.root_dir = root_dir
-        self.dataset_configs = dataset_configs
-        self.seed = seed
-        self.random_sample = random_sample
-        print(f"假装初始化 MultiAreaDataset from {root_dir} with {dataset_configs}")
-        # 模拟 to_edit_dataset 的输出结构
-        self.prompts_data = [f"Original prompt {i}" for i in range(10)]
-        self.rephrase_data = [f"Rephrased prompt {i}" for i in range(10)]
-        self.locality_data = {"neighborhood": {"prompt": [f"Locality prompt {i}" for i in range(10)]}}
+try:
+    from EasyEdit.easyeditor import (
+        ZZZHyperParams
+    )
 
-    def to_edit_dataset(self):
-        print("假装调用 MultiAreaDataset.to_edit_dataset()")
-        # 返回 (prompts, rephrase_prompts, _, _, locality_inputs, _)
-        return (
-            self.prompts_data,
-            self.rephrase_data,
-            None, # placeholder for generated_prompts
-            None, # placeholder for target_new
-            self.locality_data,
-            None  # placeholder for port_locality_inputs
-        )
+    from EasyEdit.easyeditor import BaseEditor
+    from EasyEdit.easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from EasyEdit.easyeditor import KnowEditDataset
+
+    from EasyEdit.easyeditor.models.zzz.router import KnowRouter
+
+except ImportError:
+    from easyeditor import (
+        ZZZHyperParams
+    )
+
+    from easyeditor import BaseEditor
+    from easyeditor.models.ike import encode_ike_facts
+    from sentence_transformers import SentenceTransformer
+    from easyeditor import KnowEditDataset
+    from easyeditor.models.zzz.router import KnowRouter
+
+
+
 
 # --- 配置区 ---
 MODEL_PATH = './finetuned_sbert_triplet/final_model_1' # 替换为你的模型路径
 # MultiAreaDataset 配置 (你需要根据你的实际情况修改)
 MULTI_AREA_ROOT_DIR = 'EasyEdit/data/output_meta_llama_3_8b_instruct' # 你的数据根目录
-# 选择少量数据用于测试，避免运行时间过长
-DATASET_CONFIGS = {
-    "business_industry.json": 10, # 每个文件取10个样本
-    "human_scientist.json": 10,
-    # "event_sport.json": 10,
-    # ... 可以添加更多或使用你训练时的完整配置的一个子集
-}
+
+ALL_FILES = [
+    "art_sculpture.json", "business_brand.json", "business_corporation.json",
+    "business_industry.json", "entertainment_anime.json", "entertainment_music_genre.json",
+    "entertainment_song.json", "event_film.json", "event_history.json",
+    "event_sport.json", "geography_forest.json", "geography_glacier.json",
+    "geography_volcano.json", "health_disease.json", "health_medication.json",
+    "health_symptom.json", "human_athlete.json", "human_entrepreneur.json",
+    "human_scientist.json", "human_writer.json", "places_city.json",
+    "places_country.json", "places_landmark.json", "technology_database.json",
+    "technology_programming_language.json", "technology_software.json"
+]
+
+DATASET_CONFIGS = {file: 20 for file in ALL_FILES}
 TAU_POSITIVE = 0.8 # 固定阈值，你可以根据需要调整
 
 
@@ -79,16 +99,9 @@ def evaluate_model_with_multiarea(model: SentenceTransformer,
     print(f"\n开始使用 MultiAreaDataset 进行评估，固定阈值 τ_pos = {tau_pos:.4f}")
 
     # 1. 加载并准备 MultiAreaDataset 数据
-    try:
-        # 确保你的 MultiAreaDataset 类在这里被正确实例化
-        # from multiarea_dataset import MultiAreaDataset # 应该在文件顶部导入
-        dataset = MultiAreaDataset(root_dir=multiarea_root_dir, dataset_configs=dataset_configs)
-        prompts, rephrase_prompts, _, _, locality_inputs, _ = dataset.to_edit_dataset()
-        locality_prompts = locality_inputs['neighborhood']['prompt']
-    except Exception as e:
-        print(f"加载或处理 MultiAreaDataset 时出错: {e}")
-        print("请确保 MultiAreaDataset 类及其依赖项可用，并且路径和配置正确。")
-        return {"accuracy": 0.0, "report": "Error during data loading."}
+    dataset = MultiAreaDataset(root_dir=multiarea_root_dir, dataset_configs=dataset_configs)
+    prompts, rephrase_prompts, _, _, locality_inputs, _ = dataset.to_edit_dataset()
+    locality_prompts = locality_inputs['neighborhood']['prompt']
 
     if not prompts:
         print("错误: MultiAreaDataset 未能提供 prompts (E)。无法评估。")

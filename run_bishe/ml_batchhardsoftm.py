@@ -215,7 +215,7 @@ def finetune_sentence_transformer(
     elif distance_metric_name.upper() == "MANHATTAN":
         distance_metric = BatchHardTripletLossDistanceFunction.manhattan_distance # <--- 新的，正确的 (如果存在，否则需要自定义或检查可用性)
 
-    loss_func = losses.BatchHardSoftMarginTripletLoss(model=model, distance_metric=distance_metric)
+    loss_func = losses.BatchHardTripletLoss(model=model, distance_metric=distance_metric, margin=triplet_margin)
 
     # --- 3. 配置训练参数 ---
     # 计算总训练步数和预热步数
