@@ -273,6 +273,9 @@ class KnowRouter:
         获取离群点数量
 
         """
+        if not self.cfg.use_multi_ffn:
+            return 0
+
         if not self.built:
             raise RuntimeError("路由器尚未构建。请先调用 build_route_table() 以执行聚类。")
         labels = self.clustering.cluster.labels_
