@@ -208,9 +208,12 @@ class KnowRouter:
             prompt (str): 需要路由的句子
         """
         if not self.cfg.use_multi_ffn:
+            print('当前路由器不支持多FFN，仅在主侧记忆中选择。')
             if self.boundary_route(prompt, self.cfg.boundary_threshold):
+                print('路由到主记忆')
                 return -2
             else:
+                print('路由到侧记忆')
                 return -1
 
         # 先确定聚类是否成功
