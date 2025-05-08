@@ -4,7 +4,7 @@
 
 alg_name: "FT"
 model_name: "Qwen/Qwen2.5-0.5B-Instruct"
-device: 1
+device: 0
 
 layers: [18]
 num_steps: 25
