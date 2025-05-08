@@ -201,18 +201,24 @@ class KnowRouter:
 
         return should_route_to_original
 
-
     def route(self, prompt: str) -> int:
         """
         将输入句子路由到对应的聚类ID
         Args:
             prompt (str): 需要路由的句子
         """
+        if not self.cfg.use_multi_ffn:
+            if self.boundary_route(prompt, self.cfg.boundary_threshold):
+                return -2
+            else:
+                return -1
+
         # 先确定聚类是否成功
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
         if prompt in self.route_table:
             return self.route_table[prompt]
+
 
         print('\n 开始路由')
         print('进入第一阶段路由')
@@ -252,6 +258,9 @@ class KnowRouter:
         """
         if not self.built:
             raise RuntimeError("路由器尚未构建。请先调用 build_route_table() 以执行聚类。")
+
+        if not self.cfg.use_multi_ffn:
+            return 1
         labels = self.clustering.cluster.labels_
 
         unique_labels = set(labels)
