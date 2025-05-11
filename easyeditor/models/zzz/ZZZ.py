@@ -84,7 +84,6 @@ class ZZZ(torch.nn.Module):
         self.representation_layer_index = self.config.representation_layer_index
         self._hidden_state_index_to_access = self.representation_layer_index + 1
 
-        print(f"将使用第 {self.representation_layer_index} 个解码器层 (hidden_states[{self._hidden_state_index_to_access}]) 的输出作为路由表示。")
 
         gc.collect()
         torch.cuda.empty_cache()
@@ -150,7 +149,8 @@ class ZZZ(torch.nn.Module):
             loss.backward()
             self.get_adapter_layer().mask_new_weight_gradient()
 
-            print(f"loss {np.round(loss.item(), 3)}")
+
+            # print(f"loss {np.round(loss.item(), 3)}")
 
             optimizer.step()
             loss_meter.update(loss.item())
@@ -258,7 +258,7 @@ class ZZZAdapter(torch.nn.Module):
     def route(self, prompt):
         if type(prompt) is not str:
             prompt = prompt[0]
-         
+
 
         ffn_id = self.router.route(prompt)+1
         print(f'[router] {prompt} ==> {ffn_id-1}')

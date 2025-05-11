@@ -78,7 +78,7 @@ login(token='your_huggingface_token')
 在本例中，boundary_model_name=./finetuned_sbert_triplet/final_model_1
 
 
-![image](assets/image-20250424151139-ikhpnba.png)​
+![image](assets/image-20250424151139-ikhpnba.png)
 
 #### 2. 执行知识编辑
 

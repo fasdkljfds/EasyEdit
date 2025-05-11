@@ -197,7 +197,8 @@ class KnowRouter:
 
         should_route_to_original = max_similarity < threshold
 
-        print(f"Prompt: '{prompt[:50]}...', Max Similarity with Anchors: {max_similarity:.4f}, Threshold: {threshold}, Route to Original: {should_route_to_original}")
+
+        print(f"[Boundary Router] 最大相似度: {max_similarity:.4f}, 路由到主记忆: {should_route_to_original}")
 
         return should_route_to_original
 
@@ -223,17 +224,15 @@ class KnowRouter:
             return self.route_table[prompt]
 
 
-        print('\n 开始路由')
-        print('进入第一阶段路由')
-
         if self.cfg.two_stages and self.boundary_route(prompt, self.cfg.boundary_threshold):
             return -2
-        print('进入第二阶段路由')
+        print('[Boundary Router] 进入二阶段路由')
 
         # 生成嵌入
         embedding = self.embedding.to_embeddings([prompt])[0]
         # 预测cluster
         cluster_id, _ = self.clustering.predict_cluster(embedding)
+        print(f'[Domain Router] X_input => {cluster_id}')
         return cluster_id
 
     def route_with_confidence(self, prompt: str) -> tuple[int, float]:

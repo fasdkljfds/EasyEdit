@@ -28,9 +28,6 @@ def apply_zzz_to_model(
     request = requests[0]
 
     ffn_id = router.route(request['prompt'])
-    print(
-        f"[{request['prompt']}] -> [{request['target_new']}], routing to {ffn_id}"
-    )
 
     editor = ZZZ(
         model=model,
