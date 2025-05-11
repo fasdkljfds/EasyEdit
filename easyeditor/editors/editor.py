@@ -368,6 +368,7 @@ class BaseEditor:
             # 这里all_metrics传入只是为了更新，之前已经有pre_edit的结果信息
 
             # !!! 注意这里也是评估单条的
+            print('='*20)
             print('Start evaluating...')
             eval_metric= kwargs['eval_metric'] if 'eval_metric' in kwargs.keys() else 'exact match'
             if self.alg_name == 'IKE':
