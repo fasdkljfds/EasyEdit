@@ -136,7 +136,9 @@ if __name__ == "__main__":
     parser.add_argument('--use_clustering', default=True, type=str2bool)  # 是否使用聚类
     parser.add_argument('--use_multi_ffn', default=True, type=str2bool)  # 是否使用多FFN
 
-    
+    # for 进一步实验
+    parser.add_argument('--edit_layer', default=12, type=int)  # 要编辑的层数
+
     args = parser.parse_args()
 
     if args.editing_method == 'ZZZ':
@@ -164,6 +166,9 @@ if __name__ == "__main__":
     hparams.boundary_threshold = args.boundary_threshold
     hparams.use_clustering = args.use_clustering
     hparams.use_multi_ffn = args.use_multi_ffn
+    hparams.inner_params[0] = f'model.layers[{args.edit_layer}].mlp.down_proj.weight'
+    print('编辑的权重：', hparams.inner_params[0])
+
 
     if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
         hparams.sbert_path = args.sbert_path
@@ -260,12 +265,7 @@ if __name__ == "__main__":
     print('离群点的数量', router.get_num_outlier())
 
     # --- 准备编辑器 ---
-    os.makedirs(args.output_dir, exist_ok=True)
-    output_file = os.path.join(
-        args.output_dir,
-        f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_Sequential={args.sequential_edit}.json'
-    )
-    
+
     # --- 执行知识编辑 ---
     editor = BaseEditor.from_hparams(hparams)
     metrics, edited_model, _ = editor.edit(
@@ -277,3 +277,10 @@ if __name__ == "__main__":
         sequential_edit=args.sequential_edit,
         router=router
     )
+
+    print('Method: {}'.format(args.editing_method))
+    print('Size: {}'.format(args.ds_size))
+    print('Model: {}'.format(hparams.model_name.split("/")[-1]))
+    print('Layer: {}'.format(hparams.inner_params[0]))
+    print('Evaluation: {}'.format(args.evaluation_type))
+    print('Sequential: {}'.format(args.sequential_edit))
