@@ -372,6 +372,9 @@ def test_prediction_acc(model, tok, hparams, prompts, targets, device, locality=
         labels = prompt_target_tok['input_ids'].squeeze().detach().cpu().numpy().tolist()
         answers = slice_list(answers,prompt_len,left=True)
         labels = slice_list(labels,prompt_len,left=False)
+        
+        decoded_prediction = tok.decode(answers, skip_special_tokens=True)
+        print(f"[Model] '{decoded_prediction}'")
         if locality:
             return answers if type(answers[0]) is list else [answers,]
         if isinstance(answers[0], list):
