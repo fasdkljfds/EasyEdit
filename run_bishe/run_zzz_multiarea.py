@@ -279,7 +279,6 @@ if __name__ == "__main__":
     )
 
     print('Method: {}'.format(args.editing_method))
-    print('Size: {}'.format(args.ds_size))
     print('Model: {}'.format(hparams.model_name.split("/")[-1]))
     print('Layer: {}'.format(hparams.inner_params[0]))
     print('Evaluation: {}'.format(args.evaluation_type))
