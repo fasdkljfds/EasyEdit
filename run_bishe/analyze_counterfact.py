@@ -26,6 +26,9 @@ plt.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显�
 metrics_to_plot = {
     'rewrite_acc': '编辑重写准确率 (Rewrite Accuracy)',
     'Forgetfulness_acc': '遗忘准确率 (Forgetfulness Accuracy - Locality)',
+    'Relation_Specificity_acc': '关系特异性准确率 (Relation Specificity Accuracy - Specificity)',
+    'Logical_Generalization_acc': '逻辑泛化准确率 (Logical Generalization Accuracy - Generality)',
+    'Subject_Aliasing_acc': '主题混淆准确率 (Subject Aliasing Accuracy - Specificity)',
     'Reasoning_acc': '推理准确率 (Reasoning Accuracy - Portability)'
 }
 

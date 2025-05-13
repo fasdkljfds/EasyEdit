@@ -190,6 +190,9 @@ if __name__ == '__main__':
     parser.add_argument('--use_clustering', default=True, type=str2bool)  # 是否使用聚类
     parser.add_argument('--use_multi_ffn', default=True, type=str2bool)  # 是否使用多FFN
 
+    # for 进一步实验
+    parser.add_argument('--edit_layer', default=12, type=int)
+
     args = parser.parse_args()
 
     repeat = False
@@ -200,6 +203,10 @@ if __name__ == '__main__':
     start_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     hparams = hyperparams_maps[args.editing_method].from_hparams(args.hparams_dir)
+
+    if args.editing_method == 'WISE' or args.editing_method == 'TSR':
+        hparams.inner_params[0] = f'model.layers[{args.edit_layer}].mlp.down_proj.weight'
+        print('编辑的权重：', hparams.inner_params[0])
 
     if args.data_type == 'ZsRE' or args.data_type == 'counterfact':
         prompts, subject, rephrase_prompts, target_new, locality_inputs, loc_prompts = data_processor_maps[args.data_type](
@@ -325,3 +332,4 @@ if __name__ == '__main__':
     print('Evaluation: {}'.format(args.evaluation_type))
     print('Sequential: {}'.format(args.sequential_edit))
     print('from {} to {}'.format(start_time, end_time))
+    print('Layer: {}'.format(hparams.inner_params[0]))
