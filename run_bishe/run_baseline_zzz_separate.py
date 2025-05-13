@@ -98,13 +98,26 @@ def parse_dataset_configs(config_str, all_files=None):
 
     return config_dict
 
+all_files = [
+    "art_sculpture",
+    "business_industry",
+    "entertainment_song",
+    "event_history",
+    "geography_glacier",
+    "health_disease",
+    "human_scientist",
+    "places_country",
+    "technology_programming_language",
+    "technology_software"
+]
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--editing_method', required=True, type=str)
     parser.add_argument('--hparams_dir', required=True, type=str)
 
     parser.add_argument('--data_dir', required=True, type=str)
-    parser.add_argument('--data_configs', type=str, required=True)
+    parser.add_argument('--ds_size', required=True,default=100, type=int)  # 数据集大小
     parser.add_argument('--random_sample', default=False, type=str2bool)  # 默认顺序采样
     parser.add_argument('--seed', default=42, type=int)
 
@@ -114,65 +127,71 @@ if __name__ == "__main__":
     parser.add_argument('--sequential_edit', default=True, type=str2bool)  # 是否使用顺序编辑 默认为是
 
     args = parser.parse_args()
-    dataset_configs = parse_dataset_configs(args.data_configs)
+    for file in all_files:
+        dataset_configs = {
+            file + '.json': args.ds_size
+        }
 
-    if args.editing_method == 'GRACE':
-        editing_hparams = GraceHyperParams
-    elif args.editing_method == 'WISE':
-        editing_hparams = WISEHyperParams
-    elif args.editing_method == 'ROME':
-        editing_hparams = ROMEHyperParams
-    elif args.editing_method == 'FT':
-        editing_hparams = FTHyperParams
-    else:
-        raise NotImplementedError
-    
-    multiarea_dataset = MultiAreaDataset(
-        root_dir=args.data_dir,
-        dataset_configs=dataset_configs,
-        seed=42,  # 只有随机采样时有用
-        random_sample=args.random_sample
-    )
-    
-    prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
+        if args.editing_method == 'GRACE':
+            editing_hparams = GraceHyperParams
+        elif args.editing_method == 'WISE':
+            editing_hparams = WISEHyperParams
+        elif args.editing_method == 'ROME':
+            editing_hparams = ROMEHyperParams
+        elif args.editing_method == 'FT':
+            editing_hparams = FTHyperParams
+        else:
+            raise NotImplementedError
 
-    hparams = editing_hparams.from_hparams(args.hparams_dir)
-
-    os.makedirs(args.output_dir, exist_ok=True)
-    output_file = os.path.join(
-        args.output_dir,
-        f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_Sequential={args.sequential_edit}.json'
+        multiarea_dataset = MultiAreaDataset(
+            root_dir=args.data_dir,
+            dataset_configs=dataset_configs,
+            seed=42,  # 只有随机采样时有用
+            random_sample=args.random_sample
         )
 
-    print("See results at: ", output_file)
-    if args.editing_method == 'WISE':
-        loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
-        loc_data = json.load(
-            open(loc_filepath, 'r', encoding='utf-8')
-        )[:len(multiarea_dataset)]
-        loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-        print('Len of loc_prompts: ', len(loc_prompts))
-    else:
-        loc_prompts = None
+        prompts, rephrase_prompts, target_new, subjects, locality_inputs, _ = multiarea_dataset.to_edit_dataset()
+
+        hparams = editing_hparams.from_hparams(args.hparams_dir)
+
+        os.makedirs(args.output_dir, exist_ok=True)
+        output_file = os.path.join(
+            args.output_dir,
+            f'{hparams.model_name.split("/")[-1]}_{args.editing_method}_Sequential={args.sequential_edit}.json'
+            )
+
+        print("See results at: ", output_file)
+        if args.editing_method == 'WISE':
+            loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+            loc_data = json.load(
+                open(loc_filepath, 'r', encoding='utf-8')
+            )[:len(multiarea_dataset)]
+            loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+            print('Len of loc_prompts: ', len(loc_prompts))
+        else:
+            loc_prompts = None
 
 
-    editor = BaseEditor.from_hparams(hparams)
-    if args.editing_method == 'WISE':
-        metrics, edited_model, _ = editor.edit(
-            prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
-            target_new=target_new,
-            subject=subjects,
-            locality_inputs=locality_inputs,
-            sequential_edit=args.sequential_edit,
-            loc_prompts=loc_prompts,  # only for WISE
-        )
-    else:
-        metrics, edited_model, _ = editor.edit(
-            prompts=prompts,
-            rephrase_prompts=rephrase_prompts,
-            target_new=target_new,
-            subject=subjects,
-            locality_inputs=locality_inputs,
-            sequential_edit=args.sequential_edit,
-        )
+        editor = BaseEditor.from_hparams(hparams)
+        if args.editing_method == 'WISE':
+            metrics, edited_model, _ = editor.edit(
+                prompts=prompts,
+                rephrase_prompts=rephrase_prompts,
+                target_new=target_new,
+                subject=subjects,
+                locality_inputs=locality_inputs,
+                sequential_edit=args.sequential_edit,
+                loc_prompts=loc_prompts,  # only for WISE
+            )
+        else:
+            metrics, edited_model, _ = editor.edit(
+                prompts=prompts,
+                rephrase_prompts=rephrase_prompts,
+                target_new=target_new,
+                subject=subjects,
+                locality_inputs=locality_inputs,
+                sequential_edit=args.sequential_edit,
+            )
+
+        print('Method: {}'.format(args.editing_method))
+        print('File: {}'.format(file))
