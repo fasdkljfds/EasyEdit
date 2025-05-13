@@ -148,126 +148,129 @@ if __name__ == "__main__":
     shuffled_subsets = all_subset[:]
 
     for i, subset_name in enumerate(shuffled_subsets):
+        try:
 
-        subset_filepath = os.path.join(args.data_dir, subset_name + '.json')
+            subset_filepath = os.path.join(args.data_dir, subset_name + '.json')
 
-        print(f"Loading data from {subset_name} (file: {subset_filepath}), aiming for {args.ds_size} samples...")
+            print(f"Loading data from {subset_name} (file: {subset_filepath}), aiming for {args.ds_size} samples...")
 
-        prompts, target_new, ground_truth_old, subject, rephrase_prompts, \
-            locality_inputs, portability_inputs = load_cknowedit(subset_filepath, args.ds_size)
+            prompts, target_new, ground_truth_old, subject, rephrase_prompts, \
+                locality_inputs, portability_inputs = load_cknowedit(subset_filepath, args.ds_size)
 
-        print(f"Loaded {len(prompts)} samples from {subset_name}")
+            print(f"Loaded {len(prompts)} samples from {subset_name}")
 
-        # 选择超参数类
-        if args.editing_method == 'FT':
-            editing_hparams = FTHyperParams
-        elif args.editing_method == 'ROME':
-            editing_hparams = ROMEHyperParams
-        elif args.editing_method == 'GRACE':
-            editing_hparams = GraceHyperParams
-        elif args.editing_method == 'WISE':
-            editing_hparams = WISEHyperParams
-        elif args.editing_method == 'TSR':
-            editing_hparams = ZZZHyperParams
-        else:
-            raise NotImplementedError
-
-        loc_prompts = None  # 默认为None，仅WISE需要
-        if args.editing_method == 'WISE':
-            loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
-
-            loc_data = json.load(
-                open(loc_filepath, 'r', encoding='utf-8')
-            )[:int(len(prompts))]
-            loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
-
-        hparams = editing_hparams.from_hparams(args.hparams_dir)
-        editor = BaseEditor.from_hparams(hparams)
-
-        print(f"\nStarting editing with method: {args.editing_method}")
-
-        print(f"Number of edits to perform: {len(prompts)}")
-
-        if args.editing_method == 'TSR':
-            hparams.two_stages = args.two_stages
-            if hparams.two_stages:
-                print("使用二阶段路由")
-            hparams.boundary_model_name = args.boundary_model_name
-            if hparams.boundary_model_name:
-                print(f"使用微调后的嵌入模型: {hparams.boundary_model_name}")
-            hparams.boundary_threshold = args.boundary_threshold
-            if hparams.boundary_threshold:
-                print(f"使用正阈值: {hparams.boundary_threshold}")
-            hparams.use_clustering = args.use_clustering
-            if args.use_clustering:
-                print("使用聚类")
-            hparams.use_multi_ffn = args.use_multi_ffn
-            if args.use_multi_ffn:
-                print("使用多FFN")
-
-            if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
-                hparams.sbert_path = args.sbert_path
-                hparams.embedding.model_name = args.sbert_path
-
-            if args.router_load_path and not args.retrain:
-                try:
-                    router = KnowRouter.load(args.router_load_path)
-                    print(f"成功从 {args.router_load_path} 加载路由器")
-                    print(f"现有聚类数量: {router.get_num_clusters()}")
-                except Exception as e:
-                    print(f"加载路由器失败: {str(e)}")
-                    print("将重新训练路由器...")
-                    router = KnowRouter(cfg=hparams)
-                    router.build_route_table(prompt_list=prompts)
+            # 选择超参数类
+            if args.editing_method == 'FT':
+                editing_hparams = FTHyperParams
+            elif args.editing_method == 'ROME':
+                editing_hparams = ROMEHyperParams
+            elif args.editing_method == 'GRACE':
+                editing_hparams = GraceHyperParams
+            elif args.editing_method == 'WISE':
+                editing_hparams = WISEHyperParams
+            elif args.editing_method == 'TSR':
+                editing_hparams = ZZZHyperParams
             else:
-                print("训练路由器...")
-                router = KnowRouter(cfg=hparams)
-                print(hparams.clustering)
-                router.build_route_table(prompt_list=prompts)
-                if args.router_save_path:
+                raise NotImplementedError
+
+            loc_prompts = None  # 默认为None，仅WISE需要
+            if args.editing_method == 'WISE':
+                loc_filepath = 'EasyEdit/data/wise/ZsRE/zsre_mend_train.json'
+
+                loc_data = json.load(
+                    open(loc_filepath, 'r', encoding='utf-8')
+                )[:int(len(prompts))]
+                loc_prompts = [edit_data_['loc'] + ' ' + edit_data_['loc_ans'] for edit_data_ in loc_data]
+
+            hparams = editing_hparams.from_hparams(args.hparams_dir)
+            editor = BaseEditor.from_hparams(hparams)
+
+            print(f"\nStarting editing with method: {args.editing_method}")
+
+            print(f"Number of edits to perform: {len(prompts)}")
+
+            if args.editing_method == 'TSR':
+                hparams.two_stages = args.two_stages
+                if hparams.two_stages:
+                    print("使用二阶段路由")
+                hparams.boundary_model_name = args.boundary_model_name
+                if hparams.boundary_model_name:
+                    print(f"使用微调后的嵌入模型: {hparams.boundary_model_name}")
+                hparams.boundary_threshold = args.boundary_threshold
+                if hparams.boundary_threshold:
+                    print(f"使用正阈值: {hparams.boundary_threshold}")
+                hparams.use_clustering = args.use_clustering
+                if args.use_clustering:
+                    print("使用聚类")
+                hparams.use_multi_ffn = args.use_multi_ffn
+                if args.use_multi_ffn:
+                    print("使用多FFN")
+
+                if args.sbert_path != 'sentence-transformers/all-MiniLM-L6-v2':
+                    hparams.sbert_path = args.sbert_path
+                    hparams.embedding.model_name = args.sbert_path
+
+                if args.router_load_path and not args.retrain:
                     try:
-                        router.save(args.router_save_path)
-                        print(f"路由器已保存到 {args.router_save_path}")
+                        router = KnowRouter.load(args.router_load_path)
+                        print(f"成功从 {args.router_load_path} 加载路由器")
+                        print(f"现有聚类数量: {router.get_num_clusters()}")
                     except Exception as e:
-                        print(f"保存路由器失败: {str(e)}")
+                        print(f"加载路由器失败: {str(e)}")
+                        print("将重新训练路由器...")
+                        router = KnowRouter(cfg=hparams)
+                        router.build_route_table(prompt_list=prompts)
+                else:
+                    print("训练路由器...")
+                    router = KnowRouter(cfg=hparams)
+                    print(hparams.clustering)
+                    router.build_route_table(prompt_list=prompts)
+                    if args.router_save_path:
+                        try:
+                            router.save(args.router_save_path)
+                            print(f"路由器已保存到 {args.router_save_path}")
+                        except Exception as e:
+                            print(f"保存路由器失败: {str(e)}")
 
-            print(f"聚类数量: {router.get_num_clusters()}")
+                print(f"聚类数量: {router.get_num_clusters()}")
 
-        if args.editing_method == 'WISE':
-            metrics, edited_model, _ = editor.edit(
-                prompts=prompts,
-                target_new=target_new,
-                ground_truth=target_new,
-                rephrase_prompts=rephrase_prompts,
-                portability_inputs=portability_inputs,
-                subject=subject,
-                keep_original_weight=True,
-                sequential_edit=True,  # 假设对于所有方法都使用顺序编辑
-                loc_prompts=loc_prompts  # WISE 特有的参数
-            )
-        elif args.editing_method == 'TSR':
-            metrics, edited_model, _ = editor.edit(
-                prompts=prompts,
-                target_new=target_new,
-                ground_truth=target_new,
-                rephrase_prompts=rephrase_prompts,
-                portability_inputs=portability_inputs,
-                subject=subject,
-                keep_original_weight=True,
-                sequential_edit=True,  # 假设对于所有方法都使用顺序编辑
-                router=router
-            )
+            if args.editing_method == 'WISE':
+                metrics, edited_model, _ = editor.edit(
+                    prompts=prompts,
+                    target_new=target_new,
+                    ground_truth=target_new,
+                    rephrase_prompts=rephrase_prompts,
+                    portability_inputs=portability_inputs,
+                    subject=subject,
+                    keep_original_weight=True,
+                    sequential_edit=True,  # 假设对于所有方法都使用顺序编辑
+                    loc_prompts=loc_prompts  # WISE 特有的参数
+                )
+            elif args.editing_method == 'TSR':
+                metrics, edited_model, _ = editor.edit(
+                    prompts=prompts,
+                    target_new=target_new,
+                    ground_truth=target_new,
+                    rephrase_prompts=rephrase_prompts,
+                    portability_inputs=portability_inputs,
+                    subject=subject,
+                    keep_original_weight=True,
+                    sequential_edit=True,  # 假设对于所有方法都使用顺序编辑
+                    router=router
+                )
 
-        else:
-            metrics, edited_model, _ = editor.edit(
-                prompts=prompts,
-                target_new=target_new,
-                ground_truth=target_new,
-                rephrase_prompts=rephrase_prompts,
-                portability_inputs=portability_inputs,
-                subject=subject,
-                keep_original_weight=True,
-                sequential_edit=True,
-            )
+            else:
+                metrics, edited_model, _ = editor.edit(
+                    prompts=prompts,
+                    target_new=target_new,
+                    ground_truth=target_new,
+                    rephrase_prompts=rephrase_prompts,
+                    portability_inputs=portability_inputs,
+                    subject=subject,
+                    keep_original_weight=True,
+                    sequential_edit=True,
+                )
 
-        print('subset_name:', subset_name)
+            print('subset_name:', subset_name)
+        except:
+            pass
