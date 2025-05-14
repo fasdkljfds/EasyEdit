@@ -273,11 +273,13 @@ print(f"基于实际加载和过滤，N_full_actual (训练池大小) = {N_full_
 # 目标数据量，如果实际数据不足，则使用实际数据量
 TARGET_SMALL_DATA = 100
 TARGET_MEDIUM_DATA = 500
+TARGET_LARGE_DATA = 1000
 TARGET_FULL_DATA = 2000
 
 data_size_configs_training = {
     "Small-Data": min(TARGET_SMALL_DATA, N_full_actual),
     "Medium-Data": min(TARGET_MEDIUM_DATA, N_full_actual),
+    "Large-Data": min(TARGET_LARGE_DATA, N_full_actual),
     "Full-Data": min(TARGET_FULL_DATA, N_full_actual)
 }
 # Ensure Small and Medium are not larger than Full after min()

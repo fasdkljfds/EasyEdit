@@ -210,12 +210,10 @@ df_vis = pd.DataFrame({
     'vis_x_scene2': vis_coords_from_sbert[:, 0],
     'vis_y_scene2': vis_coords_from_sbert[:, 1],
 })
-
-# Matplotlib 和 Seaborn 设置
-plt.style.use('seaborn-whitegrid')  # 或者 'seaborn-whitegrid'
+plt.style.use('seaborn-whitegrid')  # 更新为新版seaborn的style名
 try:
-    plt.rcParams['font.sans-serif'] = ['SimHei']
-    plt.rcParams['axes.unicode_minus'] = False
+    plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+    plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 except Exception as e:
     print(f"设置中文字体失败: {e}. 图表中的中文可能无法正确显示。")
 
@@ -226,89 +224,99 @@ true_palette = sns.color_palette("husl", num_true_domains)
 def create_hdbscan_palette(cluster_ids, base_palette_name="Paired"):
     unique_ids = sorted(list(set(cluster_ids)))
     n_clusters = len(unique_ids) - (1 if -1 in unique_ids else 0)
+    # 确保即使只有一个非噪声簇，也能从调色板获取颜色
     palette = sns.color_palette(base_palette_name, n_clusters if n_clusters > 0 else 1)
 
     hdbscan_palette_map = {}
     color_idx = 0
     for cid in unique_ids:
         if cid == -1:
-            hdbscan_palette_map[cid] = (0.5, 0.5, 0.5, 0.7)  # Grey for noise
+            hdbscan_palette_map[cid] = (0.5, 0.5, 0.5, 0.7)  # Noise: semi-transparent grey
         else:
-            # Handle case where only noise points exist or n_clusters is 0
             if color_idx < len(palette):
                 hdbscan_palette_map[cid] = palette[color_idx]
-            else:  # Fallback if not enough colors (should not happen with Paired for reasonable cluster counts)
+            else:  # Fallback, 理论上 Paired 对于合理数量的簇是够用的
                 hdbscan_palette_map[cid] = (random.random(), random.random(), random.random(), 0.7)
             color_idx += 1
     return hdbscan_palette_map
 
 
 def plot_clusters(df, x_col, y_col, hue_col, title, filename, palette, legend_title, is_hdbscan_hue=False):
-    plt.figure(figsize=(14, 10))
+    # --- 修改点：调整图形大小和字体，以适应论文 ---
+    plt.figure(figsize=(9, 5.5))  # 原为 (14, 10)，调整为更适合论文的尺寸
 
     hue_order = None
     current_palette = palette
 
     if is_hdbscan_hue:
-        # Prepare HDBScan labels for hue and legend
+        # 为HDBScan的hue和图例准备标签
         df[f'{hue_col}_str'] = df[hue_col].astype(str).replace('-1', 'Noise/-1')
         hue_order = sorted(df[f'{hue_col}_str'].unique(), key=lambda x: int(x.split('/')[0]) if x != "Noise/-1" else -1)
-        # Use the pre-calculated palette map for HDBScan
-        # Ensure the palette_map keys match the stringified labels
-        current_palette = {str(k).replace('-1', 'Noise/-1'): v for k, v in palette.items()}
+        # 使用预计算的调色板映射
+        current_palette = {str(k).replace('-1', 'Noise/-1'): v for k, v in palette.items()}  # 确保键与字符串化标签匹配
 
         sns.scatterplot(
             data=df, x=x_col, y=y_col, hue=f'{hue_col}_str',
             palette=current_palette, hue_order=hue_order,
-            s=50, alpha=0.8, legend='full'
+            s=35, alpha=0.75, legend='full'  # s 原为 50, alpha 原为 0.8
         )
-    else:  # For true_domain_str
+    else:  # 针对 true_domain_str
         sns.scatterplot(
             data=df, x=x_col, y=y_col, hue=hue_col,
-            palette=current_palette,  # This will be a list of colors for true_palette
-            s=50, alpha=0.8, legend='full'
+            palette=current_palette,  # 这将是 true_palette 的颜色列表
+            s=35, alpha=0.75, legend='full'  # s 原为 50, alpha 原为 0.8
         )
 
-    plt.title(title, fontsize=16)
-    plt.xlabel('UMAP Dimension 1 (可视化)', fontsize=12)
-    plt.ylabel('UMAP Dimension 2 (可视化)', fontsize=12)
+    plt.title(title, fontsize=13)  # 原为 16
+    plt.xlabel('UMAP Dimension 1', fontsize=10)  # 原为 12
+    plt.ylabel('UMAP Dimension 2', fontsize=10)  # 原为 12
+
+    # 调整图例位置和字体大小，使其更适合较小的图
+    # bbox_to_anchor 将图例放在图形外部的右侧。loc='center left' 表示图例的左中点对齐到 bbox_to_anchor 指定的点。
+    # borderaxespad 控制图例与 bbox_to_anchor 指定点之间的间距。
     plt.legend(title=legend_title, bbox_to_anchor=(1.02, 0.5), loc='center left',
-               borderaxespad=0., fontsize=11, title_fontsize=13)
-    plt.tight_layout(rect=[0, 0, 0.82, 1])
-    plt.savefig(filename, dpi=300)
+               borderaxespad=0., fontsize=8, title_fontsize=10)  # fontsize 原为 11, title_fontsize 原为 13
+
+    # rect=[left, bottom, right, top] 调整子图布局以适应图例
+    # 这里的 0.78 或 0.80 是为了给右边的图例留出空间
+    plt.tight_layout(rect=[0, 0, 0.78, 1])  # rect中right值原为 0.82，可能需根据图例宽度微调
+
+    plt.savefig(filename, dpi=300, bbox_inches='tight')  # bbox_inches='tight' 尝试裁剪掉空白边缘
     print(f"图表已保存为 {filename}")
-    plt.show()
+    # plt.show() # 在脚本中批量生成时，可以注释掉show，避免弹出太多窗口
+    plt.close()  # 关闭图像，释放内存，特别是在循环生成多个图时
 
 
 # --- 可视化 ---
+# (确保 df_vis 已经按之前的代码正确生成)
+
+print("\n--- 开始生成图表 (已调整尺寸和样式以适应论文) ---")
 
 # 图表1: SBERT -> UMAP(50D) -> UMAP(2D), 按真实领域着色 (原图表1)
 plot_clusters(df_vis, 'vis_x_scene1', 'vis_y_scene1', 'true_domain_str',
-              '图表1: SBERT->UMAP(50D)->UMAP(2D) (按真实领域)',
-              'plot1_sbert_umap50_umap2_vs_truth.png',
+              '图1: SBERT->UMAP(50D)->UMAP(2D) (真实领域)',  # 标题可以更简洁
+              'plot1_sbert_umap50_umap2_vs_truth_paper.png',  # 文件名区分
               true_palette, '真实领域')
 
 # 图表2: SBERT -> UMAP(50D) -> UMAP(2D), 按场景1的HDBSCAN结果着色 (原图表2)
 hdbscan_palette_scene1 = create_hdbscan_palette(hdbscan_ids_on_umap50d)
 plot_clusters(df_vis, 'vis_x_scene1', 'vis_y_scene1', 'hdbscan_id_scene1',
-              '图表2: SBERT->UMAP(50D)->UMAP(2D) (按HDBSCAN on UMAP50D)',
-              'plot2_sbert_umap50_umap2_vs_hdbscan_on_umap50.png',
+              '图2: SBERT->UMAP(50D)->UMAP(2D) (HDBSCAN on UMAP50D)',
+              'plot2_sbert_umap50_umap2_vs_hdbscan_on_umap50_paper.png',
               hdbscan_palette_scene1, 'HDBSCAN (on UMAP50D)', is_hdbscan_hue=True)
 
 # 图表3: SBERT -> UMAP(2D), 按真实领域着色 (原图表3a)
 plot_clusters(df_vis, 'vis_x_scene2', 'vis_y_scene2', 'true_domain_str',
-              '图表3: SBERT->UMAP(2D) (按真实领域)',
-              'plot3_sbert_umap2_vs_truth.png',
+              '图3: SBERT->UMAP(2D) (真实领域)',
+              'plot3_sbert_umap2_vs_truth_paper.png',
               true_palette, '真实领域')
 
 # 新增图表4: SBERT -> UMAP(2D), 按场景2的HDBSCAN结果着色
-# 这个图表展示了如果在原始SBERT嵌入上做HDBSCAN，然后在原始SBERT嵌入的2D UMAP投影上是什么样子
 hdbscan_palette_scene2 = create_hdbscan_palette(hdbscan_ids_on_sbert)
 plot_clusters(df_vis, 'vis_x_scene2', 'vis_y_scene2', 'hdbscan_id_scene2',
-              '图表4: SBERT->UMAP(2D) (按HDBSCAN on SBERT)',
-              'plot4_sbert_umap2_vs_hdbscan_on_sbert.png',
+              '图4: SBERT->UMAP(2D) (HDBSCAN on SBERT)',
+              'plot4_sbert_umap2_vs_hdbscan_on_sbert_paper.png',
               hdbscan_palette_scene2, 'HDBSCAN (on SBERT)', is_hdbscan_hue=True)
-
 # --- 4. 聚类评估指标 ---
 print("\n--- 4. 聚类评估指标 ---")
 
