@@ -228,7 +228,7 @@ if torch.cuda.is_available():
 
 # !! 用户需要根据实际情况修改此路径 !!
 MULTI_AREA_ROOT_DIR = 'EasyEdit/data/output_meta_llama_3_8b_instruct'
-BASE_MODEL_NAME = 'sentence-transformers/all-MiniLM-L6-v2'
+BASE_MODEL_NAME = 'BAAI/bge-m3'
 OUTPUT_BASE_DIR = './exp_sbert_finetuning_output'  # 主输出目录
 
 ALL_FILES = [
