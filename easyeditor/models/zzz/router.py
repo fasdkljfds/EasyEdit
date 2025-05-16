@@ -221,6 +221,8 @@ class KnowRouter:
         if not self.built:
             raise RuntimeError("Router not built. Call build_route_table() first.")
         if prompt in self.route_table:
+            cluster_id = self.route_table[prompt]
+            print(f'[Domain Router] X_input => {cluster_id}')
             return self.route_table[prompt]
 
 
